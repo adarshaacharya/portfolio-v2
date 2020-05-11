@@ -27,15 +27,26 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/posts`,
-        name: `posts`,
+        path: `${__dirname}/images`,
+        name: `images`,
       },
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/images`,
-        name: `images`,
+        path: `${__dirname}/posts`,
+        name: `posts`,
+      },
+    },
+    {
+      resolve: "gatsby-plugin-mdx",
+      options: {
+        defaultLayouts: {
+          default: require.resolve("./src/components/layout.js"),
+        },
+        // for adding images inside post
+        // gatsbyRemarkPlugins: ["gatsby-remark-images"],
+        // plugins: ["gatsby-remark-images"],
       },
     },
   ],
