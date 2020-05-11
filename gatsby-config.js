@@ -5,17 +5,37 @@
  */
 
 module.exports = {
-  /* Your site config here */
+  siteMetadata: {
+    title: `Aadarsha Acharya`,
+    author: `Aadarsha Acharya`,
+    description: `My personal portfoilio created using Gatsby`,
+    siteUrl: `https://adarshaacharya.com.np/`,
+    keywords: `Aadarsha Acharya, Aadarsha, Acharya, adarshaacharya, Adarsha Acharya, Adarsha, Acharya, adarshaacharya.com.np`,
+  },
+
   plugins: [
     `gatsby-plugin-sass`,
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
-        fonts: [
-          `Ubuntu`,
-          `source sans pro\:300,400,400i,700`, 
-        ],
+        fonts: [`Roboto`, `source sans pro\:300,400,400i,700`],
         display: "swap",
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/posts`,
+        name: `posts`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/images`,
+        name: `images`,
       },
     },
   ],
