@@ -11,6 +11,10 @@ const PostPreview = ({ post }) => (
       </Link>
     </h2>
 
+    <p>
+      {post.date} - {post.readingTime}
+    </p>
+
     <div>
       <p>{post.description}</p>
       <Link to={post.slug} className={styles.link}>

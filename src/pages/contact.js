@@ -6,9 +6,12 @@ import insta from "../../images/social/insta.svg"
 import twitter from "../../images/social/twitter.svg"
 
 import Layout from "../components/layout"
+import SEO from "../components/seo"
 
 export default () => (
   <Layout>
+    <SEO title={`Contact Me`} />
+    
     <h1>Contact Me</h1>
 
     <p>You can contact me on any of these social handles. </p>

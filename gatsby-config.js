@@ -1,13 +1,14 @@
 module.exports = {
   siteMetadata: {
     title: `Aadarsha Acharya`,
-    author: `Aadarsha Acharya`,
+    author: `@UltimateAdarsha`,
     description: `My personal portfoilio created using Gatsby`,
     siteUrl: `https://adarshaacharya.com.np/`,
-    keywords: `Aadarsha Acharya, Aadarsha, Acharya, adarshaacharya, Adarsha Acharya, Adarsha, Acharya, adarshaacharya.com.np`,
+    keywords: [`Aadarsha Acharya, Aadarsha, Acharya, adarshaacharya, Adarsha Acharya, Adarsha, Acharya, adarshaacharya.com.np`],
   },
 
   plugins: [
+    `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sass`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
@@ -58,5 +59,6 @@ module.exports = {
         ],
       },
     },
+    "gatsby-remark-reading-time",
   ],
 }

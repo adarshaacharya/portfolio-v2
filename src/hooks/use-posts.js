@@ -5,14 +5,19 @@ const usePosts = () => {
     query {
       allMdx(sort: { fields: [frontmatter___date], order: DESC }) {
         nodes {
+          excerpt
           frontmatter {
             title
             slug
             author
-            date
+            date(formatString: "MMMM Do, YYYY")
             description
           }
-          excerpt
+          fields {
+            readingTime {
+              text
+            }
+          }
         }
       }
     }
@@ -25,6 +30,7 @@ const usePosts = () => {
     date: post.frontmatter.date,
     description: post.frontmatter.description,
     excerpt: post.excerpt,
+    readingTime : post.fields.readingTime.text
   }))
 }
 
