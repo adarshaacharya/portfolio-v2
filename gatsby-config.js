@@ -4,7 +4,9 @@ module.exports = {
     author: `@UltimateAdarsha`,
     description: `My personal portfoilio created using Gatsby`,
     siteUrl: `https://adarshaacharya.com.np/`,
-    keywords: [`Aadarsha Acharya, Aadarsha, Acharya, adarshaacharya, Adarsha Acharya, Adarsha, Acharya, adarshaacharya.com.np`],
+    keywords: [
+      `Aadarsha Acharya, Aadarsha, Acharya, adarshaacharya, Adarsha Acharya, Adarsha, Acharya, adarshaacharya.com.np`,
+    ],
   },
 
   plugins: [

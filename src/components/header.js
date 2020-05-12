@@ -34,6 +34,7 @@ const Header = () => {
             <li className={styles.navItem}>
               <Link to="/contact/">Contact</Link>
             </li>
+
           </ul>
         </div>
       </nav>
