@@ -6,7 +6,7 @@ export const useLogo = () => {
       logo: file(relativePath: { eq: "logo.png" }) {
         #since we have put source file system up to  /assests
         sharp: childImageSharp {
-          fixed(width: 100, height: 100) {
+          fixed(width: 70, height: 70) {
             ...GatsbyImageSharpFixed
           }
         }
