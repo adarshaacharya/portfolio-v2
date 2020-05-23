@@ -1,20 +1,16 @@
 import React from "react"
 import { Link } from "gatsby"
-import Image from "gatsby-image"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
-import usePersonalPhoto from "../hooks/use-personal-pic"
 
 export default function About() {
-  const photo = usePersonalPhoto()
   return (
     <Layout>
       <SEO title={`About Me`} />
 
-      <h1>About Page</h1>
-      <Image fixed={photo} />
+      <h1 className="text-center">About Me</h1>
       <p>I'm Aadarsha Acharya, CS student based in Kathmandu, Nepal.</p>
 
       <p>

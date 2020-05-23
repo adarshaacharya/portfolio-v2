@@ -10,21 +10,59 @@
   box-sizing: border-box;
 }
 
-html,
 body {
+  --bg: var(--light-color);
+
   --primary-color: hsl(0, 0%, 30%);
-  --secondary-color: hsl(217, 89%, 52%);
+  --secondary-color: hsl(202, 100%, 50%);
+  --dark-color: hsl(0, 0, 0%);
+  --select-color: hsla(55, 100%, 54%, 0.7);
+  --normal-text: #222;
+
+  --h1: hsl(0, 0%, 15%);
+  --h: hsl(0, 0%, 10%);
 
   --nav-shadow: 0 4px 6px 0 hsla(0, 0%, 30%, 0.05);
   --nav-border: none;
   --nav-link: hsl(250, 15%, 45%);
-  --theme: hsl(217, 89%, 69%); 
+  --theme: hsl(230, 84%, 69%);
 
-  background: var(--light-color);
+  --hr: hsla(0, 0%, 0%, 0.2);
+
   font-family: "Lato", sans-serif;
   line-height: 1.5;
   transition: 0.2s ease-out;
+}
 
+body.dark {
+  -webkit-font-smoothing: antialiased;
+
+  --bg: #161625;
+  --primary-color: hsl(0, 0%, 70%);
+  --secondary-color: hsl(217, 89%, 61%);
+  --select-color: hsl(337, 80%, 81%);
+  --normal-text: rgba(255, 255, 255, 0.88);
+
+  --nav-shadow: none;
+  --nav-border: 0.1px solid hsl(0, 0%, 22%);
+  --nav-link: hsl(243, 15%, 75%);
+
+  --h1: hsl(0, 0%, 85%);
+  --h: hsl(0, 0%, 80%);
+  --hr: hsla(0, 0%, 100%, 0.2);
+
+
+  background: var(--bg);
+  transition: 0.2s ease-out;
+}
+
+.bg-color {
+  background-color: var(--bg);
+  transition: 0.2s ease-out;
+
+  // background-color: var(--bg);
+  // color: var(--primary-color);
+  // transition: color 0.2s ease-out, background 0.2s ease-out;
 }
 
 a {
@@ -46,25 +84,24 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Staatliches", cursive;
+  font-family: "Inter", sans-serif;
   margin-bottom: 0.55rem;
   line-height: 1.3;
+  color: var(--h);
 }
 
 p {
   margin: 0.5rem 0;
+  color: var(--primary-color);
+  font-size: 1.3rem;
 }
 
-
-
 ::selection {
-  // background: rgba(255, 235, 20, 0.7);
-  background: rgb(113, 244, 221);
+  background: var(--select-color);
+  // background: rgb(113, 244, 221);
   // background: #4487f4;
   color: #111;
 }
-
-
 
 // Utility class
 .container {
@@ -72,4 +109,8 @@ p {
   margin: auto;
   padding: 0 2rem;
   overflow: hidden;
+}
+
+.text-center {
+  text-align: center;
 }

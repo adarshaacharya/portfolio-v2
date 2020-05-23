@@ -11,13 +11,14 @@ module.exports = {
 
   plugins: [
     `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-dark-mode`,
     `gatsby-plugin-sass`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
-        fonts: [`Lato`, `Staatliches`, `source sans pro\:300,400,400i,700`],
+        fonts: [`Lato`, `Inter`, `source sans pro\:300,400,400i,700`],
         display: "swap",
       },
     },

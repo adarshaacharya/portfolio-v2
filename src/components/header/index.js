@@ -1,6 +1,7 @@
 import React from "react"
 import { Link } from "gatsby"
 import Image from "gatsby-image"
+import { ThemeToggler } from "gatsby-plugin-dark-mode"
 
 import styles from "./header.module.scss"
 
@@ -33,6 +34,25 @@ const Header = () => {
                 Contact
               </Link>
             </li>
+
+            <li className={styles.navItem}>
+              <ThemeToggler>
+                {({ theme, toggleTheme }) => (
+                  <div id="themeBtn">
+                    <input
+                      type="checkbox"
+                      id="switch"
+                      onChange={e =>
+                        toggleTheme(e.target.checked ? "dark" : "light")
+                      }
+                      checked={theme === "dark"}
+                    />
+                    <label htmlFor="switch">Toggle</label>
+                  </div>
+                )}
+              </ThemeToggler>
+            </li>
+
           </ul>
         </div>
       </nav>

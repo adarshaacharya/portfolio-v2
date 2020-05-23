@@ -1,11 +1,14 @@
 .main-nav {
-  background: #fff;
+  background: var(--bg);
+  transition: 0.2s ease-out;
+
   position: sticky;
   width: 100%;
   top: 0;
   z-index: 2;
   box-shadow: var(--nav-shadow);
   border-bottom: var(--nav-border);
+  border-top: 4px solid var(--theme);
 
 
   .nav-container {
@@ -36,8 +39,8 @@
   }
 
   .current-page {
-    color: var(--secondary-color);
-    border-bottom: 2px solid var(--secondary-color);
+    color: var(--theme);
+    border-bottom: 2px solid var(--theme);
   }
 
 }

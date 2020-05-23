@@ -1,0 +1,15 @@
+.author-info {
+//   display: flex;
+
+  img {
+    height: 70px;
+    border-radius: 50%;
+    border: 3px solid var(--theme);
+  }
+
+  h1 {
+    font-weight: 700;
+    font-size: 3rem;
+    margin-bottom: 2rem;
+  }
+}
