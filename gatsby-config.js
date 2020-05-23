@@ -17,7 +17,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
-        fonts: [`Roboto`, `source sans pro\:300,400,400i,700`],
+        fonts: [`Lato`, `Staatliches`, `source sans pro\:300,400,400i,700`],
         display: "swap",
       },
     },
@@ -41,7 +41,7 @@ module.exports = {
       options: {
         extensions: [".mdx", ".md"],
         defaultLayouts: {
-          default: require.resolve("./src/components/layout.js"),
+          default: require.resolve("./src/components/layout/index.js"),
         },
         gatsbyRemarkPlugins: [
           {

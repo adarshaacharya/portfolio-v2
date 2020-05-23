@@ -4,37 +4,35 @@ import Image from "gatsby-image"
 
 import styles from "./header.module.scss"
 
-import { useLogo } from "../hooks/use-logo"
+import { useLogo } from "../../hooks/use-logo"
 
 const Header = () => {
   const logo = useLogo()
 
   return (
     <>
-      <nav>
-        <div className={styles.gradBar}></div>
+      <nav className={styles.mainNav}>
         <div className={styles.navContainer}>
-          <Link to="/" className={styles.title}>
-            <Image
-              fixed={logo}
-              alt="Aadarsha"
-              className={styles.navImage}
-              style={{ height: 70, width: 70 }}
-              id="nav-img"
-            />
+          <Link to="/" className={styles.logo}>
+            <Image fixed={logo} alt="Aadarsha" className={styles.navImage} />
           </Link>
 
           <ul className={styles.navList}>
             <li className={styles.navItem}>
-              <Link to="/about/">About</Link>
+              <Link to="/about/" activeClassName={styles.currentPage}>
+                About
+              </Link>
             </li>
             <li className={styles.navItem}>
-              <Link to="/blog/">Blogs</Link>
+              <Link to="/blog/" activeClassName={styles.currentPage}>
+                Blogs
+              </Link>
             </li>
             <li className={styles.navItem}>
-              <Link to="/contact/">Contact</Link>
+              <Link to="/contact/" activeClassName={styles.currentPage}>
+                Contact
+              </Link>
             </li>
-
           </ul>
         </div>
       </nav>

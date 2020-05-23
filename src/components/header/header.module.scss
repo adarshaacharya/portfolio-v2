@@ -1,0 +1,43 @@
+.main-nav {
+  background: #fff;
+  position: sticky;
+  width: 100%;
+  top: 0;
+  z-index: 2;
+  box-shadow: var(--nav-shadow);
+  border-bottom: var(--nav-border);
+
+
+  .nav-container {
+    max-width: 750px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 6fr 3fr;
+    padding: 0 1rem;
+    align-items: center;
+  }
+
+  .logo {
+    h1 {
+      font-family: "Staatliches", cursive;
+      color: red;
+    
+    }
+  }
+
+  ul {
+    display: flex;
+    justify-items: end;
+    li a {
+      padding: 0.5rem 0.75rem;
+      margin:  0.5rem 0;
+      color: var(--nav-link);
+    }
+  }
+
+  .current-page {
+    color: var(--secondary-color);
+    border-bottom: 2px solid var(--secondary-color);
+  }
+
+}

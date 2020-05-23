@@ -11,24 +11,19 @@ import SEO from "../components/seo"
 export default () => (
   <Layout>
     <SEO title={`Contact Me`} />
-    
+
     <h1>Contact Me</h1>
 
     <p>You can contact me on any of these social handles. </p>
-    <div
-      style={{
-        display: "flex",
-        justifyContent: "space-around",
-      }}
-    >
+    <div>
       <a href="https://github.com/adarshaacharya">
-        <img src={github} alt="GitHub" height="50" />
+        <img src={github} alt="GitHub" height="40" />
       </a>
       <a href="https://twitter.com/UltimateAdarshx">
-        <img src={twitter} alt="Twitter" height="50" />
+        <img src={twitter} alt="Twitter" height="40" />
       </a>
       <a href="https://instagram.com/adarsha004">
-        <img src={insta} alt="Instagram" height="50" />
+        <img src={insta} alt="Instagram" height="40" />
       </a>
     </div>
     <Link to="/">&larr; Back To home</Link>

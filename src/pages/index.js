@@ -8,10 +8,10 @@ export default function IndexPage() {
   return (
     <Layout>
       <SEO title={`Home Page`} />
-      <h3>Hello 👋, </h3>
-      <p>
-        I'm Aadarsha Acharya frontend developer from beautiful city Kathmandu.
-      </p>
+      <h3>
+        Hello<span role="img" aria-label="hi">👋,</span>
+      </h3>
+      <p>I'm Aadarsha Acharya</p>
 
       <Link to="/about"> Learn about me &rarr; </Link>
     </Layout>
