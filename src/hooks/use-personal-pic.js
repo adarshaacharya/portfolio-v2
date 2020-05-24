@@ -5,7 +5,7 @@ const usePersonalPhoto = () => {
     query {
       logo: file(relativePath: { eq: "my-pic.png" }) {
         sharp: childImageSharp {
-          fixed(width: 270, height: 270) {
+          fixed(width: 200, height: 200) {
             ...GatsbyImageSharpFixed
           }
         }

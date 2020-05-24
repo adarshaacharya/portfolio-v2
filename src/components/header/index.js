@@ -2,10 +2,13 @@ import React from "react"
 import { Link } from "gatsby"
 import Image from "gatsby-image"
 import { ThemeToggler } from "gatsby-plugin-dark-mode"
+import Switch from "react-switch"
 
 import styles from "./header.module.scss"
-
 import { useLogo } from "../../hooks/use-logo"
+
+import sunIcon from "../../../images/toggle/sun-icon.svg"
+import moonIcon from "../../../images/toggle/moon-icon.svg"
 
 const Header = () => {
   const logo = useLogo()
@@ -38,21 +41,23 @@ const Header = () => {
             <li className={styles.navItem}>
               <ThemeToggler>
                 {({ theme, toggleTheme }) => (
-                  <div id="themeBtn">
-                    <input
-                      type="checkbox"
-                      id="switch"
+                  <div id={styles.themeToggler}>
+                    <Switch
                       onChange={e =>
-                        toggleTheme(e.target.checked ? "dark" : "light")
+                        toggleTheme(theme === "light" ? "dark" : "light")
                       }
                       checked={theme === "dark"}
+                      onColor="#222"
+                      offColor="#333"
+                      checkedIcon={<img src={moonIcon} alt="moon icon" />}
+                      uncheckedIcon={<img src={sunIcon} alt="sun icon" />}
+                      boxShadow="0 0 2px 3px #5d83e8"
+                      activeBoxShadow="0 0 2px 3px #5d83e8"
                     />
-                    <label htmlFor="switch">Toggle</label>
                   </div>
                 )}
               </ThemeToggler>
             </li>
-
           </ul>
         </div>
       </nav>

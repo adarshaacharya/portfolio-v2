@@ -35,12 +35,23 @@
       padding: 0.5rem 0.75rem;
       margin:  0.5rem 0;
       color: var(--nav-link);
+
+      &:hover {
+        color: var(--theme);
+      }
     }
   }
 
   .current-page {
     color: var(--theme);
     border-bottom: 2px solid var(--theme);
+  }
+
+
+  #theme-toggler {
+    height: 0;
+    width: 0;
+    padding: 0 1rem;
   }
 
 }

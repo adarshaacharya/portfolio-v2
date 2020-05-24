@@ -25,19 +25,21 @@ body {
   --nav-shadow: 0 4px 6px 0 hsla(0, 0%, 30%, 0.05);
   --nav-border: none;
   --nav-link: hsl(250, 15%, 45%);
+
   --theme: hsl(230, 84%, 69%);
 
   --hr: hsla(0, 0%, 0%, 0.2);
 
+  background: var(--bg);
+  transition: 0.2s ease-out;
   font-family: "Lato", sans-serif;
   line-height: 1.5;
-  transition: 0.2s ease-out;
 }
 
 body.dark {
   -webkit-font-smoothing: antialiased;
 
-  --bg: #161625;
+  --bg: #282a33;
   --primary-color: hsl(0, 0%, 70%);
   --secondary-color: hsl(217, 89%, 61%);
   --select-color: hsl(337, 80%, 81%);
@@ -56,14 +58,14 @@ body.dark {
   transition: 0.2s ease-out;
 }
 
-.bg-color {
-  background-color: var(--bg);
-  transition: 0.2s ease-out;
+// .bg-color {
+//   background-color: var(--bg);
+//   transition: 0.2s ease-out;
 
-  // background-color: var(--bg);
-  // color: var(--primary-color);
-  // transition: color 0.2s ease-out, background 0.2s ease-out;
-}
+//   // background-color: var(--bg);
+//   // color: var(--primary-color);
+//   // transition: color 0.2s ease-out, background 0.2s ease-out;
+// }
 
 a {
   color: var(--primary-color);

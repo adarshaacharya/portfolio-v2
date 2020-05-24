@@ -1,15 +1,45 @@
 .author-info {
-//   display: flex;
+  > div {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    align-items: center;
 
-  img {
-    height: 70px;
-    border-radius: 50%;
-    border: 3px solid var(--theme);
+    .author-img {
+      margin-right: 2rem;
+      img {
+        height: 200px !important ;
+        width: 200px !important;
+        border-radius: 50%;
+        border: 3px solid var(--theme);
+      }
+    }
+
+    margin-bottom: 2rem;
   }
 
-  h1 {
-    font-weight: 700;
-    font-size: 3rem;
-    margin-bottom: 2rem;
+  .info {
+    h1 {
+      color: var(--primary-color);
+      font-weight: 700;
+      font-size: 2.4rem;
+      margin-left: 1rem;
+    }
+
+    .social-icons {
+      display: flex;
+      justify-content: start;
+      a {
+        img {
+          height: 20px;
+          padding-left: 1rem;
+        }
+      }
+    }
+  }
+
+  p {
+    display: grid;
+    grid-template-columns: auto;
+    align-items: center;
   }
 }
