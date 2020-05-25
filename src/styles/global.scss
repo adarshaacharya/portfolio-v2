@@ -1,6 +1,7 @@
 // Config
 :root {
-  --light-color: #f3f3f3;
+  // --light-color: #f3f3f3;
+  --light-color: #ffffff;
   --max-width: 1100px;
 }
 
@@ -28,7 +29,7 @@ body {
 
   --theme: hsl(230, 84%, 69%);
 
-  --hr: hsla(0, 0%, 0%, 0.2);
+  --hr-color: hsla(0, 0%, 0%, 0.2);
 
   background: var(--bg);
   transition: 0.2s ease-out;
@@ -51,8 +52,7 @@ body.dark {
 
   --h1: hsl(0, 0%, 85%);
   --h: hsl(0, 0%, 80%);
-  --hr: hsla(0, 0%, 100%, 0.2);
-
+  --hr-color: hsla(0, 0%, 100%, 0.2);
 
   background: var(--bg);
   transition: 0.2s ease-out;
@@ -66,6 +66,12 @@ body.dark {
 //   // color: var(--primary-color);
 //   // transition: color 0.2s ease-out, background 0.2s ease-out;
 // }
+
+hr {
+  border: none;
+  border-top: 1px var(--hr-color) solid;
+  margin: 45px 0;
+}
 
 a {
   color: var(--primary-color);
@@ -116,3 +122,14 @@ p {
 .text-center {
   text-align: center;
 }
+
+// buttons
+.btn {
+  display: inline-block;
+  cursor: pointer;
+  padding: 0.5rem 1.5rem;
+  border: 1px solid var(--primary-color);
+}
+
+// sample gradient
+// linear-gradient(135deg, rgba(85,239,203,1) 0%,rgba(30,87,153,1) 0%,rgba(85,239,203,1) 0%,rgba(91,202,255,1) 100%);

@@ -3,6 +3,8 @@ import { Link } from "gatsby"
 import Image from "gatsby-image"
 
 import styles from "./style.module.scss"
+
+import TechStack from './techstack';
 import usePersonalPhoto from "../../hooks/use-personal-pic"
 
 import github from "../../../images/social/github.svg"
@@ -42,7 +44,9 @@ export default function Author() {
           backend.
         </p>
 
-        
+        <div className={styles.techStack}>
+            <TechStack />
+        </div>
       </div>
     </>
   )
