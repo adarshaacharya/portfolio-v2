@@ -13,15 +13,24 @@ module.exports = {
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-dark-mode`,
     `gatsby-plugin-sass`,
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
+
+    // Google fonts
     {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
-        fonts: [`Lato`, `Inter`, `source sans pro\:300,400,400i,700`],
+        fonts: [
+          `Lato`,
+          `Inter`,
+          `IBM Plex Mono`,
+          `source sans pro\:300,400,400i,700`,
+        ],
         display: "swap",
       },
     },
+
+    // Image Transformer
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -29,14 +38,28 @@ module.exports = {
         name: `images`,
       },
     },
+
+    // Source File System
+    // Json source
+    `gatsby-transformer-json`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/posts`,
+        name: `projects`,
+        path: `${__dirname}/content/projects`,
+      },
+    },
+
+    // Markdown Source
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/content/posts/`,
         name: `posts`,
       },
     },
 
+    // Mdx plugin & its config for subfield : prismjs, remark-images, reading-time,etc.
     {
       resolve: "gatsby-plugin-mdx",
       options: {

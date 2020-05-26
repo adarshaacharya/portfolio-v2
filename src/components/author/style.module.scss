@@ -37,10 +37,25 @@
     }
   }
 
-
   p {
     display: grid;
     grid-template-columns: auto;
     align-items: center;
+  }
+}
+
+.tech-stack {
+  padding: 1rem 0;
+  h3 {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    padding: 2rem 0;
+    display: flex;
+    justify-content: center;
+  }
+  .techs {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    row-gap: 2rem;
   }
 }

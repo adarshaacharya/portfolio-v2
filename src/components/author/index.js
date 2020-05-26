@@ -4,7 +4,7 @@ import Image from "gatsby-image"
 
 import styles from "./style.module.scss"
 
-import TechStack from './techstack';
+import TechStack from "./techstack"
 import usePersonalPhoto from "../../hooks/use-personal-pic"
 
 import github from "../../../images/social/github.svg"
@@ -34,19 +34,22 @@ export default function Author() {
                 <img src={insta} alt="Instagram" />
               </a>
             </div>
+            <p>
+              adarshaofficial@gmail.com
+            </p>
           </div>
         </div>
 
         <p>
-          I am a Full-Stack JavaScript Developer from Nepal who loves to code
-          and create cool projects. I am specialized in building full stack
-          applications that use React in frontend and Node.js, GraphQL in the
-          backend.
+          I'm Aadarsha Acharya, CS student based in Kathmandu, Nepal. I love
+          writing codes to solve real world problems and enjoy turning complex
+          problems into simple, beautiful and intuitive solutions. I love
+          speaking and contributing open source too.
         </p>
+      </div>
 
-        <div className={styles.techStack}>
-            <TechStack />
-        </div>
+      <div className={styles.techStack}>
+        <TechStack />
       </div>
     </>
   )

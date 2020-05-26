@@ -4,12 +4,13 @@
 
   position: sticky;
   width: 100%;
+  left: 0;
   top: 0;
   z-index: 2;
+
   box-shadow: var(--nav-shadow);
   border-bottom: var(--nav-border);
   border-top: 4px solid var(--theme);
-
 
   .nav-container {
     max-width: 750px;
@@ -21,10 +22,10 @@
   }
 
   .logo {
-    h1 {
-      font-family: "Staatliches", cursive;
-      color: red;
-    
+    align-items: center;
+    img {
+      height: 50px !important;
+      width: 50px !important;
     }
   }
 
@@ -33,7 +34,7 @@
     justify-items: end;
     li a {
       padding: 0.5rem 0.75rem;
-      margin:  0.5rem 0;
+      margin: 0.5rem 0;
       color: var(--nav-link);
 
       &:hover {
@@ -47,11 +48,9 @@
     border-bottom: 2px solid var(--theme);
   }
 
-
   #theme-toggler {
     height: 0;
     width: 0;
     padding: 0 1rem;
   }
-
 }

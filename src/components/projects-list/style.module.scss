@@ -1,0 +1,30 @@
+.project {
+  border-radius: 4px;
+  margin-bottom: 3rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  box-shadow: 1px 2px 18px rgba(0, 0, 0, 0.1);
+
+  > div {
+    padding: 0.3rem 0.7rem;
+    position: relative;
+
+    h3 {
+      font-family: "IBM Plex Mono", monospace;
+      margin-bottom: 5px;
+    }
+
+    .project-links {
+      display: flex;
+      align-items: center;
+      position: absolute;
+      bottom: auto;
+      :first-child {
+        height: 1.5rem;
+      }
+    }
+    p {
+      font-size: 1rem;
+    }
+  }
+}

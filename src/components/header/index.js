@@ -23,8 +23,8 @@ const Header = () => {
 
           <ul className={styles.navList}>
             <li className={styles.navItem}>
-              <Link to="/about/" activeClassName={styles.currentPage}>
-                About
+              <Link to="/projects/" activeClassName={styles.currentPage}>
+                Projects
               </Link>
             </li>
             <li className={styles.navItem}>
@@ -49,10 +49,12 @@ const Header = () => {
                       checked={theme === "dark"}
                       onColor="#222"
                       offColor="#333"
-                      checkedIcon={<img src={moonIcon} alt="moon icon" />}
-                      uncheckedIcon={<img src={sunIcon} alt="sun icon" />}
+                      checkedIcon={<img src={moonIcon} alt="moon icon" height="25"/>}
+                      uncheckedIcon={<img src={sunIcon} alt="sun icon" height="25"/>}
                       boxShadow="0 0 2px 3px #5d83e8"
                       activeBoxShadow="0 0 2px 3px #5d83e8"
+                      height={25}
+                      width={48}
                     />
                   </div>
                 )}
