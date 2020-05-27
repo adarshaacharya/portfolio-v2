@@ -13,6 +13,7 @@
 body {
   --bg: var(--light-color);
 
+  --light-text : rgba(0, 0, 0, 0.4);
   --primary-color: hsl(0, 0%, 30%);
   --secondary-color: hsl(202, 100%, 50%);
   --dark-color: hsl(0, 0, 0%);
@@ -41,6 +42,7 @@ body {
 body.dark {
   -webkit-font-smoothing: antialiased;
 
+  --light-text : #fff;
   --bg: #282a33;
   --primary-color: hsl(0, 0%, 70%);
   --secondary-color: hsl(217, 89%, 61%);

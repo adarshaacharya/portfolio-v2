@@ -35,12 +35,10 @@
         }
       }
     }
-  }
 
-  p {
-    display: grid;
-    grid-template-columns: auto;
-    align-items: center;
+    p {
+      font-family: "IBM Plex Mono", monospace;
+    }
   }
 }
 

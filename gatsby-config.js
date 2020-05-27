@@ -22,6 +22,7 @@ module.exports = {
           `Lato`,
           `Inter`,
           `IBM Plex Mono`,
+          `Montserrat`,
           `source sans pro\:300,400,400i,700`,
         ],
         display: "swap",

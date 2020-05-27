@@ -6,13 +6,19 @@
   grid-template-columns: 1fr 1fr;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   // border: 1px solid hsla(0, 18%, 47%, 0.1);
-  border-top: 5px solid var(--theme);
-  border-radius: 12px;
+  border-top: 3px solid var(--theme);
+  // border-left: 1px solid var(--theme);
+  // border-right: 1px solid var(--theme);
 
+  border-radius: 10px;
+
+  transform: translateY(0ox);
+  transition: transform 0.22s ease;
   &:hover {
-    transform: translateY(-2px);
-
+    transition: transform 0.2s ease;
+    transform: translateY(-3px);
   }
+
   > div {
     padding: 0.3rem 0.7rem;
     position: relative;
