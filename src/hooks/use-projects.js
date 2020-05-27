@@ -1,6 +1,6 @@
 import { graphql, useStaticQuery } from "gatsby"
 
-export const useProjects = () => {
+export const useProjectsDescription = () => {
   const data = useStaticQuery(graphql`
     query {
       allProjectsJson {
@@ -24,4 +24,13 @@ export const useProjects = () => {
     image: node.image,
     description: node.description,
   }))
+}
+
+
+export const useProjectsImage = () => {
+  
+
+
+
+
 }

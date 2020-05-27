@@ -8,7 +8,7 @@ import ProjectsList from "../components/projects-list"
 import { useProjects } from "../hooks/use-projects"
 
 export default function Projects() {
-  const projects = useProjects()
+  const projects = useProjectsDescription()
 
   return (
     <Layout>

@@ -30,6 +30,8 @@ body {
 
   --hr-color: hsla(0, 0%, 0%, 0.2);
 
+  --card-color : inherit;
+  
   background: var(--bg);
   transition: 0.2s ease-out;
   font-family: "Lato", sans-serif;
@@ -52,6 +54,8 @@ body.dark {
   --h1: hsl(0, 0%, 85%);
   --h: hsl(0, 0%, 80%);
   --hr-color: hsla(0, 0%, 100%, 0.2);
+
+  --card-color : #303030;
 
   background: var(--bg);
   transition: 0.2s ease-out;
