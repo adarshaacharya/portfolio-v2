@@ -10,7 +10,7 @@
     "title": "Nodejs Blog System",
     "repo": "https://github.com/adarshaacharya/NodejsBlogSystem",
     "demo": "https://nodejsblogsystem.herokuapp.com/",
-    "image": "project_nodejsblog.png",
+    "image": "project_blog.png",
     "description": "Boilerplate for starting the blogging system using Node JS, MongoDB and Socket for real time update. 🔥 "
   },
   {

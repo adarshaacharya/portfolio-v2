@@ -3,7 +3,7 @@ import { graphql, useStaticQuery } from "gatsby"
 const usePersonalPhoto = () => {
   const data = useStaticQuery(graphql`
     query {
-      logo: file(relativePath: { eq: "my-pic.png" }) {
+      pic: file(relativePath: { eq: "my-pic.png" }) {
         sharp: childImageSharp {
           fixed(width: 200, height: 200) {
             ...GatsbyImageSharpFixed
@@ -13,7 +13,7 @@ const usePersonalPhoto = () => {
     }
   `)
 
-  return data.logo.sharp.fixed
+  return data.pic.sharp.fixed
 }
 
 export default usePersonalPhoto

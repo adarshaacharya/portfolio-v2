@@ -8,14 +8,14 @@ import ProjectsList from "../components/projects-list"
 import { useProjects } from "../hooks/use-projects"
 
 export default function Projects() {
-  const projects = useProjectsDescription()
+  const projects = useProjects()
 
   return (
     <Layout>
       <SEO title={`Side Projects`} />
 
       {projects.map(project => (
-        <ProjectsList project={project} />
+        <ProjectsList project={project} key={project.title}/>
       ))}
       <Link to="/">&larr; Back to home</Link>
     </Layout>

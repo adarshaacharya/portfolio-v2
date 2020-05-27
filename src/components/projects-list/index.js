@@ -1,15 +1,16 @@
 import React from "react"
+import Image from "gatsby-image"
 import Icon from "../../hooks/use-icons"
 
 import styles from "./style.module.scss"
 
 const ProjectsList = ({
-  project: { title, repo, demo, image, description },
+  project: { title, repo, demo, description, currentImg },
 }) => {
   return (
     <>
       <div className={styles.project}>
-        <img src={image} alt="" styles={styles.image} />
+        <Image fluid={currentImg} alt={title} />
         <div>
           <h3>{title}</h3>
 
