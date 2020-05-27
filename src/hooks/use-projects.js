@@ -37,11 +37,11 @@ export const useProjects = () => {
   // data.allFile.edges.map(({ node }, index) => console.log(node, index))
 
   return data.allProjectsJson.edges.map(({ node }, index) => ({
-    currentImg: data.allFile.edges[index].node.sharp.fluid,
+    currentImg: data.allFile.edges[index].node.sharp.fluid, // optimized image
     title: node.title,
     repo: node.repo,
     demo: node.demo,
-    image: node.image,
+    image: node.image, // raw image
     description: node.description,
   }))
 }

@@ -5,7 +5,7 @@ import styles from "./style.module.scss"
 export default function TechStack() {
   return (
     <>
-      <h3>{TECHS.title}</h3>
+      <h2>{TECHS.title}</h2>
       <div className={styles.techs}>
         {TECHS.data.map(tech => (
           <Icon stack={tech} key={tech} />

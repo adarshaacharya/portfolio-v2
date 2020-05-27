@@ -46,12 +46,12 @@
 
 .tech-stack {
   padding: 1rem 0;
-  h3 {
-    font-size: 1.5rem;
-    color: var(--primary-color);
+  h2 {
     padding: 2rem 0;
-    display: flex;
-    justify-content: center;
+    font-weight: 700;
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    letter-spacing: -0.03rem;
   }
   .techs {
     display: grid;

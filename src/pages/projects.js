@@ -13,6 +13,7 @@ export default function Projects() {
   return (
     <Layout>
       <SEO title={`Side Projects`} />
+      <h2>Side Projects.</h2>
 
       {projects.map(project => (
         <ProjectsList project={project} key={project.title}/>

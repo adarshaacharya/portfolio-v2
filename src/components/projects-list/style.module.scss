@@ -1,24 +1,18 @@
 .project {
   background-color: var(--card-color);
-  border-radius: 4px;
   margin-bottom: 3rem;
   padding: 3rem;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  box-shadow: 1px 2px 18px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  // border: 1px solid hsla(0, 18%, 47%, 0.1);
+  border-top: 5px solid var(--theme);
+  border-radius: 12px;
 
-  transition-property: transform;
-  transition-duration: 0.3s;
-  transition-property: -webkit-transform;
-  transition-property: transform;
-  transition-property: transform, -webkit-transform;
   &:hover {
-    -webkit-transform: scale(0.95);
-    -ms-transform: scale(0.95);
-    transform: scale(0.95);
-    cursor: pointer;
-  }
+    transform: translateY(-2px);
 
+  }
   > div {
     padding: 0.3rem 0.7rem;
     position: relative;

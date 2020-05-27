@@ -1,27 +1,22 @@
 import React from "react"
 import { Link } from "gatsby"
 
+import Icon from '../../hooks/use-icons'
 import styles from "./post-preview.module.scss"
 
-const PostPreview = ({ post }) => (
-  <article>
-    <h2>
-      <Link to={post.slug} className={styles.link}>
-        {post.title}
+const PostPreview = ({
+  post: { title, date, readingTime, slug, description },
+}) => {
+  return (
+    <article>
+      <Link to={slug}>
+        <h2>{title}</h2>
+        <div className={styles.date}>{date}</div>
+        <div className={styles.readingTime}> Reading time : {readingTime}</div>
+        <p>{description}</p>
       </Link>
-    </h2>
-
-    <p>
-      {post.date} - {post.readingTime}
-    </p>
-
-    <div>
-      <p>{post.description}</p>
-      <Link to={post.slug} className={styles.link}>
-        read this post &rarr;
-      </Link>
-    </div>
-  </article>
-)
+    </article>
+  )
+}
 
 export default PostPreview
