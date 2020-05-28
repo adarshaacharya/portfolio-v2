@@ -1,5 +1,6 @@
 article {
-  box-shadow: rgba(0, 0, 0, 0.05) 0px 5px 10px;  margin-bottom: 4rem;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 5px 10px;
+  margin-bottom: 4rem;
   background-color: var(--card-color);
 
 
@@ -11,7 +12,9 @@ article {
     display: grid;
     margin: 0;
     &:hover {
-      background: #fafafa;
+      // background: #fafafa;
+      box-shadow: rgba(0, 0, 0, 0.1) 0px 5px 10px;
+
     }
 
     h2 {
