@@ -23,6 +23,7 @@ module.exports = {
           `Inter`,
           `IBM Plex Mono`,
           `Montserrat`,
+          `Merriweather`,
           `source sans pro\:300,400,400i,700`,
         ],
         display: "swap",
@@ -46,7 +47,7 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `projects`,
+        name: `constants`,
         path: `${__dirname}/content/projects`,
       },
     },
@@ -87,5 +88,6 @@ module.exports = {
       },
     },
     "gatsby-remark-reading-time",
+   
   ],
 }

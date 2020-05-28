@@ -18,15 +18,16 @@ const BlogPostTemplate = ({ data, pageContext }) => {
       />
 
       <div className={styles.currentBlogPost}>
-          <h1>{post.frontmatter.title}</h1>
-          <p>
-            Posted by {post.frontmatter.author} on {post.frontmatter.date}{" "}
-          </p>
-          <i>{post.fields.readingTime.text}</i>
-          <MDXRenderer>{post.body}</MDXRenderer>
-       
-        <hr />
+        <h1>{post.frontmatter.title}</h1>
+
+        <p>
+          Posted by {post.frontmatter.author} on {post.frontmatter.date}{" "}
+        </p>
+        <i>{post.fields.readingTime.text}</i>
+        <MDXRenderer>{post.body}</MDXRenderer>
       </div>
+
+      <hr />
 
       <nav className={styles.bottomNav}>
         <ul>
