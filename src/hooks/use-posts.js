@@ -10,8 +10,9 @@ const usePosts = () => {
             title
             slug
             author
-            date(formatString: "MMMM Do, YYYY")
+            tags 
             description
+            date(formatString: "MMMM Do, YYYY")
           }
           fields {
             readingTime {
@@ -26,11 +27,12 @@ const usePosts = () => {
   return data.allMdx.nodes.map(post => ({
     title: post.frontmatter.title,
     slug: post.frontmatter.slug,
-    author: post.frontmatter.author,
-    date: post.frontmatter.date,
     description: post.frontmatter.description,
+    author: post.frontmatter.author,
+    tags : post.frontmatter.tags,
     excerpt: post.excerpt,
-    readingTime : post.fields.readingTime.text
+    readingTime : post.fields.readingTime.text,
+    date: post.frontmatter.date,
   }))
 }
 

@@ -42,6 +42,20 @@ article {
     font-size: 1.1rem;
   }
   
+
+  .tags {
+      list-style-type: none;
+      display: flex;
+      
+      li {
+        padding-right: 1rem;
+        &:hover {
+          
+        }
+      }
+  }
+
+
   &:last-of-type {
     .post {
       border-bottom-color: transparent;
