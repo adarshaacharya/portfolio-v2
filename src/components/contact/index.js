@@ -1,6 +1,8 @@
 import React from "react"
 
 import styles from "./style.module.scss"
+
+import Icon from "../../hooks/use-icons"
 import useForm from "../../hooks/use-form"
 
 const Contact = () => {
@@ -61,9 +63,15 @@ const Contact = () => {
             <input type="submit" value="Send" className={styles.btn} />
           </div>
         </form>
+      </section>
 
-        <h3>Hit me up !</h3>
-        
+      <hr />
+
+      <section className={styles.social}>
+        <Icon stack="GitHub" key="github" />
+        <Icon stack="Twitter" key="Twitter" />
+        <Icon stack="Instagram" key="instagram" />
+        <Icon stack="Linkedin" key="linkedin" />
       </section>
     </>
   )
