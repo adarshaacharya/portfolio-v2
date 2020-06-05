@@ -2,9 +2,8 @@ import React from "react"
 
 import styles from "./style.module.scss"
 
-import Icon from "../../hooks/use-icons"
 import useForm from "../../hooks/use-form"
-
+import SocialIcons from "./social-icons"
 const Contact = () => {
   const [formData, handleInput] = useForm()
 
@@ -65,14 +64,7 @@ const Contact = () => {
         </form>
       </section>
 
-      <hr />
-
-      <section className={styles.social}>
-        <Icon stack="GitHub" key="github" />
-        <Icon stack="Twitter" key="Twitter" />
-        <Icon stack="Instagram" key="instagram" />
-        <Icon stack="Linkedin" key="linkedin" />
-      </section>
+      <SocialIcons />
     </>
   )
 }

@@ -6,15 +6,13 @@ article {
 
   .post {
     border-bottom: 1px solid var(--hr-color);
-
-
     padding: 30px 30px;
     display: grid;
     margin: 0;
     &:hover {
-      background: #fafafa;
-      box-shadow: rgba(0, 0, 0, 0.1) 0px 5px 10px;
-      border-radius: 15px;
+      background: rgba(0,0,0, 0.1);
+      border-radius: 5px;
+      border: none;
     }
 
     h2 {

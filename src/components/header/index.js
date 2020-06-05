@@ -47,14 +47,14 @@ const Header = () => {
                         toggleTheme(theme === "light" ? "dark" : "light")
                       }
                       checked={theme === "dark"}
-                      onColor="#222"
-                      offColor="#333"
-                      checkedIcon={<img src={moonIcon} alt="moon icon" height="25"/>}
-                      uncheckedIcon={<img src={sunIcon} alt="sun icon" height="25"/>}
+                      onColor="#4487F4"
+                      offColor="#222"
+                      checkedIcon={<img src={moonIcon} alt="moon icon" height="22"/>}
+                      uncheckedIcon={<img src={sunIcon} alt="sun icon" height="22"/>}
                       boxShadow="0 0 2px 3px #5d83e8"
                       activeBoxShadow="0 0 2px 3px #5d83e8"
-                      height={25}
-                      width={48}
+                      height={20}
+                      width={40}
                     />
                   </div>
                 )}

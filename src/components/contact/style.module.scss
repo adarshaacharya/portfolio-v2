@@ -70,12 +70,26 @@
     cursor: pointer;
     text-decoration: none;
     line-height: 1;
-
   }
 }
 
-
 .social {
-    display: flex;
+  h2 {
+    padding: 1rem;
+  }
 
+  .icons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    div {
+      text-align: center;
+    
+      a {
+        font-family: Ibm Plex Mono;
+        font-size: 13px;
+        border-bottom: 1px dashed var(--primary-color);
+      }
+    }
+  }
 }
