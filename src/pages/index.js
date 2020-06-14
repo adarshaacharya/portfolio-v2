@@ -1,15 +1,14 @@
 import React from "react"
-import { Link } from "gatsby"
 
-import Layout from "../components/layout"
-import SEO from "../components/seo"
-import Author from "../components/author"
+import Layout from "../components/Layout"
+import SEO from "../components/Seo"
+import AuthorInfo from "../components/AuthorInfo"
 
 export default function IndexPage() {
   return (
     <Layout>
       <SEO title={`Home Page`} />
-      <Author />
+      <AuthorInfo />
     </Layout>
   )
 }

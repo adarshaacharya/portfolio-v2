@@ -4,14 +4,14 @@ import Image from "gatsby-image"
 
 import styles from "./style.module.scss"
 
-import TechStack from "./techstack"
+import TechStack from "./TechStack"
 import usePersonalPhoto from "../../hooks/use-personal-pic"
 
 import github from "../../../images/social/github.svg"
 import insta from "../../../images/social/insta.svg"
 import twitter from "../../../images/social/twitter.svg"
 
-export default function Author() {
+export default function AuthorInfo() {
   const photo = usePersonalPhoto()
 
   return (

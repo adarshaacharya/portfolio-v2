@@ -1,9 +1,9 @@
 import React from "react"
 import { Link } from "gatsby"
 
-import Layout from "../components/layout"
-import Contact from '../components/contact'
-import SEO from "../components/seo"
+import Layout from "../components/Layout"
+import Contact from '../components/Contact'
+import SEO from "../components/Seo"
 
 export default () => (
   <Layout>

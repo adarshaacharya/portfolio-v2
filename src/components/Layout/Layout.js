@@ -3,8 +3,8 @@ import React from "react"
 import "../../styles/global.scss"
 import styles from "./layout.module.scss"
 
-import Header from "../header"
-import Footer from "../footer"
+import Header from "../Header"
+import Footer from "../Footer"
 
 const Layout = ({ children }) => {
   return (

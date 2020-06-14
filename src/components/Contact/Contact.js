@@ -3,7 +3,7 @@ import React from "react"
 import styles from "./style.module.scss"
 
 import useForm from "../../hooks/use-form"
-import SocialIcons from "./social-icons"
+import SocialIcons from "./SocialIcons"
 const Contact = () => {
   const [formData, handleInput] = useForm()
 

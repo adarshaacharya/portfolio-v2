@@ -1,10 +1,9 @@
 import React from "react"
-import { Link } from "gatsby"
 
-import Layout from "../components/layout"
+import Layout from "../components/Layout"
 import usePosts from "../hooks/use-posts"
-import PostPreview from "../components/post-preview"
-import SEO from "../components/seo"
+import PostPreview from "../components/PostPreview"
+import SEO from "../components/Seo"
 
 export default function Blog() {
   const posts = usePosts()

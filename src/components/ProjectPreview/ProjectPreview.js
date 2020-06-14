@@ -4,7 +4,7 @@ import Icon from "../../hooks/use-icons"
 
 import styles from "./style.module.scss"
 
-const ProjectsList = ({
+const ProjectPreview = ({
   project: { title, repo, demo, description, currentImg },
 }) => {
   return (
@@ -31,4 +31,4 @@ const ProjectsList = ({
   )
 }
 
-export default ProjectsList
+export default ProjectPreview

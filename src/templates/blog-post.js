@@ -1,8 +1,8 @@
 import React from "react"
 import { graphql, Link, useStaticQuery } from "gatsby"
 import { MDXRenderer } from "gatsby-plugin-mdx"
-import Layout from "../components/layout"
-import SEO from "../components/seo"
+import Layout from "../components/Layout"
+import SEO from "../components/Seo"
 
 import styles from "./style.module.scss"
 
