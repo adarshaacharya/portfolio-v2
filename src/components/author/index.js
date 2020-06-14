@@ -34,9 +34,7 @@ export default function Author() {
                 <img src={insta} alt="Instagram" />
               </a>
             </div>
-            <p>
-              adarshaofficial@gmail.com
-            </p>
+            <p>adarshaofficial@gmail.com</p>
           </div>
         </div>
 
@@ -46,6 +44,15 @@ export default function Author() {
           problems into simple, beautiful and intuitive solutions. I love
           speaking and contributing open source too.
         </p>
+
+        <a
+          className={styles.resume}
+          href="https://drive.google.com/file/d/1yRn7sCfYR29rYTFr8dpLe0CnAyZQod-c/view"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Download Resume
+        </a>
       </div>
 
       <div className={styles.techStack}>

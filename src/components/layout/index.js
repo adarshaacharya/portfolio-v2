@@ -10,7 +10,6 @@ const Layout = ({ children }) => {
   return (
     <>
       <Header />
-
       <div className={styles.layout}>
         <main className="container">{children}</main>
         <Footer />

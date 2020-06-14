@@ -2,10 +2,10 @@
   > div {
     display: grid;
     grid-template-columns: 1fr 2fr;
+    grid-gap: 5px;
     align-items: center;
 
     .author-img {
-      margin-right: 2rem;
       img {
         height: 200px !important ;
         width: 200px !important;
@@ -36,10 +36,19 @@
       }
     }
 
-    p {
-      font-family: "IBM Plex Mono", monospace;
-    }
+     p {
+       margin-left: 1rem;;
+     }
   }
+
+   .resume {
+     display: inline-block;
+     color : var(--dark-color);
+    font-family: Ibm Plex Mono;
+    font-size: 20px;
+    border-bottom: 1px dashed var(--primary-color);
+    margin: 15px 0;
+   }
 }
 
 .tech-stack {
@@ -55,5 +64,16 @@
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     row-gap: 2rem;
+
+    > div {
+      text-align: center;
+      margin-bottom: 40px;
+      p {
+        display: inline-block;
+        font-family: Ibm Plex Mono;
+        font-size: 17px;
+        border-bottom: 1px dashed var(--primary-color);
+      }
+    }
   }
 }

@@ -4,6 +4,7 @@
 
   position: sticky;
   width: 100%;
+  height: 80px;
   left: 0;
   top: 0;
   z-index: 2;
@@ -17,7 +18,6 @@
     margin: auto;
     display: grid;
     grid-template-columns: 6fr 3fr;
-    padding: 0 1rem;
     align-items: center;
   }
 

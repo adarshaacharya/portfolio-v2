@@ -10,7 +10,6 @@ export default function IndexPage() {
     <Layout>
       <SEO title={`Home Page`} />
       <Author />
-      <Link to="/projects/" className="btn"> View My Projects &rarr; </Link>
     </Layout>
   )
 }

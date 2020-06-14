@@ -11,8 +11,8 @@ const SocialIcons = () => {
         <h2>Hit me up.</h2>
         <div className={styles.icons}>
           {SOCIALS.data.map(el => (
-            <div>
-              <Icon stack={el.social} key={el.social} />
+            <div key={el.social}>
+              <Icon stack={el.social} />
               <br />
               <a href={el.link} target="_blank" rel="noopener noreferrer">
                 {el.social}
@@ -24,6 +24,5 @@ const SocialIcons = () => {
     </>
   )
 }
-
 
 export default SocialIcons

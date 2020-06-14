@@ -1,15 +1,14 @@
 export const TECHS = {
-  title: "My Tech Stack",
   data: [
     "HTML5",
     "CSS3",
+    "Php",
     "JavaScript",
     "React",
     "Node.js",
-    "Sass",
-    "Git",
-    "Heroku",
-    "MySQL",
+    "Gatsby",
+    "MySql",
     "MongoDB",
+    "Git",
   ],
 }
