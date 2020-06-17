@@ -1,4 +1,5 @@
 import React from "react"
+import PropTypes from "prop-types"
 import Image from "gatsby-image"
 import Icon from "../../hooks/use-icons"
 
@@ -29,6 +30,14 @@ const ProjectPreview = ({
       </div>
     </>
   )
+}
+
+ProjectPreview.propTypes = {
+  title: PropTypes.string.isRequired,
+  repo: PropTypes.string.isRequired,
+  demo: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
+  currentImg: PropTypes.string.isRequired,
 }
 
 export default ProjectPreview

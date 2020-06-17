@@ -36,19 +36,26 @@
       }
     }
 
-     p {
-       margin-left: 1rem;;
-     }
+    p {
+      margin-left: 1rem;
+    }
   }
 
-   .resume {
-     display: inline-block;
-     color : var(--dark-color);
+  .resume {
+    display: flex;
+    color: var(--dark-color);
     font-family: Ibm Plex Mono;
     font-size: 20px;
-    border-bottom: 1px dashed var(--primary-color);
     margin: 15px 0;
-   }
+
+    .icon {
+      padding-right: 1rem;
+    }
+
+    .link {
+      border-bottom: 1px dashed var(--primary-color);
+    }
+  }
 }
 
 .tech-stack {

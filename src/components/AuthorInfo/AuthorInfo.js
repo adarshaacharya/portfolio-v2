@@ -10,6 +10,7 @@ import usePersonalPhoto from "../../hooks/use-personal-pic"
 import github from "../../../images/social/github.svg"
 import insta from "../../../images/social/insta.svg"
 import twitter from "../../../images/social/twitter.svg"
+import download from "../../../images/download.svg"
 
 export default function AuthorInfo() {
   const photo = usePersonalPhoto()
@@ -45,14 +46,17 @@ export default function AuthorInfo() {
           speaking and contributing open source too.
         </p>
 
-        <a
-          className={styles.resume}
-          href="https://drive.google.com/file/d/1yRn7sCfYR29rYTFr8dpLe0CnAyZQod-c/view"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Download Resume
-        </a>
+        <div className={styles.resume}>
+          <img src={download} alt="Resume" className={styles.icon} />
+          <a
+            className={styles.link}
+            href="https://drive.google.com/file/d/1yRn7sCfYR29rYTFr8dpLe0CnAyZQod-c/view"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Download Resume
+          </a>
+        </div>
       </div>
 
       <div className={styles.techStack}>

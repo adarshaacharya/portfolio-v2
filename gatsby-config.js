@@ -81,6 +81,8 @@ module.exports = {
             options: {
               classPrefix: "language-",
               inlineCodeMarker: null,
+              showLineNumbers: true,
+              noInlineHighlight: false,
               aliases: { sh: "bash", js: "javascript" },
             },
           },
@@ -88,6 +90,5 @@ module.exports = {
       },
     },
     "gatsby-remark-reading-time",
-   
   ],
 }

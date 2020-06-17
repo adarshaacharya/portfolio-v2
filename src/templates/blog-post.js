@@ -17,12 +17,9 @@ const BlogPostTemplate = ({ data, pageContext }) => {
         description={post.frontmatter.description}
       />
 
-      <div className={styles.currentBlogPost}>
+      <div className={styles.currentBlogPost} >
         <h1>{post.frontmatter.title}</h1>
-
-        <p>
-          Posted by {post.frontmatter.author} on {post.frontmatter.date}{" "}
-        </p>
+        Posted by {post.frontmatter.author} on {post.frontmatter.date} <br />
         <i>{post.fields.readingTime.text}</i>
         <MDXRenderer>{post.body}</MDXRenderer>
       </div>
@@ -71,5 +68,3 @@ export const query = graphql`
     }
   }
 `
-
-
