@@ -89,6 +89,7 @@ module.exports = {
         ],
       },
     },
-    "gatsby-remark-reading-time",
+    `gatsby-remark-reading-time`,
+    `gatsby-plugin-styled-components`,
   ],
 }
