@@ -6,6 +6,8 @@ import styles from "./style.module.scss"
 
 import TechStack from "./TechStack"
 import usePersonalPhoto from "../../hooks/use-personal-pic"
+import Icon from "../../hooks/use-icons"
+import { SOCIALS } from "../../constants/social"
 
 import github from "../../../images/social/github.svg"
 import insta from "../../../images/social/insta.svg"
@@ -35,7 +37,9 @@ export default function AuthorInfo() {
                 <img src={insta} alt="Instagram" />
               </a>
             </div>
-            <p>adarshaofficial@gmail.com</p>
+            <p>
+              adarshaofficial@gmail.com
+            </p>
           </div>
         </div>
 

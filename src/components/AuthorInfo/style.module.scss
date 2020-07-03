@@ -4,17 +4,16 @@
     grid-template-columns: 1fr 2fr;
     grid-gap: 5px;
     align-items: center;
+    max-width: 900px;
+    margin-bottom: 2rem;
 
     .author-img {
       img {
-        height: 200px !important ;
-        width: 200px !important;
+      
         border-radius: 50%;
         border: 3px solid var(--theme);
       }
     }
-
-    margin-bottom: 2rem;
   }
 
   .info {
@@ -80,6 +79,33 @@
         font-family: Ibm Plex Mono;
         font-size: 17px;
         border-bottom: 1px dashed var(--primary-color);
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 520px) {
+  .author-info {
+    > div {
+     
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 1px;
+      
+
+      .author-img {
+        height: 100px !important ;
+        width: 100px !important;
+      }
+    }
+
+    .info {
+      padding-top: 2rem;
+      h1 {
+        font-weight: 400px;
+        font-size: 1.4rem;
+      }
+      p {
+        font-size: 1.1rem;
       }
     }
   }

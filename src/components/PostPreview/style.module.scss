@@ -5,14 +5,13 @@ article {
 
 
   .post {
-    border-bottom: 1px solid var(--hr-color);
+    border-bottom: 1px dashed var(--hr-color);
     padding: 30px 30px;
     display: grid;
     margin: 0;
     &:hover {
       background: rgba(0,0,0, 0.1);
       border-radius: 5px;
-      border: none;
     }
 
     h2 {

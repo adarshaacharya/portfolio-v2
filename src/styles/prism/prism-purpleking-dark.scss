@@ -16,6 +16,7 @@ pre[class*="language-"] {
   white-space: pre;
   word-spacing: normal;
   word-break: normal;
+  border-radius: 6px;
 
   -moz-tab-size: 4;
   -o-tab-size: 4;
@@ -186,10 +187,8 @@ pre > code.highlight {
 /* overrides color-values for the Line Highlight plugin
 * http://prismjs.com/plugins/gatsby-highlight-code-line/
 */
-/* .gatsby-highlight-code-line {
-	background: rgba(224, 145, 66, 0.2);
-	background: -webkit-linear-gradient(left, rgba(224, 145, 66, 0.2) 70%, rgba(224, 145, 66, 0));
-	background: linear-gradient(to right, rgba(224, 145, 66, 0.2) 70%, rgba(224, 145, 66, 0));
-} */
-
-
+// .gatsby-highlight-code-line {
+// 	background: rgba(224, 145, 66, 0.2);
+// 	background: -webkit-linear-gradient(left, rgba(224, 145, 66, 0.2) 70%, rgba(224, 145, 66, 0));
+// 	background: linear-gradient(to right, rgba(224, 145, 66, 0.2) 70%, rgba(224, 145, 66, 0));
+// }
