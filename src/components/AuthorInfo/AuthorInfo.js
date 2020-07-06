@@ -9,10 +9,10 @@ import usePersonalPhoto from '@hooks/use-personal-pic'
 import Icon from '@hooks/use-icons'
 import { SOCIALS } from '@src/constants/social'
 
-import github from '../../../images/social/github.svg'
-import insta from '../../../images/social/insta.svg'
-import twitter from '../../../images/social/twitter.svg'
-import download from '../../../images/download.svg'
+import github from '@images/social/github.svg'
+import insta from '@images/social/insta.svg'
+import twitter from '@images/social/twitter.svg'
+import download from '@images/download.svg'
 
 export default function AuthorInfo() {
   const photo = usePersonalPhoto()

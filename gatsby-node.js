@@ -9,6 +9,7 @@ exports.onCreateWebpackConfig = ({ actions }) => {
         '@components': path.join(__dirname, 'src/components'),
         '@pages': path.join(__dirname, 'src/pages'),
         '@hooks': path.join(__dirname, 'src/hooks'),
+        '@images': path.join(__dirname, 'static/images'),
       },
     },
   })

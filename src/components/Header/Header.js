@@ -5,10 +5,10 @@ import { ThemeToggler } from 'gatsby-plugin-dark-mode'
 import Switch from 'react-switch'
 
 import styles from './header.module.scss'
-import { useLogo } from '../../hooks/use-logo'
+import { useLogo } from '@hooks/use-logo'
 
-import sunIcon from '../../../images/toggle/sun-icon.svg'
-import moonIcon from '../../../images/toggle/moon-icon.svg'
+import sunIcon from '@images/toggle/sun-icon.svg'
+import moonIcon from '@images/toggle/moon-icon.svg'
 
 const Header = () => {
   const logo = useLogo()

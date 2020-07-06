@@ -36,7 +36,7 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/images`,
+        path: `${__dirname}/static/images`, // globally shares image for graphql query
         name: `images`,
       },
     },

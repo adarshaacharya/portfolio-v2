@@ -3,7 +3,6 @@ import Icon from '@hooks/use-icons'
 import { SOCIALS } from '@src/constants/social'
 import styles from './style.module.scss'
 
-
 const SocialIcons = () => {
   return (
     <>
