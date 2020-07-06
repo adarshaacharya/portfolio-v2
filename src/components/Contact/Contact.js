@@ -1,9 +1,9 @@
-import React from "react"
+import React from 'react'
 
-import styles from "./style.module.scss"
+import styles from './style.module.scss'
 
-import useForm from "../../hooks/use-form"
-import SocialIcons from "./SocialIcons"
+import useForm from '@hooks/use-form'
+import SocialIcons from './SocialIcons'
 const Contact = () => {
   const [formData, handleInput] = useForm()
 

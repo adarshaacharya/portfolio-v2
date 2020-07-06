@@ -1,6 +1,6 @@
 import React from "react"
-import { TECHS } from "../../constants/stack"
-import Icon from "../../hooks/use-icons"
+import { TECHS } from "@src/constants/stack"
+import Icon from "@hooks/use-icons"
 import styles from "./style.module.scss"
 
 export default function TechStack() {

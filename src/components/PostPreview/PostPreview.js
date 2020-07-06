@@ -1,7 +1,6 @@
 import React from "react"
 import { Link } from "gatsby"
 import PropTypes from 'prop-types'
-import Icon from "../../hooks/use-icons"
 import styles from "./style.module.scss"
 
 const PostPreview = ({

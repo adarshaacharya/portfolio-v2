@@ -1,7 +1,22 @@
 const path = require(`path`)
 
+exports.onCreateWebpackConfig = ({ actions }) => {
+  actions.setWebpackConfig({
+    resolve: {
+      alias: {
+        src: path.join(__dirname, 'src'),
+        '@src': path.join(__dirname, 'src'),
+        '@components': path.join(__dirname, 'src/components'),
+        '@pages': path.join(__dirname, 'src/pages'),
+        '@hooks': path.join(__dirname, 'src/hooks'),
+      },
+    },
+  })
+}
+
+// create pages for each post
 exports.createPages = async ({ actions, graphql, resporter }) => {
-  const blogPost = path.resolve("./src/templates/blog-post.js")
+  const blogPost = path.resolve('./src/templates/blog-post.js')
 
   const result = await graphql(`
     query {
@@ -17,7 +32,7 @@ exports.createPages = async ({ actions, graphql, resporter }) => {
   `)
 
   if (result.erros) {
-    reporter.panic("failed to create posts", result.errors)
+    reporter.panic('failed to create posts', result.errors)
   }
 
   // all post pages

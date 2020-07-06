@@ -1,7 +1,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 import Image from "gatsby-image"
-import Icon from "../../hooks/use-icons"
+import Icon from "@hooks/use-icons"
 
 import styles from "./style.module.scss"
 

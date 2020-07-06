@@ -1,14 +1,14 @@
-import React from "react"
-import { Link } from "gatsby"
-import Image from "gatsby-image"
-import { ThemeToggler } from "gatsby-plugin-dark-mode"
-import Switch from "react-switch"
+import React from 'react'
+import { Link } from 'gatsby'
+import Image from 'gatsby-image'
+import { ThemeToggler } from 'gatsby-plugin-dark-mode'
+import Switch from 'react-switch'
 
-import styles from "./header.module.scss"
-import { useLogo } from "../../hooks/use-logo"
+import styles from './header.module.scss'
+import { useLogo } from '../../hooks/use-logo'
 
-import sunIcon from "../../../images/toggle/sun-icon.svg"
-import moonIcon from "../../../images/toggle/moon-icon.svg"
+import sunIcon from '../../../images/toggle/sun-icon.svg'
+import moonIcon from '../../../images/toggle/moon-icon.svg'
 
 const Header = () => {
   const logo = useLogo()
@@ -44,13 +44,17 @@ const Header = () => {
                   <div id={styles.themeToggler}>
                     <Switch
                       onChange={e =>
-                        toggleTheme(theme === "light" ? "dark" : "light")
+                        toggleTheme(theme === 'light' ? 'dark' : 'light')
                       }
-                      checked={theme === "dark"}
+                      checked={theme === 'dark'}
                       onColor="#4487F4"
                       offColor="#222"
-                      checkedIcon={<img src={moonIcon} alt="moon icon" height="22"/>}
-                      uncheckedIcon={<img src={sunIcon} alt="sun icon" height="22"/>}
+                      checkedIcon={
+                        <img src={moonIcon} alt="moon icon" height="22" />
+                      }
+                      uncheckedIcon={
+                        <img src={sunIcon} alt="sun icon" height="22" />
+                      }
                       boxShadow="0 0 2px 3px #5d83e8"
                       activeBoxShadow="0 0 2px 3px #5d83e8"
                       height={20}
@@ -66,6 +70,5 @@ const Header = () => {
     </>
   )
 }
-
 
 export default Header
