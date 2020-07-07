@@ -32,8 +32,7 @@ export const ProjectPreviewWrapper = styled.div`
     .project-links {
       display: flex;
       align-items: center;
-      /* // position: absolute;
-      // bottom: auto; */
+   
       :first-child {
         height: 1.5rem;
         fill: var(--theme);

@@ -1,5 +1,6 @@
 const path = require(`path`)
 
+// alias for folder system
 exports.onCreateWebpackConfig = ({ actions }) => {
   actions.setWebpackConfig({
     resolve: {
@@ -10,6 +11,7 @@ exports.onCreateWebpackConfig = ({ actions }) => {
         '@pages': path.join(__dirname, 'src/pages'),
         '@hooks': path.join(__dirname, 'src/hooks'),
         '@images': path.join(__dirname, 'static/images'),
+        '@portfolio-ui' : path.join(__dirname, 'src/@portfolio-ui')
       },
     },
   })

@@ -16,6 +16,9 @@
             ],
             "@images/*": [
                 "static/images/*"
+            ],
+            "@portfolio-ui/*": [
+                "src/@portfolio-ui/*"
             ]
         }
     }

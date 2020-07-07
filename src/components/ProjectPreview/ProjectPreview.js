@@ -1,8 +1,8 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import Image from 'gatsby-image'
 import Icon from '@hooks/use-icons'
-import ProjectPreviewWrapper from './ProjectPreview.style'
+import Image from 'gatsby-image'
+import PropTypes from 'prop-types'
+import React from 'react'
+import { ProjectPreviewWrapper } from './ProjectPreview.style'
 
 const ProjectPreview = ({
   project: { title, repo, demo, description, currentImg },
