@@ -1,14 +1,15 @@
 import React from 'react'
 import Icon from '@hooks/use-icons'
 import { SOCIALS } from '@src/constants/social'
-import styles from './style.module.scss'
+
+import { SocialWrapper } from './Contact.style'
 
 const SocialIcons = () => {
   return (
     <>
-      <section className={styles.social}>
+      <SocialWrapper>
         <h2>Hit me up.</h2>
-        <div className={styles.icons}>
+        <div className="icons">
           {SOCIALS.data.map(el => (
             <div key={el.social}>
               <Icon stack={el.social} />
@@ -19,7 +20,7 @@ const SocialIcons = () => {
             </div>
           ))}
         </div>
-      </section>
+      </SocialWrapper>
     </>
   )
 }

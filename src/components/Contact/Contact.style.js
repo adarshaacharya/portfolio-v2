@@ -1,4 +1,6 @@
-.contact {
+import styled from 'styled-components'
+
+export const ContactWrapper = styled.div`
   form {
     min-height: 400px;
     padding: 3rem;
@@ -17,9 +19,9 @@
     display: grid;
     grid-gap: 1rem;
     grid-template-areas:
-      "name email"
-      "message message"
-      ".btn";
+      'name email'
+      'message message'
+      '.btn';
   }
 
   .name {
@@ -71,9 +73,9 @@
     text-decoration: none;
     line-height: 1;
   }
-}
+`
 
-.social {
+export const SocialWrapper = styled.section`
   h2 {
     padding: 1rem;
   }
@@ -92,4 +94,4 @@
       }
     }
   }
-}
+`

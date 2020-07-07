@@ -22,7 +22,7 @@ const ProjectPreview = ({
               {" "}
               <Icon stack="GitHub" key="github" className={styles.github} />
             </a>
-            <a href={demo} target="_blank" className={styles.demo}>
+            <a href={demo} target="_blank" rel="noopener noreferrer" className={styles.demo}>
               Demo &rarr;
             </a>
           </div>
