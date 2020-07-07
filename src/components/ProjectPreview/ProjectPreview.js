@@ -1,33 +1,37 @@
-import React from "react"
-import PropTypes from "prop-types"
-import Image from "gatsby-image"
-import Icon from "@hooks/use-icons"
-
-import styles from "./style.module.scss"
+import Icon from '@hooks/use-icons'
+import Image from 'gatsby-image'
+import PropTypes from 'prop-types'
+import React from 'react'
+import { ProjectPreviewWrapper } from './ProjectPreview.style'
 
 const ProjectPreview = ({
   project: { title, repo, demo, description, currentImg },
 }) => {
   return (
     <>
-      <div className={styles.project}>
+      <ProjectPreviewWrapper>
         <Image fluid={currentImg} alt={title} />
         <div>
           <h3>{title}</h3>
 
           <p>{description}</p>
 
-          <div className={styles.projectLinks}>
-            <a href={repo} target="_blank" className={styles.repo}>
-              {" "}
-              <Icon stack="GitHub" key="github" className={styles.github} />
+          <div className="project-links">
+            <a href={repo} target="_blank" className="repo">
+              {' '}
+              <Icon stack="GitHub" key="github" className="github" />
             </a>
-            <a href={demo} target="_blank" className={styles.demo}>
+            <a
+              href={demo}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="demo"
+            >
               Demo &rarr;
             </a>
           </div>
         </div>
-      </div>
+      </ProjectPreviewWrapper>
     </>
   )
 }

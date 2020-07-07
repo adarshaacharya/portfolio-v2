@@ -4,7 +4,7 @@ import Image from 'gatsby-image'
 import { ThemeToggler } from 'gatsby-plugin-dark-mode'
 import Switch from 'react-switch'
 
-import styles from './header.module.scss'
+import { HeaderWrapper } from './Header.style'
 import { useLogo } from '@hooks/use-logo'
 
 import sunIcon from '@images/toggle/sun-icon.svg'
@@ -15,33 +15,33 @@ const Header = () => {
 
   return (
     <>
-      <nav className={styles.mainNav}>
-        <div className={styles.navContainer}>
-          <Link to="/" className={styles.logo}>
-            <Image fixed={logo} alt="Aadarsha" className={styles.navImage} />
+      <HeaderWrapper>
+        <div className="nav-container">
+          <Link to="/" className="logo">
+            <Image fixed={logo} alt="Aadarsha" className="nav-image" />
           </Link>
 
-          <ul className={styles.navList}>
-            <li className={styles.navItem}>
-              <Link to="/projects/" activeClassName={styles.currentPage}>
+          <ul className="nav-list">
+            <li className="nav-item">
+              <Link to="/projects/" activeClassName="current-page">
                 Projects
               </Link>
             </li>
-            <li className={styles.navItem}>
-              <Link to="/blog/" activeClassName={styles.currentPage}>
+            <li className="nav-item">
+              <Link to="/blog/" activeClassName="current-page">
                 Blogs
               </Link>
             </li>
-            <li className={styles.navItem}>
-              <Link to="/contact/" activeClassName={styles.currentPage}>
+            <li className="nav-item">
+              <Link to="/contact/" activeClassName="current-page">
                 Contact
               </Link>
             </li>
 
-            <li className={styles.navItem}>
+            <li className="nav-item">
               <ThemeToggler>
                 {({ theme, toggleTheme }) => (
-                  <div id={styles.themeToggler}>
+                  <div id="theme-toggler">
                     <Switch
                       onChange={e =>
                         toggleTheme(theme === 'light' ? 'dark' : 'light')
@@ -66,7 +66,7 @@ const Header = () => {
             </li>
           </ul>
         </div>
-      </nav>
+      </HeaderWrapper>
     </>
   )
 }

@@ -1,24 +1,23 @@
 import React from 'react'
-
-import styles from './style.module.scss'
-
 import useForm from '@hooks/use-form'
 import SocialIcons from './SocialIcons'
+import { ContactWrapper } from './Contact.style'
+
 const Contact = () => {
   const [formData, handleInput] = useForm()
 
   return (
     <>
-      <section className={styles.contact}>
+      <ContactWrapper>
         <h1>Drop Hello.</h1>
 
         <form autoComplete="off">
-          <div className={styles.row}>
-            <div className={styles.name}>
+          <div className="row">
+            <div className="name">
               <label htmlFor="name">Name</label>
               <input
                 type="text"
-                className={styles.formControl}
+                className="form-control"
                 name="name"
                 id="name"
                 placeholder="Adarsha Acharya"
@@ -28,11 +27,11 @@ const Contact = () => {
               />
             </div>
 
-            <div className={styles.email}>
+            <div className="email">
               <label htmlFor="email">Email</label>
               <input
                 type="email"
-                className={styles.formControl}
+                className="form-control"
                 name="email"
                 id="email"
                 placeholder="adarsha@example.com"
@@ -43,11 +42,11 @@ const Contact = () => {
             </div>
           </div>
 
-          <div className={styles.message}>
+          <div className="message">
             <label htmlFor="message">Message</label>
             <textarea
               name="message"
-              className={styles.formControl}
+              className="form-control"
               id="message"
               cols="30"
               rows="10"
@@ -59,10 +58,10 @@ const Contact = () => {
           </div>
 
           <div>
-            <input type="submit" value="Send" className={styles.btn} />
+            <input type="submit" value="Send" className="btn" />
           </div>
         </form>
-      </section>
+      </ContactWrapper>
 
       <SocialIcons />
     </>
