@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `Aadarsha Acharya`,
-    author: `@UltimateAdarsha`,
+    author: `@aadarshatweets`,
     description: `My personal portfoilio created using Gatsby`,
     siteUrl: `https://adarshaacharya.com.np/`,
     keywords: [
@@ -36,7 +36,7 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/images`,
+        path: `${__dirname}/static/images`, // globally shares image for graphql query
         name: `images`,
       },
     },
@@ -89,7 +89,10 @@ module.exports = {
         ],
       },
     },
+    // reading time
     `gatsby-remark-reading-time`,
+
+    // styled components
     `gatsby-plugin-styled-components`,
   ],
 }

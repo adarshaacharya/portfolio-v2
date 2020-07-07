@@ -1,8 +1,7 @@
-import React from "react"
-import { SOCIALS } from "../../constants/social"
-import Icon from "../../hooks/use-icons"
-
-import styles from "./style.module.scss"
+import React from 'react'
+import Icon from '@hooks/use-icons'
+import { SOCIALS } from '@src/constants/social'
+import styles from './style.module.scss'
 
 const SocialIcons = () => {
   return (

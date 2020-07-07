@@ -1,32 +1,31 @@
-import React from "react"
-import { Link } from "gatsby"
-import Image from "gatsby-image"
+import React from 'react'
+import Image from 'gatsby-image'
 
-import styles from "./style.module.scss"
 
-import TechStack from "./TechStack"
-import usePersonalPhoto from "../../hooks/use-personal-pic"
-import Icon from "../../hooks/use-icons"
-import { SOCIALS } from "../../constants/social"
+import TechStack from './TechStack'
+import usePersonalPhoto from '@hooks/use-personal-pic'
+import Icon from '@hooks/use-icons'
+import { SOCIALS } from '@src/constants/social'
 
-import github from "../../../images/social/github.svg"
-import insta from "../../../images/social/insta.svg"
-import twitter from "../../../images/social/twitter.svg"
-import download from "../../../images/download.svg"
+import github from '@images/social/github.svg'
+import insta from '@images/social/insta.svg'
+import twitter from '@images/social/twitter.svg'
+import download from '@images/download.svg'
+import { AuthorInfoWrapper } from './AuthorInfo.style'
 
 export default function AuthorInfo() {
   const photo = usePersonalPhoto()
 
   return (
     <>
-      <div className={styles.authorInfo}>
+      <AuthorInfoWrapper>
         <div>
-          <Image fixed={photo} className={styles.authorImg} />
+          <Image fixed={photo} className="author-img" />
 
-          <div className={styles.info}>
+          <div className="info">
             <h1>Aadarsha Acharya</h1>
 
-            <div className={styles.socialIcons}>
+            <div className="social-icons">
               <a href="https://github.com/adarshaacharya">
                 <img src={github} alt="GitHub" />
               </a>
@@ -37,9 +36,7 @@ export default function AuthorInfo() {
                 <img src={insta} alt="Instagram" />
               </a>
             </div>
-            <p>
-              adarshaofficial@gmail.com
-            </p>
+            <p>adarshaofficial@gmail.com</p>
           </div>
         </div>
 
@@ -50,10 +47,10 @@ export default function AuthorInfo() {
           speaking and contributing open source too.
         </p>
 
-        <div className={styles.resume}>
-          <img src={download} alt="Resume" className={styles.icon} />
+        <div className="resume">
+          <img src={download} alt="Resume" className="icon" />
           <a
-            className={styles.link}
+            className="link"
             href="https://drive.google.com/file/d/1yRn7sCfYR29rYTFr8dpLe0CnAyZQod-c/view"
             target="_blank"
             rel="noopener noreferrer"
@@ -61,11 +58,10 @@ export default function AuthorInfo() {
             Download Resume
           </a>
         </div>
-      </div>
+      </AuthorInfoWrapper>
 
-      <div className={styles.techStack}>
         <TechStack />
-      </div>
+   
     </>
   )
 }
