@@ -2,7 +2,6 @@ import React from 'react'
 import GlobalStyles from '@src/styles/GlobalStyles'
 import Footer from '@components/Footer'
 import Header from '@components/Header'
-import styles from './layout.module.scss'
 import { LayoutWrapper } from './Layout.style'
 
 const Layout = ({ children }) => {
