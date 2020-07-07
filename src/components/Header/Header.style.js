@@ -1,4 +1,6 @@
-.main-nav {
+import styled from 'styled-components'
+
+export const HeaderWrapper = styled.nav`
   background: var(--bg);
   transition: 0.2s ease-out;
 
@@ -53,4 +55,4 @@
     width: 0;
     padding: 0 1rem;
   }
-}
+`
