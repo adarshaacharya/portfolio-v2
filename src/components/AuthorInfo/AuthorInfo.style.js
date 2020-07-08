@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 
 export const AuthorInfoWrapper = styled.section`
   > div {
@@ -21,7 +21,7 @@ export const AuthorInfoWrapper = styled.section`
     h1 {
       color: var(--primary-color);
       font-weight: 700;
-      font-size: 2.4rem;
+      /* font-size: 2.4rem; */
       margin-left: 1rem;
     }
 
@@ -44,7 +44,7 @@ export const AuthorInfoWrapper = styled.section`
   .resume {
     display: flex;
     color: var(--dark-color);
-    font-family: Ibm Plex Mono;
+    /* font-family: Ibm Plex Mono; */
     font-size: 20px;
     margin: 15px 0;
 
@@ -56,14 +56,39 @@ export const AuthorInfoWrapper = styled.section`
       border-bottom: 1px dashed var(--primary-color);
     }
   }
-`
+
+  @media screen and (max-width: 520px) {
+    .author-info {
+      > div {
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 1px;
+
+        .author-img {
+          height: 100px !important ;
+          width: 100px !important;
+        }
+      }
+
+      .info {
+        padding-top: 2rem;
+        h1 {
+          font-weight: 400px;
+          font-size: 1.4rem;
+        }
+        p {
+          font-size: 1.1rem;
+        }
+      }
+    }
+  }
+`;
 
 export const TechStackWrapper = styled.section`
-padding: 1rem 0;
+  padding: 1rem 0;
   h2 {
     padding: 2rem 0;
     font-weight: 700;
-    font-size: 1.8rem;
+    /* font-size: 1.8rem; */
     margin-bottom: 1.5rem;
     letter-spacing: -0.03rem;
   }
@@ -78,40 +103,9 @@ padding: 1rem 0;
       p {
         display: inline-block;
         font-family: Ibm Plex Mono;
-        font-size: 17px;
+        /* font-size: 17px; */
         border-bottom: 1px dashed var(--primary-color);
       }
     }
   }
-}
-
-
-
-@media screen and (max-width: 520px) {
-  .author-info {
-    > div {
-     
-      grid-template-columns: 1fr 1fr;
-      grid-gap: 1px;
-      
-
-      .author-img {
-        height: 100px !important ;
-        width: 100px !important;
-      }
-    }
-
-    .info {
-      padding-top: 2rem;
-      h1 {
-        font-weight: 400px;
-        font-size: 1.4rem;
-      }
-      p {
-        font-size: 1.1rem;
-      }
-    }
-  }
-
-
-`
+`;

@@ -19,7 +19,10 @@
             ],
             "@portfolio-ui/*": [
                 "src/@portfolio-ui/*"
-            ]
+            ],
+            "@context/*": [
+                "src/context/*"
+            ],
         }
     }
 }

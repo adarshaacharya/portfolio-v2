@@ -1,12 +1,12 @@
-import { useState } from "react"
+import { useState } from 'react';
 
 function useForm() {
-  const [formData, setFormData] = useState({})
+  const [formData, setFormData] = useState({});
   const handleInput = e => {
-    const { value, name } = e.target
-    setFormData({ ...formData, [name]: value })
-  }
-  return [formData, handleInput]
+    const { value, name } = e.target;
+    setFormData({ ...formData, [name]: value });
+  };
+  return [formData, handleInput];
 }
 
-export default useForm
+export default useForm;

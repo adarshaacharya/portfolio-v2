@@ -1,4 +1,4 @@
-import { graphql, useStaticQuery } from "gatsby"
+import { graphql, useStaticQuery } from 'gatsby';
 
 export const useProjects = () => {
   const data = useStaticQuery(graphql`
@@ -32,8 +32,7 @@ export const useProjects = () => {
         }
       }
     }
-  `)
- 
+  `);
 
   return data.allProjectsJson.edges.map(({ node }, index) => ({
     currentImg: data.allFile.edges[index].node.sharp.fluid, // optimized image
@@ -42,5 +41,5 @@ export const useProjects = () => {
     demo: node.demo,
     image: node.image, // raw image
     description: node.description,
-  }))
-}
+  }));
+};

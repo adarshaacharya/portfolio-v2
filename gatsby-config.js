@@ -11,7 +11,6 @@ module.exports = {
 
   plugins: [
     `gatsby-plugin-react-helmet`,
-    `gatsby-plugin-dark-mode`,
     `gatsby-plugin-sass`,
 
     // Google fonts
@@ -26,7 +25,7 @@ module.exports = {
           `Merriweather`,
           `source sans pro\:300,400,400i,700`,
         ],
-        display: "swap",
+        display: 'swap',
       },
     },
 
@@ -63,15 +62,15 @@ module.exports = {
 
     // Mdx plugin & its config for subfield : prismjs, remark-images, reading-time,etc.
     {
-      resolve: "gatsby-plugin-mdx",
+      resolve: 'gatsby-plugin-mdx',
       options: {
-        extensions: [".mdx", ".md"],
+        extensions: ['.mdx', '.md'],
         defaultLayouts: {
-          default: require.resolve("./src/components/Layout/index.js"),
+          default: require.resolve('./src/components/Layout/index.js'),
         },
         gatsbyRemarkPlugins: [
           {
-            resolve: "gatsby-remark-images",
+            resolve: 'gatsby-remark-images',
             options: {
               maxWidth: 1035,
             },
@@ -79,11 +78,11 @@ module.exports = {
           {
             resolve: `gatsby-remark-prismjs`,
             options: {
-              classPrefix: "language-",
+              classPrefix: 'language-',
               inlineCodeMarker: null,
               showLineNumbers: true,
               noInlineHighlight: false,
-              aliases: { sh: "bash", js: "javascript" },
+              aliases: { sh: 'bash', js: 'javascript' },
             },
           },
         ],
@@ -95,4 +94,4 @@ module.exports = {
     // styled components
     `gatsby-plugin-styled-components`,
   ],
-}
+};

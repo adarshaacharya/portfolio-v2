@@ -1,20 +1,19 @@
-import React from 'react'
-import Image from 'gatsby-image'
+import React from 'react';
+import Image from 'gatsby-image';
 
+import TechStack from './TechStack';
+import usePersonalPhoto from '@hooks/use-personal-pic';
+import Icon from '@hooks/use-icons';
+import { SOCIALS } from '@src/constants/social';
 
-import TechStack from './TechStack'
-import usePersonalPhoto from '@hooks/use-personal-pic'
-import Icon from '@hooks/use-icons'
-import { SOCIALS } from '@src/constants/social'
-
-import github from '@images/social/github.svg'
-import insta from '@images/social/insta.svg'
-import twitter from '@images/social/twitter.svg'
-import download from '@images/download.svg'
-import { AuthorInfoWrapper } from './AuthorInfo.style'
+import github from '@images/social/github.svg';
+import insta from '@images/social/insta.svg';
+import twitter from '@images/social/twitter.svg';
+import download from '@images/download.svg';
+import { AuthorInfoWrapper } from './AuthorInfo.style';
 
 export default function AuthorInfo() {
-  const photo = usePersonalPhoto()
+  const photo = usePersonalPhoto();
 
   return (
     <>
@@ -41,10 +40,11 @@ export default function AuthorInfo() {
         </div>
 
         <p>
-          I'm Aadarsha Acharya, CS student based in Kathmandu, Nepal. I love
-          writing codes to solve real world problems and enjoy turning complex
-          problems into simple, beautiful and intuitive solutions. I love
-          speaking and contributing open source too.
+          Hey there, I am a fullstack developer from Kathmandu, Nepal. I mostly
+          work on Javascript, React, Node & MongoDB.I love writing codes to
+          solve real world problems and enjoy turning complex problems into
+          simple, beautiful and intuitive solutions. I love speaking and
+          contributing open source too.
         </p>
 
         <div className="resume">
@@ -60,8 +60,7 @@ export default function AuthorInfo() {
         </div>
       </AuthorInfoWrapper>
 
-        <TechStack />
-   
+      <TechStack />
     </>
-  )
+  );
 }

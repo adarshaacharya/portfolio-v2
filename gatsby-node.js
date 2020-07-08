@@ -1,4 +1,4 @@
-const path = require(`path`)
+const path = require(`path`);
 
 // alias for folder system
 exports.onCreateWebpackConfig = ({ actions }) => {
@@ -11,15 +11,19 @@ exports.onCreateWebpackConfig = ({ actions }) => {
         '@pages': path.join(__dirname, 'src/pages'),
         '@hooks': path.join(__dirname, 'src/hooks'),
         '@images': path.join(__dirname, 'static/images'),
-        '@portfolio-ui' : path.join(__dirname, 'src/@portfolio-ui')
+        '@portfolio-ui': path.join(__dirname, 'src/@portfolio-ui'),
+        '@context': path.join(__dirname, 'src/context'),
       },
     },
-  })
-}
+  });
+};
 
-// create pages for each post
+/*===============================================
+  Create Page for Each Blog Post
+===================================================*/
+
 exports.createPages = async ({ actions, graphql, resporter }) => {
-  const blogPost = path.resolve('./src/templates/blog-post.js')
+  const blogPost = path.resolve('./src/templates/blog-post.js');
 
   const result = await graphql(`
     query {
@@ -32,18 +36,18 @@ exports.createPages = async ({ actions, graphql, resporter }) => {
         }
       }
     }
-  `)
+  `);
 
   if (result.erros) {
-    reporter.panic('failed to create posts', result.errors)
+    reporter.panic('failed to create posts', result.errors);
   }
 
   // all post pages
-  const posts = result.data.allMdx.nodes
+  const posts = result.data.allMdx.nodes;
 
   posts.forEach((post, index) => {
-    const previous = index === posts.length - 1 ? null : posts[index + 1]
-    const next = index === 0 ? null : posts[index - 1]
+    const previous = index === posts.length - 1 ? null : posts[index + 1];
+    const next = index === 0 ? null : posts[index - 1];
 
     actions.createPage({
       path: post.frontmatter.slug, // url of each post will bve slug
@@ -53,6 +57,6 @@ exports.createPages = async ({ actions, graphql, resporter }) => {
         previous,
         next,
       },
-    })
-  })
-}
+    });
+  });
+};

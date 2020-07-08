@@ -1,24 +1,23 @@
-import React from 'react'
-import { Link } from 'gatsby'
-import Image from 'gatsby-image'
-import { ThemeToggler } from 'gatsby-plugin-dark-mode'
-import Switch from 'react-switch'
+import { useLogo } from '@hooks/use-logo';
+// import { ThemeToggler } from 'gatsby-plugin-dark-mode'
+// import Switch from 'react-switch'
+import ToggleSwitch from '@portfolio-ui/ToggleSwitch';
+import { Link } from 'gatsby';
+import Image from 'gatsby-image';
+import React from 'react';
+import { HeaderWrapper } from './Header.style';
 
-import { HeaderWrapper } from './Header.style'
-import { useLogo } from '@hooks/use-logo'
-
-import sunIcon from '@images/toggle/sun-icon.svg'
-import moonIcon from '@images/toggle/moon-icon.svg'
 
 const Header = () => {
-  const logo = useLogo()
+  const logo = useLogo();
 
   return (
     <>
       <HeaderWrapper>
         <div className="nav-container">
           <Link to="/" className="logo">
-            <Image fixed={logo} alt="Aadarsha" className="nav-image" />
+            {/* <Image fixed={logo} alt="Aadarsha" className="nav-image" /> */}
+            adarsha
           </Link>
 
           <ul className="nav-list">
@@ -39,7 +38,8 @@ const Header = () => {
             </li>
 
             <li className="nav-item">
-              <ThemeToggler>
+              <ToggleSwitch />
+              {/* <ThemeToggler>
                 {({ theme, toggleTheme }) => (
                   <div id="theme-toggler">
                     <Switch
@@ -62,13 +62,13 @@ const Header = () => {
                     />
                   </div>
                 )}
-              </ThemeToggler>
+              </ThemeToggler> */}
             </li>
           </ul>
         </div>
       </HeaderWrapper>
     </>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;
