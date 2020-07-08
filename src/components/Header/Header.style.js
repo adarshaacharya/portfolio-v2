@@ -4,7 +4,7 @@ export const HeaderWrapper = styled.nav`
   background: var(--bg);
   transition: 0.2s ease-out;
 
-  position: sticky;
+  /* position: sticky; */
   width: 100%;
   height: 80px;
   left: 0;
@@ -13,7 +13,7 @@ export const HeaderWrapper = styled.nav`
 
   box-shadow: var(--nav-shadow);
   border-bottom: var(--nav-border);
-  border-top: 4px solid var(--theme);
+  border-top: 4px solid ${p => p.theme.primaryColor};
 
   .nav-container {
     max-width: 750px;

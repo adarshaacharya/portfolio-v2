@@ -1,6 +1,4 @@
-// gatsby-browser.js
+require("./src/styles/prism/new-moon.scss")
 
-// require("./src/styles/prism/prism-purpleking-dark.css")
-require("./src/styles/prism/prism-purpleking-dark.scss")
-
+// if you want line no.
 // require("prismjs/plugins/line-numbers/prism-line-numbers.css")

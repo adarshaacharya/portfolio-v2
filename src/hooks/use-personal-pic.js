@@ -1,4 +1,4 @@
-import { graphql, useStaticQuery } from 'gatsby'
+import { graphql, useStaticQuery } from 'gatsby';
 
 const usePersonalPhoto = () => {
   const data = useStaticQuery(graphql`
@@ -11,9 +11,9 @@ const usePersonalPhoto = () => {
         }
       }
     }
-  `)
+  `);
 
-  return data.pic.sharp.fixed
-}
+  return data.pic.sharp.fixed;
+};
 
-export default usePersonalPhoto
+export default usePersonalPhoto;
