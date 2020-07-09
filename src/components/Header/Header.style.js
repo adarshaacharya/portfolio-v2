@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 export const HeaderWrapper = styled.nav`
   background: var(--bg);
-  transition: 0.2s ease-out;
+  /* transition: 0.2s ease-out; */
 
   /* position: sticky; */
   width: 100%;
@@ -34,6 +34,8 @@ export const HeaderWrapper = styled.nav`
   ul {
     display: flex;
     justify-items: end;
+    list-style: none;
+
     li a {
       padding: 0.5rem 0.75rem;
       margin: 0.5rem 0;

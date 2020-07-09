@@ -1,7 +1,7 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 
 export const PostPreviewWrapper = styled.article`
-   /* box-shadow: rgba(0, 0, 0, 0.05) 0px 5px 10px;
+  /* box-shadow: rgba(0, 0, 0, 0.05) 0px 5px 10px;
    margin-bottom: 4rem; */
   background-color: var(--card-color);
 
@@ -37,6 +37,8 @@ export const PostPreviewWrapper = styled.article`
   }
   p {
     font-size: 1.1rem;
+    margin: 0;
+    padding : 2rem 0;
   }
 
   .tags {
@@ -55,4 +57,4 @@ export const PostPreviewWrapper = styled.article`
       border-bottom-color: transparent;
     }
   }
-`
+`;

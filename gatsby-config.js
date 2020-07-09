@@ -12,7 +12,6 @@ module.exports = {
   plugins: [
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sass`,
-
     // Google fonts
     {
       resolve: `gatsby-plugin-google-fonts`,
@@ -60,21 +59,30 @@ module.exports = {
       },
     },
 
-    // Mdx plugin & its config for subfield : prismjs, remark-images, reading-time,etc.
+    // Mdx plugin & its config for subfield : prismjs, autolink-headers, remark-images, reading-time,etc.
     {
       resolve: 'gatsby-plugin-mdx',
+
       options: {
         extensions: ['.mdx', '.md'],
         defaultLayouts: {
           default: require.resolve('./src/components/Layout/index.js'),
         },
         gatsbyRemarkPlugins: [
+          //embed codepen
+          `gatsby-remark-embedder`,
+
+          // auto link headers
           {
-            resolve: 'gatsby-remark-images',
+            resolve: `gatsby-remark-autolink-headers`,
             options: {
-              maxWidth: 1035,
+              className: `gatsby-remark-autolink`,
+              maintainCase: true,
+              removeAccents: true,
             },
           },
+
+          // prismjs
           {
             resolve: `gatsby-remark-prismjs`,
             options: {
@@ -85,13 +93,31 @@ module.exports = {
               aliases: { sh: 'bash', js: 'javascript' },
             },
           },
+
+          // images in markdown
+          {
+            resolve: 'gatsby-remark-images',
+            options: {
+              maxWidth: 1035,
+            },
+          },
         ],
       },
     },
+
     // reading time
     `gatsby-remark-reading-time`,
 
     // styled components
     `gatsby-plugin-styled-components`,
+
+    // NProgress
+    {
+      resolve: `gatsby-plugin-nprogress`,
+      options: {
+        color: `#2298DC`,
+        showSpinner: false,
+      },
+    },
   ],
 };

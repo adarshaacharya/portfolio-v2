@@ -1,4 +1,6 @@
 import { createGlobalStyle } from 'styled-components';
+import PrismJsStyles from './prism/prismjs.style';
+import BlogCssStyles from './blogcss.style';
 
 const GlobalStyles = createGlobalStyle`
 /* Reset */
@@ -16,6 +18,7 @@ const GlobalStyles = createGlobalStyle`
     -webkit-font-smoothing: antialiased;
     font-display : fallback !important;
     line-height: 1.6;
+    scroll-behavior: smooth;
   }
   
   body {
@@ -60,34 +63,21 @@ const GlobalStyles = createGlobalStyle`
     margin : 30px 0;
   }
 
+ 
+/*===============
+  Prism JS styles
+================*/
+${PrismJsStyles}
 
+/*===============
+  Blog styles
+================*/
+${BlogCssStyles}
 
- /* For codeblock in blog */
-blockquote {
-  margin: 1.5rem 0;
-  padding: 1rem;
-  background: ${p => p.theme.blockQuote};
-  border-radius: 0.3rem;
-  border: 1px solid #ffe066;
-  border-left: 8px solid #ffe066;
-}
+/*===============
+  Scrollbar styles
+================*/
 
-blockquote p {
-  margin: 0;
-}
-
-blockquote a {
-  padding: 1px 4px;
-  border-bottom: 2px solid #ffe066;
-  color: #343a40;
-}
-
-blockquote a:hover {
-  border-radius: 0.3rem;
-  border-bottom: 2px solid #ffe066;
-  background: #ffe066;
-  color: #343a40;
-}
 
 `;
 

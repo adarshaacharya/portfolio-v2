@@ -1,7 +1,7 @@
-import React from 'react'
-import { Link } from 'gatsby'
-import PropTypes from 'prop-types'
-import { PostPreviewWrapper } from './PostPreview.style'
+import React from 'react';
+import { Link } from 'gatsby';
+import PropTypes from 'prop-types';
+import { PostPreviewWrapper } from './PostPreview.style';
 
 const PostPreview = ({
   post: { title, date, tags, readingTime, slug, description },
@@ -19,14 +19,14 @@ const PostPreview = ({
 
           <ul className="tags">
             {tags.map(tag => (
-              <li>#{tag}</li>
+              <li key={tag}>#{tag}</li>
             ))}
           </ul>
         </div>
       </Link>
     </PostPreviewWrapper>
-  )
-}
+  );
+};
 
 PostPreview.propTypes = {
   title: PropTypes.string.isRequired,
@@ -35,5 +35,5 @@ PostPreview.propTypes = {
   tags: PropTypes.array.isRequired,
   readingTime: PropTypes.string.isRequired,
   date: PropTypes.string.isRequired,
-}
-export default PostPreview
+};
+export default PostPreview;
