@@ -21,7 +21,6 @@
     "env-cmd": "^10.1.0",
     "gatsby": "^2.21.21",
     "gatsby-image": "^2.4.3",
-    "gatsby-plugin-dark-mode": "^1.1.2",
     "gatsby-plugin-google-fonts": "^1.0.1",
     "gatsby-plugin-mdx": "^1.2.22",
     "gatsby-plugin-nprogress": "^2.3.10",
@@ -45,7 +44,6 @@
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-helmet": "^6.0.0",
-    "react-switch": "^5.0.1",
     "simple-icons": "^2.14.0",
     "styled-components": "^5.1.1"
   },
