@@ -1,8 +1,13 @@
 import { css } from 'styled-components';
 
 const BlogCssStyles = css`
-
-.blog-content {
+  /* Disqus styles */
+  div#disqus_thread {
+    background: whitesmoke;
+    padding: 15px 25px;
+    border-radius: 10px;
+  }
+  .blog-content {
     ${p => p.theme.spacing.sectionTopBottom};
     margin-top: 50px;
     line-height: 1.58;
@@ -83,12 +88,14 @@ const BlogCssStyles = css`
 
     /* Gatsby image*/
     .gatsby-resp-image-image,
-    .gatsby-resp-image-background-image {
+    .gatsby-resp-image-background-image,
+    img {
       border-radius: 8px;
-      transition: all 0.6s;
+      transition: transform 0.6s;
 
       &:hover {
-        translate: scale(1);
+        transform: scale(1.03);
+        cursor: pointer;
       }
     }
 

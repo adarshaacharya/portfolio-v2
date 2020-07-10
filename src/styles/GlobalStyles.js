@@ -18,7 +18,7 @@ const GlobalStyles = createGlobalStyle`
     -webkit-font-smoothing: antialiased;
     font-display : fallback !important;
     line-height: 1.6;
-    scroll-behavior: smooth;
+    /* scroll-behavior: smooth; */
   }
   
   body {

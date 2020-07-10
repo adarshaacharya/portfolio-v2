@@ -28,10 +28,10 @@ export default function AuthorInfo() {
               <a href="https://github.com/adarshaacharya">
                 <img src={github} alt="GitHub" />
               </a>
-              <a href="https://twitter.com/UltimateAdarshx">
+              <a href="https://twitter.com/adarshatweets">
                 <img src={twitter} alt="Twitter" />
               </a>
-              <a href="https://instagram.com/adarsha004">
+              <a href="https://instagram.com/adarsha.acharya.004">
                 <img src={insta} alt="Instagram" />
               </a>
             </div>

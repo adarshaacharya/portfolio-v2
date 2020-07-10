@@ -12,6 +12,7 @@ module.exports = {
   plugins: [
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sass`,
+    
     // Google fonts
     {
       resolve: `gatsby-plugin-google-fonts`,
@@ -119,5 +120,6 @@ module.exports = {
         showSpinner: false,
       },
     },
+
   ],
 };

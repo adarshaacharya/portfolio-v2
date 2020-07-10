@@ -7,5 +7,5 @@
 
 ---
 
-Made with ❤️ and ![www.gatsby.com]@gatsby
+Made with ❤️ and [@gatsby](www.gatsby.com)
 

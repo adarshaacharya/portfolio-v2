@@ -1,3 +1,5 @@
+/* Welcome to node interface */
+
 const path = require(`path`);
 
 // alias for folder system
@@ -18,20 +20,21 @@ exports.onCreateWebpackConfig = ({ actions }) => {
   });
 };
 
-/*===============================================
-  Create Page for Each Blog Post
-===================================================*/
+/*======================================================
+  Create Page for Each Blog Post ( Programmatic Page Gen)
+======================================================*/
 
 exports.createPages = async ({ actions, graphql, resporter }) => {
-  const blogPost = path.resolve('./src/templates/blog-post.js');
+  const blogPostTemplate = path.resolve('./src/templates/blog-post.js');
 
+  // get only slug to create pages and pages themselves query for data. Title is queried for next & prev 
   const result = await graphql(`
     query {
       allMdx(sort: { fields: [frontmatter___date], order: DESC }, limit: 1000) {
         nodes {
           frontmatter {
             slug
-            title
+            title 
           }
         }
       }
@@ -39,19 +42,22 @@ exports.createPages = async ({ actions, graphql, resporter }) => {
   `);
 
   if (result.erros) {
-    reporter.panic('failed to create posts', result.errors);
+    reporter.panic('Failed to create posts', result.errors);
   }
 
-  // all post pages
+  // get data out of all mdx (contains : frontmatter -> slug)
   const posts = result.data.allMdx.nodes;
 
   posts.forEach((post, index) => {
     const previous = index === posts.length - 1 ? null : posts[index + 1];
     const next = index === 0 ? null : posts[index - 1];
 
+    // create each blog post with template using slug
     actions.createPage({
-      path: post.frontmatter.slug, // url of each post will bve slug
-      component: blogPost,
+      path: post.frontmatter.slug, // url of each post will be /blog/slug
+      component: blogPostTemplate,
+
+      // pass slug to the template (data to be passed to tmplate so that it can independently query its data )
       context: {
         slug: post.frontmatter.slug,
         previous,

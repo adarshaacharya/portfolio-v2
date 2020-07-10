@@ -1,16 +1,17 @@
-import React from 'react'
-import useForm from '@hooks/use-form'
-import SocialIcons from './SocialIcons'
-import { ContactWrapper } from './Contact.style'
+import React from 'react';
+import useForm from '@hooks/use-form';
+import SocialIcons from './SocialIcons';
+import { ContactWrapper } from './Contact.style';
 
 const Contact = () => {
-  const [formData, handleInput] = useForm()
+  const [formData, handleInput] = useForm();
 
   return (
     <>
       <ContactWrapper>
         <h1>Drop Hello.</h1>
-
+        If you have something you wanna talk about, have a question or just want
+        to say hi, send me an email or DM me on Twitter.
         <form autoComplete="off">
           <div className="row">
             <div className="name">
@@ -65,7 +66,7 @@ const Contact = () => {
 
       <SocialIcons />
     </>
-  )
-}
+  );
+};
 
-export default Contact
+export default Contact;
