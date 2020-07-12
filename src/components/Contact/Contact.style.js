@@ -76,22 +76,6 @@ export const ContactWrapper = styled.div`
 `
 
 export const SocialWrapper = styled.section`
-  h2 {
-    padding: 1rem;
-  }
 
-  .icons {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-
-    div {
-      text-align: center;
-
-      a {
-        font-family: Ibm Plex Mono;
-        font-size: 13px;
-        border-bottom: 1px dashed var(--primary-color);
-      }
-    }
   }
 `

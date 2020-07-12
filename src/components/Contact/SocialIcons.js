@@ -1,28 +1,29 @@
-import React from 'react'
-import Icon from '@hooks/use-icons'
-import { SOCIALS } from '@src/constants/social'
-
-import { SocialWrapper } from './Contact.style'
+import React from 'react';
+import Icon from '@hooks/use-icons';
+import { SOCIALS } from '@src/constants/social';
+import { PageTitle, Flex, IconPrefix } from '@portfolio-ui/';
+import { SocialWrapper } from './Contact.style';
 
 const SocialIcons = () => {
   return (
     <>
       <SocialWrapper>
-        <h2>Hit me up.</h2>
-        <div className="icons">
+        <PageTitle>Hit me up.</PageTitle>
+        <Flex justify="space-between">
           {SOCIALS.data.map(el => (
-            <div key={el.social}>
+            <div>
               <Icon stack={el.social} />
-              <br />
-              <a href={el.link} target="_blank" rel="noopener noreferrer">
-                {el.social}
-              </a>
+              <IconPrefix>
+                <a href={el.link} target="_blank" rel="noopener noreferrer">
+                  {el.social}
+                </a>
+              </IconPrefix>
             </div>
           ))}
-        </div>
+        </Flex>
       </SocialWrapper>
     </>
-  )
-}
+  );
+};
 
-export default SocialIcons
+export default SocialIcons;

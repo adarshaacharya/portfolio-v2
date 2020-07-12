@@ -5,7 +5,8 @@ import { DiscussionEmbed } from 'disqus-react';
 
 import Layout from '@components/Layout';
 import SEO from '@components/Seo';
-import { url, disqusShortName } from '../../config/config';
+import { Flex } from '@portfolio-ui/';
+import { url, disqusShortName } from '../../config/data';
 
 import './style.scss';
 
@@ -30,12 +31,15 @@ const BlogPostTemplate = ({ data, pageContext }) => {
       />
 
       <div className="blog-content">
-        <h1>{post.frontmatter.title}</h1>
-        <b>
-          👤 {post.frontmatter.author}
-          🗓️ {post.frontmatter.date}
-          🕒{post.fields.readingTime.text}
-        </b>
+        <div className="article-header">
+          <h1>{post.frontmatter.title}</h1>
+          <Flex>
+            <span>👤 {post.frontmatter.author}</span>
+            <span> 🗓️ {post.frontmatter.date}</span>
+            <span>🕒{post.fields.readingTime.text}</span>
+          </Flex>
+        </div>
+
         <MDXRenderer className="post-body">{post.body}</MDXRenderer>
       </div>
 
@@ -43,6 +47,7 @@ const BlogPostTemplate = ({ data, pageContext }) => {
       <DiscussionEmbed shortname={disqusShortName} config={disqusConfig} />
       <hr />
       <nav className="bottom-nav">
+        <h2>Up Next</h2>
         <ul>
           <li>
             {previous && (

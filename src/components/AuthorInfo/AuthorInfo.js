@@ -25,13 +25,25 @@ export default function AuthorInfo() {
             <h1>Aadarsha Acharya</h1>
 
             <div className="social-icons">
-              <a href="https://github.com/adarshaacharya">
+              <a
+                href="https://github.com/adarshaacharya"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <img src={github} alt="GitHub" />
               </a>
-              <a href="https://twitter.com/adarshatweets">
+              <a
+                href="https://twitter.com/adarshatweets"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <img src={twitter} alt="Twitter" />
               </a>
-              <a href="https://instagram.com/adarsha.acharya.004">
+              <a
+                href="https://instagram.com/adarsha.acharya.004"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <img src={insta} alt="Instagram" />
               </a>
             </div>

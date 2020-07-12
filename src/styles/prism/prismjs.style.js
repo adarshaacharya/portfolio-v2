@@ -15,19 +15,16 @@ const PrismJsStyles = css`
     margin: 0;
   }
 
-
   blockquote a {
-  padding: 1px 4px;
-  border-bottom: 2px solid #ffe066;
-  color: ${p => p.theme.primaryColor};
-}
+    padding: 1px 4px;
+    border-bottom: 2px solid #ffe066;
+    color: ${p => p.theme.primaryColor};
+  }
 
-blockquote a:hover {
-  border-bottom: 2px solid #ffe066;
-  background: #ffe066;
-  color: ${p => p.theme.primaryText};
-
-}
+  blockquote a:hover {
+    border-bottom: 2px solid #ffe066;
+    color: ${p => p.theme.primaryText};
+  }
 
   /* inline backtics */
   p > .language-text {

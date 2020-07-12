@@ -1,12 +1,12 @@
 ---
 id : 01
-title: First Post !!
+title: Understanding Template Literals in JavaScript
 slug: hello-world
 description: A brief about rest and spread syntax
 tags : ['reactjs', 'javascript']
 author: Aadarsha Acharya
 date : 2014-03-17
----
+---  
 
 ![random images from unsplash](harley-davidson.jpg)
 
@@ -20,13 +20,62 @@ id sem consectetuer libero luctus adipiscing.
 
 
 
-### Introduction
+## Introduction
 Many new features for working with arrays and objects have been made available to the JavaScript language since the 2015 Edition of the ECMAScript specification. A few of the notable ones that you will learn in this article are destructuring, rest parameters, and spread syntax. These features provide more direct ways of accessing the members of an array or an object, and can make working with these data structures quicker and more succinct.
 
 Many other languages do not have corresponding syntax for destructuring, rest parameters, and spread, so these features may have a learning curve both for new JavaScript developers and those coming from another language. In this article, you will learn how to destructure objects and arrays, how to use the spread operator to unpack objects and arrays, and how to use rest parameters in function calls.
 
 ```jsx
-console.log("Hello World");
+class Board extends React.Component {
+  constructor(props) {
+    super(props);
+    console.log("Many other languages do not have corresponding syntax for destructuring, rest parameters, and spread, so these features may have a learning curve both for new JavaScript developers and those coming from another language. In this article, you will learn how to destructure objects and arrays, how to use the spread operator to unpack objects and arrays, and how to use rest parameters in function calls.
+")
+    this.state = {
+      squares: Array(9).fill(null),
+    };
+  }
+
+  handleClick(i) {
+    const squares = this.state.squares.slice();
+    squares[i] = 'X';
+    this.setState({squares: squares});
+  }
+
+  renderSquare(i) {
+    return (
+      <Square
+        value={this.state.squares[i]}
+        onClick={() => this.handleClick(i)}
+      />
+    );
+  }
+
+  render() {
+    const status = 'Next player: X';
+
+    return (
+      <div>
+        <div className="status">{status}</div>
+        <div className="board-row">
+          {this.renderSquare(0)}
+          {this.renderSquare(1)}
+          {this.renderSquare(2)}
+        </div>
+        <div className="board-row">
+          {this.renderSquare(3)}
+          {this.renderSquare(4)}
+          {this.renderSquare(5)}
+        </div>
+        <div className="board-row">
+          {this.renderSquare(6)}
+          {this.renderSquare(7)}
+          {this.renderSquare(8)}
+        </div>
+      </div>
+    );
+  }
+}
 ```
 
 ## Default NodeJS server

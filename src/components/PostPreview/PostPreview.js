@@ -8,7 +8,7 @@ const PostPreview = ({
 }) => {
   return (
     <PostPreviewWrapper>
-      <Link to={slug} key={title}>
+      <Link to={`/${slug}`} key={title}>
         <div className="post">
           <h2>{title}</h2>
           <div className="prefix">
@@ -28,12 +28,12 @@ const PostPreview = ({
   );
 };
 
-PostPreview.propTypes = {
-  title: PropTypes.string.isRequired,
-  slug: PropTypes.string.isRequired,
-  description: PropTypes.string.isRequired,
-  tags: PropTypes.array.isRequired,
-  readingTime: PropTypes.string.isRequired,
-  date: PropTypes.string.isRequired,
-};
+// PostPreview.propTypes = {
+//   title: PropTypes.string.isRequired,
+//   slug: PropTypes.string.isRequired,
+//   description: PropTypes.string.isRequired,
+//   tags: PropTypes.array.isRequired,
+//   readingTime: PropTypes.string.isRequired,
+//   date: PropTypes.string.isRequired,
+// };
 export default PostPreview;

@@ -12,17 +12,17 @@ module.exports = {
   plugins: [
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sass`,
-    
+
     // Google fonts
     {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
         fonts: [
-          `Lato`,
-          `Inter`,
+          `Inter\:300,400,400i,500,600,700`,
           `IBM Plex Mono`,
           `Montserrat`,
           `Merriweather`,
+          `Muli`,
           `source sans pro\:300,400,400i,700`,
         ],
         display: 'swap',
@@ -120,6 +120,5 @@ module.exports = {
         showSpinner: false,
       },
     },
-
   ],
 };

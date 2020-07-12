@@ -1,15 +1,16 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-
 import Footer from '@components/Footer';
-import Header from '@components/Header';
-import { LayoutWrapper } from './Layout.style';
-
-import useDarkMode from '@hooks/use-dark-mode';
 import ThemeToggleContext from '@context/ThemeToggleContext';
+import useDarkMode from '@hooks/use-dark-mode';
+import Navbar from '@src/components/Navbar';
 import GlobalStyles from '@src/styles/GlobalStyles';
+import PropTypes from 'prop-types';
+import React from 'react';
+import { setConfiguration } from 'react-grid-system';
 import { ThemeProvider } from 'styled-components';
+import { LayoutWrapper } from './Layout.style';
 import { darkTheme, lightTheme } from './Theme/theme';
+
+setConfiguration({ breakpoints: [576, 769, 992, 1200] }); // sm, md, lg, xl
 
 const Layout = ({ children }) => {
   const [theme, toggleTheme] = useDarkMode();
@@ -20,13 +21,11 @@ const Layout = ({ children }) => {
       <>
         <GlobalStyles />
         <ThemeToggleContext.Provider value={{ theme, toggleTheme }}>
-          <Header />
+          <Navbar />
         </ThemeToggleContext.Provider>
 
-        <LayoutWrapper>
-          <main className="container">{children}</main>
-          <Footer />
-        </LayoutWrapper>
+        <LayoutWrapper>{children}</LayoutWrapper>
+        <Footer />
       </>
     </ThemeProvider>
   );

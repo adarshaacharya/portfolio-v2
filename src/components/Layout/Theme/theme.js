@@ -8,6 +8,8 @@ export const sizes = {
 };
 
 const commonTheme = {
+  shadow: '0px 10px 10px rgba(0, 0, 0, 0.2)',
+  shadowSmall: '0px 5px 10px rgba(0, 0, 0, 0.05)',
   fontFamily: '"Lato", sans-serif',
   secondaryFontFamily: '"Inter", sans-serif',
   spacing: {
@@ -37,6 +39,7 @@ export const lightTheme = {
   primaryBlack: '#383838',
   primaryText: '#383838',
   blockQuote: '#fff9db',
+  navBorderBottom: 'none',
   ...commonTheme,
 };
 
@@ -50,5 +53,6 @@ export const darkTheme = {
   elevation0: '#191919',
   primaryText: '#F8F8F8',
   blockQuote: '#232323',
+  navBorderBottom: '0.1px solid hsl(0, 0%, 22%)',
   ...commonTheme,
 };

@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Flex } from '@portfolio-ui/';
 
 export const AuthorInfoWrapper = styled.section`
   > div {
@@ -65,7 +66,7 @@ export const AuthorInfoWrapper = styled.section`
 
         .author-img {
           height: 100px !important ;
-          width: 100px !important;
+          max-width: 100px !important;
         }
       }
 
@@ -83,29 +84,16 @@ export const AuthorInfoWrapper = styled.section`
   }
 `;
 
-export const TechStackWrapper = styled.section`
-  padding: 1rem 0;
-  h2 {
-    padding: 2rem 0;
-    font-weight: 700;
-    /* font-size: 1.8rem; */
-    margin-bottom: 1.5rem;
-    letter-spacing: -0.03rem;
-  }
-  .techs {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    row-gap: 2rem;
+export const TechStackWrapper = styled.section``;
 
-    > div {
-      text-align: center;
-      margin-bottom: 40px;
-      p {
-        display: inline-block;
-        font-family: Ibm Plex Mono;
-        /* font-size: 17px; */
-        border-bottom: 1px dashed var(--primary-color);
-      }
-    }
+export const TechItem = styled(Flex)`
+  padding: 1rem 0;
+  margin: 0;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  [data-icon='Next.js'] svg {
+    fill: ${p => p.theme.primaryBlack};
   }
 `;

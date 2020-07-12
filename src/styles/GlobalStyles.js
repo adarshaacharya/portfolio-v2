@@ -1,6 +1,6 @@
 import { createGlobalStyle } from 'styled-components';
-import PrismJsStyles from './prism/prismjs.style';
 import BlogCssStyles from './blogcss.style';
+import PrismJsStyles from './prism/prismjs.style';
 
 const GlobalStyles = createGlobalStyle`
 /* Reset */
@@ -23,6 +23,7 @@ const GlobalStyles = createGlobalStyle`
   
   body {
     margin : 0;
+    padding : 0;
     background-color : ${p => p.theme.bg};
     color : ${p => p.theme.primaryText};
     transition: 0.2s ease-out;
@@ -50,6 +51,11 @@ const GlobalStyles = createGlobalStyle`
     line-height : 150%;
   }
 
+  /* img {
+  display: inline-block;
+  max-width: 100%;
+  height: auto;
+} */
 
   ul {
       list-style: none;

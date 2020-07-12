@@ -1,21 +1,24 @@
-import React from 'react'
-import { TECHS } from '@src/constants/stack'
-import Icon from '@hooks/use-icons'
-import { TechStackWrapper } from './AuthorInfo.style'
+import React from 'react';
+import { Row, Col } from 'react-grid-system';
+import { TECHS } from '@src/constants/stack';
+import Icon from '@hooks/use-icons';
+import { PageTitle, IconPrefix } from '@portfolio-ui/';
+import { TechStackWrapper, TechItem } from './AuthorInfo.style';
 
 export default function TechStack() {
   return (
     <TechStackWrapper>
-      <h2>Things I love</h2>
-      <div className="techs">
+      <PageTitle>Technologies I've worked with.</PageTitle>
+      <Row>
         {TECHS.data.map(tech => (
-          <div key={tech}>
-            <Icon stack={tech} />
-            <br />
-            <p>{tech}</p>
-          </div>
+          <Col lg={3} md={4} sm={4} xs={6} key={tech}>
+            <TechItem>
+              <Icon stack={tech} />
+              <IconPrefix>{tech}</IconPrefix>
+            </TechItem>
+          </Col>
         ))}
-      </div>
+      </Row>
     </TechStackWrapper>
-  )
+  );
 }

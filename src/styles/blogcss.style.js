@@ -7,15 +7,16 @@ const BlogCssStyles = css`
     padding: 15px 25px;
     border-radius: 10px;
   }
-  .blog-content {
-    ${p => p.theme.spacing.sectionTopBottom};
-    margin-top: 50px;
-    line-height: 1.58;
 
+  .blog-content {
+    font-family: 'Inter';
+    padding: 0 1em;
+   
     p {
-      font-size: 18px;
+      font-size: 1rem;
       line-height: 36px;
-      margin: 1em auto;
+      margin: 1.5rem auto;
+      font-weight: 400;
     }
 
     a:hover {
@@ -32,45 +33,81 @@ const BlogCssStyles = css`
       margin: 0;
     }
 
-    /* code {
-      font-size: 16px;
-    } */
+    /*codepen*/
     iframe {
       border-radius: 5px;
       border: none;
       height: 500px !important;
     }
+
     figure {
       margin: 50px 0;
     }
+
     figcaption {
       margin: 10px 0;
       font-style: italic;
       font-size: 12px;
       text-align: center;
     }
+
     @media ${p => p.theme.media.tablet} {
       pre {
         overflow-x: scroll;
       }
     }
-    h1 {
-      font-size: 3rem;
-      font-weight: 700;
-      margin-bottom: 50px;
-    }
+
     h2,
     h3,
     h4,
     h5,
     h6 {
-      font-family: ${p => p.theme.secondaryFontFamily};
-      margin: 2.1em 0 0.5em 0;
-      color: ${p => p.theme.primaryColor};
-      &:hover .gatsby-remark-autolink svg {
-        opacity: 1;
-      }
+      margin: 0 0 1.5rem 0;
+      line-height: 1.2;
     }
+
+    /* blog heading styles*/
+    h1:not(:first-child),
+    h2:not(:first-child),
+    h3:not(:first-child),
+    h4:not(:first-child) {
+      margin-top: 3rem;
+    }
+
+    h1 {
+      font-size: 2rem;
+      font-weight: 700;
+    }
+
+    h2 {
+      font-size: 1.8rem;
+      font-weight: 700;
+    }
+
+    h2 code {
+      font-size: 1.75rem !important;
+    }
+
+    h3 {
+      font-size: 1.4rem;
+      font-weight: 600;
+    }
+
+    h3 code {
+      font-size: 1.3rem !important;
+    }
+
+    h4 {
+      font-size: 1.3rem;
+      font-weight: 400;
+      margin-bottom: 1rem;
+    }
+
+    h5 {
+      font-size: 1.2rem;
+      margin-bottom: 1rem;
+    }
+
     ul,
     ol {
       font-family: ${p =>
@@ -109,10 +146,9 @@ const BlogCssStyles = css`
         scale: 1.3;
         margin-right: 10px;
         fill: ${p => p.theme.primaryColor};
-        visibility: visible !important;
-        opacity: 0.5;
       }
       &:hover {
+        visibility: visible !important;
         /* border-bottom: none; */
       }
     }

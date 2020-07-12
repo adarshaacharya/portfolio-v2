@@ -1,7 +1,13 @@
+import { StyledContainer } from '@portfolio-ui/';
 import styled from 'styled-components';
 
-export const LayoutWrapper = styled.section`
-  margin: auto;
-  max-width: 750px;
-  margin-top: 70px;
+export const LayoutWrapper = styled(StyledContainer)`
+  margin-top: 100px;
+  margin-bottom: 20px;
+  padding: 0 1em;
+  min-height: calc(100vh - 125px);
+
+@media ${props => props.theme.media.tablet} {
+  margin-top : 50px;
+}
 `;
