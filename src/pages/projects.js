@@ -1,24 +1,25 @@
-import React from 'react'
-import { Link } from 'gatsby'
+import React from 'react';
+import { Link } from 'gatsby';
 
-import Layout from '@components/Layout'
-import SEO from '@components/Seo'
-import ProjectPreview from '@components/ProjectPreview'
+import Layout from '@components/Layout';
+import SEO from '@components/Seo';
+import ProjectPreview from '@components/ProjectPreview';
+import { SectionTitle } from '@portfolio-ui/';
 
-import { useProjects } from '@hooks/use-projects'
+import { useProjects } from '@hooks/use-projects';
 
 export default function Projects() {
-  const projects = useProjects()
+  const projects = useProjects();
 
   return (
     <Layout>
       <SEO title={`Side Projects`} />
-      <h2>Side Projects.</h2>
+      <SectionTitle>Some Things I've Built.</SectionTitle>
 
       {projects.map(project => (
         <ProjectPreview project={project} key={project.title} />
       ))}
       <Link to="/">&larr; Back to home</Link>
     </Layout>
-  )
+  );
 }

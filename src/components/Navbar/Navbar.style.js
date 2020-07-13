@@ -9,10 +9,10 @@ export const NavWrapper = styled.div`
   position: fixed;
   width: 100%;
 
-  background-color: ${p => p.theme.bg};
-  box-shadow: ${p => p.theme.shadowSmall};
-  border-bottom: ${p => p.theme.navBorderBottom};
-  border-top: 6px solid ${p => p.theme.primaryColor};
+  background-color: ${props => props.theme.bg};
+  box-shadow: ${props => props.theme.shadowSmall};
+  border-bottom: ${props => props.theme.navBorderBottom};
+  border-top: 5px solid ${props => props.theme.primaryColor};
 
   z-index: 99;
   transition: 0.2s ease-out;
@@ -47,14 +47,14 @@ export const NavItem = styled.li`
   font-size: 1rem;
 
   a {
-    color: ${p => p.theme.primaryText};
+    color: ${props => props.theme.primaryText};
   }
 
   a:hover,
   .active {
     cursor: pointer;
     padding-bottom: 25px;
-    color: ${p => p.theme.primaryColor};
-    border-bottom: 2px solid ${p => p.theme.primaryColor};
+    color: ${props => props.theme.primaryColor};
+    border-bottom: 2px solid ${props => props.theme.primaryColor};
   }
 `;

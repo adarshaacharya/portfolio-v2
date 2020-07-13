@@ -2,7 +2,7 @@ import { css } from 'styled-components';
 
 export const sizes = {
   mobile: '480px',
-  tablet: '768px',
+  tablet: '768px',      
   fablet: '1000px',
   desktop: '1200px',
 };
@@ -10,7 +10,7 @@ export const sizes = {
 const commonTheme = {
   shadow: '0px 10px 10px rgba(0, 0, 0, 0.2)',
   shadowSmall: '0px 5px 10px rgba(0, 0, 0, 0.05)',
-  fontFamily: '"Lato", sans-serif',
+  fontFamily: '"Inter", sans-serif',
   secondaryFontFamily: '"Inter", sans-serif',
   spacing: {
     sectionBottom: 'margin-bottom: 100px',

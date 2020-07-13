@@ -2,6 +2,7 @@ import React from 'react';
 import useForm from '@hooks/use-form';
 import SocialIcons from './SocialIcons';
 import { ContactWrapper } from './Contact.style';
+import { SectionTitle } from '@portfolio-ui/';
 
 const Contact = () => {
   const [formData, handleInput] = useForm();
@@ -9,7 +10,7 @@ const Contact = () => {
   return (
     <>
       <ContactWrapper>
-        <h1>Drop Hello.</h1>
+        <SectionTitle>Drop Hello.</SectionTitle>
         If you have something you wanna talk about, have a question or just want
         to say hi, send me an email or DM me on Twitter.
         <form autoComplete="off">

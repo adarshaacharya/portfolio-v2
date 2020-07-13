@@ -2,7 +2,7 @@ import { StyledContainer } from '@portfolio-ui/';
 import styled from 'styled-components';
 
 export const LayoutWrapper = styled(StyledContainer)`
-  margin-top: 100px;
+  margin-top: 150px;
   margin-bottom: 20px;
   padding: 0 1em;
   min-height: calc(100vh - 125px);

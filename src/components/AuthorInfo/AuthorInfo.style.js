@@ -1,6 +1,9 @@
 import styled from 'styled-components';
 import { Flex } from '@portfolio-ui/';
 
+import Image from 'gatsby-image';
+
+
 export const AuthorInfoWrapper = styled.section`
   > div {
     display: grid;
@@ -12,8 +15,6 @@ export const AuthorInfoWrapper = styled.section`
 
     .author-img {
       img {
-        border-radius: 50%;
-        border: 3px solid var(--theme);
       }
     }
   }
@@ -83,6 +84,15 @@ export const AuthorInfoWrapper = styled.section`
     }
   }
 `;
+
+export const Avatar = styled(Image)`
+  border-radius: 50%;
+  border: 3px solid ${props => props.theme.primaryColor};
+`;
+
+export const ResumeWrapper = styled.div`` 
+
+
 
 export const TechStackWrapper = styled.section``;
 

@@ -19,11 +19,10 @@ module.exports = {
       options: {
         fonts: [
           `Inter\:300,400,400i,500,600,700`,
+          `Poppins\:300,400,400i,500,600,700`,
           `IBM Plex Mono`,
-          `Montserrat`,
-          `Merriweather`,
+          `Nunito Sans`,
           `Muli`,
-          `source sans pro\:300,400,400i,700`,
         ],
         display: 'swap',
       },
