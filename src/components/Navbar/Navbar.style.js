@@ -14,7 +14,7 @@ export const NavWrapper = styled.div`
   border-bottom: ${props => props.theme.navBorderBottom};
   border-top: 5px solid ${props => props.theme.primaryColor};
 
-  z-index: 99;
+  z-index: 99;    
   transition: 0.2s ease-out;
 
   .logo {

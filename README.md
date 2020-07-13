@@ -28,3 +28,9 @@ export const Color = {
   yellow: `#e6af05`,
 }
   --boxShadow: rgba(18, 18, 18, .12);      --boxShadow: rgba(250, 250, 250, .12);
+
+
+
+---
+
+#1A202C

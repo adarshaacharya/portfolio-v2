@@ -1,109 +1,64 @@
-import styled from 'styled-components';
-import { Flex } from '@portfolio-ui/';
-
 import Image from 'gatsby-image';
+import styled from 'styled-components';
 
+export const AuthorInfoWrapper = styled.div`
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: auto;
+  margin-bottom: 2rem;
 
-export const AuthorInfoWrapper = styled.section`
-  > div {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    grid-gap: 5px;
-    align-items: center;
-    max-width: 900px;
-    margin-bottom: 2rem;
-
-    .author-img {
-      img {
-      }
-    }
-  }
-
-  .info {
-    h1 {
-      color: var(--primary-color);
-      font-weight: 700;
-      /* font-size: 2.4rem; */
-      margin-left: 1rem;
-    }
-
-    .social-icons {
-      display: flex;
-      justify-content: start;
-      a {
-        img {
-          height: 20px;
-          padding-left: 1rem;
-        }
-      }
-    }
-
-    p {
-      margin-left: 1rem;
-    }
-  }
-
-  .resume {
-    display: flex;
-    color: var(--dark-color);
-    /* font-family: Ibm Plex Mono; */
-    font-size: 20px;
-    margin: 15px 0;
-
-    .icon {
-      padding-right: 1rem;
-    }
-
-    .link {
-      border-bottom: 1px dashed var(--primary-color);
-    }
-  }
-
-  @media screen and (max-width: 520px) {
-    .author-info {
-      > div {
-        grid-template-columns: 1fr 1fr;
-        grid-gap: 1px;
-
-        .author-img {
-          height: 100px !important ;
-          max-width: 100px !important;
-        }
-      }
-
-      .info {
-        padding-top: 2rem;
-        h1 {
-          font-weight: 400px;
-          font-size: 1.4rem;
-        }
-        p {
-          font-size: 1.1rem;
-        }
-      }
-    }
+  @media ${props => props.theme.media.tablet} {
+    grid-template-columns: 1fr;
+    grid-row-gap: 2rem;
+    margin-bottom: 5rem;
   }
 `;
 
 export const Avatar = styled(Image)`
   border-radius: 50%;
   border: 3px solid ${props => props.theme.primaryColor};
+  box-shadow: 4px 4px 23px -10px ${props => props.theme.primaryColor};
+
+  &:hover {
+    cursor: pointer;
+  }
+  @media ${props => props.theme.media.tablet} {
+    justify-self: center;
+  }
 `;
 
-export const ResumeWrapper = styled.div`` 
-
-
-
-export const TechStackWrapper = styled.section``;
-
-export const TechItem = styled(Flex)`
-  padding: 1rem 0;
-  margin: 0;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-
-  [data-icon='Next.js'] svg {
-    fill: ${p => p.theme.primaryBlack};
+export const Info = styled.div`
+  a {
+    color: ${props => props.theme.primaryColor};
+    position: absolute;
+    border-bottom: 2px dotted ${props => props.theme.primaryColor};
+    line-height: 34px;
+    font-size: 1.1rem;
+    letter-spacing: 0.9px;
   }
+  @media ${props => props.theme.media.tablet} {
+    justify-self: center;
+    a {
+      margin-top: 0.5rem;
+    }
+  }
+`;
+
+export const AvatarName = styled.h1`
+  font-family: 'Poppins', sans-serif;
+  font-weight: 900;
+  font-size: 1.9rem;
+  letter-spacing: 2.5px;
+  margin: 0;
+  padding-bottom: 0.5rem;
+  color: ${props => props.theme.textBlack};
+  text-shadow: ${props => (props.theme.dark ? '1px 2px 1px #6D83F2' : 'none')};
+`;
+
+export const Bio = styled.p`
+  padding: 0.8rem 0;
+  line-height: 1.9rem;
+  font-size: 1rem;
 `;

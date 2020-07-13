@@ -6,5 +6,4 @@ export const Flex = styled.div`
   justify-content: ${p => p.justify};
   align-items: ${p => p.align};
   flex-wrap: ${p => (p.nowrap ? 'nowrap' : 'wrap')};
-  gap: ${p => p.gap};
 `;

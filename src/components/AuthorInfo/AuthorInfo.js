@@ -1,31 +1,55 @@
 import React from 'react';
 
 import useAvatar from '@src/hooks/use-avatar';
-import { Flex } from '@portfolio-ui/';
-import download from '@images/download.svg';
+import Resume from './Resume';
 
-import { AuthorInfoWrapper, Avatar, ResumeWrapper } from './AuthorInfo.style';
+import {
+  AuthorInfoWrapper,
+  Avatar,
+  AvatarName,
+  Info,
+  Bio,
+} from './AuthorInfo.style';
 import TechStack from './TechStack';
 
 export default function AuthorInfo() {
-  const photo = useAvatar();
-
+  const avatar = useAvatar();
   return (
     <>
       <AuthorInfoWrapper>
-        <Avatar fixed={photo} alt="adarsha" />
-        <Flex>
-          <img src={download} alt="Resume" />
-          <a
-            href="https://drive.google.com/file/d/1yRn7sCfYR29rYTFr8dpLe0CnAyZQod-c/view"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Download Resume
+        <Avatar fixed={avatar} alt="adarsha" />
+        <Info>
+          <AvatarName>Aadarsha Acharya</AvatarName>
+          <a href="mailto: adarshaofficial@gmail.com">
+            ✉️ adarshaofficial@gmail.com
           </a>
-        </Flex>
+        </Info>
       </AuthorInfoWrapper>
 
+      <Bio>
+        Hello! I’m Aadarsha Acharya, aspiring web developer based in Kathmandu
+        Nepal.
+      </Bio>
+      <Bio>
+        I'm super passionate about exploring and building open source web apps
+        and tools. I like learning about new technologies and try to keep up
+        with the always-evolving JavaScript development world. Currently diving
+        in the React ecosystem with backend in Node.js.
+      </Bio>
+      <Bio>
+        I'm currently pursuing Bachelor Degree (class of 2018) in Computer
+        Science at
+        <a
+          href="http://www.tribhuvan-university.edu.np/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          {' '}
+          Tribuvan University.
+        </a>
+      </Bio>
+
+      <Resume />
       <TechStack />
     </>
   );

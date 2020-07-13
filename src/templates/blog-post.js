@@ -5,7 +5,7 @@ import { DiscussionEmbed } from 'disqus-react';
 
 import Layout from '@components/Layout';
 import SEO from '@components/Seo';
-import { Flex } from '@portfolio-ui/';
+import { Flex, SectionTitle } from '@portfolio-ui/';
 import { url, disqusShortName } from '../../config/data';
 
 import './style.scss';
@@ -32,7 +32,7 @@ const BlogPostTemplate = ({ data, pageContext }) => {
 
       <div className="blog-content">
         <div className="article-header">
-          <h1>{post.frontmatter.title}</h1>
+          <SectionTitle>{post.frontmatter.title}</SectionTitle>
           <Flex>
             <span>👤 {post.frontmatter.author}</span>
             <span> 🗓️ {post.frontmatter.date}</span>

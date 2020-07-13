@@ -1,10 +1,10 @@
+import React from 'react';
 import Footer from '@components/Footer';
 import ThemeToggleContext from '@context/ThemeToggleContext';
 import useDarkMode from '@hooks/use-dark-mode';
 import Navbar from '@src/components/Navbar';
 import GlobalStyles from '@src/styles/GlobalStyles';
 import PropTypes from 'prop-types';
-import React from 'react';
 import { setConfiguration } from 'react-grid-system';
 import { ThemeProvider } from 'styled-components';
 import { LayoutWrapper } from './Layout.style';

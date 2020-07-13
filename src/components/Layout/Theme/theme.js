@@ -56,3 +56,4 @@ export const darkTheme = {
   navBorderBottom: '0.1px solid hsl(0, 0%, 22%)',
   ...commonTheme,
 };
+
