@@ -1,5 +1,6 @@
 import Image from 'gatsby-image';
 import styled from 'styled-components';
+import { Flex } from '@portfolio-ui/';
 
 export const AuthorInfoWrapper = styled.div`
   display: grid;
@@ -12,7 +13,6 @@ export const AuthorInfoWrapper = styled.div`
   @media ${props => props.theme.media.tablet} {
     grid-template-columns: 1fr;
     grid-row-gap: 2rem;
-    margin-bottom: 5rem;
   }
 `;
 
@@ -30,17 +30,16 @@ export const Avatar = styled(Image)`
 `;
 
 export const Info = styled.div`
-  a {
+  .email {
     color: ${props => props.theme.primaryColor};
-    position: absolute;
-    border-bottom: 2px dotted ${props => props.theme.primaryColor};
+    /* border-bottom: 2px dotted ${props => props.theme.primaryColor}; */
     line-height: 34px;
     font-size: 1.1rem;
     letter-spacing: 0.9px;
   }
   @media ${props => props.theme.media.tablet} {
     justify-self: center;
-    a {
+    .email {
       margin-top: 0.5rem;
     }
   }
@@ -50,15 +49,34 @@ export const AvatarName = styled.h1`
   font-family: 'Poppins', sans-serif;
   font-weight: 900;
   font-size: 1.9rem;
-  letter-spacing: 2.5px;
+  letter-spacing: 2px;
   margin: 0;
   padding-bottom: 0.5rem;
   color: ${props => props.theme.textBlack};
   text-shadow: ${props => (props.theme.dark ? '1px 2px 1px #6D83F2' : 'none')};
 `;
 
+export const SocialIcons = styled(Flex)`
+  a {
+    img {
+      height: 25px;
+      padding-left: 1.5rem;
+      margin-top: 1rem;
+    }
+    &:nth-child(1) {
+      img {
+        padding-left: 0;
+      }
+    }
+  }
+
+  @media ${props => props.theme.media.tablet} {
+    justify-content: center;
+  }
+`;
+
 export const Bio = styled.p`
-  padding: 0.8rem 0;
+  padding: 0.7rem 0;
   line-height: 1.9rem;
   font-size: 1rem;
 `;

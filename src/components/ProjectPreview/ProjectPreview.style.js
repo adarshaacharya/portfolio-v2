@@ -7,7 +7,7 @@ export const ProjectPreviewWrapper = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  /* // border: 1px solid hsla(0, 18%, 47%, 0.1); */
+  /* // border: 1px solid hsla(0, 18%, 47%, 0.1); */   
   border-top: 3px solid var(--theme);
   /* // border-left: 1px solid var(--theme);
   // border-right: 1px solid var(--theme); */

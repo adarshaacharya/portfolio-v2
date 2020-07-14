@@ -31,14 +31,16 @@ const BlogPostTemplate = ({ data, pageContext }) => {
       />
 
       <div className="blog-content">
+        <hr/>
         <div className="article-header">
           <SectionTitle>{post.frontmatter.title}</SectionTitle>
-          <Flex>
+          <Flex justify="space-around">
             <span>👤 {post.frontmatter.author}</span>
             <span> 🗓️ {post.frontmatter.date}</span>
-            <span>🕒{post.fields.readingTime.text}</span>
+            <span>🕒 {post.fields.readingTime.text}</span>
           </Flex>
         </div>
+        <hr/>
 
         <MDXRenderer className="post-body">{post.body}</MDXRenderer>
       </div>

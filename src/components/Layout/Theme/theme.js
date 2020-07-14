@@ -39,6 +39,7 @@ export const lightTheme = {
   primaryBlack: '#383838',
   primaryText: '#383838',
   blockQuote: '#fff9db',
+  hrColor : '#eee',
   navBorderBottom: 'none',
   ...commonTheme,
 };
@@ -53,6 +54,7 @@ export const darkTheme = {
   elevation0: '#191919',
   primaryText: '#F8F8F8',
   blockQuote: '#232323',
+  hrColor : '#303030',
   navBorderBottom: '0.1px solid hsl(0, 0%, 22%)',
   ...commonTheme,
 };

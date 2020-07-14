@@ -1,9 +1,8 @@
 import React from 'react';
 
 import github from '@images/social/github.svg';
-import linkedin from '@images/social/linkedin.svg';
+import insta from '@images/social/insta.svg';
 import twitter from '@images/social/twitter.svg';
-
 import useAvatar from '@src/hooks/use-avatar';
 import Resume from './Resume';
 
@@ -24,33 +23,16 @@ export default function AuthorInfo() {
       <AuthorInfoWrapper>
         <Avatar fixed={avatar} alt="adarsha" />
         <Info>
-          <AvatarName> Aadarsha Acharya</AvatarName>
-
-          <a href="mailto: adarshaofficial@gmail.com" className="email">
-            ✉️ adarshaofficial@gmail.com
-          </a>
-
+          <AvatarName>Aadarsha Acharya</AvatarName>
           <SocialIcons>
-            <a
-              href="https://github.com/adarshaacharya"
-              rel="noopener noreferrer"
-              target="_blank"
-            >
+            <a href="https://github.com/adarshaacharya">
               <img src={github} alt="GitHub" />
             </a>
-            <a
-              href="https://twitter.com/adarshatweets"
-              rel="noopener noreferrer"
-              target="_blank"
-            >
+            <a href="https://twitter.com/UltimateAdarshx">
               <img src={twitter} alt="Twitter" />
             </a>
-            <a
-              href="https://www.linkedin.com/in/adarshaacharya/"
-              rel="noopener noreferrer"
-              target="_blank"
-            >
-              <img src={linkedin} alt="linkedin" />
+            <a href="https://instagram.com/adarsha004">
+              <img src={insta} alt="Instagram" />
             </a>
           </SocialIcons>
         </Info>
@@ -80,7 +62,6 @@ export default function AuthorInfo() {
       </Bio>
 
       <Resume />
-      <hr />
       <TechStack />
     </>
   );

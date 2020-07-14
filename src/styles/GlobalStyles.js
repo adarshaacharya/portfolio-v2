@@ -65,8 +65,8 @@ const GlobalStyles = createGlobalStyle`
   }
 
   hr {
-    border : 1px solid ${p => p.theme.accentColor};
-    margin : 30px 0;
+    border-top : 1px solid ${p => p.theme.hrColor};
+    margin : 45px 0;
   }
 
  

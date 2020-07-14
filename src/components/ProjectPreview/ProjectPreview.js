@@ -14,7 +14,7 @@ const ProjectPreview = ({
         <Image fluid={currentImg} alt={title} />
         <div>
           <h3>{title}</h3>
-
+  
           <p>{description}</p>
 
           <div className="project-links">

@@ -2,30 +2,34 @@ import React from 'react';
 import { Link } from 'gatsby';
 import PropTypes from 'prop-types';
 
-import { PostPreviewWrapper } from './PostPreview.style';
+import {
+  PostItem,
+  PostTitle,
+  Description,
+  DateTime,
+  Tags,
+} from './PostPreview.style';
 
 const PostPreview = ({
   post: { title, date, tags, readingTime, slug, description },
 }) => {
   return (
-    <PostPreviewWrapper>
-      <Link to={`/${slug}`} key={title}>
-        <div className="post">
-          <h2>{title}</h2>
-          <div className="prefix">
-            <div className="date">{date}</div>
-            <div className="reading-time"> {readingTime}</div>
-          </div>
-          <p>{description}</p>
+    <PostItem to={`/${slug}`} key={title}>
+      <DateTime>
+        📅 {date} &nbsp; 🕒 {readingTime}
+      </DateTime>
+      <PostTitle>{title}</PostTitle>
 
-          <ul className="tags">
-            {tags.map(tag => (
-              <li key={tag}>#{tag}</li>
-            ))}
-          </ul>
-        </div>
-      </Link>
-    </PostPreviewWrapper>
+      <Description>{description}</Description>
+
+      <Tags>
+        {tags.map(tag => (
+          <span key={tag} className={`tag-${tag}`}>
+            {tag}
+          </span>
+        ))}
+      </Tags>
+    </PostItem>
   );
 };
 
