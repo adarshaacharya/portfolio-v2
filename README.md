@@ -34,3 +34,19 @@ export const Color = {
 ---
 
 #1A202C
+
+
+
+
+
+
+
+export const LabItem = styled.a.attrs(props => ({
+  href: props.href,
+  title: props.title,
+  target: '_blank',
+  rel: 'noopener noreferrer'
+}))`
+  color: var(--primaryColor);
+  display: block;
+`

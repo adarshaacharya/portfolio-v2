@@ -62,9 +62,9 @@ export default function AuthorInfo() {
       </Bio>
       <Bio>
         I'm super passionate about exploring and building open source web apps
-        and tools. I like learning about new technologies and try to keep up
-        with the always evolving JavaScript development world. Currently diving
-        in the React ecosystem with backend in Node.js.
+        and tools and try to keep up with the always evolving JavaScript
+        development world. Currently I'm diving in the React ecosystem with backend
+        in Node.js.
       </Bio>
       <Bio>
         I'm currently pursuing Bachelor Degree (class of 2018) in Computer

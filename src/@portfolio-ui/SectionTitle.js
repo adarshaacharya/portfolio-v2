@@ -10,4 +10,11 @@ export const SectionTitle = styled.h1`
   text-align: ${p => p.align};
   line-height: 45px;
   letter-spacing: 1px;
+
+  @media ${props => props.theme.media.tablet} {
+    margin: 20px auto;
+    text-align: center;
+    font-size: 1.5rem;
+    line-height: 30px;
+  }
 `;

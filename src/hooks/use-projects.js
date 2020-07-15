@@ -11,6 +11,7 @@ export const useProjects = () => {
             demo
             image
             description
+            techs
           }
         }
       }
@@ -35,11 +36,12 @@ export const useProjects = () => {
   `);
 
   return data.allProjectsJson.edges.map(({ node }, index) => ({
-    currentImg: data.allFile.edges[index].node.sharp.fluid, // optimized image
+    thumbnail: data.allFile.edges[index].node.sharp.fluid, // optimized image
     title: node.title,
     repo: node.repo,
     demo: node.demo,
     image: node.image, // raw image
     description: node.description,
+    techs : node.techs
   }));
 };

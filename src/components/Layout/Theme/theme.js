@@ -32,7 +32,7 @@ const commonTheme = {
 
 export const lightTheme = {
   dark: false,
-  bg: '#F8F8F8',
+  bg: '#F7FAFC',
   primaryColor: '#6D83F2',
   secondaryColor: '#F8F8F8',
   accentColor: '#C7D0FF',
