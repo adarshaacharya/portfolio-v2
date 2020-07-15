@@ -1,8 +1,8 @@
 import { useLogo } from '@hooks/use-logo';
 import { Link } from 'gatsby';
 import React from 'react';
-import { NavItem, NavItems } from './Navbar.style';
-import NavLinks from './NavLinks';
+import { NavItem, NavItems } from './NavDesktop.style';
+import NavDesktopLinks from './NavDesktopLinks';
 
 const NavDesktop = () => {
   const logo = useLogo();
@@ -15,7 +15,7 @@ const NavDesktop = () => {
 
       <nav>
         <NavItems>
-          <NavLinks NavItem={NavItem} />
+          <NavDesktopLinks NavItem={NavItem} />
         </NavItems>
       </nav>
     </>

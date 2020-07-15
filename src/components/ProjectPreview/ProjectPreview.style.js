@@ -76,6 +76,7 @@ export const ProjectTitle = styled.h3`
     box-shadow: none;
     padding: 10px 0;
     text-align: center;
+    border-radius: 0;
   }
 `;
 

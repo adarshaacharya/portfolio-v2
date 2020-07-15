@@ -10,8 +10,8 @@ const SocialIcons = () => {
       <SocialWrapper>
         <SectionTitle>Hit me up.</SectionTitle>
         <Flex justify="space-between">
-          {SOCIALS.data.map(el => (
-            <div>
+          {SOCIALS.data.map((el, i) => (
+            <div key={i}>
               <Icon stack={el.social} />
               <IconPrefix>
                 <a href={el.link} target="_blank" rel="noopener noreferrer">

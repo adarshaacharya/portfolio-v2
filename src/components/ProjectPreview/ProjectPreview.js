@@ -1,7 +1,6 @@
 import React from 'react';
-import { Link } from 'gatsby';
 import PropTypes from 'prop-types';
-import { FormattedIcon, ExternalLinkContainer } from '@portfolio-ui/';
+import { FormattedIcon } from '@portfolio-ui/';
 
 import {
   ProjectPreviewWrapper,
@@ -48,7 +47,7 @@ const ProjectPreview = ({
 
           <TechList>
             {techs.map(tech => (
-              <li>{tech}</li>
+              <li key={tech}>{tech}</li>
             ))}
           </TechList>
         </Project>
