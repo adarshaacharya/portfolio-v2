@@ -1,6 +1,6 @@
+import React from 'react';
 import { ToggleSwitch } from '@portfolio-ui';
 import { Link } from 'gatsby';
-import React from 'react';
 
 const NavLinks = ({ NavItem }) => {
   return (

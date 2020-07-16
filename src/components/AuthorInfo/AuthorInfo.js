@@ -1,9 +1,5 @@
 import React from 'react';
-
-import github from '@images/social/github.svg';
-import linkedin from '@images/social/linkedin.svg';
-import twitter from '@images/social/twitter.svg';
-
+import { FormattedIcon, ExternalLink } from '@portfolio-ui/';
 import useAvatar from '@src/hooks/use-avatar';
 import Resume from './Resume';
 
@@ -31,27 +27,15 @@ export default function AuthorInfo() {
           </a>
 
           <SocialIcons>
-            <a
-              href="https://github.com/adarshaacharya"
-              rel="noopener noreferrer"
-              target="_blank"
-            >
-              <img src={github} alt="GitHub" />
-            </a>
-            <a
-              href="https://twitter.com/adarshatweets"
-              rel="noopener noreferrer"
-              target="_blank"
-            >
-              <img src={twitter} alt="Twitter" />
-            </a>
-            <a
-              href="https://www.linkedin.com/in/adarshaacharya/"
-              rel="noopener noreferrer"
-              target="_blank"
-            >
-              <img src={linkedin} alt="linkedin" />
-            </a>
+            <ExternalLink href="https://github.com/adarshaacharya">
+              <FormattedIcon name="GitHub" />
+            </ExternalLink>
+            <ExternalLink href="https://twitter.com/adarshatweets">
+              <FormattedIcon name="Twitter" />
+            </ExternalLink>
+            <ExternalLink href="https://www.linkedin.com/in/adarshaacharya/">
+              <FormattedIcon name="Linkedin" />
+            </ExternalLink>
           </SocialIcons>
         </Info>
       </AuthorInfoWrapper>
@@ -63,8 +47,8 @@ export default function AuthorInfo() {
       <Bio>
         I'm super passionate about exploring and building open source web apps
         and tools and try to keep up with the always evolving JavaScript
-        development world. Currently I'm diving in the React ecosystem with backend
-        in Node.js.
+        development world. Currently I'm diving in the React ecosystem with
+        backend in Node.js.
       </Bio>
       <Bio>
         I'm currently pursuing Bachelor Degree (class of 2018) in Computer

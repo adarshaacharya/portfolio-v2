@@ -1,32 +1,35 @@
 import React from 'react';
 import { Link } from 'gatsby';
-import { FormattedIcon } from '@portfolio-ui/';
+import styled from 'styled-components';
 
-import { TabItem, TabLabel, TabItems } from './NavMobile.style';
+import { ToggleSwitch } from '@portfolio-ui';
+
+const MobileNavWrapper = styled.div`
+  display: flex;
+  justify-content: flex-end;
+  top: 0;
+  width: 100%;
+  z-index: 99;
+  transition: 0.2s ease-out;
+`;
+
+const ToggleIcon = styled.div`
+  border-radius: 50%;
+  padding: 15px 20px 0 0;
+  color: #f5f5f5;
+  &:hover {
+    cursor: pointer;
+  }
+`;
+
 const NavMobile = () => {
   return (
     <>
-      <TabItems>
-        <TabItem to="/" activeClassName="active">
-          <FormattedIcon name="Home" />
-          <TabLabel>Home</TabLabel>
-        </TabItem>
-
-        <TabItem to="/projects/" activeClassName="active">
-          <FormattedIcon name="Project" />
-          <TabLabel>Projects</TabLabel>
-        </TabItem>
-
-        <TabItem to="/blog/" activeClassName="active">
-          <FormattedIcon name="Blog" />
-          <TabLabel>Blog</TabLabel>
-        </TabItem>
-
-        <TabItem to="/contact/" activeClassName="active">
-          <FormattedIcon name="Contact" />
-          <TabLabel>Contact</TabLabel>
-        </TabItem>
-      </TabItems>
+      <MobileNavWrapper>
+        <ToggleIcon>
+          <ToggleSwitch />
+        </ToggleIcon>
+      </MobileNavWrapper>
     </>
   );
 };

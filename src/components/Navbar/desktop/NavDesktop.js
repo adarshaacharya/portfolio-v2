@@ -3,6 +3,7 @@ import { Link } from 'gatsby';
 import React from 'react';
 import { NavItem, NavItems } from './NavDesktop.style';
 import NavDesktopLinks from './NavDesktopLinks';
+import { ToggleSwitch } from '@portfolio-ui';
 
 const NavDesktop = () => {
   const logo = useLogo();

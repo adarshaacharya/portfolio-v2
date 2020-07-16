@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 
 export const StyledPageNotFound = styled.div`
   height: 65vh;
@@ -8,4 +8,4 @@ export const StyledPageNotFound = styled.div`
     font-weight: 900 !important;
     font-size: 35px;
   }
-`
+`;

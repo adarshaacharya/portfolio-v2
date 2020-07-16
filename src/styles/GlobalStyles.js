@@ -21,7 +21,7 @@ const GlobalStyles = createGlobalStyle`
   }
   
   body {
-    margin : 0;
+    /* margin : 0; */
     padding : 0;
     background-color : ${p => p.theme.bg};
     color : ${p => p.theme.primaryText};

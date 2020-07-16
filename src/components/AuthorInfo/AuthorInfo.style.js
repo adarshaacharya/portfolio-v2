@@ -24,6 +24,7 @@ export const Avatar = styled(Image)`
   &:hover {
     cursor: pointer;
   }
+
   @media ${props => props.theme.media.tablet} {
     justify-self: center;
   }
@@ -32,7 +33,6 @@ export const Avatar = styled(Image)`
 export const Info = styled.div`
   .email {
     color: ${props => props.theme.primaryColor};
-    /* border-bottom: 2px dotted ${props => props.theme.primaryColor}; */
     line-height: 34px;
     font-size: 1.1rem;
     letter-spacing: 0.9px;
@@ -57,16 +57,13 @@ export const AvatarName = styled.h1`
 `;
 
 export const SocialIcons = styled(Flex)`
+  margin-top: 10px;
   a {
-    img {
-      height: 25px;
-      padding-left: 1.5rem;
-      margin-top: 1rem;
-    }
-    &:nth-child(1) {
-      img {
-        padding-left: 0;
-      }
+    margin-right: 1.5rem;
+    svg {
+      width: 25px;
+      height: 30px;
+      fill: ${props => props.theme.primaryColor};
     }
   }
 

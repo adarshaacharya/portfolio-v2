@@ -57,12 +57,8 @@ const ProjectPreview = ({
   );
 };
 
-// ProjectPreview.propTypes = {
-//   title: PropTypes.string.isRequired,
-//   repo: PropTypes.string.isRequired,
-//   demo: PropTypes.string.isRequired,
-//   description: PropTypes.string.isRequired,
-//   currentImg: PropTypes.string.isRequired,
-// };
+ProjectPreview.propTypes = {
+  project: PropTypes.object.isRequired,
+};
 
 export default ProjectPreview;

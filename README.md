@@ -39,14 +39,8 @@ export const Color = {
 
 
 
+Awesome dark theme ---
+#0E141B
 
 
-export const LabItem = styled.a.attrs(props => ({
-  href: props.href,
-  title: props.title,
-  target: '_blank',
-  rel: 'noopener noreferrer'
-}))`
-  color: var(--primaryColor);
-  display: block;
-`
+---

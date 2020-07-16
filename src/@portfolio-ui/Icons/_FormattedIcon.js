@@ -10,6 +10,8 @@ import {
   IconBlog,
   IconProject,
   IconContact,
+  IconSun,
+  IconMoon,
 } from '@portfolio-ui/Icons';
 
 const FormattedIcon = ({ name }) => {
@@ -37,6 +39,12 @@ const FormattedIcon = ({ name }) => {
 
     case 'Contact':
       return <IconContact />;
+
+    case 'Sun':
+      return <IconSun />;
+
+    case 'Moon':
+      return <IconMoon />;
   }
 };
 

@@ -1,81 +1,99 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components';
+import { Button } from '@portfolio-ui/';
 
-export const ContactWrapper = styled.div`
-  form {
-    min-height: 400px;
-    padding: 3rem;
-    box-shadow: rgba(0, 0, 0, 0.05) 0px 5px 10px;
-    border-top: 4px solid var(--theme);
-    border-radius: 12px;
-    background: var(--card-color);
-    margin: 3rem 0;
+export const ContactForm = styled.section``;
 
-    label {
-      color: var(--primary-color);
-    }
+export const Form = styled.form`
+  min-height: 400px;
+  padding: 3rem;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 5px 10px;
+  border-radius: 12px;
+  background: ${props => props.theme.secondaryColor};
+  border-top: 4px solid ${props => props.theme.primaryColor};
+  border: 1px solid
+    ${props => (props.theme.dark ? props.theme.primaryColor : 'none')};
+  margin: 3rem 0;
+`;
+
+export const FormContainer = styled.div`
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-areas:
+    'name  email'
+    'message  message'
+    '. btn';
+  label {
+    color: ${p => (p.theme.dark ? '#fff' : '#252525')};
   }
 
-  .row {
-    display: grid;
-    grid-gap: 1rem;
+  @media ${props => props.theme.media.tablet} {
     grid-template-areas:
-      'name email'
+      'name name'
+      'email email'
       'message message'
       '.btn';
   }
+`;
 
-  .name {
-    grid-area: name;
+export const FormDescription = styled.p`
+  font-size: 1rem;
+  line-height: 1.7rem;
+  a {
+    &:hover {
+      border-bottom: 1px solid
+        ${props =>
+          props.theme.dark
+            ? props.theme.primaryBlack
+            : props.theme.primaryColor};
+    }
   }
+`;
 
-  .email {
-    grid-area: email;
+export const FormGroup = styled.div`
+  padding: 5px 0;
+`;
+
+// common css feature
+const FormControl = css`
+  width: 100%;
+  padding: 10px 15px;
+  border-radius: 5px;
+  background-color: #eaeaea;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  margin: 5px 0;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  font-family: 'Inter', sans-serif;
+
+  &:focus {
+    border-color: ${props => props.theme.primaryColor};
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075),
+      0 0 8px ${props => props.theme.primaryColor};
+    outline: 0 none;
   }
+`;
 
-  .message {
-    grid-area: message;
+export const Input = styled.input`
+  ${FormControl};
+`;
+
+export const TextArea = styled.textarea`
+  ${FormControl}
+  width: 100%;
+  padding: 10px 15px;
+  font-size: 1rem;
+
+  @media ${props => props.theme.media.tablet} {
+    height: 150px;
   }
+`;
 
-  .btn {
-    grid-area: btn;
-  }
-
-  .form-control {
+export const ContactButton = styled(Button)`
+  grid-area: btn;
+  @media ${props => props.theme.media.tablet} {
+    display: block;
     width: 100%;
-    padding: 10px 15px;
-    border-radius: 3px;
-    background-color: #eaeaea;
-    border: none;
-    margin: 5px 0;
-    margin-bottom: 1rem;
-    font-size: 1rem;
   }
+`;
 
-  textarea {
-    width: 100%;
-    padding: 10px 15px;
-    font-size: 1rem;
-    font: 400 13.3333px Arial;
-  }
-
-  .btn {
-    padding: 1rem 2.5rem;
-    background: var(--theme);
-    color: #fff;
-    text-decoration: none;
-    text-transform: uppercase;
-    border: none;
-    border-radius: 6px;
-    margin: 0 0 0.5rem 0;
-    vertical-align: middle;
-    text-align: center;
-    cursor: pointer;
-    text-decoration: none;
-    line-height: 1;
-  }
-`
-
-export const SocialWrapper = styled.section`
-
-  }
-`
+export const SocialWrapper = styled.section``;

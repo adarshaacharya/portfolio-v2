@@ -33,12 +33,8 @@ const PostPreview = ({
   );
 };
 
-// PostPreview.propTypes = {
-//   title: PropTypes.string.isRequired,
-//   slug: PropTypes.string.isRequired,
-//   description: PropTypes.string.isRequired,
-//   tags: PropTypes.array.isRequired,
-//   readingTime: PropTypes.string.isRequired,
-//   date: PropTypes.string.isRequired,
-// };
+PostPreview.propTypes = {
+  post: PropTypes.object.isRequired,
+};
+
 export default PostPreview;

@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { Flex, ExternalLinkContainer } from '@portfolio-ui/';
+import { Flex, ExternalLink } from '@portfolio-ui/';
 import Image from 'gatsby-image';
 
 export const ProjectPreviewWrapper = styled.div`
@@ -15,7 +15,6 @@ export const Project = styled.div`
   display: grid;
   grid-template-columns: 2fr 1fr;
   grid-template-rows: auto;
-
   grid-template-areas:
     'thumbnail title '
     'thumbnail   links'
@@ -31,7 +30,7 @@ export const Project = styled.div`
   }
 `;
 
-export const ProjectImgContainer = styled(ExternalLinkContainer)`
+export const ProjectImgContainer = styled(ExternalLink)`
   grid-area: thumbnail;
 `;
 
@@ -51,12 +50,11 @@ export const ProjectImg = styled(Image)`
 
   @media ${props => props.theme.media.tablet} {
     max-width: 100%;
-    /* border: 0; */
     border-radius: 0;
   }
 `;
 
-export const ProjectTitleContainer = styled(ExternalLinkContainer)`
+export const ProjectTitleContainer = styled(ExternalLink)`
   grid-area: title;
   align-self: flex-end;
 `;
@@ -87,7 +85,7 @@ export const ProjectLinks = styled(Flex)`
   }
 `;
 
-export const ProjectLink = styled(ExternalLinkContainer)`
+export const ProjectLink = styled(ExternalLink)`
   position: relative;
   top: 7px;
   left: 10px;

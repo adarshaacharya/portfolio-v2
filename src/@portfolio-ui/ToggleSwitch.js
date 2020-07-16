@@ -10,10 +10,13 @@ const SwitchWrapper = styled.div`
   cursor: pointer;
   border: none;
   position: relative;
-
   img {
     background: transparent;
     margin: 0;
+  }
+
+  svg {
+    fill: #ffc024;
   }
 `;
 

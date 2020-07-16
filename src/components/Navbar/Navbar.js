@@ -4,7 +4,7 @@ import { Visible } from 'react-grid-system';
 
 import { NavWrapper, NavContent } from './Navbar.style';
 import NavDesktop from './desktop/NavDesktop';
-import NavMobile from './mobile/NavMobile';
+import TabBar from './mobile/TabBar';
 
 const Navbar = () => {
   return (
@@ -18,7 +18,7 @@ const Navbar = () => {
       </NavWrapper>
 
       <Visible xs sm>
-        <NavMobile />
+        <TabBar />
       </Visible>
     </header>
   );

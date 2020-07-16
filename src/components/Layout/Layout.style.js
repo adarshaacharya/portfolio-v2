@@ -8,6 +8,6 @@ export const LayoutWrapper = styled(StyledContainer)`
   min-height: calc(100vh - 125px);
 
 @media ${props => props.theme.media.tablet} {
-  margin-top : 50px;
+  margin-top : 0px;
 }
 `;

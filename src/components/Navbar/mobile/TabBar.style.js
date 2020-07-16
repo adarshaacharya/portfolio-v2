@@ -27,7 +27,6 @@ export const TabItem = styled(Link)`
     fill: ${props => props.theme.primaryText};
   }
 
-  &:hover,
   &.active {
     border-top: 2px solid ${props => props.theme.primaryColor};
     svg {

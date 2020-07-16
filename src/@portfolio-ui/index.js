@@ -3,7 +3,8 @@ export * from './Flex';
 export * from './Container';
 export * from './SectionTitle';
 export * from './IconPrefix';
-export * from './ExternalLinkContainer';
+export * from './ExternalLink';
+export * from './Button'
 
 // for all icons
 export * from './Icons';
