@@ -27,14 +27,14 @@ exports.onCreateWebpackConfig = ({ actions }) => {
 exports.createPages = async ({ actions, graphql, resporter }) => {
   const blogPostTemplate = path.resolve('./src/templates/blog-post.js');
 
-  // get only slug to create pages and pages themselves query for data. Title is queried for next & prev 
+  // get only slug to create pages and pages themselves query for data. Title is queried for next & prev
   const result = await graphql(`
     query {
       allMdx(sort: { fields: [frontmatter___date], order: DESC }, limit: 1000) {
         nodes {
           frontmatter {
             slug
-            title 
+            title
           }
         }
       }
@@ -54,7 +54,7 @@ exports.createPages = async ({ actions, graphql, resporter }) => {
 
     // create each blog post with template using slug
     actions.createPage({
-      path: post.frontmatter.slug, // url of each post will be /blog/slug
+      path: '/blog/' + post.frontmatter.slug, // url of each post will be /blog/slug
       component: blogPostTemplate,
 
       // pass slug to the template (data to be passed to tmplate so that it can independently query its data )

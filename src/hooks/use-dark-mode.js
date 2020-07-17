@@ -5,17 +5,17 @@ const useDarkMode = () => {
 
   const toggleTheme = useCallback(() => {
     if (theme === 'light') {
-      localStorage.setItem('ADARSHA_THEME', 'dark');
+      localStorage.setItem('aadarsha:theme', 'dark');
       setTheme('dark');
     } else {
-      localStorage.setItem('ADARSHA_THEME', 'light');
+      localStorage.setItem('aadarsha:theme', 'light');
       setTheme('light');
     }
   }, [theme]);
 
   // runs on initial render
   useEffect(() => {
-    const localTheme = localStorage.getItem('ADARSHA_THEME');
+    const localTheme = localStorage.getItem('aadarsha:theme');
 
     // if theme exists
     if (localTheme) {

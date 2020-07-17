@@ -24,7 +24,8 @@ const Layout = ({ children }) => {
           <Navbar />
         </ThemeToggleContext.Provider>
 
-        <LayoutWrapper>{children}</LayoutWrapper>
+        <LayoutWrapper>{children} </LayoutWrapper>
+
         <Footer />
       </>
     </ThemeProvider>

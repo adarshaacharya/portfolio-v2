@@ -36,6 +36,9 @@ export const Info = styled.div`
     line-height: 34px;
     font-size: 1.1rem;
     letter-spacing: 0.9px;
+    &:hover {
+      color: ${p => p.theme.primaryText};
+    }
   }
   @media ${props => props.theme.media.tablet} {
     justify-self: center;
@@ -60,10 +63,15 @@ export const SocialIcons = styled(Flex)`
   margin-top: 10px;
   a {
     margin-right: 1.5rem;
+    transition: transform 0.2s infinite;
     svg {
       width: 25px;
       height: 30px;
       fill: ${props => props.theme.primaryColor};
+      &:hover {
+        fill: ${props => props.theme.primaryText};
+        transform: scale(1.1);
+      }
     }
   }
 

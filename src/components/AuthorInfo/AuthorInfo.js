@@ -27,13 +27,22 @@ export default function AuthorInfo() {
           </a>
 
           <SocialIcons>
-            <ExternalLink href="https://github.com/adarshaacharya">
+            <ExternalLink
+              href="https://github.com/adarshaacharya"
+              aria-label="GitHub Link"
+            >
               <FormattedIcon name="GitHub" />
             </ExternalLink>
-            <ExternalLink href="https://twitter.com/adarshatweets">
+            <ExternalLink
+              href="https://twitter.com/adarshatweets"
+              aria-label="Twitter Link"
+            >
               <FormattedIcon name="Twitter" />
             </ExternalLink>
-            <ExternalLink href="https://www.linkedin.com/in/adarshaacharya/">
+            <ExternalLink
+              href="https://www.linkedin.com/in/adarshaacharya/"
+              aria-label="Linkedin Link"
+            >
               <FormattedIcon name="Linkedin" />
             </ExternalLink>
           </SocialIcons>
@@ -53,14 +62,10 @@ export default function AuthorInfo() {
       <Bio>
         I'm currently pursuing Bachelor Degree (class of 2018) in Computer
         Science at
-        <a
-          href="http://www.tribhuvan-university.edu.np/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        <ExternalLink href="http://www.tribhuvan-university.edu.np/">
           {' '}
           Tribuvan University.
-        </a>
+        </ExternalLink>
       </Bio>
 
       <Resume />

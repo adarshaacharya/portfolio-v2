@@ -3,22 +3,22 @@ import { Link } from 'gatsby';
 import PropTypes from 'prop-types';
 
 import {
-  PostItem,
-  PostTitle,
+  BlogItem,
+  BlogTitle,
   Description,
   DateTime,
   Tags,
-} from './PostPreview.style';
+} from './BlogPreview.style';
 
-const PostPreview = ({
-  post: { title, date, tags, readingTime, slug, description },
+const BlogPreview = ({
+  blog: { title, date, tags, readingTime, slug, description },
 }) => {
   return (
-    <PostItem to={`/${slug}`} key={title}>
+    <BlogItem to={'/blog/' + slug} key={title}>
       <DateTime>
         📅 {date} &nbsp; 🕒 {readingTime}
       </DateTime>
-      <PostTitle>{title}</PostTitle>
+      <BlogTitle>{title}</BlogTitle>
 
       <Description>{description}</Description>
 
@@ -29,12 +29,12 @@ const PostPreview = ({
           </span>
         ))}
       </Tags>
-    </PostItem>
+    </BlogItem>
   );
 };
 
-PostPreview.propTypes = {
-  post: PropTypes.object.isRequired,
+BlogPreview.propTypes = {
+  blog: PropTypes.object.isRequired,
 };
 
-export default PostPreview;
+export default BlogPreview;

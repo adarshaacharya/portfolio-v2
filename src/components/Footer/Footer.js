@@ -3,8 +3,8 @@ import React from 'react';
 import { FooterWrapper } from './Footer.style';
 export default function Footer() {
   return (
-    <>
-      <hr />© {new Date().getFullYear()}, Built with
+    <FooterWrapper>
+      © {new Date().getFullYear()}, Built with
       {` `}
       <a
         href="https://www.gatsbyjs.org"
@@ -13,6 +13,6 @@ export default function Footer() {
       >
         Gatsby
       </a>{' '}
-    </>
+    </FooterWrapper>
   );
 }

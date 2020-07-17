@@ -96,4 +96,3 @@ export const ContactButton = styled(Button)`
   }
 `;
 
-export const SocialWrapper = styled.section``;

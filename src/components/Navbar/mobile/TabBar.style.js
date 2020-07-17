@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { Link } from 'gatsby';
 
-export const TabItems = styled.ul`
+export const TabItems = styled.div`
   display: flex;
   justify-content: space-between;
   z-index: 999;

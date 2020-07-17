@@ -69,6 +69,7 @@ export const ProjectTitle = styled.h3`
       props.theme.dark ? props.theme.primaryColor : 'hsla(0, 0%, 50%, 0.1)'};
   box-shadow: 0 2px 4px hsla(0, 0%, 0%, 0.3);
   border-radius: 0 4px 4px 0;
+
   @media ${props => props.theme.media.tablet} {
     font-size: 1.5rem;
     box-shadow: none;

@@ -5,6 +5,8 @@ export { default as IconExternal } from './external';
 export { default as IconGitHub } from './github';
 export { default as IconTwitter } from './twitter';
 export { default as IconLinkedin } from './linkedin';
+export { default as IconResume } from './resume';
+
 
 // tabbar icons
 export { default as IconHome } from './home';

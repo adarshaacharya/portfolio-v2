@@ -6,18 +6,27 @@ import ThemeToggleContext from '@context/ThemeToggleContext';
 import moon from '@images/toggle/moon-icon.svg';
 import sun from '@images/toggle/sun-icon.svg';
 
+// import { FormattedIcon } from '@portfolio-ui/';
+
 const SwitchWrapper = styled.div`
   cursor: pointer;
   border: none;
   position: relative;
+
   img {
     background: transparent;
     margin: 0;
+    width: 25px;
+    height: 100%;
   }
 
+
+/* 
   svg {
-    fill: #ffc024;
-  }
+    width: 25px;
+    height: 30px;
+    fill: ${props => props.theme.primaryColor};
+  } */
 `;
 
 // export const ToggleSwitch = () => {
@@ -47,3 +56,4 @@ export const ToggleSwitch = () => {
     </SwitchWrapper>
   );
 };
+

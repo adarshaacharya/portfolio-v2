@@ -1,21 +1,21 @@
 import React from 'react';
 
-import Layout from '../components/Layout';
-import usePosts from '../hooks/use-posts';
-import PostPreview from '../components/PostPreview';
-import SEO from '../components/Seo';
+import Layout from '@components/Layout';
+import usePosts from '@hooks/use-posts';
+import SEO from '@components/Seo';
 import { SectionTitle } from '@portfolio-ui/';
+import BlogPreview from '@src/components/BlogPreview/';
 
 export default function Blog() {
-  const posts = usePosts();
+  const blogs = usePosts();
 
   return (
     <Layout>
       <SEO title={`Blogs`} />
-      <SectionTitle>Read my blogs.</SectionTitle>
+      <SectionTitle>Blogs.</SectionTitle>
 
-      {posts.map(post => (
-        <PostPreview post={post} key={post.slug} />
+      {blogs.map(blog => (
+        <BlogPreview blog={blog} key={blog.slug} />
       ))}
     </Layout>
   );

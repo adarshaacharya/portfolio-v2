@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { Flex } from '@portfolio-ui/';
 import { Link } from 'gatsby';
 
-export const PostItem = styled(Link)`
+export const BlogItem = styled(Link)`
   color: ${props => props.theme.primaryBlack};
   display: block;
   margin-bottom: 70px;
@@ -28,7 +28,7 @@ export const DateTime = styled.p`
   padding: 1rem 0;
 `;
 
-export const PostTitle = styled.h1`
+export const BlogTitle = styled.h1`
   font-size: 1.3rem;
   font-weight: 700;
   margin: 0 0 1rem 0;

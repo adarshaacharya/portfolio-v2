@@ -1,12 +1,12 @@
+const config = require('./config/data');
+
 module.exports = {
   siteMetadata: {
-    title: `Aadarsha Acharya`,
-    author: `@aadarshatweets`,
-    description: `My personal portfoilio created using Gatsby`,
-    siteUrl: `https://adarshaacharya.com.np/`,
-    keywords: [
-      `Aadarsha Acharya, Aadarsha, Acharya, adarshaacharya, Adarsha Acharya, Adarsha, Acharya, adarshaacharya.com.np`,
-    ],
+    title: config.title,
+    author: config.author,
+    description: config.description,
+    siteUrl: config.url,
+    keywords: config.keywords,
   },
 
   plugins: [
@@ -21,10 +21,6 @@ module.exports = {
           `Inter\:300,400,400i,500,600,700`,
           `Poppins\:300,400,400i,500,600,700`,
           `IBM Plex Mono`,
-          `Nunito Sans`,
-          `Montserrat\:300,400,400i,500,600,700`,
-          `Muli\:300,400,400i,500,600,700,800`,
-          `Bowlby One SC`,
         ],
         display: 'swap',
       },
@@ -63,15 +59,14 @@ module.exports = {
 
     // Mdx plugin & its config for subfield : prismjs, autolink-headers, remark-images, reading-time,etc.
     {
-      resolve: 'gatsby-plugin-mdx',
-
+      resolve: 'gatsby-plugin-mdx', // used instead of  gatsby plugin remark
       options: {
         extensions: ['.mdx', '.md'],
         defaultLayouts: {
           default: require.resolve('./src/components/Layout/index.js'),
         },
         gatsbyRemarkPlugins: [
-          //embed codepen
+          //embed gif/pen/pin/player/post/sandbox/tweet/video
           `gatsby-remark-embedder`,
 
           // auto link headers
@@ -117,8 +112,26 @@ module.exports = {
     {
       resolve: `gatsby-plugin-nprogress`,
       options: {
-        color: `#2298DC`,
+        color: config.themeColor,
         showSpinner: false,
+      },
+    },
+
+    // SEO and tracking stuffs
+    {
+      resolve: 'gatsby-plugin-google-analytics',
+      options: {
+        trackingId: config.googleAnalyticsID,
+        head: true,
+      },
+    },
+    `gatsby-plugin-sitemap`,
+    {
+      resolve: 'gatsby-plugin-robots-txt',
+      options: {
+        host: config.url,
+        sitemap: `${config.url}/sitemap.xml`,
+        policy: [{ userAgent: '*', allow: '/' }],
       },
     },
   ],

@@ -50,12 +50,6 @@ const GlobalStyles = createGlobalStyle`
     line-height : 150%;
   }
 
-  /* img {
-  display: inline-block;
-  max-width: 100%;
-  height: auto;
-} */
-
   ul {
       list-style: none;
       padding: 0;
@@ -79,9 +73,6 @@ ${PrismJsStyles}
 ================*/
 ${BlogCssStyles}
 
-/*===============
-  Scrollbar styles
-================*/
 
 
 `;

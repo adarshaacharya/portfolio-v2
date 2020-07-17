@@ -12,7 +12,7 @@ const NavLinks = ({ NavItem }) => {
       </NavItem>
       <NavItem>
         <Link to="/blog/" activeClassName="active">
-          Blogs
+          Blog
         </Link>
       </NavItem>
       <NavItem>
