@@ -15,6 +15,7 @@ const GlobalStyles = createGlobalStyle`
     height : 100%;
     font-family : ${p => p.theme.fontFamily};
     font-size: calc(12px + 0.4vw);
+    -webkit-font-smoothing: antialiased;
     font-display : fallback !important;
     line-height: 1.6;
     /* scroll-behavior: smooth; */
@@ -25,7 +26,7 @@ const GlobalStyles = createGlobalStyle`
     padding : 0;
     background-color : ${p => p.theme.bg};
     color : ${p => p.theme.primaryText};
-    transition: 0.2s ease-out;
+    transition: 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
   }
 
   a {

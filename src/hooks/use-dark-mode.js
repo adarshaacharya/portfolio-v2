@@ -1,27 +1,20 @@
-import { useCallback, useEffect, useState } from 'react';
+import { useState, useEffect } from 'react';
 
 const useDarkMode = () => {
-  const [theme, setTheme] = useState('light');
+  const _THEME_ = 'adarsha:theme';
+  const storedTheme =
+    typeof window !== 'undefined' && window.localStorage.getItem(_THEME_);
 
-  const toggleTheme = useCallback(() => {
-    if (theme === 'light') {
-      localStorage.setItem('aadarsha:theme', 'dark');
-      setTheme('dark');
-    } else {
-      localStorage.setItem('aadarsha:theme', 'light');
-      setTheme('light');
+  const [theme, setTheme] = useState(storedTheme || 'light');
+
+  const toggleTheme = () =>
+    setTheme(prevTheme => (prevTheme === 'light' ? 'dark' : 'light'));
+
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      window.localStorage.setItem(_THEME_, theme);
     }
   }, [theme]);
-
-  // runs on initial render
-  useEffect(() => {
-    const localTheme = localStorage.getItem('aadarsha:theme');
-
-    // if theme exists
-    if (localTheme) {
-      setTheme(localTheme);
-    }
-  }, []);
 
   return [theme, toggleTheme];
 };

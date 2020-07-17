@@ -91,15 +91,15 @@ export const ProjectLink = styled(ExternalLink)`
   top: 7px;
   left: 10px;
   padding: 10px;
+  transition: all 0.3s ease-in-out;
   svg {
     width: 25px;
     height: 30px;
     fill: ${props => props.theme.primaryColor};
-  }
-
-  transition: all 0.3s ease-in-out;
-  &:hover {
-    transform: scale(1.07);
+    &:hover {
+      transform: scale(1.07);
+      fill: ${props => props.theme.primaryText};
+    }
   }
 `;
 

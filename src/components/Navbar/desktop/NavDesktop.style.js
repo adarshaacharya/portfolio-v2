@@ -4,7 +4,6 @@ export const NavItems = styled.ul`
   display: flex;
   align-items: center;
   list-style: none;
-  /* transition: 0.2s ease-out; */
 
   /*@TODO : ADD LOGO height & width : 50px !important*/
 `;

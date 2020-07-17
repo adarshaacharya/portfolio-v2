@@ -8,12 +8,12 @@ export const NavWrapper = styled.div`
   align-items: center;
   position: fixed;
   width: 100%;
-  background-color: ${props => props.theme.bg};
+  /* transition: 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+  background-color: ${props => props.theme.bg}; */
   box-shadow: ${props => props.theme.shadowSmall};
   border-bottom: ${props => props.theme.navBorderBottom};
   border-top: 5px solid ${props => props.theme.primaryColor};
   z-index: 99;    
-  transition: 0.2s ease-out;
 
   .logo {
     margin-right: auto;
