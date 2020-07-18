@@ -22,5 +22,6 @@ export const NavItem = styled.li`
     padding-bottom: 25px;
     color: ${props => props.theme.primaryColor};
     border-bottom: 2px solid ${props => props.theme.primaryColor};
+    
   }
 `;

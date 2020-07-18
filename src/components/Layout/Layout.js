@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'gatsby';
 import Footer from '@components/Footer';
 import ThemeToggleContext from '@context/ThemeToggleContext';
 import useDarkMode from '@hooks/use-dark-mode';
@@ -23,9 +24,7 @@ const Layout = ({ children }) => {
         <ThemeToggleContext.Provider value={{ theme, toggleTheme }}>
           <Navbar />
         </ThemeToggleContext.Provider>
-
         <LayoutWrapper>{children} </LayoutWrapper>
-
         <Footer />
       </>
     </ThemeProvider>

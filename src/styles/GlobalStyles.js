@@ -26,7 +26,7 @@ const GlobalStyles = createGlobalStyle`
     padding : 0;
     background-color : ${p => p.theme.bg};
     color : ${p => p.theme.primaryText};
-    transition: 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+    transition: 0.2s ease-out;
   }
 
   a {

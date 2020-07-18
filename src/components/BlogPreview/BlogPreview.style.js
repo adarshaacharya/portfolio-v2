@@ -38,7 +38,6 @@ export const BlogTitle = styled.h1`
 export const Description = styled.p`
   padding: .5rem 0;
   font-size : 1.1rem;
-  font-family : "Muli";
   font-weight : 400;
 `;
 
