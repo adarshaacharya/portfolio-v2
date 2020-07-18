@@ -5,7 +5,7 @@ const useDarkMode = () => {
   const storedTheme =
     typeof window !== 'undefined' && window.localStorage.getItem(_THEME_);
 
-  const [theme, setTheme] = useState(storedTheme || 'light');
+    const [theme, setTheme] = useState(storedTheme);
 
   const toggleTheme = () =>
     setTheme(prevTheme => (prevTheme === 'light' ? 'dark' : 'light'));

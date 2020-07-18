@@ -11,7 +11,7 @@ export const TabItems = styled.div`
   width: 100%;
   margin: 0;
   border-top: 1px solid ${props => props.theme.primaryColor};
-  background: ${props => props.theme.secondaryColor};
+  background: ${props => props.theme.navBg};
 `;
 
 export const TabItem = styled(Link)`

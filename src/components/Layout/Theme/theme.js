@@ -2,7 +2,7 @@ import { css } from 'styled-components';
 
 export const sizes = {
   mobile: '480px',
-  tablet: '768px',      
+  tablet: '768px',
   fablet: '1000px',
   desktop: '1200px',
 };
@@ -39,14 +39,15 @@ export const lightTheme = {
   primaryBlack: '#383838',
   primaryText: '#383838',
   blockQuote: '#fff9db',
-  hrColor : '#eee',
+  hrColor: '#eee',
+  navBg: '#F7FAFC',
   navBorderBottom: 'none',
   ...commonTheme,
 };
 
 export const darkTheme = {
   dark: true,
-  bg: '#1A202C',
+  bg: '#10171D',
   primaryColor: '#6D83F2',
   secondaryColor: '#232323',
   accentColor: '#303030',
@@ -54,8 +55,8 @@ export const darkTheme = {
   elevation0: '#191919',
   primaryText: '#F8F8F8',
   blockQuote: '#232323',
-  hrColor : '#303030',
+  hrColor: '#303030',
+  navBg: '#1b2938',
   navBorderBottom: '0.1px solid hsl(0, 0%, 22%)',
   ...commonTheme,
 };
-
