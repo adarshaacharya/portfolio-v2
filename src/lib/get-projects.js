@@ -1,6 +1,6 @@
 import { graphql, useStaticQuery } from 'gatsby';
 
-export const useProjects = () => {
+export default () => {
   const data = useStaticQuery(graphql`
     query {
       allProjectsJson(sort: { fields: image }) {
@@ -42,6 +42,6 @@ export const useProjects = () => {
     demo: node.demo,
     image: node.image, // raw image
     description: node.description,
-    techs : node.techs
+    techs: node.techs,
   }));
 };

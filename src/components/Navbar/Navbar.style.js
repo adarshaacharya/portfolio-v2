@@ -7,7 +7,7 @@ export const NavWrapper = styled.div`
 
   @media ${props => props.theme.media.minTablet} {
     display: block;
-    padding: 0.6rem 0;
+    padding: 0.5rem 0;
     top: 0;
     left: 0;
     align-items: center;

@@ -12,6 +12,7 @@ exports.onCreateWebpackConfig = ({ actions }) => {
         '@components': path.join(__dirname, 'src/components'),
         '@pages': path.join(__dirname, 'src/pages'),
         '@hooks': path.join(__dirname, 'src/hooks'),
+        '@lib': path.join(__dirname, 'src/lib'),
         '@images': path.join(__dirname, 'static/images'),
         '@portfolio-ui': path.join(__dirname, 'src/@portfolio-ui'),
         '@context': path.join(__dirname, 'src/context'),

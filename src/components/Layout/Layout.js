@@ -1,19 +1,23 @@
 import React from 'react';
-import { Link } from 'gatsby';
-import Footer from '@components/Footer';
-import ThemeToggleContext from '@context/ThemeToggleContext';
-import useDarkMode from '@hooks/use-dark-mode';
-import Navbar from '@src/components/Navbar';
-import GlobalStyles from '@src/styles/GlobalStyles';
 import PropTypes from 'prop-types';
-import { setConfiguration } from 'react-grid-system';
+
+// theme logic
+import useDarkMode from '@hooks/use-dark-mode';
+import GlobalStyles from '@src/styles/GlobalStyles';
 import { ThemeProvider } from 'styled-components';
-import { LayoutWrapper } from './Layout.style';
+import ThemeToggleContext from '@context/ThemeToggleContext';
 import { darkTheme, lightTheme } from './Theme/theme';
+
+// components
+import Navbar from '@src/components/Navbar';
+import Footer from '@components/Footer';
+
+// styles
+import { LayoutWrapper } from './Layout.style';
 
 
 const Layout = ({ children }) => {
-  const {theme, toggleTheme} = useDarkMode();
+  const { theme, toggleTheme } = useDarkMode();
   const currentTheme = theme === 'light' ? lightTheme : darkTheme;
 
   return (

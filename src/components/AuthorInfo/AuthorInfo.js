@@ -1,6 +1,6 @@
 import React from 'react';
 import { FormattedIcon, ExternalLink } from '@portfolio-ui/';
-import useAvatar from '@src/hooks/use-avatar';
+import getAvatar from '@lib/get-avatar';
 import Resume from './Resume';
 
 import {
@@ -14,7 +14,7 @@ import {
 import TechStack from './TechStack';
 
 export default function AuthorInfo() {
-  const avatar = useAvatar();
+  const avatar = getAvatar();
   return (
     <>
       <AuthorInfoWrapper>

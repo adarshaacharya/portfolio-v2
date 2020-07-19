@@ -5,10 +5,10 @@ import Layout from '@components/Layout';
 import SEO from '@components/Seo';
 import ProjectPreview from '@components/ProjectPreview';
 import { SectionTitle } from '@portfolio-ui/';
-import { useProjects } from '@hooks/use-projects';
+import getProjects from '@lib/get-projects';
 
 export default function Projects() {
-  const projects = useProjects();
+  const projects = getProjects();
 
   return (
     <Layout>

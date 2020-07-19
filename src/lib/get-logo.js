@@ -1,11 +1,12 @@
 import { graphql, useStaticQuery } from 'gatsby';
 
-const useAvatar = () => {
+export default () => {
   const data = useStaticQuery(graphql`
     query {
-      pic: file(relativePath: { eq: "my-pic.png" }) {
+      #since we have put source file system up to  static/images
+      logo: file(relativePath: { eq: "logo.png" }) {
         sharp: childImageSharp {
-          fixed(width: 200, height: 200) {
+          fixed(width: 64, height: 64) {
             ...GatsbyImageSharpFixed
           }
         }
@@ -13,7 +14,5 @@ const useAvatar = () => {
     }
   `);
 
-  return data.pic.sharp.fixed;
+  return data.logo.sharp.fixed;
 };
-
-export default useAvatar;
