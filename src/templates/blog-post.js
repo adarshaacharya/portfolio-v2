@@ -1,13 +1,11 @@
-import React from 'react';
-import { graphql, Link } from 'gatsby';
-import { MDXRenderer } from 'gatsby-plugin-mdx';
-import { DiscussionEmbed } from 'disqus-react';
-
 import Layout from '@components/Layout';
 import SEO from '@components/Seo';
 import { Flex, SectionTitle } from '@portfolio-ui/';
-import { url, disqusShortName } from '../../config/data';
-
+import { DiscussionEmbed } from 'disqus-react';
+import { graphql, Link } from 'gatsby';
+import { MDXRenderer } from 'gatsby-plugin-mdx';
+import React from 'react';
+import { disqusShortName, url } from '../../config/data';
 import './style.scss';
 
 // page context from gatsby-node and data from below graphql query
@@ -15,7 +13,7 @@ const BlogPostTemplate = ({ data, pageContext }) => {
   const post = data.mdx;
   const { previous, next, slug } = pageContext;
 
-  const baseSlugUrl = `${url}/${slug}`;
+  const baseSlugUrl = `${url}/blog/${slug}`;
   const disqusConfig = {
     url: baseSlugUrl,
     identifier: post.frontmatter.id.toString(),
@@ -31,16 +29,21 @@ const BlogPostTemplate = ({ data, pageContext }) => {
       />
 
       <div className="blog-content">
-        <hr/>
-        <div className="article-header">
-          <SectionTitle>{post.frontmatter.title}</SectionTitle>
-          <Flex justify="space-around">
-            <span>👤 {post.frontmatter.author}</span>
-            <span> 🗓️ {post.frontmatter.date}</span>
-            <span>🕒 {post.fields.readingTime.text}</span>
-          </Flex>
-        </div>
-        <hr/>
+        <hr />
+        <SectionTitle>{post.frontmatter.title}</SectionTitle>
+        <Flex justify="space-around">
+          <span role="img" aria-label="author">
+            👤 {post.frontmatter.author}
+          </span>
+          <span role="img" aria-label="date">
+            {' '}
+            🗓️ {post.frontmatter.date}
+          </span>
+          <span role="img" aria-label="readingTime">
+            🕒 {post.fields.readingTime.text}
+          </span>
+        </Flex>
+        <hr />
 
         <MDXRenderer className="post-body">{post.body}</MDXRenderer>
       </div>
@@ -54,14 +57,16 @@ const BlogPostTemplate = ({ data, pageContext }) => {
           <li>
             {previous && (
               <Link to={previous.frontmatter.slug} rel="prev">
-                🔥 {previous.frontmatter.title}
+                <span role="img" aria-label="previous">🔥</span>
+                {previous.frontmatter.title}
               </Link>
             )}
           </li>
           <li>
             {next && (
               <Link to={next.frontmatter.slug} rel="next">
-                {next.frontmatter.title} 🤟🏻
+                {next.frontmatter.title} 
+                <span role="img" aria-label="next">🤟🏻</span>
               </Link>
             )}
           </li>

@@ -13,7 +13,6 @@ const Navbar = () => {
         </NavContent>
       </NavWrapper>
 
-      
       <TabBarWrapper>
         <TabBar />
       </TabBarWrapper>

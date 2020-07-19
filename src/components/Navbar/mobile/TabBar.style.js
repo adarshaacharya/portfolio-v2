@@ -30,9 +30,9 @@ export const TabItem = styled(Link)`
   &.active {
     border-top: 2px solid ${props => props.theme.primaryColor};
     svg {
-      fill: ${props => props.theme.primaryColor};
+      color: ${props => (props.theme.dark ? '#fff' : props.theme.primaryColor)};
     }
-    color: ${props => props.theme.primaryColor};
+    color: ${props => (props.theme.dark ? '#fff' : props.theme.primaryColor)};
   }
 `;
 

@@ -3,15 +3,16 @@ import { css } from 'styled-components';
 const BlogCssStyles = css`
   /* Disqus styles */
   div#disqus_thread {
-    background: whitesmoke;
     padding: 15px 25px;
     border-radius: 10px;
+
+    color: ${props => props.theme.primaryText} !important;
   }
 
   .blog-content {
     font-family: 'Inter';
     padding: 0 1em;
-   
+
     p {
       font-size: 1rem;
       line-height: 36px;
@@ -19,6 +20,11 @@ const BlogCssStyles = css`
       font-weight: 400;
     }
 
+    a {
+      padding-bottom: 0.1rem;
+      border-bottom: 2px solid transparent;
+      transition: border-color 0.25s ease 0s;
+    }
     a:hover {
       color: ${p => p.theme.primaryText};
       border-bottom: 2px solid ${p => p.theme.primaryColor};

@@ -1,17 +1,18 @@
-import { useLogo } from '@hooks/use-logo';
-import { Link } from 'gatsby';
 import React from 'react';
-import { NavItem, NavItems } from './NavDesktop.style';
+
+import { useLogo } from '@hooks/use-logo';
+import { NavItem, NavItems, Logo } from './NavDesktop.style';
 import NavDesktopLinks from './NavDesktopLinks';
 
 const NavDesktop = () => {
-  const logo = useLogo();
+  // const logo = useLogo();
   return (
     <>
-      <Link to="/" className="logo">
+      <Logo to="/">
         {/* <Image fixed={logo} alt="Aadarsha" className="nav-image" /> */}
-        Aadarsha
-      </Link>
+        <span>aada</span>
+        rsha
+      </Logo>
 
       <nav>
         <NavItems>

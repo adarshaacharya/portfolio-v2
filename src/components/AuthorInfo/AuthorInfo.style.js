@@ -32,14 +32,27 @@ export const Avatar = styled(Image)`
 
 export const Info = styled.div`
   .email {
-    color: ${props => props.theme.primaryColor};
-    line-height: 34px;
+    display: inline-flex;
+    line-height: 50px;
     font-size: 1.1rem;
-    letter-spacing: 0.9px;
+    letter-spacing: 0.7px;
+    transition: transform 0.2s infinite;
+
+    svg {
+      height: 37px;
+      width: 37px;
+      fill: ${props => props.theme.primaryColor};
+      margin-right: 11px;
+      margin-top: 6px;
+    }
     &:hover {
-      color: ${p => p.theme.primaryText};
+      svg {
+        fill: ${props => props.theme.primaryText};
+        transform: scale(1.1);
+      }
     }
   }
+
   @media ${props => props.theme.media.tablet} {
     justify-self: center;
     .email {
@@ -49,14 +62,13 @@ export const Info = styled.div`
 `;
 
 export const AvatarName = styled.h1`
-  font-family: 'Poppins', sans-serif;
+  font-family: ${props => props.theme.secondaryFontFamily};
   font-weight: 900;
-  font-size: 1.9rem;
-  letter-spacing: 2px;
+  font-size: 1.7rem;
+  letter-spacing: 1px;
   margin: 0;
-  padding-bottom: 0.5rem;
   color: ${props => props.theme.textBlack};
-  text-shadow: ${props => (props.theme.dark ? '1px 2px 1px #6D83F2' : 'none')};
+ 
 `;
 
 export const SocialIcons = styled(Flex)`
@@ -84,4 +96,11 @@ export const Bio = styled.p`
   padding: 0.7rem 0;
   line-height: 1.9rem;
   font-size: 1rem;
+  a {
+    border-color: transparent;
+    transition: border-color 0.25s ease 0s;
+    &:hover {
+      border-bottom: 1px solid ${props => props.theme.primaryColor};
+    }
+  }
 `;

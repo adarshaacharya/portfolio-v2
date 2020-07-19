@@ -23,7 +23,8 @@ export default function AuthorInfo() {
           <AvatarName> Aadarsha Acharya</AvatarName>
 
           <a href="mailto: adarshaofficial@gmail.com" className="email">
-            ✉️ adarshaofficial@gmail.com
+            <FormattedIcon name="Email" />
+            <span>adarshaofficial@gmail.com</span>
           </a>
 
           <SocialIcons>

@@ -11,7 +11,7 @@ const NavLinks = ({ NavItem }) => {
         </Link>
       </NavItem>
       <NavItem>
-        <Link to="/blog/" activeClassName="active">
+        <Link to="/blog/" activeClassName="active" partiallyActive={true}>
           Blog
         </Link>
       </NavItem>

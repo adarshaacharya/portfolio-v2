@@ -37,8 +37,11 @@ export const FormContainer = styled.div`
 
 export const FormDescription = styled.p`
   font-size: 1rem;
-  line-height: 1.7rem;
+  line-height: 1.8rem;
   a {
+    border-color : transparent;
+    transition: border-color 0.25s ease 0s;
+    will-change: border-color;
     &:hover {
       border-bottom: 1px solid
         ${props =>
@@ -95,4 +98,3 @@ export const ContactButton = styled(Button)`
     width: 100%;
   }
 `;
-

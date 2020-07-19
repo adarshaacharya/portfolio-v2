@@ -21,6 +21,7 @@ module.exports = {
           `Inter\:300,400,400i,500,600,700`,
           `Poppins\:300,400,400i,500,600,700`,
           `IBM Plex Mono`,
+          `Ubuntu`,
         ],
         display: 'swap',
       },

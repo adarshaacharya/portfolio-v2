@@ -6,7 +6,7 @@ export const SectionTitle = styled.h1`
   font-weight: 900;
   font-style: normal;
   color: ${p => (p.theme.dark ? p.theme.primaryText : p.theme.primaryBlack)};
-  font-family: 'Poppins', sans-serif;
+  font-family: ${p => p.theme.primaryFontFamily};
   text-align: ${p => p.align};
   line-height: 45px;
   letter-spacing: 1px;

@@ -1,6 +1,5 @@
 import React from 'react';
 import useForm from '@hooks/use-form';
-import SocialIcons from './SocialIcons';
 import { SectionTitle } from '@portfolio-ui/';
 import {
   ContactForm,
@@ -75,8 +74,6 @@ const Contact = () => {
           <ContactButton type="submit">Submit</ContactButton>
         </Form>
       </ContactForm>
-
-      <SocialIcons />
     </>
   );
 };

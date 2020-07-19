@@ -13,7 +13,7 @@ const GlobalStyles = createGlobalStyle`
   /* Scaffolding */
   body, html {
     height : 100%;
-    font-family : ${p => p.theme.fontFamily};
+    font-family : ${p => p.theme.primaryFontFamily};
     font-size: calc(12px + 0.4vw);
     -webkit-font-smoothing: antialiased;
     font-display : fallback !important;
@@ -22,20 +22,25 @@ const GlobalStyles = createGlobalStyle`
   }
   
   body {
-    /* margin : 0; */
+    margin : 0;
     padding : 0;
     background-color : ${p => p.theme.bg};
     color : ${p => p.theme.primaryText};
     transition: 0.2s ease-out;
+    border-top: 5px solid ${props => props.theme.primaryColor};
   }
 
   a {
     text-decoration : none;
     color :${p => p.theme.primaryColor};
-    
+
     &:hover {
       color: ${p => p.theme.primaryText};
     }
+  }
+
+  svg {
+    cursor: pointer;
   }
 
   /* Headings */
