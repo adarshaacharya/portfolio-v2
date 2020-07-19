@@ -5,7 +5,7 @@ export const SectionTitle = styled.h1`
   font-size: 1.7rem;
   font-weight: 900;
   font-style: normal;
-  color: ${p => (p.theme.dark ? p.theme.primaryText : p.theme.primaryBlack)};
+  color: ${p => p.theme.primaryText};
   font-family: ${p => p.theme.primaryFontFamily};
   text-align: ${p => p.align};
   line-height: 45px;

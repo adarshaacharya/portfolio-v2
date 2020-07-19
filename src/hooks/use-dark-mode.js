@@ -1,22 +1,53 @@
-import { useState, useEffect } from 'react';
+// import { useState, useEffect } from 'react';
 
-const useDarkMode = () => {
+// const useDarkMode = () => {
+//   const _THEME_ = 'adarsha:theme';
+//   const storedTheme =
+//     typeof localStorage !== 'undefined' && localStorage.getItem(_THEME_);
+//   const [theme, setTheme] = useState(storedTheme);
+
+//   const toggleTheme = () => {
+//     setTheme(prevTheme => (prevTheme === 'light' ? 'dark' : 'light'));
+//   };
+
+//   useEffect(() => {
+//     if (typeof localStorage !== 'undefined') {
+//       localStorage.setItem(_THEME_, theme);
+//     }
+//   }, [theme]);
+
+//   return [theme, toggleTheme];
+// };
+
+// export default useDarkMode;
+
+
+import { useEffect, useState } from 'react'
+
+export default () => {
   const _THEME_ = 'adarsha:theme';
-  const storedTheme =
-    typeof window !== 'undefined' && window.localStorage.getItem(_THEME_);
 
-    const [theme, setTheme] = useState(storedTheme);
+  const [theme, setTheme] = useState('light')
 
-  const toggleTheme = () =>
-    setTheme(prevTheme => (prevTheme === 'light' ? 'dark' : 'light'));
+  const toggleTheme = () => {
+    if (theme === 'light') {
+      window.localStorage.setItem(_THEME_, 'dark')
+      setTheme('dark')
+    } else {
+      window.localStorage.setItem(_THEME_, 'light')
+      setTheme('light')
+    }
+  }
 
   useEffect(() => {
-    if (typeof window !== 'undefined') {
-      window.localStorage.setItem(_THEME_, theme);
+    const localTheme = window.localStorage.getItem('theme')
+    if (localTheme) {
+      setTheme(localTheme)
     }
-  }, [theme]);
+  }, [])
 
-  return [theme, toggleTheme];
-};
-
-export default useDarkMode;
+  return [
+    theme,
+    toggleTheme,
+  ]
+}

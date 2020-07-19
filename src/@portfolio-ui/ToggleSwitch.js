@@ -32,13 +32,12 @@ export const ToggleSwitch = () => {
         onColor="#555"
         offColor="#222"
         checkedIcon={<img src={Moon} alt="moon icon" className="moon" />}
-        uncheckedIcon={<img src={Sun} alt="sun icon" className="sun"  />}
+        uncheckedIcon={<img src={Sun} alt="sun icon" className="sun" />}
         boxShadow="0 0 2px 3px #2D85F4"
         activeBoxShadow="0 0 2px 3px #2D85F4"
         handleDiameter={23}
         height={25}
         width={55}
-        aria-checked={theme === 'dark' ? true : false}
       />
     </>
   );
