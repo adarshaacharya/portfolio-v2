@@ -1,8 +1,9 @@
 const personal = {
   title: 'Aadarsha Acharya - Portfolio Website',
-  description:
-    'Personal website of a web developer passionate about create things and sharing good ideas',
+  defaultTitle: 'Aadarsha Acharya',
   author: 'Aadarsha Acharya',
+  description:
+    'Aadarsha Acharya- Web developer passionate about create things and sharing good ideas',
   url: 'https://adarshaacharya.com.np',
   keywords: [
     `Aadarsha Acharya, Aadarsha, Acharya, adarshaacharya, Adarsha Acharya, Adarsha, Acharya, adarshaacharya.com.np`,
@@ -10,6 +11,7 @@ const personal = {
 };
 
 const social = {
+  logo: 'static/images/logo.png',
   twitter: '@adarshatweets',
   twitterLink: `https://twitter.com/aadarshatweets`,
   linkedinLink: `https://www.linkedin.com/in/adarshaacharya/`,
@@ -17,7 +19,8 @@ const social = {
 };
 
 const theme = {
-  themeColor: '#6D83F2',
+  themeColor: '#2D85F4',
+  backgroundColor: '#2D85F4',
 };
 
 const disqus = {
@@ -31,7 +34,7 @@ const trackingID = {
 module.exports = {
   ...personal,
   ...social,
-  ...theme,
+  ...theme, // manifest
   ...disqus,
   ...trackingID,
 };

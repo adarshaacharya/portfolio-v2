@@ -135,5 +135,21 @@ module.exports = {
         policy: [{ userAgent: '*', allow: '/' }],
       },
     },
+
+
+    // pwa features
+    {
+      resolve: 'gatsby-plugin-manifest',
+      options: {
+        name: config.defaultTitle,
+        short_name: config.defaultTitle,
+        start_url: '/',
+        background_color: config.backgroundColor,
+        theme_color: config.themeColor,
+        display: 'minimal-ui',
+        icon: config.logo
+      },
+    },
+    'gatsby-plugin-offline',
   ],
 };
