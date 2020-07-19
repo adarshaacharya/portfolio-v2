@@ -52,6 +52,7 @@
     "react-switch": "^5.0.1",
     "simple-icons": "^2.14.0",
     "styled-components": "^5.1.1",
+    "swr": "^0.2.3",
     "use-sound": "^1.0.2"
   },
   "devDependencies": {

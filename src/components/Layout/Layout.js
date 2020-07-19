@@ -11,10 +11,9 @@ import { ThemeProvider } from 'styled-components';
 import { LayoutWrapper } from './Layout.style';
 import { darkTheme, lightTheme } from './Theme/theme';
 
-setConfiguration({ breakpoints: [576, 769, 992, 1200] }); // sm, md, lg, xl
 
 const Layout = ({ children }) => {
-  const [theme, toggleTheme] = useDarkMode();
+  const {theme, toggleTheme} = useDarkMode();
   const currentTheme = theme === 'light' ? lightTheme : darkTheme;
 
   return (
