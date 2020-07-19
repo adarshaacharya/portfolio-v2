@@ -60,12 +60,12 @@ const SEO = ({ title, description, keywords, author }) => {
   );
 };
 
-// SEO.defaultProps = {
-//   lang: `en`,
-//   meta: [],
-//   keywords: [],
-//   description: ``,
-// }
+SEO.defaultProps = {
+  lang: `en`,
+  meta: [],
+  keywords: [],
+  description: ``,
+}
 
 SEO.propTypes = {
   description: PropTypes.string,

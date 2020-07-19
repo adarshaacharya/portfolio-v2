@@ -6,7 +6,7 @@ export default () => {
       site {
         siteMetadata {
           title
-          author
+          author  
           description
           keywords
         }

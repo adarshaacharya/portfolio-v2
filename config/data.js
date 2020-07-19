@@ -1,5 +1,5 @@
 const personal = {
-  title: 'Aadarsha Acharya - Portfolio Website',
+  title: 'Aadarsha Acharya',
   defaultTitle: 'Aadarsha Acharya',
   author: 'Aadarsha Acharya',
   description:
@@ -11,7 +11,7 @@ const personal = {
 };
 
 const social = {
-  logo: 'static/images/logo.png',
+  logo: 'static/images/logo6.png',
   twitter: '@adarshatweets',
   twitterLink: `https://twitter.com/aadarshatweets`,
   linkedinLink: `https://www.linkedin.com/in/adarshaacharya/`,
@@ -19,8 +19,8 @@ const social = {
 };
 
 const theme = {
-  themeColor: '#2D85F4',
-  backgroundColor: '#2D85F4',
+  themeColor: '#1b2938',
+  backgroundColor: '#1b2938',
 };
 
 const disqus = {
