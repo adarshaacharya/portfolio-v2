@@ -6,10 +6,7 @@ export const BlogItem = styled(Link)`
   color: ${props => props.theme.primaryBlack};
   display: block;
   margin-bottom: 70px;
-  box-shadow: 0 4px 6px hsla(0, 0%, 0%, 0.1);
-  
-  /* box-shadow: 4px 4px 23px -10px ${props => props.theme.primaryColor}; */
-
+  box-shadow:  ${props => props.theme.cardShadow};
   padding: 2rem 3rem;
   border-radius: 10px;
   border: 1px solid
@@ -46,7 +43,7 @@ export const Tags = styled(Flex)`
   > span {
     display: block;
     font-weight: 500;
-    background: ${props => props.theme.accentColor};
+    background: ${props => props.theme.tagColor};
     padding: 0.4rem 0.6rem;
     font-size: 0.75rem;
     border-radius: 3rem;

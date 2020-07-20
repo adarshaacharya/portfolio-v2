@@ -4,7 +4,7 @@ import { NavWrapper, NavContent, TabBarWrapper } from './Navbar.style';
 import NavDesktop from './desktop/NavDesktop';
 import TabBar from './mobile/TabBar';
 
-const Navbar = () => {
+ const Navbar = () => {
   return (
     <header>
       <NavWrapper>
@@ -20,4 +20,5 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+
+export default Navbar 

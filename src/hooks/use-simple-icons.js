@@ -11,7 +11,7 @@ export default ({ stack, style }) => {
         fill: `#${icon.hex}`,
         display: 'inline-block',
         width: '50px',
-        margin: '0 auto',
+        margin: '4px auto',
         ...style,
       }}
       dangerouslySetInnerHTML={{ __html: icon.svg }}

@@ -6,7 +6,6 @@ import { graphql, Link } from 'gatsby';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
 import React from 'react';
 import { disqusShortName, url } from '../../config/data';
-import './style.scss';
 
 // page context from gatsby-node and data from below graphql query
 const BlogPostTemplate = ({ data, pageContext }) => {
@@ -49,29 +48,22 @@ const BlogPostTemplate = ({ data, pageContext }) => {
       </div>
 
       <hr />
+
+      <Flex justify="space-between" className="recommendation">
+        {previous && (
+          <Link to={`/blog/${previous.frontmatter.slug}/`} rel="prev">
+            &larr; {previous.frontmatter.title}
+          </Link>
+        )}
+
+        {next && (
+          <Link to={`/blog/${next.frontmatter.slug}/`} rel="next">
+            {next.frontmatter.title} &rarr;
+          </Link>
+        )}
+      </Flex>
+
       <DiscussionEmbed shortname={disqusShortName} config={disqusConfig} />
-      <hr />
-      <nav className="bottom-nav">
-        <h2>Up Next</h2>
-        <ul>
-          <li>
-            {previous && (
-              <Link to={previous.frontmatter.slug} rel="prev">
-                <span role="img" aria-label="previous">🔥</span>
-                {previous.frontmatter.title}
-              </Link>
-            )}
-          </li>
-          <li>
-            {next && (
-              <Link to={next.frontmatter.slug} rel="next">
-                {next.frontmatter.title} 
-                <span role="img" aria-label="next">🤟🏻</span>
-              </Link>
-            )}
-          </li>
-        </ul>
-      </nav>
     </Layout>
   );
 };

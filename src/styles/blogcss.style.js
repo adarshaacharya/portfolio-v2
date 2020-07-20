@@ -5,8 +5,16 @@ const BlogCssStyles = css`
   div#disqus_thread {
     padding: 15px 25px;
     border-radius: 10px;
+    background: #fafafa;
+    margin-bottom: 90px;
+    margin-top: 50px;
+    box-shadow: ${p => p.theme.shadowSmall};
+  }
 
-    color: ${props => props.theme.primaryText} !important;
+  .recommendation a {
+    font-size: 1rem;
+    font-style: italic;
+    font-family: ${p => p.theme.UbuntuFontFamily} !important;
   }
 
   .blog-content {
@@ -37,6 +45,10 @@ const BlogCssStyles = css`
     blockquote p {
       word-break: break-word;
       margin: 0;
+    }
+
+    span {
+      color: ${p => p.theme.secondaryText};
     }
 
     /*codepen*/
@@ -120,13 +132,18 @@ const BlogCssStyles = css`
         p.theme.primaryFontFamily}; /*@TODO : New font family*/
       font-size: 1.05rem;
       padding: 0px 10px;
-      margin-left: 3em;
+      margin: 0 0 2rem 0;
       line-height: 220%;
       text-indent: 0px;
     }
 
-    ul {
-      list-style: square;
+    li {
+      margin: 0.8rem 0;
+    }
+
+    li:nth-child(n)::before {
+      content: '👉🏼 ';
+      margin: 0.2rem;
     }
 
     /* Gatsby image*/

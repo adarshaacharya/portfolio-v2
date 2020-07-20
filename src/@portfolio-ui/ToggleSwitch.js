@@ -26,7 +26,7 @@ export const ToggleSwitch = () => {
   return (
     <>
       <SwitchWrapper
-        aria-label="Switch between Dark and Light mode"
+        aria-label="Toggle Theme"
         onChange={toggleTheme}
         checked={theme === 'dark' ? true : false}
         onColor="#555"

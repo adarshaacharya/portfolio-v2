@@ -12,13 +12,12 @@ export default function Projects() {
 
   return (
     <Layout>
-      <SEO title={`Side Projects`} />
+      <SEO title={`Projects`} />
       <SectionTitle>Some Things I've Built.</SectionTitle>
 
       {projects.map(project => (
         <ProjectPreview project={project} key={project.title} />
       ))}
-      <Link to="/">&larr; Back to home</Link>
     </Layout>
   );
 }

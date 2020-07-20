@@ -15,7 +15,7 @@ export const NavWrapper = styled.div`
     width: 100%;
     background: ${props => props.theme.navBg};
     transition: 0.2s ease-out;
-    box-shadow: ${props => props.theme.shadowSmall};
+    box-shadow: ${props => props.theme.navShadow};
     border-bottom: ${props => props.theme.navBorderBottom};
     z-index: 99;
   }

@@ -1,6 +1,6 @@
 import Image from 'gatsby-image';
 import styled from 'styled-components';
-import { Flex } from '@portfolio-ui/';
+import { Flex, SvgAnimation } from '@portfolio-ui/';
 
 export const AuthorInfoWrapper = styled.div`
   display: grid;
@@ -36,21 +36,13 @@ export const Info = styled.div`
     line-height: 50px;
     font-size: 1.1rem;
     letter-spacing: 0.7px;
-    transition: transform 0.2s infinite;
-
     svg {
       height: 37px;
       width: 37px;
-      fill: ${props => props.theme.primaryColor};
       margin-right: 11px;
       margin-top: 6px;
     }
-    &:hover {
-      svg {
-        fill: ${props => props.theme.primaryText};
-        transform: scale(1.1);
-      }
-    }
+    ${SvgAnimation};
   }
 
   @media ${props => props.theme.media.tablet} {
@@ -68,23 +60,17 @@ export const AvatarName = styled.h1`
   letter-spacing: 1px;
   margin: 0;
   color: ${props => props.theme.textBlack};
- 
 `;
 
 export const SocialIcons = styled(Flex)`
   margin-top: 10px;
   a {
     margin-right: 1.5rem;
-    transition: transform 0.2s infinite;
     svg {
       width: 25px;
       height: 30px;
-      fill: ${props => props.theme.primaryColor};
-      &:hover {
-        fill: ${props => props.theme.primaryText};
-        transform: scale(1.1);
-      }
     }
+    ${SvgAnimation};
   }
 
   @media ${props => props.theme.media.tablet} {

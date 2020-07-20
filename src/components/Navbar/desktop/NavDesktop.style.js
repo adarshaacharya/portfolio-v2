@@ -3,7 +3,7 @@ import { Link } from 'gatsby';
 
 export const Logo = styled(Link)`
   margin-right: auto;
-  font-family: Ubuntu;
+  font-family: ${p => p.theme.UbuntuFontFamily};
   font-size: 1.5rem;
   font-weight: 700;
 

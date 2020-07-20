@@ -6,13 +6,28 @@ export const ContactForm = styled.section``;
 export const Form = styled.form`
   min-height: 400px;
   padding: 3rem;
-  box-shadow: rgba(0, 0, 0, 0.05) 0px 5px 10px;
+  box-shadow: ${props => props.theme.cardShadow};
   border-radius: 12px;
   background: ${props => props.theme.secondaryColor};
   border-top: 4px solid ${props => props.theme.primaryColor};
   border: 1px solid
     ${props => (props.theme.dark ? props.theme.primaryColor : 'none')};
-  margin: 3rem 0;
+  margin-bottom: 5rem;
+`;
+
+export const FormDescription = styled.p`
+  font-size: 1rem;
+  line-height: 1.8rem;
+  margin-bottom: 1.5rem;
+  a {
+    border-color: transparent;
+    transition: border-color 0.25s ease 0s;
+    &:hover {
+      border-bottom: 1px solid
+        ${props =>
+          props.theme.secondaryText};
+    }
+  }
 `;
 
 export const FormContainer = styled.div`
@@ -32,23 +47,6 @@ export const FormContainer = styled.div`
       'email email'
       'message message'
       '.btn';
-  }
-`;
-
-export const FormDescription = styled.p`
-  font-size: 1rem;
-  line-height: 1.8rem;
-  a {
-    border-color : transparent;
-    transition: border-color 0.25s ease 0s;
-    will-change: border-color;
-    &:hover {
-      border-bottom: 1px solid
-        ${props =>
-          props.theme.dark
-            ? props.theme.primaryBlack
-            : props.theme.primaryColor};
-    }
   }
 `;
 

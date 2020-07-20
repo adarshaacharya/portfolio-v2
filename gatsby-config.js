@@ -2,11 +2,11 @@ const config = require('./config/data');
 
 module.exports = {
   siteMetadata: {
-    title: config.title,
-    author: config.author,
-    description: config.description,
-    siteUrl: config.url,
-    keywords: config.keywords,
+    title: config.siteTitle,
+    author: config.siteAuthor,
+    description: config.siteDescription,
+    siteUrl: config.siteUrl,
+    keywords: config.siteKeywords,
   },
 
   plugins: [
@@ -88,7 +88,6 @@ module.exports = {
               inlineCodeMarker: null,
               showLineNumbers: true,
               noInlineHighlight: false,
-              aliases: { sh: 'bash', js: 'javascript' },
             },
           },
 

@@ -1,9 +1,20 @@
 import styled from 'styled-components';
-import { Flex, ExternalLink } from '@portfolio-ui/';
+import { Flex, ExternalLink, SvgAnimation } from '@portfolio-ui/';
 import Image from 'gatsby-image';
 
 export const ProjectPreviewWrapper = styled.div`
-  margin: 80px 0;
+  padding: 60px 0;
+  border: none;
+  border-bottom: 1px solid ${p => p.theme.hrColor};
+
+  &:first-of-type {
+    padding-top: 0px;
+  }
+
+  &:last-of-type {
+    border-bottom: 0;
+  }
+
   @media ${props => props.theme.media.tablet} {
     margin: 0;
   }
@@ -63,7 +74,7 @@ export const ProjectTitle = styled.h3`
   cursor: pointer;
   padding: 1.5rem 0 1rem 0.5rem;
   margin: 0;
-  background: ${props => props.theme.accentColor};
+  background: ${p => p.theme.tagColor};
   border: 1px solid
     ${props =>
       props.theme.dark ? props.theme.primaryColor : 'hsla(0, 0%, 50%, 0.1)'};
@@ -95,15 +106,11 @@ export const ProjectLink = styled(ExternalLink)`
   svg {
     width: 25px;
     height: 30px;
-    fill: ${props => props.theme.primaryColor};
-    &:hover {
-      transform: scale(1.07);
-      fill: ${props => props.theme.primaryText};
-    }
   }
+  ${SvgAnimation};
 `;
 
-export const ProjectDescription = styled.div`
+export const ProjectDescription = styled.p`
   grid-area: description;
   padding: 2rem 0;
   @media ${props => props.theme.media.tablet} {
@@ -117,8 +124,8 @@ export const TechList = styled(Flex)`
     list-style: none;
     display: block;
     font-weight: 500;
-    background: ${props => props.theme.accentColor};
-    color: ${props => props.theme.primaryBlack};
+    background: ${props => props.theme.tagColor};
+    color: ${props => props.theme.primaryText};
     margin: 0.2rem;
     padding: 0.5rem 0.7rem;
     font-size: 0.75rem;
@@ -128,5 +135,3 @@ export const TechList = styled(Flex)`
     line-height: 1;
   }
 `;
-
-export const ProjectContent = styled.div``;

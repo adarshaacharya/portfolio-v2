@@ -1,16 +1,16 @@
-import React from 'react';
-import { FormattedIcon, ExternalLink } from '@portfolio-ui/';
 import getAvatar from '@lib/get-avatar';
-import Resume from './Resume';
-
+import { ExternalLink, FormattedIcon } from '@portfolio-ui/';
+import { socialmedia } from '@src/constants/socia-media';
+import React from 'react';
 import {
   AuthorInfoWrapper,
   Avatar,
   AvatarName,
-  Info,
   Bio,
+  Info,
   SocialIcons,
 } from './AuthorInfo.style';
+import Resume from './Resume';
 import TechStack from './TechStack';
 
 export default function AuthorInfo() {
@@ -28,24 +28,14 @@ export default function AuthorInfo() {
           </a>
 
           <SocialIcons>
-            <ExternalLink
-              href="https://github.com/adarshaacharya"
-              aria-label="GitHub Link"
-            >
-              <FormattedIcon name="GitHub" />
-            </ExternalLink>
-            <ExternalLink
-              href="https://twitter.com/adarshatweets"
-              aria-label="Twitter Link"
-            >
-              <FormattedIcon name="Twitter" />
-            </ExternalLink>
-            <ExternalLink
-              href="https://www.linkedin.com/in/adarshaacharya/"
-              aria-label="Linkedin Link"
-            >
-              <FormattedIcon name="Linkedin" />
-            </ExternalLink>
+            {socialmedia &&
+              socialmedia.map(({ url, name }, i) => (
+                <div key={i}>
+                  <ExternalLink href={url} aria-label={name}>
+                    <FormattedIcon name={name} />
+                  </ExternalLink>
+                </div>
+              ))}
           </SocialIcons>
         </Info>
       </AuthorInfoWrapper>

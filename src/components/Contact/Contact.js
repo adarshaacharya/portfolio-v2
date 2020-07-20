@@ -20,12 +20,12 @@ const Contact = () => {
       <ContactForm>
         <SectionTitle>Drop Hello.</SectionTitle>
         <FormDescription>
-          If you wanna get in touch, talk to me about a project collaboration or
-          just say hi, fill up the awesome form below or send an email to &nbsp;
-          <a href="mailto: adarshaofficial@gmail.com ">
+          If you have a question, talk to me about a project collaboration or
+          just say hi, fill up the awesome form below or send an email to {' '}
+          <a href="mailto: adarshaofficial@gmail.com">
             adarshaofficial@gmail.com{' '}
           </a>
-          and let's talk.
+          . I'll respond as soon as possible!
         </FormDescription>
 
         <Form autoComplete="off">

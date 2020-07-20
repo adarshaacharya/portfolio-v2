@@ -7,7 +7,7 @@ export const LayoutWrapper = styled(StyledContainer)`
   padding: 0 1em;
   min-height: calc(100vh - 125px);
 
-@media ${props => props.theme.media.tablet} {
-  margin-top : 0px;
-}
+  @media ${props => props.theme.media.tablet} {
+    margin-top: 0px;
+  }
 `;

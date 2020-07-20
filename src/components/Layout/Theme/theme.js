@@ -8,18 +8,16 @@ export const sizes = {
 };
 
 const commonTheme = {
-  shadow: '0px 10px 10px rgba(0, 0, 0, 0.2)',
-  shadowSmall: '0px 5px 10px rgba(0, 0, 0, 0.05)',
   primaryFontFamily: '"Inter", sans-serif',
   secondaryFontFamily: '"Poppins", sans-serif',
-  spacing: {
-    sectionBottom: 'margin-bottom: 100px',
-    sectionTop: 'margin-top: 100px',
-    sectionTopBottom: css`
-      margin-top: 100px;
-      margin-bottom: 100px;
-    `,
-  },
+  IBMFontFamily: '"IBM Plex Mono", sans-serif',
+  UbuntuFontFamily: '"Ubuntu", sans-seris',
+
+  shadow: '0px 10px 10px rgba(0, 0, 0, 0.2)',
+  shadowSmall: '0px 5px 10px rgba(0, 0, 0, 0.09)',
+  navShadow: '0px 7px 10px rgba(0, 0, 0, 0.06)',
+  cardShadow: '4px 4px 23px -10px hsla(0, 0%, 0%, 0.4)',
+
   media: {
     mobile: `(max-width: ${sizes.mobile})`,
     tablet: `(max-width: ${sizes.tablet})`,
@@ -28,39 +26,58 @@ const commonTheme = {
     minMobile: `(min-width: ${sizes.mobile})`,
     minTablet: `(min-width: ${sizes.tablet})`,
   },
-  svgTransition : ''
 };
 
 export const lightTheme = {
   dark: false,
+
+  // bg, theme, font
   bg: '#F7FAFC',
   primaryColor: '#2D85F4',
   secondaryColor: '#F8F8F8',
-  accentColor: '#C7D0FF',
-  
-  primaryBlack: '#383838',
+
+  // tags
+  tagColor: '#CAE9F1',
+
+  // headings, paragraph, anchor
   primaryText: '#383838',
-  blockQuote: '#fff9db',
-  
-  hrColor: '#eee',
+  secondaryText: '#222',
+
+  codeText: '#cbe9ff',
+
+  // blog bloackquote bg
+  blockQuote: '#E6E6E6',
+
+  hrColor: 'rgba(0,0,0,0.2)',
   navBg: '#F7FAFC',
   navBorderBottom: 'none',
+
+  // generic
+  grayColor: '#666',
+
   ...commonTheme,
 };
 
 export const darkTheme = {
   dark: true,
+
   bg: '#10171D',
   primaryColor: '#2D85F4',
   secondaryColor: '#232323',
-  accentColor: '#303030',
-  primaryBlack: '#F8F8F8',
-  elevation0: '#191919',
+
+  tagColor: '#303030',
+
   primaryText: '#F8F8F8',
+  secondaryText: '#ffffffe0',
+
+  codeText: '#1b2938',
+
   blockQuote: '#232323',
 
   hrColor: '#303030',
   navBg: '#1b2938',
   navBorderBottom: '0.1px solid hsl(0, 0%, 22%)',
+
+  grayColor: '#888',
   ...commonTheme,
 };

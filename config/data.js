@@ -1,11 +1,11 @@
 const personal = {
-  title: 'Aadarsha Acharya',
+  siteTitle: 'Aadarsha Acharya',
   defaultTitle: 'Aadarsha Acharya',
-  author: 'Aadarsha Acharya',
-  description:
+  siteAuthor: 'Aadarsha Acharya',
+  siteDescription:
     'Aadarsha Acharya- Web developer passionate about create things and sharing good ideas',
-  url: 'https://adarshaacharya.com.np',
-  keywords: [
+  siteUrl: 'https://adarshaacharya.com.np',
+  siteKeywords: [
     `Aadarsha Acharya, Aadarsha, Acharya, adarshaacharya, Adarsha Acharya, Adarsha, Acharya, adarshaacharya.com.np`,
   ],
 };

@@ -25,7 +25,6 @@ const GlobalStyles = createGlobalStyle`
     margin : 0;
     padding : 0;
     background-color : ${p => p.theme.bg};
-    color : ${p => p.theme.primaryText};
     transition: 0.2s ease-out;
     border-top: 5px solid ${props => props.theme.primaryColor};
   }
@@ -51,9 +50,11 @@ const GlobalStyles = createGlobalStyle`
   }
 
   p {
-    font-size : 16px;
+    font-size : 18px;
+    font-weight : 400;
+    color : ${p => p.theme.secondaryText};
     margin : 0;
-    line-height : 150%;
+    line-height : 34px;
   }
 
   ul {
@@ -64,8 +65,9 @@ const GlobalStyles = createGlobalStyle`
   }
 
   hr {
+    border : none;
     border-top : 1px solid ${p => p.theme.hrColor};
-    margin : 45px 0;
+    margin : 40px 0;
   }
 
  
@@ -78,9 +80,6 @@ ${PrismJsStyles}
   Blog styles
 ================*/
 ${BlogCssStyles}
-
-
-
 `;
 
 export default GlobalStyles;

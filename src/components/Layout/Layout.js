@@ -15,7 +15,6 @@ import Footer from '@components/Footer';
 // styles
 import { LayoutWrapper } from './Layout.style';
 
-
 const Layout = ({ children }) => {
   const { theme, toggleTheme } = useDarkMode();
   const currentTheme = theme === 'light' ? lightTheme : darkTheme;
@@ -27,7 +26,7 @@ const Layout = ({ children }) => {
         <ThemeToggleContext.Provider value={{ theme, toggleTheme }}>
           <Navbar />
         </ThemeToggleContext.Provider>
-        <LayoutWrapper>{children} </LayoutWrapper>
+        <LayoutWrapper>{children}</LayoutWrapper>
         <Footer />
       </>
     </ThemeProvider>

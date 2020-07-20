@@ -1,5 +1,5 @@
-export const TECHS = {
-  data: [
+module.exports = {
+  techstack: [
     'HTML5',
     'CSS3',
     'JavaScript',

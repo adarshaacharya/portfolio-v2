@@ -51,7 +51,6 @@ const ProjectPreview = ({
             ))}
           </TechList>
         </Project>
-        <hr />
       </ProjectPreviewWrapper>
     </>
   );

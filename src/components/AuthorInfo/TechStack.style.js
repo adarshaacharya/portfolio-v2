@@ -15,8 +15,8 @@ export const TechItem = styled(Flex)`
 
   &:hover {
     cursor: pointer;
-    background: ${p => (p.theme.dark ? 'none' : "#EBEBEB")};
-    color: ${p => (p.theme.dark ? '#8CF1B3' : 'none')};
+    background: ${p => (p.theme.dark ? 'none' : '#EBEBEB')};
+    color: ${p => (p.theme.dark ? '#8CF1B3' : p.theme.primaryColor)};
     border-radius: 10px;
     transform: scale(0.9);
   }

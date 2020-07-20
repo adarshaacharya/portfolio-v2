@@ -2,6 +2,7 @@ import React from 'react';
 import { Flex, ExternalLink } from '@portfolio-ui/';
 import { FormattedIcon } from '@portfolio-ui/';
 import styled from 'styled-components';
+import { SvgAnimation } from '@src/@portfolio-ui';
 
 const ResumeWrapper = styled(Flex)`
   padding-top: 1rem;
