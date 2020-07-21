@@ -39,6 +39,7 @@ const Contact = () => {
           name="contact-adarsha"
           data-netlify="true"
           data-netlify-recaptcha="true"
+          data-netlify-honeypot="bot-field"
           autoComplete="off"
         >
           <noscript>
@@ -86,7 +87,11 @@ const Contact = () => {
             </FormGroup>
           </FormContainer>
 
-          <Recaptcha ref={recaptchaRef} sitekey={RECAPTCHA_KEY} type="image" size="normal" />
+          <Recaptcha
+            ref={recaptchaRef}
+            sitekey={RECAPTCHA_KEY}
+            size="compact"
+          />
           <ContactButton type="submit">Submit</ContactButton>
         </Form>
       </ContactForm>

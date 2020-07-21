@@ -1,7 +1,9 @@
 import styled, { css } from 'styled-components';
 import { Button } from '@portfolio-ui/';
 
-export const ContactForm = styled.section``;
+export const ContactForm = styled.section`
+ 
+`;
 
 export const Form = styled.form`
   min-height: 400px;
@@ -89,7 +91,6 @@ export const TextArea = styled.textarea`
 
 export const ContactButton = styled(Button)`
   grid-area: btn;
-  margin-top: 1.5rem;
   @media ${props => props.theme.media.tablet} {
     display: block;
     width: 100%;
