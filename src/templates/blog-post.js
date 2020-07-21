@@ -44,7 +44,7 @@ const BlogPostTemplate = ({ data, pageContext }) => {
         </Flex>
         <hr />
 
-        <MDXRenderer className="post-body">{post.body}</MDXRenderer>
+        <MDXRenderer>{post.body}</MDXRenderer>
       </div>
 
       <hr />

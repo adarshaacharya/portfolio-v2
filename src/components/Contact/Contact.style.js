@@ -8,7 +8,7 @@ export const Form = styled.form`
   padding: 3rem;
   box-shadow: ${props => props.theme.cardShadow};
   border-radius: 12px;
-  background: ${props => props.theme.secondaryColor};
+  background: ${props => props.theme.cardBg};
   border-top: 4px solid ${props => props.theme.primaryColor};
   border: 1px solid
     ${props => (props.theme.dark ? props.theme.primaryColor : 'none')};

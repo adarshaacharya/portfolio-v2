@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 import { ToggleSwitch } from '@portfolio-ui';
+import { useSfx } from '@src/hooks/use-sfx';
 
 const MobileNavWrapper = styled.div`
   display: flex;
@@ -13,19 +14,15 @@ const MobileNavWrapper = styled.div`
 `;
 
 const ToggleIcon = styled.div`
-  border-radius: 50%;
-  padding: 15px 20px 0 0;
-  color: #f5f5f5;
-  &:hover {
-    cursor: pointer;
-  }
+  margin: 15px 20px 0 0;
 `;
 
 const NavMobile = () => {
+  const { playPop } = useSfx();
   return (
     <>
       <MobileNavWrapper>
-        <ToggleIcon>
+        <ToggleIcon onClick={playPop}>
           <ToggleSwitch />
         </ToggleIcon>
       </MobileNavWrapper>

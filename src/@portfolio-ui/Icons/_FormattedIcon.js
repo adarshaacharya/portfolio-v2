@@ -13,7 +13,7 @@ import {
   IconSun,
   IconMoon,
   IconResume,
-  IconEmail
+  IconEmail,
 } from '@portfolio-ui/Icons';
 
 const FormattedIcon = ({ name }) => {
@@ -53,6 +53,9 @@ const FormattedIcon = ({ name }) => {
 
     case 'Email':
       return <IconEmail />;
+
+    default:
+      return null;
   }
 };
 

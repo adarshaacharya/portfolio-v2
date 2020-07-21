@@ -25,7 +25,7 @@ exports.onCreateWebpackConfig = ({ actions }) => {
   Create Page for Each Blog Post ( Programmatic Page Gen)
 ======================================================*/
 
-exports.createPages = async ({ actions, graphql }) => {
+exports.createPages = async ({ actions, graphql , reporter}) => {
   const blogPostTemplate = path.resolve('./src/templates/blog-post.js');
 
   // get only slug to create pages and pages themselves query for data. Title is queried for next & prev
@@ -55,7 +55,7 @@ exports.createPages = async ({ actions, graphql }) => {
 
     // create each blog post with template using slug
     actions.createPage({
-      path: `/blog/${post.frontmatter.slug}`, // url of each post will be /blog/slug
+      path: '/blog/' + post.frontmatter.slug, // url of each post will be /blog/slug
       component: blogPostTemplate,
 
       // pass slug to the template (data to be passed to tmplate so that it can independently query its data )

@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 
+
 export const Button = styled.button`
   padding: 1rem 2rem;
   background: ${props => props.theme.primaryColor};
@@ -19,4 +20,5 @@ export const Button = styled.button`
     transform: translate(-2px, -2px);
     opacity: 1;
   }
+
 `;

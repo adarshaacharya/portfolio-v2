@@ -74,7 +74,7 @@ export const ProjectTitle = styled.h3`
   cursor: pointer;
   padding: 1.5rem 0 1rem 0.5rem;
   margin: 0;
-  background: ${p => p.theme.tagColor};
+  background: ${p => (p.theme.dark ? p.theme.cardBg : p.theme.tagColor)};
   border: 1px solid
     ${props =>
       props.theme.dark ? props.theme.primaryColor : 'hsla(0, 0%, 50%, 0.1)'};

@@ -69,7 +69,7 @@ module.exports = {
         gatsbyRemarkPlugins: [
           //embed gif/pen/pin/player/post/sandbox/tweet/video
           `gatsby-remark-embedder`,
-
+          `gatsby-remark-copy-linked-files`,
           // auto link headers
           {
             resolve: `gatsby-remark-autolink-headers`,
@@ -129,8 +129,8 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-robots-txt',
       options: {
-        host: config.url,
-        sitemap: `${config.url}/sitemap.xml`,
+        host: config.siteUrl,
+        sitemap: `${config.siteUrl}/sitemap.xml`,
         policy: [{ userAgent: '*', allow: '/' }],
       },
     },

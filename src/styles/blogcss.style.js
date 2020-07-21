@@ -38,8 +38,12 @@ const BlogCssStyles = css`
       border-bottom: 2px solid ${p => p.theme.primaryColor};
     }
 
+    a.gatsby-resp-image-link {
+      margin: 50px 0;
+    }
+
     a.gatsby-resp-image-link:hover {
-      border-bottom: none;
+      /* border-bottom: none; */
     }
 
     blockquote p {
@@ -151,16 +155,16 @@ const BlogCssStyles = css`
     .gatsby-resp-image-background-image,
     img {
       border-radius: 8px;
-      transition: transform 0.6s;
+      transition: transform 0.2s;
 
       &:hover {
-        transform: scale(1.03);
+        transform: scale(1.01);
         cursor: pointer;
       }
     }
 
     .gatsby-resp-image-background-image {
-      box-shadow: 12px 13px 5px -10px rgba(0, 0, 0, 0.38);
+      box-shadow: 12px 13px 5px -10px rgba(0, 0, 0, 0.2);
     }
 
     /* Gatsby plugin autolin header*/

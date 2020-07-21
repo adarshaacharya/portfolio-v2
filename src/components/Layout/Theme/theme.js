@@ -1,5 +1,3 @@
-import { css } from 'styled-components';
-
 export const sizes = {
   mobile: '480px',
   tablet: '768px',
@@ -13,10 +11,8 @@ const commonTheme = {
   IBMFontFamily: '"IBM Plex Mono", sans-serif',
   UbuntuFontFamily: '"Ubuntu", sans-seris',
 
-  shadow: '0px 10px 10px rgba(0, 0, 0, 0.2)',
-  shadowSmall: '0px 5px 10px rgba(0, 0, 0, 0.09)',
   navShadow: '0px 7px 10px rgba(0, 0, 0, 0.06)',
-  cardShadow: '4px 4px 23px -10px hsla(0, 0%, 0%, 0.4)',
+  cardShadow: '0px 3px 5px rgba(0, 0, 0, 0.2)',
 
   media: {
     mobile: `(max-width: ${sizes.mobile})`,
@@ -52,6 +48,9 @@ export const lightTheme = {
   navBg: '#F7FAFC',
   navBorderBottom: 'none',
 
+  // card
+  cardBg: '#FAFAFA',
+
   // generic
   grayColor: '#666',
 
@@ -77,6 +76,8 @@ export const darkTheme = {
   hrColor: '#303030',
   navBg: '#1b2938',
   navBorderBottom: '0.1px solid hsl(0, 0%, 22%)',
+
+  cardBg: '#1E262F',
 
   grayColor: '#888',
   ...commonTheme,

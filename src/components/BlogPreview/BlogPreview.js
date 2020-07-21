@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'gatsby';
 import PropTypes from 'prop-types';
 
 import {
@@ -10,11 +9,19 @@ import {
   Tags,
 } from './BlogPreview.style';
 
+import { useSfx } from '@hooks/use-sfx';
+
 const BlogPreview = ({
   blog: { title, date, tags, readingTime, slug, description },
 }) => {
+  const { playPop, playClick } = useSfx();
   return (
-    <BlogItem to={'/blog/' + slug} key={title}>
+    <BlogItem
+      to={'/blog/' + slug}
+      key={title}
+      onMouseEnter={playPop}
+      onClick={playClick}
+    >
       <DateTime>
         📅 {date} &nbsp; 🕒 {readingTime}
       </DateTime>

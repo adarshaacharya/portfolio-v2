@@ -14,21 +14,23 @@ import {
 
 const Contact = () => {
   const [formData, handleInput] = useForm();
-
+  const handleSubmit = event => {
+    event.preventDefault();
+  };
   return (
     <>
       <ContactForm>
         <SectionTitle>Drop Hello.</SectionTitle>
         <FormDescription>
           If you have a question, talk to me about a project collaboration or
-          just say hi, fill up the awesome form below or send an email to {' '}
+          just say hi, fill up the awesome form below or send an email to{' '}
           <a href="mailto: adarshaofficial@gmail.com">
             adarshaofficial@gmail.com{' '}
           </a>
           . I'll respond as soon as possible!
         </FormDescription>
 
-        <Form autoComplete="off">
+        <Form autoComplete="off" onSubmit={handleSubmit}>
           <FormContainer>
             <FormGroup style={{ gridArea: 'name' }}>
               <label htmlFor="name">Name*</label>

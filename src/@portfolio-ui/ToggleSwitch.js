@@ -6,17 +6,10 @@ import { FormattedIcon } from '@portfolio-ui/';
 
 import ThemeToggleContext from '@context/ThemeToggleContext';
 
-
 const SwitchWrapper = styled(Switch)`
   svg {
     height: 27px;
     transform: rotate(-91.13deg);
-  }
-
-  .moon {
-    svg {
-    }
-    /* height: 20px; */
   }
 `;
 
