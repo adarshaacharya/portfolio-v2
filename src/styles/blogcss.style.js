@@ -156,6 +156,8 @@ const BlogCssStyles = css`
     img {
       border-radius: 8px;
       transition: transform 0.2s;
+      width: 100%;
+      height: auto;
 
       &:hover {
         transform: scale(1.01);

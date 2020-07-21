@@ -1,4 +1,5 @@
 import React from 'react';
+import Recaptcha from 'react-google-recaptcha';
 import useForm from '@hooks/use-form';
 import { SectionTitle } from '@portfolio-ui/';
 import {
@@ -14,9 +15,13 @@ import {
 
 const Contact = () => {
   const [formData, handleInput] = useForm();
-  const handleSubmit = event => {
-    event.preventDefault();
-  };
+  const recaptchaRef = React.createRef();
+
+  const RECAPTCHA_KEY = process.env.GATSBY_APP_SITE_RECAPTCHA_KEY;
+  if (typeof RECAPTCHA_KEY === 'undefined') {
+    throw new Error('RECAPTCHA KEY is undefined');
+  }
+  
   return (
     <>
       <ContactForm>
@@ -30,7 +35,19 @@ const Contact = () => {
           . I'll respond as soon as possible!
         </FormDescription>
 
-        <Form autoComplete="off" onSubmit={handleSubmit}>
+        <Form
+          name="contact-adarsha"
+          data-netlify="true"
+          data-netlify-recaptcha="true"
+          autoComplete="off"
+        >
+          <p hidden>
+            <label>
+              Don’t fill this out:{' '}
+              <input name="bot-field" onChange={handleInput} />
+            </label>
+          </p>
+
           <FormContainer>
             <FormGroup style={{ gridArea: 'name' }}>
               <label htmlFor="name">Name*</label>
@@ -73,6 +90,7 @@ const Contact = () => {
             </FormGroup>
           </FormContainer>
 
+          <Recaptcha ref={recaptchaRef} sitekey={RECAPTCHA_KEY} />
           <ContactButton type="submit">Submit</ContactButton>
         </Form>
       </ContactForm>
