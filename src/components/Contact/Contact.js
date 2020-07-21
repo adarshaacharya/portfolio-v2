@@ -17,11 +17,11 @@ const Contact = () => {
   const [formData, handleInput] = useForm();
   const recaptchaRef = React.createRef();
 
-  const RECAPTCHA_KEY = process.env.GATSBY_APP_SITE_RECAPTCHA_KEY;
+  const RECAPTCHA_KEY = process.env.GATSBY_SITE_RECAPTCHA_KEY;
   if (typeof RECAPTCHA_KEY === 'undefined') {
     throw new Error('RECAPTCHA KEY is undefined');
   }
-  
+
   return (
     <>
       <ContactForm>
@@ -41,13 +41,9 @@ const Contact = () => {
           data-netlify-recaptcha="true"
           autoComplete="off"
         >
-          <p hidden>
-            <label>
-              Don’t fill this out:{' '}
-              <input name="bot-field" onChange={handleInput} />
-            </label>
-          </p>
-
+          <noscript>
+            <p>This form won’t work with Javascript disabled</p>
+          </noscript>
           <FormContainer>
             <FormGroup style={{ gridArea: 'name' }}>
               <label htmlFor="name">Name*</label>
