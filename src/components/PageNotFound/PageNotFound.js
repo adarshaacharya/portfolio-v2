@@ -1,6 +1,6 @@
-import React from "react"
+import React from 'react';
 
-import { StyledPageNotFound } from './PageNotFound.style'
+import { StyledPageNotFound } from './PageNotFound.style';
 
 export default function PageNotFound() {
   return (
@@ -8,9 +8,11 @@ export default function PageNotFound() {
       <StyledPageNotFound>
         <h1>NOT FOUND</h1>
         <p>
-          The page you're looking for doesn't exists. Please click on any link to continue.
+        There's nothing here, perhaps you'll find what you're looking for back
+        home.
+
         </p>
       </StyledPageNotFound>
     </>
-  )
+  );
 }

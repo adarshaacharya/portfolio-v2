@@ -1,47 +1,63 @@
-import Icon from '@hooks/use-icons'
-import Image from 'gatsby-image'
-import PropTypes from 'prop-types'
-import React from 'react'
-import { ProjectPreviewWrapper } from './ProjectPreview.style'
+import React from 'react';
+import PropTypes from 'prop-types';
+import { FormattedIcon } from '@portfolio-ui/';
+
+import {
+  ProjectPreviewWrapper,
+  Project,
+  ProjectLinks,
+  ProjectLink,
+  ProjectImgContainer,
+  ProjectImg,
+  ProjectTitleContainer,
+  ProjectTitle,
+  ProjectDescription,
+  TechList,
+} from './ProjectPreview.style';
 
 const ProjectPreview = ({
-  project: { title, repo, demo, description, currentImg },
+  project: { title, repo, demo, description, thumbnail, techs },
 }) => {
   return (
     <>
       <ProjectPreviewWrapper>
-        <Image fluid={currentImg} alt={title} />
-        <div>
-          <h3>{title}</h3>
+        <Project>
+          <ProjectImgContainer href={demo ? demo : repo}>
+            <ProjectImg fluid={thumbnail} alt={title} />
+          </ProjectImgContainer>
 
-          <p>{description}</p>
+          <ProjectTitleContainer href={demo ? demo : repo}>
+            <ProjectTitle>{title}</ProjectTitle>
+          </ProjectTitleContainer>
 
-          <div className="project-links">
-            <a href={repo} target="_blank" className="repo">
-              {' '}
-              <Icon stack="GitHub" key="github" className="github" />
-            </a>
-            <a
-              href={demo}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="demo"
-            >
-              Demo &rarr;
-            </a>
-          </div>
-        </div>
+          <ProjectLinks>
+            {repo && (
+              <ProjectLink href={repo} aria-label="GitHub Link">
+                <FormattedIcon name="GitHub" />
+              </ProjectLink>
+            )}
+            {demo && (
+              <ProjectLink href={demo} aria-label="External Link">
+                <FormattedIcon name="External" />
+              </ProjectLink>
+            )}
+          </ProjectLinks>
+
+          <ProjectDescription>{description}</ProjectDescription>
+
+          <TechList>
+            {techs.map(tech => (
+              <li key={tech}>{tech}</li>
+            ))}
+          </TechList>
+        </Project>
       </ProjectPreviewWrapper>
     </>
-  )
-}
+  );
+};
 
 ProjectPreview.propTypes = {
-  title: PropTypes.string.isRequired,
-  repo: PropTypes.string.isRequired,
-  demo: PropTypes.string.isRequired,
-  description: PropTypes.string.isRequired,
-  currentImg: PropTypes.string.isRequired,
-}
+  project: PropTypes.object.isRequired,
+};
 
-export default ProjectPreview
+export default ProjectPreview;

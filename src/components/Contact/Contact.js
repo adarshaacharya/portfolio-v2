@@ -1,71 +1,83 @@
-import React from 'react'
-import useForm from '@hooks/use-form'
-import SocialIcons from './SocialIcons'
-import { ContactWrapper } from './Contact.style'
+import React from 'react';
+import useForm from '@hooks/use-form';
+import { SectionTitle } from '@portfolio-ui/';
+import {
+  ContactForm,
+  TextArea,
+  ContactButton,
+  Form,
+  Input,
+  FormContainer,
+  FormDescription,
+  FormGroup,
+} from './Contact.style';
 
 const Contact = () => {
-  const [formData, handleInput] = useForm()
-
+  const [formData, handleInput] = useForm();
+  const handleSubmit = event => {
+    event.preventDefault();
+  };
   return (
     <>
-      <ContactWrapper>
-        <h1>Drop Hello.</h1>
+      <ContactForm>
+        <SectionTitle>Drop Hello.</SectionTitle>
+        <FormDescription>
+          If you have a question, talk to me about a project collaboration or
+          just say hi, fill up the awesome form below or send an email to{' '}
+          <a href="mailto: adarshaofficial@gmail.com">
+            adarshaofficial@gmail.com{' '}
+          </a>
+          . I'll respond as soon as possible!
+        </FormDescription>
 
-        <form autoComplete="off">
-          <div className="row">
-            <div className="name">
-              <label htmlFor="name">Name</label>
-              <input
+        <Form autoComplete="off" onSubmit={handleSubmit}>
+          <FormContainer>
+            <FormGroup style={{ gridArea: 'name' }}>
+              <label htmlFor="name">Name*</label>
+              <Input
                 type="text"
-                className="form-control"
-                name="name"
+                name="Name"
                 id="name"
-                placeholder="Adarsha Acharya"
+                placeholder="Steve Smith"
                 value={formData.name}
                 onChange={handleInput}
                 required
               />
-            </div>
+            </FormGroup>
 
-            <div className="email">
-              <label htmlFor="email">Email</label>
-              <input
+            <FormGroup style={{ gridArea: 'email' }}>
+              <label htmlFor="email">Email*</label>
+              <Input
                 type="email"
-                className="form-control"
-                name="email"
+                name="Email"
                 id="email"
-                placeholder="adarsha@example.com"
+                placeholder="stevesmith@hey.com"
                 value={formData.email}
                 onChange={handleInput}
                 required
               />
-            </div>
-          </div>
+            </FormGroup>
 
-          <div className="message">
-            <label htmlFor="message">Message</label>
-            <textarea
-              name="message"
-              className="form-control"
-              id="message"
-              cols="30"
-              rows="10"
-              placeholder="Hello Aadarsha!"
-              value={formData.message}
-              onChange={handleInput}
-              required
-            />
-          </div>
+            <FormGroup style={{ gridArea: 'message' }}>
+              <label htmlFor="message">Message*</label>
+              <TextArea
+                name="Message"
+                id="message"
+                cols="30"
+                rows="10"
+                placeholder="Let's have chat buddy!"
+                value={formData.message}
+                onChange={handleInput}
+                required
+              />
+            </FormGroup>
+          </FormContainer>
 
-          <div>
-            <input type="submit" value="Send" className="btn" />
-          </div>
-        </form>
-      </ContactWrapper>
-
-      <SocialIcons />
+          <ContactButton type="submit">Submit</ContactButton>
+        </Form>
+      </ContactForm>
     </>
-  )
-}
+  );
+};
 
-export default Contact
+export default Contact;
