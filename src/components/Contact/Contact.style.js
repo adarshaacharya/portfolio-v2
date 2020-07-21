@@ -23,9 +23,7 @@ export const FormDescription = styled.p`
     border-color: transparent;
     transition: border-color 0.25s ease 0s;
     &:hover {
-      border-bottom: 1px solid
-        ${props =>
-          props.theme.secondaryText};
+      border-bottom: 1px solid ${props => props.theme.secondaryText};
     }
   }
 `;
@@ -91,6 +89,7 @@ export const TextArea = styled.textarea`
 
 export const ContactButton = styled(Button)`
   grid-area: btn;
+  margin-top: 1.5rem;
   @media ${props => props.theme.media.tablet} {
     display: block;
     width: 100%;

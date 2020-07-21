@@ -1,16 +1,16 @@
-import React from 'react';
-import Recaptcha from 'react-google-recaptcha';
 import useForm from '@hooks/use-form';
 import { SectionTitle } from '@portfolio-ui/';
+import React from 'react';
+import Recaptcha from 'react-google-recaptcha';
 import {
-  ContactForm,
-  TextArea,
   ContactButton,
+  ContactForm,
   Form,
-  Input,
   FormContainer,
   FormDescription,
   FormGroup,
+  Input,
+  TextArea,
 } from './Contact.style';
 
 const Contact = () => {
@@ -86,7 +86,7 @@ const Contact = () => {
             </FormGroup>
           </FormContainer>
 
-          <Recaptcha ref={recaptchaRef} sitekey={RECAPTCHA_KEY} />
+          <Recaptcha ref={recaptchaRef} sitekey={RECAPTCHA_KEY} type="image" size="normal" />
           <ContactButton type="submit">Submit</ContactButton>
         </Form>
       </ContactForm>
