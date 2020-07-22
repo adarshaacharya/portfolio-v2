@@ -3,7 +3,7 @@ const personal = {
   defaultTitle: 'Aadarsha Acharya',
   siteAuthor: 'Aadarsha Acharya',
   siteDescription:
-    'Aadarsha Acharya- Web developer passionate about create things and sharing good ideas',
+    'Personal website of Aadarsha Acharya - Fullstack developer passionate about creating and sharing things on internet',
   siteUrl: 'https://adarshaacharya.com.np',
   siteKeywords: [
     `Aadarsha Acharya, Aadarsha, Acharya, adarshaacharya, Adarsha Acharya, Adarsha, Acharya, adarshaacharya.com.np`,

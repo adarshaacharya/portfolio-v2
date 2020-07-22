@@ -5,10 +5,9 @@ export const themeStorageKey = 'adarsha:theme';
 
 const isServer = typeof window === 'undefined';
 
-// change value to dark if you want initial value to dark
 const getTheme = () => {
-  if (isServer) return 'light';
-  return localStorage.getItem(themeStorageKey) || 'light';
+  if (isServer) return 'dark';
+  return localStorage.getItem(themeStorageKey) || 'dark';
 };
 
 const setLightMode = () => {

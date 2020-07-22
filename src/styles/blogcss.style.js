@@ -23,8 +23,8 @@ const BlogCssStyles = css`
 
     p {
       font-size: 1rem;
-      line-height: 36px;
-      margin: 1.5rem auto;
+      line-height: 2.215rem;
+      margin: 1.5rem 0;
       font-weight: 400;
     }
 
@@ -51,10 +51,6 @@ const BlogCssStyles = css`
       margin: 0;
     }
 
-    span {
-      color: ${p => p.theme.secondaryText};
-    }
-
     /*codepen*/
     iframe {
       border-radius: 5px;
@@ -79,6 +75,7 @@ const BlogCssStyles = css`
       }
     }
 
+    h1,
     h2,
     h3,
     h4,
@@ -86,6 +83,7 @@ const BlogCssStyles = css`
     h6 {
       margin: 0 0 1.5rem 0;
       line-height: 1.2;
+      font-family: ${props => props.theme.UbuntuFontFamily};
     }
 
     /* blog heading styles*/
@@ -97,13 +95,14 @@ const BlogCssStyles = css`
     }
 
     h1 {
-      font-size: 2rem;
+      font-size: 1.8rem;
       font-weight: 700;
     }
 
     h2 {
-      font-size: 1.8rem;
+      font-size: 1.6rem;
       font-weight: 700;
+      line-height: 1.6;
     }
 
     h2 code {
@@ -112,7 +111,8 @@ const BlogCssStyles = css`
 
     h3 {
       font-size: 1.4rem;
-      font-weight: 600;
+      font-weight: 700;
+      line-height: 1.6;
     }
 
     h3 code {
@@ -121,7 +121,7 @@ const BlogCssStyles = css`
 
     h4 {
       font-size: 1.3rem;
-      font-weight: 400;
+      font-weight: 700;
       margin-bottom: 1rem;
     }
 

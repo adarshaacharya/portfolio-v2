@@ -6,7 +6,7 @@ const path = require(`path`);
 exports.onCreateWebpackConfig = ({ actions }) => {
   actions.setWebpackConfig({
     resolve: {
-      alias: {
+      alias: {  
         src: path.join(__dirname, 'src'),
         '@src': path.join(__dirname, 'src'),
         '@components': path.join(__dirname, 'src/components'),

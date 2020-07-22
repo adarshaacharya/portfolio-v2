@@ -1,9 +1,7 @@
 import styled, { css } from 'styled-components';
 import { Button } from '@portfolio-ui/';
 
-export const ContactForm = styled.section`
- 
-`;
+export const ContactForm = styled.section``;
 
 export const Form = styled.form`
   min-height: 400px;
@@ -22,6 +20,7 @@ export const FormDescription = styled.p`
   line-height: 1.8rem;
   margin-bottom: 1.5rem;
   a {
+    display: inline-table;
     border-color: transparent;
     transition: border-color 0.25s ease 0s;
     &:hover {

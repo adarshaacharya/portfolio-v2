@@ -19,9 +19,9 @@ module.exports = {
       options: {
         fonts: [
           `Inter\:300,400,400i,500,600,700`,
-          `Poppins\:300,400,400i,500,600,700`,
+          `Poppins\:500,600,700`,
           `IBM Plex Mono`,
-          `Ubuntu`,
+          `Ubuntu\:300,400,400i,500,600,700`,
         ],
         display: 'swap',
       },
@@ -135,7 +135,6 @@ module.exports = {
       },
     },
 
-
     // pwa features
     {
       resolve: 'gatsby-plugin-manifest',
@@ -146,7 +145,7 @@ module.exports = {
         background_color: config.backgroundColor,
         theme_color: config.themeColor,
         display: 'minimal-ui',
-        icon: config.logo
+        icon: config.logo,
       },
     },
     'gatsby-plugin-offline',

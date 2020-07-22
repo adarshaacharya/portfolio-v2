@@ -80,7 +80,7 @@ export const SocialIcons = styled(Flex)`
 
 export const Bio = styled.p`
   padding: 0.7rem 0;
-  line-height: 1.9rem;
+  line-height: 2.215rem;
   font-size: 1rem;
   a {
     border-color: transparent;

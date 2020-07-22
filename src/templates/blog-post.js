@@ -5,14 +5,33 @@ import { DiscussionEmbed } from 'disqus-react';
 import { graphql, Link } from 'gatsby';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
 import React from 'react';
-import { disqusShortName, url } from '../../config/data';
+import { disqusShortName, siteUrl } from '../../config/data';
+import styled from 'styled-components';
+
+const PostHeader = styled.div`
+  font-family: ${p => p.theme.UbuntuFontFamily};
+  span {
+    color: ${p => p.theme.primaryText};
+    margin-bottom: 5px;
+  }
+`;
+const PostTitle = styled.h1`
+  font-family: ${p => p.theme.UbuntuFontFamily};
+  font-size: 1.8rem;
+  font-weight: 600;
+  padding: 1rem;
+  @media ${p => p.theme.media.mobile} {
+    font-size: 1.6rem;
+    padding: 0.3rem;
+  }
+`;
 
 // page context from gatsby-node and data from below graphql query
 const BlogPostTemplate = ({ data, pageContext }) => {
   const post = data.mdx;
   const { previous, next, slug } = pageContext;
 
-  const baseSlugUrl = `${url}/blog/${slug}`;
+  const baseSlugUrl = `${siteUrl}/blog/${slug}`;
   const disqusConfig = {
     url: baseSlugUrl,
     identifier: post.frontmatter.id.toString(),
@@ -26,11 +45,10 @@ const BlogPostTemplate = ({ data, pageContext }) => {
         author={post.frontmatter.author}
         description={post.frontmatter.description}
       />
-
-      <div className="blog-content">
-        <hr />
-        <SectionTitle>{post.frontmatter.title}</SectionTitle>
-        <Flex justify="space-around">
+      <hr />
+      <PostHeader>
+        <PostTitle>{post.frontmatter.title}</PostTitle>
+        <Flex justify="space-between">
           <span role="img" aria-label="author">
             👤 {post.frontmatter.author}
           </span>
@@ -42,8 +60,11 @@ const BlogPostTemplate = ({ data, pageContext }) => {
             🕒 {post.fields.readingTime.text}
           </span>
         </Flex>
-        <hr />
+      </PostHeader>
 
+      <hr />
+
+      <div className="blog-content">
         <MDXRenderer>{post.body}</MDXRenderer>
       </div>
 

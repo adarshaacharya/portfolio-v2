@@ -1,11 +1,11 @@
 ---
-id : 01
-title: "Use Linux Terminal on Windows"
+id: 01
+title: 'Guide To Use Linux Terminal on Windows'
 author: Aadarsha Acharya
 slug: linux-terminal-in-windows
-description: "In early 2016, Windows delivered a new feature that was long awaited: The possibility of running Linux Bash"
-tags: ["workflow"]
-date: 2019-10-22 
+description: 'In early 2016, Windows delivered a new feature that was long awaited: The possibility of running Linux Bash on windows.'
+tags: ['workflow']
+date: 2019-10-22
 ---
 
 In early 2016, Windows delivered a new feature that was long awaited: The possibility of running Linux Bash.
@@ -16,11 +16,10 @@ This is possible because the module "Windows Subsystem for Linux", provides a Li
 
 Sometimes we get the impression that very few people still use Windows for development. But I'm sure that impression is different from reality. I did a quick search on Twitter (which is quite niche) and the results were:
 
-
 This shows that even among my followers, many people use Windows, and that shouldn't really be a problem.
 
 MacBooks are very expensive and inaccessible to most people. Linux ends up generating resistance among some developers, **[but shouldn't, read this text from Jaydson](https://jaydson.com/por-que-uso-linux/)** and presents a list of incompatible software
- like the Adobe package.
+like the Adobe package.
 
 So good old Windows turns out to be an alternative and I think it's important that it's evolving.
 
@@ -32,17 +31,17 @@ Some time later I started using macOS and I didn't play with Windows for a long 
 
 ## Let's go what matters
 
-The only point here is that for everything to work you need to have * Windows 10 * with all updates installed.
+The only point here is that for everything to work you need to have _ Windows 10 _ with all updates installed.
 
-I have * Windows 10 * running on a virtual machine inside the Mac, so all prints will be in English.
+I have _ Windows 10 _ running on a virtual machine inside the Mac, so all prints will be in English.
 
 ### Enabling Bash on Ubuntu
 
-First of all go to the _System Settings_ and activate the * Developer Mode *
+First of all go to the _System Settings_ and activate the _ Developer Mode _
 
 ![Developer Mode](windows-developer-mode.png)
 
-Then go to the Control Panel, click Programs and click * Turn Windows Features On or Off *. Then search for * Windows Subsystem for Linux (Beta) *, activate and restart the system.
+Then go to the Control Panel, click Programs and click _ Turn Windows Features On or Off _. Then search for _ Windows Subsystem for Linux (Beta) _, activate and restart the system.
 
 ![Turn Windows Features On or Off](./windows-turn-on.png)
 
@@ -66,12 +65,11 @@ Now let's make things better. Standard Windows terminals suck and don't provide 
 
 It has a Windows version and I strongly recommend it.
 
-To integrate with _Bash on Ubuntu_ just access Hyper settings (you will edit directly in your default IDE), search for * shell * and add the path:
+To integrate with _Bash on Ubuntu_ just access Hyper settings (you will edit directly in your default IDE), search for _ shell _ and add the path:
 
 `C:\\Windows\\System32\\bash.exe`
 
 ### VSCode
-
 
 It's been my main IDE for some time now, I think **[VSCode](https://code.visualstudio.com/)** is fantastic and I almost became an evangelist.
 
@@ -91,7 +89,7 @@ You probably already have _git_, _node_ and other development tools installed on
 
 You will be inside a real Bash, so some commands are different from the Windows Terminal, **[see a list of these differences](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/4/html/Step_by_Step_Guide/ap-doslinux.html)**.
 
-The following are some commands to install two of the most essential tools today: * git * and * node *.
+The following are some commands to install two of the most essential tools today: _ git _ and _ node _.
 
 ```bash
 #### Updating apt-get
@@ -114,7 +112,8 @@ sudo apt-get install -y nodejs
 ```
 
 From here you will be able to install any development dependency, always remembering not to install on Windows anymore, but within _Bash on Ubuntu_.
-___
+
+---
 
 _Bash on Ubuntu_ manages to bring Windows development much closer to Linux and macOS, and is expected to evolve further in the coming years.
 

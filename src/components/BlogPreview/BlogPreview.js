@@ -23,7 +23,7 @@ const BlogPreview = ({
       onClick={playClick}
     >
       <DateTime>
-        📅 {date} &nbsp; 🕒 {readingTime}
+        <span>📅 {date}</span> &nbsp; &nbsp; 🕒 {readingTime}
       </DateTime>
       <BlogTitle>{title}</BlogTitle>
 
