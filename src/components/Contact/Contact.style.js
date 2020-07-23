@@ -20,12 +20,11 @@ export const FormDescription = styled.p`
   line-height: 1.8rem;
   margin-bottom: 1.5rem;
   a {
+    display: inline-table;
     border-color: transparent;
     transition: border-color 0.25s ease 0s;
     &:hover {
-      border-bottom: 1px solid
-        ${props =>
-          props.theme.secondaryText};
+      border-bottom: 1px solid ${props => props.theme.secondaryText};
     }
   }
 `;

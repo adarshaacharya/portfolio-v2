@@ -23,20 +23,21 @@ export const BlogItem = styled(Link)`
 
   @media ${props => props.theme.media.tablet} {
     padding: 1.3rem 1rem;
-    margin-bottom : 50px;
+    margin-bottom: 50px;
   }
 `;
 
 export const DateTime = styled.p`
   font-family: ${p => p.theme.UbuntuFontFamily};
   padding: 1rem 0;
-
-  @media ${props => props.theme.media.tablet} {
-    font-size: 1.1rem;
-  }
+  font-size: 0.9rem;
+  display: flex;
+  justify-content: space-between;
 `;
 
-export const BlogTitle = styled.h1`
+export const BlogTitle = styled.h2`
+  font-family: ${p => p.theme.UbuntuFontFamily};
+  color: ${p => p.theme.secondaryText};
   font-size: 1.3rem;
   font-weight: 700;
   margin: 0 0 1rem 0;
@@ -44,8 +45,9 @@ export const BlogTitle = styled.h1`
 `;
 
 export const Description = styled.p`
+  color: ${p => p.theme.primaryText};
   padding: 0.5rem 0;
-  font-size: 1.1rem;
+  font-size: 1rem;
   font-weight: 400;
 `;
 

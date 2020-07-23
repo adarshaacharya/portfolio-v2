@@ -1,26 +1,19 @@
-import React from 'react';
-import Recaptcha from 'react-google-recaptcha';
 import useForm from '@hooks/use-form';
 import { SectionTitle } from '@portfolio-ui/';
+import React from 'react';
 import {
-  ContactForm,
-  TextArea,
   ContactButton,
+  ContactForm,
   Form,
-  Input,
   FormContainer,
   FormDescription,
   FormGroup,
+  Input,
+  TextArea,
 } from './Contact.style';
 
 const Contact = () => {
   const [formData, handleInput] = useForm();
-  const recaptchaRef = React.createRef();
-
-  const RECAPTCHA_KEY = process.env.GATSBY_SITE_RECAPTCHA_KEY;
-  if (typeof RECAPTCHA_KEY === 'undefined') {
-    throw new Error('RECAPTCHA KEY is undefined');
-  }
 
   return (
     <>
@@ -28,22 +21,29 @@ const Contact = () => {
         <SectionTitle>Drop Hello.</SectionTitle>
         <FormDescription>
           If you have a question, talk to me about a project collaboration or
-          just say hi, fill up the awesome form below or send an email to{' '}
+          just say hi, fill up the form below or send an email to&nbsp;
           <a href="mailto: adarshaofficial@gmail.com">
-            adarshaofficial@gmail.com{' '}
+            adarshaofficial@gmail.com
           </a>
           . I'll respond as soon as possible!
         </FormDescription>
 
         <Form
-          name="contact-adarsha"
+          name="contact"
+          method="post"
           data-netlify="true"
-          data-netlify-recaptcha="true"
+          data-netlify-honeypot="bot-field"
           autoComplete="off"
         >
-          <noscript>
-            <p>This form won’t work with Javascript disabled</p>
-          </noscript>
+          {/* The `form-name` hidden field is required to support form submissions without JavaScript */}
+          <input type="hidden" name="form-name" value="contact" />
+          <p hidden>
+            <label>
+              Don’t fill this out:{' '}
+              <input name="bot-field" onChange={handleInput} />
+            </label>
+          </p>
+
           <FormContainer>
             <FormGroup style={{ gridArea: 'name' }}>
               <label htmlFor="name">Name*</label>
@@ -86,7 +86,6 @@ const Contact = () => {
             </FormGroup>
           </FormContainer>
 
-          <Recaptcha ref={recaptchaRef} sitekey={RECAPTCHA_KEY} />
           <ContactButton type="submit">Submit</ContactButton>
         </Form>
       </ContactForm>

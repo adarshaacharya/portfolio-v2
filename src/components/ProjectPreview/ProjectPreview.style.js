@@ -80,6 +80,7 @@ export const ProjectTitle = styled.h3`
       props.theme.dark ? props.theme.primaryColor : 'hsla(0, 0%, 50%, 0.1)'};
   box-shadow: 0 2px 4px hsla(0, 0%, 0%, 0.3);
   border-radius: 0 4px 4px 0;
+  font-family: ${p => p.theme.UbuntuFontFamily};
 
   @media ${props => props.theme.media.tablet} {
     font-size: 1.5rem;
@@ -113,6 +114,8 @@ export const ProjectLink = styled(ExternalLink)`
 export const ProjectDescription = styled.p`
   grid-area: description;
   padding: 2rem 0;
+  line-height: 2.215rem;
+
   @media ${props => props.theme.media.tablet} {
     padding: 1rem 0;
   }
