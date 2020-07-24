@@ -14,15 +14,18 @@ import {
   ProjectDescription,
   TechList,
 } from './ProjectPreview.style';
+import { useSfx } from '@hooks/use-sfx';
 
 const ProjectPreview = ({
   project: { title, repo, demo, description, thumbnail, techs },
 }) => {
+  const { playPop } = useSfx();
+
   return (
     <>
       <ProjectPreviewWrapper>
         <Project>
-          <ProjectImgContainer href={demo ? demo : repo}>
+          <ProjectImgContainer href={demo ? demo : repo} onMouseEnter={playPop}>
             <ProjectImg fluid={thumbnail} alt={title} />
           </ProjectImgContainer>
 

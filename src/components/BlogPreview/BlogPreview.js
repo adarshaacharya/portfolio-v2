@@ -16,7 +16,7 @@ const BlogPreview = ({
 }) => {
   const { playPop, playClick } = useSfx();
   return (
-    <BlogItem
+    <BlogItem  
       to={'/blog/' + slug}
       key={title}
       onMouseEnter={playPop}
