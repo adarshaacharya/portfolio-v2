@@ -1,8 +1,14 @@
+<div align="center">
+  <img alt="Logo" src="https://raw.githubusercontent.com/adarshaacharya/adarshaacharya.com.np/master/static/images/logo.png?token=AL7P72GRC4KIW4CVJBVHQPK7FZJBC" width="100" />
+</div>
 <h1 align="center">Aadarsha Acharya </h1>
+
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/2b27e3a1-ff98-455a-8136-3512a4685fad/deploy-status)](https://app.netlify.com/sites/adarshaacharya/deploys)
 
 [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/adarshaacharya/adarshaacharya.com.np)
+
+
 
 <p>
   <img alt="Version" src="https://img.shields.io/badge/version-2.0-blue.svg?cacheSeconds=2592000" />
@@ -48,10 +54,10 @@ yarn run test
 
 👤 **Aadarsha Acharya**
 
-- Website: https://adarshaacharya.com.np/
-- Twitter: [@adarshatweets](https://twitter.com/adarshatweets)
-- Github: [@adarshaacharya](https://github.com/adarshaacharya)
-- LinkedIn: [@adarshaacharya](https://linkedin.com/in/adarshaacharya)
+* Website: https://adarshaacharya.com.np/
+* Twitter: [@adarshatweets](https://twitter.com/adarshatweets)
+* Github: [@adarshaacharya](https://github.com/adarshaacharya)
+* LinkedIn: [@adarshaacharya](https://linkedin.com/in/adarshaacharya)
 
 ## 🤝 Contributing
 
@@ -65,3 +71,4 @@ Give a ⭐️ if this project helped you!
 
 Copyright © 2020 [Aadarsha Acharya](https://github.com/adarshaacharya).<br />
 This project is [MIT](https://github.com/adarshaacharya/adarshaacharya.com.np/blob/master/LICENSE) licensed.
+
