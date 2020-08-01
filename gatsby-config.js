@@ -1,12 +1,12 @@
+const config = require('./config/data');
+
 module.exports = {
   siteMetadata: {
-    title: `Aadarsha Acharya`,
-    author: `@aadarshatweets`,
-    description: `My personal portfoilio created using Gatsby`,
-    siteUrl: `https://adarshaacharya.com.np/`,
-    keywords: [
-      `Aadarsha Acharya, Aadarsha, Acharya, adarshaacharya, Adarsha Acharya, Adarsha, Acharya, adarshaacharya.com.np`,
-    ],
+    title: config.siteTitle,
+    author: config.siteAuthor,
+    description: config.siteDescription,
+    siteUrl: config.siteUrl,
+    keywords: config.siteKeywords,
   },
 
   plugins: [
@@ -18,12 +18,10 @@ module.exports = {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
         fonts: [
-          `Lato`,
-          `Inter`,
+          `Inter\:300,400,400i,500,600,700`,
+          `Poppins\:500,600,700`,
           `IBM Plex Mono`,
-          `Montserrat`,
-          `Merriweather`,
-          `source sans pro\:300,400,400i,700`,
+          `Ubuntu\:300,400,400i,500,600,700`,
         ],
         display: 'swap',
       },
@@ -60,21 +58,29 @@ module.exports = {
       },
     },
 
-    // Mdx plugin & its config for subfield : prismjs, remark-images, reading-time,etc.
+    // Mdx plugin & its config for subfield : prismjs, autolink-headers, remark-images, reading-time,etc.
     {
-      resolve: 'gatsby-plugin-mdx',
+      resolve: 'gatsby-plugin-mdx', // used instead of  gatsby plugin remark
       options: {
         extensions: ['.mdx', '.md'],
         defaultLayouts: {
           default: require.resolve('./src/components/Layout/index.js'),
         },
         gatsbyRemarkPlugins: [
+          //embed gif/pen/pin/player/post/sandbox/tweet/video
+          `gatsby-remark-embedder`,
+          `gatsby-remark-copy-linked-files`,
+          // auto link headers
           {
-            resolve: 'gatsby-remark-images',
+            resolve: `gatsby-remark-autolink-headers`,
             options: {
-              maxWidth: 1035,
+              className: `gatsby-remark-autolink`,
+              maintainCase: true,
+              removeAccents: true,
             },
           },
+
+          // prismjs
           {
             resolve: `gatsby-remark-prismjs`,
             options: {
@@ -82,16 +88,66 @@ module.exports = {
               inlineCodeMarker: null,
               showLineNumbers: true,
               noInlineHighlight: false,
-              aliases: { sh: 'bash', js: 'javascript' },
+            },
+          },
+
+          // images in markdown
+          {
+            resolve: 'gatsby-remark-images',
+            options: {
+              maxWidth: 1035,
             },
           },
         ],
       },
     },
+
     // reading time
     `gatsby-remark-reading-time`,
 
     // styled components
     `gatsby-plugin-styled-components`,
+
+    // NProgress
+    {
+      resolve: `gatsby-plugin-nprogress`,
+      options: {
+        color: config.themeColor,
+        showSpinner: false,
+      },
+    },
+
+    // SEO and tracking stuffs
+    {
+      resolve: 'gatsby-plugin-google-analytics',
+      options: {
+        trackingId: config.googleAnalyticsID,
+        head: true,
+      },
+    },
+    `gatsby-plugin-sitemap`,
+    {
+      resolve: 'gatsby-plugin-robots-txt',
+      options: {
+        host: config.siteUrl,
+        sitemap: `${config.siteUrl}/sitemap.xml`,
+        policy: [{ userAgent: '*', allow: '/' }],
+      },
+    },
+
+    // pwa features
+    {
+      resolve: 'gatsby-plugin-manifest',
+      options: {
+        name: config.defaultTitle,
+        short_name: config.defaultTitle,
+        start_url: '/',
+        background_color: config.backgroundColor,
+        theme_color: config.themeColor,
+        display: 'minimal-ui',
+        icon: config.logo,
+      },
+    },
+    'gatsby-plugin-offline',
   ],
 };

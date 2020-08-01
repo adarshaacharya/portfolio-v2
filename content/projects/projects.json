@@ -4,20 +4,37 @@
     "repo": "https://github.com/adarshaacharya/E-Complaints",
     "demo": "http://e-complaints.herokuapp.com/",
     "image": "project_ecomplaints.png",
-    "description": "A complaint management app that helps user to send  send the compaints to different departments, admin can forward complaints to respective dept. and dept. officer will reply to that complaint. 🔥"
+    "description": "A public complaint management app that helps user to send the compaints to different government departments, admin can filter & forward complaints to respective department and department officer will reply to that complaint.",
+    "techs": [
+      "Node.js",
+      "Express",
+      "Ejs",
+      "MongoDB"
+    ]
   },
   {
-    "title": "Nodejs Blog System",
+    "title": "Node.js Blog System",
     "repo": "https://github.com/adarshaacharya/NodejsBlogSystem",
     "demo": "https://nodejsblogsystem.herokuapp.com/",
     "image": "project_blog.png",
-    "description": "Boilerplate for starting the blogging system using Node JS, MongoDB and Socket for real time update. 🔥 "
+    "description": "Boilerplate for starting the blogging using Node JS, MongoDB and Socket for real time update. User can create profile, post & make comments on posts.",
+    "techs": [
+      "Node.js",
+      "Express",
+      "Ejs",
+      "MongoDB"
+    ]
   },
   {
     "title": "Tour 360°",
-    "repo": "https://github.com/adarshaacharya/NodejsBlogSystem",
+    "repo": "https://github.com/adarshaacharya/Tour360",
     "demo": "http://100.24.44.234/Tour360/",
     "image": "project_tour360.png",
-    "description": "Tour 360° is a virtual reality viewing platform that helps to view 360 images eyeglasses && book flights airplane, hotels hotel and guides boy ."
+    "description": "Tour 360° is a virtual reality viewing platform build for VisitNepal2020 that helps to view 360 images & book flights airplane, hotels hotel and guides boy.",
+    "techs": [
+      "Php",
+      "MySQL",
+      "Aws"
+    ]
   }
 ]

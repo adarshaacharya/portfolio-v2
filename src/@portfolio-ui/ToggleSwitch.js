@@ -1,26 +1,37 @@
-import ThemeToggleContext from '@context/ThemeToggleContext';
-
 import React, { useContext } from 'react';
+import Switch from 'react-switch';
 import styled from 'styled-components';
 
-const SwitchWrapper = styled.div``;
+import { FormattedIcon } from '@portfolio-ui/';
 
-const ToggleSwitch = () => {
+import ThemeToggleContext from '@context/ThemeToggleContext';
+
+const SwitchWrapper = styled(Switch)`
+  svg {
+    height: 27px;
+    transform: rotate(-91.13deg);
+  }
+`;
+
+export const ToggleSwitch = () => {
   const { toggleTheme, theme } = useContext(ThemeToggleContext);
 
   return (
-    <SwitchWrapper>
-      <div className="button r" id="button-1">
-        <input
-          className="checkbox"
-          aria-label="toggle theme"
-          type="checkbox"
-          onChange={toggleTheme}
-          checked={theme === 'dark' ? true : false}
-        />
-      </div>
-    </SwitchWrapper>
+    <>
+      <SwitchWrapper
+        aria-label="Toggle Theme"
+        onChange={toggleTheme}
+        checked={theme === 'dark' ? true : false}
+        onColor="#555"
+        offColor="#222"
+        checkedIcon={<FormattedIcon name="Moon" className="moon" />}
+        uncheckedIcon={<FormattedIcon name="Sun" />}
+        boxShadow="0 0 2px 3px #2D85F4"
+        activeBoxShadow="0 0 2px 3px #2D85F4"
+        handleDiameter={23}
+        height={25}
+        width={55}
+      />
+    </>
   );
 };
-
-export default ToggleSwitch;

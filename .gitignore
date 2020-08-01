@@ -53,6 +53,7 @@ typings/
 
 # dotenv environment variable files
 .env.development
+.env.production
 
 # gatsby files
 .cache/
@@ -72,3 +73,4 @@ yarn-error.log
 ### VisualStudioCode ###
 .vscode/
 
+README.md
