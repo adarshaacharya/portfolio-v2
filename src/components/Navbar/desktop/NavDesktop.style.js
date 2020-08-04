@@ -1,5 +1,5 @@
-import styled from 'styled-components';
 import { Link } from 'gatsby';
+import styled from 'styled-components';
 
 export const Logo = styled(Link)`
   margin-right: auto;

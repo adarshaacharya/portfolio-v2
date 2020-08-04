@@ -8,6 +8,13 @@ tags: ['workflow']
 date: 2019-10-22
 ---
 
+```js
+function myFunction() {
+  var x = document.getElementById('myAnchor').rel;
+  document.getElementById('demo').innerHTML = x;
+}
+```
+
 In early 2016, Windows delivered a new feature that was long awaited: The possibility of running Linux Bash.
 
 This is possible because the module "Windows Subsystem for Linux", provides a Linux environment running within Windows 10 itself, without the need for virtual machines, working seamlessly with Windows.

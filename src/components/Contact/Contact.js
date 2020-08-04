@@ -9,7 +9,7 @@ import {
   FormDescription,
   FormGroup,
   Input,
-  TextArea,
+  TextArea
 } from './Contact.style';
 
 const Contact = () => {
@@ -46,7 +46,7 @@ const Contact = () => {
 
           <FormContainer>
             <FormGroup style={{ gridArea: 'name' }}>
-              <label htmlFor="name">Name*</label>
+              <label htmlFor="name">Name</label>
               <Input
                 type="text"
                 name="Name"
@@ -59,7 +59,7 @@ const Contact = () => {
             </FormGroup>
 
             <FormGroup style={{ gridArea: 'email' }}>
-              <label htmlFor="email">Email*</label>
+              <label htmlFor="email">Email</label>
               <Input
                 type="email"
                 name="Email"
@@ -72,7 +72,7 @@ const Contact = () => {
             </FormGroup>
 
             <FormGroup style={{ gridArea: 'message' }}>
-              <label htmlFor="message">Message*</label>
+              <label htmlFor="message">Message</label>
               <TextArea
                 name="Message"
                 id="message"

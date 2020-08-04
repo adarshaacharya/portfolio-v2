@@ -54,6 +54,9 @@ export const lightTheme = {
   // generic
   grayColor: '#666',
 
+  //selection
+  selectionColor: '#C1DAF3',
+
   ...commonTheme,
 };
 
@@ -80,5 +83,7 @@ export const darkTheme = {
   cardBg: '#1E262F',
 
   grayColor: '#888',
+
+  selectionColor: '#84909e',
   ...commonTheme,
 };
