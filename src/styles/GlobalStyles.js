@@ -70,6 +70,11 @@ const GlobalStyles = createGlobalStyle`
     margin : 40px 0;
   }
 
+  ::selection {
+    background: ${p => p.theme.selectionColor};
+  }
+ 
+
  
 /*===============
   Prism JS styles

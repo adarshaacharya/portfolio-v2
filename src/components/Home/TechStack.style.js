@@ -1,5 +1,5 @@
-import styled from 'styled-components';
 import { Flex } from '@portfolio-ui/';
+import styled from 'styled-components';
 
 export const TechStackWrapper = styled.section``;
 
@@ -9,7 +9,7 @@ export const TechItem = styled(Flex)`
   align-items: center;
   padding: 20px 0;
   [data-icon='Next.js'] svg {
-    fill: ${p => p.theme.primaryBlack};
+    fill: ${p => p.theme.primaryText};
   }
   transition: transform 0.2s ease-in-out;
 
@@ -20,4 +20,5 @@ export const TechItem = styled(Flex)`
     border-radius: 10px;
     transform: scale(0.9);
   }
+
 `;
