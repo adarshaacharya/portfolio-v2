@@ -1,12 +1,13 @@
-import React from 'react';
 import Layout from '@components/Layout';
-import styled from 'styled-components';
 import SEO from '@components/Seo';
 import { Flex } from '@portfolio-ui/';
 import { DiscussionEmbed } from 'disqus-react';
 import { graphql, Link } from 'gatsby';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
-import { disqusShortName, siteUrl } from '../../config/data';
+import React from 'react';
+import styled from 'styled-components';
+import { disqusShortName, siteUrl } from '../../config/SiteConfig';
+
 
 const PostHeader = styled.div`
   font-family: ${p => p.theme.UbuntuFontFamily};

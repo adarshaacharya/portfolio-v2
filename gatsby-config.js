@@ -1,4 +1,4 @@
-const config = require('./config/data');
+const config = require('./config/SiteConfig');
 
 module.exports = {
   siteMetadata: {

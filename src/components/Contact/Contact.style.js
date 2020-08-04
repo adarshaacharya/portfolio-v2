@@ -90,6 +90,7 @@ export const TextArea = styled.textarea`
 
 export const ContactButton = styled(Button)`
   grid-area: btn;
+    
   @media ${props => props.theme.media.tablet} {
     display: block;
     width: 100%;

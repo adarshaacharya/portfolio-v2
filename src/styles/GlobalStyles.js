@@ -80,6 +80,7 @@ ${PrismJsStyles}
   Blog styles
 ================*/
 ${BlogCssStyles}
+
 `;
 
 export default GlobalStyles;
