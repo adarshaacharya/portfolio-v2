@@ -1,5 +1,5 @@
 <p align="center">
- <img alt="Logo" src="https://raw.githubusercontent.com/adarshaacharya/adarshaacharya.com.np/master/static/images/logo.png?token=AL7P72HL5WIVULTUJMTOUR27FZJZ4" width="100" />
+ <img alt="Logo" src="https://raw.githubusercontent.com/adarshaacharya/adarshaacharya.com.np/develop/static/images/logo.png?token=AL7P72DHAYWDDPDBO5M5U6C7HJKSQ" width="100" />
 
  <a href="http://adarshaacharya.com.np/">
 	<h1 align="center">Adarsha Acharya</h1>
