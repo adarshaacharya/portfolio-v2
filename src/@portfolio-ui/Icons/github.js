@@ -1,7 +1,11 @@
 import React from 'react';
 
 const IconGitHub = () => (
-  <svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 438.549 438.549">
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    role="img"
+    viewBox="0 0 438.549 438.549"
+  >
     <title>GitHub</title>
     <path
       d="M409.132,114.573c-19.608-33.596-46.205-60.194-79.798-79.8C295.736,15.166,259.057,5.365,219.271,5.365

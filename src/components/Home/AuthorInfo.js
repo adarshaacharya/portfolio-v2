@@ -52,8 +52,7 @@ export default function AuthorInfo() {
         backend in Node.js.
       </Bio>
       <Bio>
-        I'm currently pursuing Bachelor Degree in Computer
-        Science at
+        I'm currently pursuing Bachelor Degree in Computer Science at
         <ExternalLink href="http://www.tribhuvan-university.edu.np/">
           {' '}
           Tribuvan University.

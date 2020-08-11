@@ -17,7 +17,6 @@ _If you want to give idea for blog post ceate a issue and give description of ar
 
 ## Work on Issue
 
-
 First of all, this is a JavaScript project that's distributed on [yarnpkg.com](https://yarnpkg.com/) and
 therefore uses JavaScript tooling based on [Node.js](https://nodejs.org/) with dependencies from npm.
 You're going to need to have those things installed to contribute to this project.

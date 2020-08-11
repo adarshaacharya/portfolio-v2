@@ -35,4 +35,3 @@ export default () => {
     date: post.frontmatter.date,
   }));
 };
-

@@ -8,7 +8,6 @@ import React from 'react';
 import styled from 'styled-components';
 import { disqusShortName, siteUrl } from '../../config/SiteConfig';
 
-
 const PostHeader = styled.div`
   font-family: ${p => p.theme.UbuntuFontFamily};
   span {

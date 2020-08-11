@@ -25,8 +25,9 @@ Sometimes we get the impression that very few people still use Windows for devel
 
 This shows that even among my followers, many people use Windows, and that shouldn't really be a problem.
 
-MacBooks are very expensive and inaccessible to most people. Linux ends up generating resistance among some developers, **[but shouldn't, read this text from Jaydson](https://jaydson.com/por-que-uso-linux/)** and presents a list of incompatible software
-like the Adobe package.
+> MacBooks are very expensive and inaccessible to most people. Linux ends up generating resistance among some developers,
+> **[but shouldn't, read this text from Jaydson](https://jaydson.com/por-que-uso-linux/)** and presents a list of
+> incompatible software like the Adobe package. `package.json`
 
 So good old Windows turns out to be an alternative and I think it's important that it's evolving.
 

@@ -11,6 +11,6 @@ module.exports = {
     {
       name: 'GitHub',
       url: 'https://github.com/adarshaacharya',
-    }
+    },
   ],
 };

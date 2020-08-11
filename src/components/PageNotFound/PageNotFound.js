@@ -8,9 +8,8 @@ export default function PageNotFound() {
       <StyledPageNotFound>
         <h1>NOT FOUND</h1>
         <p>
-        There's nothing here, perhaps you'll find what you're looking for back
-        home.
-
+          There's nothing here, perhaps you'll find what you're looking for back
+          home.
         </p>
       </StyledPageNotFound>
     </>

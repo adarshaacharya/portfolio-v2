@@ -9,7 +9,7 @@ import {
   FormDescription,
   FormGroup,
   Input,
-  TextArea
+  TextArea,
 } from './Contact.style';
 
 const Contact = () => {
