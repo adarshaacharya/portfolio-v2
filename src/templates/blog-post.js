@@ -44,6 +44,8 @@ const BlogPostTemplate = ({ data, pageContext }) => {
         title={post.frontmatter.title}
         author={post.frontmatter.author}
         description={post.frontmatter.description}
+        keywords={post.frontmatter.tags}
+        isBlogPost
       />
       <hr />
       <PostHeader>
@@ -101,6 +103,7 @@ export const query = graphql`
         title
         author
         slug
+        tags
         date(formatString: "MMMM DD, YYYY")
       }
       fields {

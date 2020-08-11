@@ -8,10 +8,10 @@ module.exports = {
     siteUrl: config.siteUrl,
     keywords: config.siteKeywords,
   },
+  pathPrefix: '/',
 
   plugins: [
     `gatsby-plugin-react-helmet`,
-    `gatsby-plugin-sass`,
 
     // Google fonts
     {
@@ -60,7 +60,7 @@ module.exports = {
 
     // Mdx plugin & its config for subfield : prismjs, autolink-headers, remark-images, reading-time,etc.
     {
-      resolve: 'gatsby-plugin-mdx', // used instead of  gatsby plugin remark
+      resolve: 'gatsby-plugin-mdx', // used instead of  gatsby transformer remark
       options: {
         extensions: ['.mdx', '.md'],
         defaultLayouts: {
