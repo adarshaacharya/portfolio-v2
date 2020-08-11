@@ -9,6 +9,7 @@ export default () => {
           author
           description
           keywords
+          siteUrl
         }
       }
     }

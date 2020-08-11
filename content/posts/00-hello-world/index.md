@@ -4,7 +4,7 @@ title: 'Guide To Use Linux Terminal on Windows'
 author: Aadarsha Acharya
 slug: linux-terminal-in-windows
 description: 'In early 2016, Windows delivered a new feature that was long awaited: The possibility of running Linux Bash on windows.'
-tags: ['workflow']
+tags: ['workflow', 'windows', 'linux']
 date: 2019-10-22
 ---
 
@@ -25,8 +25,9 @@ Sometimes we get the impression that very few people still use Windows for devel
 
 This shows that even among my followers, many people use Windows, and that shouldn't really be a problem.
 
-> MacBooks are very expensive and inaccessible to most people. Linux ends up generating resistance among some developers,
-> **[but shouldn't, read this text from Jaydson](https://jaydson.com/por-que-uso-linux/)** and presents a list of
+> MacBooks are very expensive and inaccessible to most people. Linux ends up generating 
+> resistance among some developers,
+> **[but shouldn't, read this text from Jaydson](https://jaydson.com/por-que-uso-linux/)** > and presents a list of
 > incompatible software like the Adobe package. `package.json`
 
 So good old Windows turns out to be an alternative and I think it's important that it's evolving.
