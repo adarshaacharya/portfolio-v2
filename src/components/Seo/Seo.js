@@ -32,7 +32,7 @@ const SEO = ({ title, description, keywords, author, isBlogPost }) => {
     title: metaTitle,
     tagline: metaKeywords.map(tag => `#${tag}`).join(' '),
     cloudName: 'rqzwagy7xnx4p34h',
-    imagePublicID: 'portfolio/blog-post-card_4_l9uk3s',
+    imagePublicID: 'portfolio/blog-post-card',
     titleFont: 'futura',
     taglineFont: 'futura',
     // titleExtraConfig: 'bold', // optional - set title font weight to bold
@@ -68,7 +68,7 @@ const SEO = ({ title, description, keywords, author, isBlogPost }) => {
           property: `og:type`,
           content: `website`,
         },
-        // here
+       
         {
           name: 'twitter:card',
           content: 'summary_large_image',
@@ -81,7 +81,7 @@ const SEO = ({ title, description, keywords, author, isBlogPost }) => {
           name: 'twitter:image',
           content: socialImage,
         },
-        // here
+        
         {
           name: `twitter:creator`,
           content: metaAuthor,
