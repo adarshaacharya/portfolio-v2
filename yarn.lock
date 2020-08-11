@@ -1755,7 +1755,7 @@
     lodash "^4.17.13"
     to-fast-properties "^2.0.0"
 
-"@commitlint/cli@^9.1.1":
+"@commitlint/cli@^9.1.0", "@commitlint/cli@^9.1.1":
   version "9.1.1"
   resolved "https://registry.yarnpkg.com/@commitlint/cli/-/cli-9.1.1.tgz#24277e6c1e616191a34a7182a1d3e73369a34f98"
   integrity sha512-ye9vUZz8Niv77e5ecBWnA2PnuPF+vYy/3BfSZx8sEaNjozJWUolTk/fuqTsoij3bseZBVObd+cVqZgGk8lfEdw==
@@ -4604,6 +4604,13 @@ commander@~2.8.1:
   integrity sha1-Br42f+v9oMMwqh4qBy09yXYkJdQ=
   dependencies:
     graceful-readlink ">= 1.0.0"
+
+commitlint@^9.1.0:
+  version "9.1.0"
+  resolved "https://registry.yarnpkg.com/commitlint/-/commitlint-9.1.0.tgz#86fa5f3b4eaefa31dcc035faaf4695a9a144e76e"
+  integrity sha512-ZCMwt116JfKjiIsm1rivqveNnqA3Kkwk8FIwoUws+LuVKo3CDVcowXMX/dJVACPMErLGO16uB5U2VIe5hjmCKw==
+  dependencies:
+    "@commitlint/cli" "^9.1.0"
 
 common-tags@^1.8.0:
   version "1.8.0"
