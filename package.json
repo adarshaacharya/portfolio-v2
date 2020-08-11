@@ -14,6 +14,11 @@
     "clean": "gatsby clean",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
   },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
   "dependencies": {
     "@commitlint/cli": "^9.1.1",
     "@commitlint/config-conventional": "^9.1.1",
@@ -62,6 +67,7 @@
     "use-sound": "^1.0.2"
   },
   "devDependencies": {
+    "husky": "^4.2.5",
     "prettier": "2.0.5"
   },
   "repository": {
