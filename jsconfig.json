@@ -1,31 +1,15 @@
 {
-    "compilerOptions": {
-        "baseUrl": ".",
-        "paths": {
-            "@src/*": [
-                "src/*"
-            ],
-            "@components/*": [
-                "src/components/*"
-            ],
-            "@pages/*": [
-                "src/pages/*"
-            ],
-            "@hooks/*": [
-                "src/hooks/*"
-            ],
-            "@lib/*": [
-                "src/lib/*"
-            ],
-            "@images/*": [
-                "static/images/*"
-            ],
-            "@portfolio-ui/*": [
-                "src/@portfolio-ui/*"
-            ],
-            "@context/*": [
-                "src/context/*"
-            ],
-        }
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@src/*": ["src/*"],
+      "@components/*": ["src/components/*"],
+      "@pages/*": ["src/pages/*"],
+      "@hooks/*": ["src/hooks/*"],
+      "@lib/*": ["src/lib/*"],
+      "@images/*": ["static/images/*"],
+      "@portfolio-ui/*": ["src/@portfolio-ui/*"],
+      "@context/*": ["src/context/*"]
     }
+  }
 }

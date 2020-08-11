@@ -20,5 +20,4 @@ export const TechItem = styled(Flex)`
     border-radius: 10px;
     transform: scale(0.9);
   }
-
 `;

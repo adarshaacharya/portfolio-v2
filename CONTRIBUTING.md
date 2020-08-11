@@ -17,7 +17,6 @@ _If you want to give idea for blog post ceate a issue and give description of ar
 
 ## Work on Issue
 
-
 First of all, this is a JavaScript project that's distributed on [yarnpkg.com](https://yarnpkg.com/) and
 therefore uses JavaScript tooling based on [Node.js](https://nodejs.org/) with dependencies from npm.
 You're going to need to have those things installed to contribute to this project.
@@ -40,7 +39,10 @@ You're going to need to have those things installed to contribute to this projec
 
 ### Note - Commit & PR Title :
 
-It’s good to have descriptive commit messages so that other folks can make sense of what your commit is doing. This project strictly follows [conventional commits](https://www.conventionalcommits.org/en/v1.0.0-beta.3/).
+It’s good to have descriptive commit messages so that other folks can make sense of what your commit is doing.
+This project uses [Husky](https://github.com/typicode/husky/blob/master/README.md) prevent bad `git commit`, `git push` and more 🐶 \_woof! 
+
+Read [conventional commits](https://www.conventionalcommits.org/en/v1.0.0-beta.3/) before making the commit message.
 
 Also, for PR titles and description you should follow [Gatsby documentation](https://www.gatsbyjs.org/contributing/managing-pull-requests/#commit-and-pr-title)
 

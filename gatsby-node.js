@@ -6,7 +6,7 @@ const path = require(`path`);
 exports.onCreateWebpackConfig = ({ actions }) => {
   actions.setWebpackConfig({
     resolve: {
-      alias: {  
+      alias: {
         src: path.join(__dirname, 'src'),
         '@src': path.join(__dirname, 'src'),
         '@components': path.join(__dirname, 'src/components'),
@@ -25,7 +25,7 @@ exports.onCreateWebpackConfig = ({ actions }) => {
   Create Page for Each Blog Post ( Programmatic Page Gen)
 ======================================================*/
 
-exports.createPages = async ({ actions, graphql , reporter}) => {
+exports.createPages = async ({ actions, graphql, reporter }) => {
   const blogPostTemplate = path.resolve('./src/templates/blog-post.js');
 
   // get only slug to create pages and pages themselves query for data. Title is queried for next & prev

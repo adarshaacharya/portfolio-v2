@@ -8,7 +8,7 @@ import BlogPreview from '@src/components/BlogPreview/';
 
 export default function Blog() {
   const blogs = getPosts();
-console.log(blogs)
+  console.log(blogs);
   return (
     <Layout>
       <SEO title={`Blogs`} />

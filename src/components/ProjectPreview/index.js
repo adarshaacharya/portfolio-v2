@@ -1,4 +1,3 @@
-import ProjectPreview from "./ProjectPreview";
+import ProjectPreview from './ProjectPreview';
 
-
-export default ProjectPreview
+export default ProjectPreview;

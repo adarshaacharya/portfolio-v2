@@ -65,7 +65,7 @@ SEO.defaultProps = {
   meta: [],
   keywords: [],
   description: ``,
-}
+};
 
 SEO.propTypes = {
   description: PropTypes.string,
