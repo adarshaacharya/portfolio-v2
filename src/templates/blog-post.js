@@ -45,6 +45,7 @@ const BlogPostTemplate = ({ data, pageContext }) => {
         author={post.frontmatter.author}
         description={post.frontmatter.description}
         keywords={post.frontmatter.tags}
+        slug={`/blog/${slug}`}
         isBlogPost
       />
       <hr />
