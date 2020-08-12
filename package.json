@@ -20,13 +20,10 @@
     }
   },
   "dependencies": {
-    "@commitlint/cli": "^9.1.1",
-    "@commitlint/config-conventional": "^9.1.1",
     "@jlengstorf/get-share-image": "^0.7.1",
     "@mdx-js/mdx": "^1.6.6",
     "@mdx-js/react": "^1.6.6",
     "babel-plugin-styled-components": "^1.10.7",
-    "commitlint": "^9.1.0",
     "disqus-react": "^1.0.9",
     "env-cmd": "^10.1.0",
     "gatsby": "^2.21.21",
@@ -69,6 +66,9 @@
     "use-sound": "^1.0.2"
   },
   "devDependencies": {
+    "@commitlint/cli": "^9.1.1",
+    "@commitlint/config-conventional": "^9.1.1",
+    "commitlint": "^9.1.0",
     "husky": "^4.2.5",
     "prettier": "2.0.5"
   },
