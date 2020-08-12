@@ -1,6 +1,5 @@
 import getShareImage from '@jlengstorf/get-share-image';
 import getSiteMetadata from '@lib/get-site-metadata.js';
-import PropTypes from 'prop-types';
 import React from 'react';
 import { Helmet } from 'react-helmet';
 
