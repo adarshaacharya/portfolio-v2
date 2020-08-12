@@ -4,17 +4,18 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import { Helmet } from 'react-helmet';
 
-const SEO = ({ title, description, keywords, author, isBlogPost }) => {
+const SEO = ({ title, description, keywords, author, isBlogPost, slug }) => {
   const data = getSiteMetadata();
 
   const metaDescription = description || data.site.siteMetadata.description;
   const metaTitle = title || data.site.siteMetadata.title;
   const metaAuthor = author || data.site.siteMetadata.author;
   const metaKeywords = keywords || data.site.siteMetadata.keywords;
+  const metaUrl = `${data.site.siteMetadata.siteUrl}${slug || ''}`;
 
   const websiteCard = getShareImage({
     title: 'Aadarsha Acharya',
-    tagline : 'http://adarshaacharya.com.np/',
+    tagline: 'http://adarshaacharya.com.np/',
     cloudName: 'rqzwagy7xnx4p34h',
     imagePublicID: 'portfolio/website-card',
     titleFont: 'futura',
@@ -22,7 +23,7 @@ const SEO = ({ title, description, keywords, author, isBlogPost }) => {
     titleBottomOffset: 330,
     taglineTopOffset: 380,
     taglineFontSize: 38,
-    textLeftOffset : 330,
+    textLeftOffset: 330,
     textColor: '232129',
     taglineColor: '011627',
     titleColor: '362865',
@@ -51,14 +52,28 @@ const SEO = ({ title, description, keywords, author, isBlogPost }) => {
       title={title}
       titleTemplate={`%s | ${data.site.siteMetadata.title}`}
       meta={[
+        // general meta tags
+        {
+          name: `url`,
+          content: metaUrl,
+        },
         {
           name: `description`,
           content: metaDescription,
         },
+        {
+          name: `image`,
+          content: socialImage,
+        },
 
+        // open graph tags
+        {
+          property: `og:url`,
+          content: metaUrl,
+        },
         {
           property: `og:title`,
-          content: title,
+          content: `${metaTitle} | Aadarsha Acharya`,
         },
         {
           property: `og:description`,
@@ -68,27 +83,27 @@ const SEO = ({ title, description, keywords, author, isBlogPost }) => {
           property: `og:type`,
           content: `website`,
         },
-       
+        {
+          property: `og:image`,
+          content: socialImage,
+        },
+
+        // twitter cards
         {
           name: 'twitter:card',
           content: 'summary_large_image',
         },
         {
-          property: 'og:image',
-          content: socialImage,
-        },
-        {
           name: 'twitter:image',
           content: socialImage,
         },
-        
         {
           name: `twitter:creator`,
           content: metaAuthor,
         },
         {
           name: `twitter:title`,
-          content: metaTitle,
+          content: `${metaTitle} | Aadarsha Acharya`,
         },
         {
           name: `twitter:description`,
@@ -113,11 +128,5 @@ SEO.defaultProps = {
   description: ``,
 };
 
-SEO.propTypes = {
-  description: PropTypes.string,
-  keywords: PropTypes.arrayOf(PropTypes.string),
-  author: PropTypes.string,
-  title: PropTypes.string.isRequired,
-};
 
 export default SEO;
