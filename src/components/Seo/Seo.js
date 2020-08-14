@@ -127,5 +127,4 @@ SEO.defaultProps = {
   description: ``,
 };
 
-
 export default SEO;
