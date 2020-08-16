@@ -15,7 +15,7 @@ const SEO = ({ title, description, keywords, author, isBlogPost, slug }) => {
   const websiteCard = getShareImage({
     title: 'Aadarsha Acharya',
     tagline: 'http://adarshaacharya.com.np/',
-    cloudName: 'rqzwagy7xnx4p34h',
+    cloudName: 'aadarsha',
     imagePublicID: 'portfolio/website-card',
     titleFont: 'futura',
     taglineFont: 'futura',
@@ -31,7 +31,7 @@ const SEO = ({ title, description, keywords, author, isBlogPost, slug }) => {
   const blogPostCard = getShareImage({
     title: metaTitle,
     tagline: metaKeywords.map(tag => `#${tag}`).join(' '),
-    cloudName: 'rqzwagy7xnx4p34h',
+    cloudName: 'aadarsha',
     imagePublicID: 'portfolio/blog-post-card',
     titleFont: 'futura',
     taglineFont: 'futura',
