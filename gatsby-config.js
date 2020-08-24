@@ -4,7 +4,7 @@ require('dotenv').config({
   path: `.env.${process.env.NODE_ENV}`,
 });
 
-const queries = []
+const queries = require('./src/utils/algolia')
 
 module.exports = {
   siteMetadata: {
