@@ -1,20 +1,25 @@
-/*utility function that fetches all the mdx  posts and transformer method takes the data received and massages it into a shape I can use for my Algolia records by lifting the keys of the frontmatter object up to the same level as the rest of the node*/
+/*mdxQuery retrieves all the published posts. 3 Then my transformer method takes the data received and massages it into a shape I can use for my Algolia records by lifting the keys of the frontmatter object up to the same level as the rest of the node. /posts/ is the fir of posts. */
 
-
+// add rawbody if you want to search body too
 const mdxQuery = `
 query {
     allMdx(filter: {fileAbsolutePath: {regex: "/posts/"}}) {
       edges {
         node {
-          excerpt 
           frontmatter {
+            tags
             title
             description
             slug
-            tags      
-            id    
+            id
+            date(formatString: "MMMM Do, YYYY")
           }
-          rawBody
+          fields {
+            readingTime {
+              text
+            }
+          }
+          
         }
       }
     }
@@ -37,6 +42,5 @@ const queries = [
       data.allMdx.edges.map(edge => edge.node).map(unnestFrontmatter),
   },
 ];
-
 
 module.exports = queries;
