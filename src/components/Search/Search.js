@@ -4,11 +4,11 @@ import React from 'react';
 import { Hits, InstantSearch, SearchBox, Stats } from 'react-instantsearch-dom';
 import Hit from './Hit';
 import Posts from './Posts';
+import SimpleIcon from '@src/hooks/use-simple-icons';
 
 const urlToSearchState = ({ search }) => qs.parse(search.slice(1));
 
 const Search = ({ props }) => {
-  console.log(props.location, 'PROPSSSSSSSS');
   const { location } = props;
 
   const [searchState, setSearchState] = React.useState(
@@ -46,7 +46,11 @@ const Search = ({ props }) => {
               },
             }}
           />
-          <Hits hitComponent={Hit} />
+          <div>
+            Powered by Algolia
+            <SimpleIcon stack="Algolia" />
+            <Hits hitComponent={Hit} />
+          </div>
         </>
       ) : (
         <Posts />

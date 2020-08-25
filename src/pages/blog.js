@@ -6,15 +6,11 @@ import Search from '@src/components/Search';
 import React from 'react';
 
 export default function Blog({ ...props }) {
-  const blogs = getPosts();
   return (
     <Layout>
       <SEO title={`Blogs`} />
       <SectionTitle>Blogs.</SectionTitle>
       <Search props={props} />
-      {/* {blogs.map(blog => (
-        <BlogPreview blog={blog} key={blog.slug} />
-      ))} */}
     </Layout>
   );
 }
