@@ -4,13 +4,10 @@ import React from 'react';
 import {
   BlogItem,
   BlogTitle,
-
-  DateTime, Description,
-
-  Tags
+  DateTime,
+  Description,
+  Tags,
 } from './BlogPreview.style';
-
-
 
 const BlogPreview = ({
   blog: { title, date, tags, readingTime, slug, description },
