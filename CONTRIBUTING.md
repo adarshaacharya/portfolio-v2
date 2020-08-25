@@ -27,20 +27,21 @@ You're going to need to have those things installed to contribute to this projec
 4. Run `yarn install`.
 5. Create `.env.development` file in main dir.
 6. Check `.env.example` file and copy everything over there to `.env.development` file.
-7. Run `gatsby develop` command.
-8. Make the appropriate changes for the issue you are trying to address or the feature that you want to add.
-9. Use git add . to add file contents of changed files.
-10. Push the changes to the remote repository using git push origin branch-name-here.
-11. Submit a pull request to the upstream repository with meaningful description and title.
-12. Iterate on the solution.
-13. Get merged! 🎉 🎊
+7. This project uses [Algolia](https://www.algolia.com/) for searching blogs. So, you must put api keys that algolia gives you in `.env.development` file. Check this docs on [Configuring Algolia plugin](https://www.gatsbyjs.com/docs/adding-search-with-algolia/#configuring-the-algolia-plugin).
+8. Run `gatsby develop` command.
+9. Make the appropriate changes for the issue you are trying to address or the feature that you want to add.
+10. Use git add . to add file contents of changed files.
+11. Push the changes to the remote repository using git push origin branch-name-here.
+12. Submit a pull request to the upstream repository with meaningful description and title.
+13. Iterate on the solution.
+14. Get merged! 🎉 🎊
 
 > If you facae any problem while setting up project you can [open issues](https://github.com/adarshaacharya/adarshaacharya.com.np/issues) I will guide you for setup.
 
 ### Note - Commit & PR Title :
 
 It’s good to have descriptive commit messages so that other folks can make sense of what your commit is doing.
-This project uses [Husky](https://github.com/typicode/husky/blob/master/README.md) prevent bad `git commit`, `git push` and more 🐶 \_woof! 
+This project uses [Husky](https://github.com/typicode/husky/blob/master/README.md) prevent bad `git commit`, `git push` and more 🐶 \_woof!
 
 Read [conventional commits](https://www.conventionalcommits.org/en/v1.0.0-beta.3/) before making the commit message.
 

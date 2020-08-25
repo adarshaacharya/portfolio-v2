@@ -1,7 +1,5 @@
-import React from 'react';
 import PropTypes from 'prop-types';
-import { themeStorageKey } from '@hooks/use-dark-mode';
-const bgVariableName = 'bg';
+import React from 'react';
 
 export default function HTML(props) {
   return (

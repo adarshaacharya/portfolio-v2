@@ -1,3 +1,3 @@
-import PostPreview from './BlogPreview';
+import BlogPreview from './BlogPreview';
 
-export default PostPreview;
+export default BlogPreview;
