@@ -1,2 +1,2 @@
-import TechStack from './TechStack'
-export default TechStack
+import TechStack from './TechStack';
+export default TechStack;

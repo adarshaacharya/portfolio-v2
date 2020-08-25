@@ -4,7 +4,6 @@ import AuthorInfo from '@src/components/AuthorInfo';
 import TechStack from '@src/TechStack';
 import React from 'react';
 
-
 export default function IndexPage() {
   return (
     <Layout>

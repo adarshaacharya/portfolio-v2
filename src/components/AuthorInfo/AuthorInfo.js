@@ -12,9 +12,8 @@ import {
   SocialIcons,
 } from './AuthorInfo.style';
 import Resume from './Resume';
-import TechStack from './TechStack';
 
-export default function AuthorInfo() {
+const AuthorInfo = () => {
   const avatar = getAvatar();
   return (
     <>
@@ -61,7 +60,8 @@ export default function AuthorInfo() {
 
       <Resume />
       <hr />
-      <TechStack />
     </>
   );
-}
+};
+
+export default AuthorInfo;
