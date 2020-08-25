@@ -37,7 +37,6 @@ const BlogPreview = ({
           </span>
         ))}
       </Tags>
-
     </BlogItem>
   );
 };
