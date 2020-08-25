@@ -6,4 +6,8 @@ export const FooterWrapper = styled(StyledContainer)`
   color: ${p => p.theme.primaryText};
   padding: 2rem 0;
   text-align: center;
+
+  @media ${props => props.theme.media.tablet} {
+    border-top: none;
+  }
 `;
