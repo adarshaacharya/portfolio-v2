@@ -27,7 +27,7 @@ You're going to need to have those things installed to contribute to this projec
 4. Run `yarn install`.
 5. Create `.env.development` file in main dir.
 6. Check `.env.example` file and copy everything over there to `.env.development` file.
-7. This project uses [Algolia](https://www.algolia.com/) for searching blogs. So, you must put api keys that algolia gives you in `.env.development` file. Check this docs on  [Configuring Algolia plugin](https://www.gatsbyjs.com/docs/adding-search-with-algolia/#configuring-the-algolia-plugin).
+7. This project uses [Algolia](https://www.algolia.com/) for searching blogs. So, you must put api keys that algolia gives you in `.env.development` file. Check this docs on [Configuring Algolia plugin](https://www.gatsbyjs.com/docs/adding-search-with-algolia/#configuring-the-algolia-plugin).
 8. Run `gatsby develop` command.
 9. Make the appropriate changes for the issue you are trying to address or the feature that you want to add.
 10. Use git add . to add file contents of changed files.

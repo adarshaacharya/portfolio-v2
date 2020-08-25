@@ -1,16 +1,16 @@
-import React from 'react';
+import { useSfx } from '@hooks/use-sfx';
 import PropTypes from 'prop-types';
-import { Highlight } from 'react-instantsearch-dom';
-
+import React from 'react';
 import {
   BlogItem,
   BlogTitle,
-  Description,
-  DateTime,
-  Tags,
+
+  DateTime, Description,
+
+  Tags
 } from './BlogPreview.style';
 
-import { useSfx } from '@hooks/use-sfx';
+
 
 const BlogPreview = ({
   blog: { title, date, tags, readingTime, slug, description },

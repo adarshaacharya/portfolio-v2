@@ -4,7 +4,7 @@ import React from 'react';
 import { Hits, InstantSearch, SearchBox, Stats } from 'react-instantsearch-dom';
 import Hit from './Hit';
 import Posts from './Posts';
-import { SearchbarPrefix, StyledSearch } from './Search.style';
+import { StyledSearch } from './Search.style';
 const urlToSearchState = ({ search }) => qs.parse(search.slice(1));
 
 const Search = ({ props }) => {
