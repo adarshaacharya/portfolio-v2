@@ -12,7 +12,7 @@ export const StyledSearch = styled.section`
       position: relative;
       &-input {
         -webkit-appearance: none;
-        background-color: ${p => p.theme.bg};
+        background-color: ${p => p.theme.secondaryColor};
         border: 1px solid
           ${p => (p.theme.dark ? p.theme.primaryColor : p.theme.bg)};
         color: ${p => p.theme.primaryText};
@@ -21,13 +21,15 @@ export const StyledSearch = styled.section`
         font-size: 1rem;
         padding: 15px;
         border-radius: 4px;
-
+        color: ${p => p.theme.primaryText};
         width: 100%;
       }
       &-reset,
       &-submit {
         align-items: center;
-        background-color: ${p => p.theme.bg};
+        border: none;
+        border-left: 1px solid
+          ${p => (p.theme.dark ? p.theme.primaryColor : p.theme.bg)};
         cursor: pointer;
         display: flex;
         height: 100%;
@@ -35,7 +37,10 @@ export const StyledSearch = styled.section`
         position: absolute;
         right: 0;
         top: 0;
-        will-change: color;
+        background: none;
+        padding: 0 1rem;
+        text-align: center;
+        width: 4.8rem;
       }
       &-submit {
         &:hover,
@@ -45,6 +50,7 @@ export const StyledSearch = styled.section`
       }
       &-reset {
         border: none;
+        margin-right: 4.8rem;
 
         &[hidden] {
           display: none;
@@ -54,11 +60,12 @@ export const StyledSearch = styled.section`
         }
       }
       &-submitIcon {
+        height: 1.2rem;
+        width: 1.62rem;
       }
     }
     &-Stats {
       color: ${p => p.theme.primaryColor};
-      margin-bottom: 1rem;
     }
     &-Hits {
       &-item {
@@ -67,10 +74,8 @@ export const StyledSearch = styled.section`
       }
     }
   }
+
+  svg {
+    fill: ${p => p.theme.primaryText};
+  }
 `;
-
-
-export const AlgoliaIcon = styled.img`
-    mar
-
-`

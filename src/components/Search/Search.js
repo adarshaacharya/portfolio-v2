@@ -1,11 +1,10 @@
-import SimpleIcon from '@src/hooks/use-simple-icons';
 import algoliasearch from 'algoliasearch/lite';
 import qs from 'qs';
 import React from 'react';
 import { Hits, InstantSearch, SearchBox, Stats } from 'react-instantsearch-dom';
 import Hit from './Hit';
 import Posts from './Posts';
-import { StyledSearch } from './Search.style';
+import { SearchbarPrefix, StyledSearch } from './Search.style';
 const urlToSearchState = ({ search }) => qs.parse(search.slice(1));
 
 const Search = ({ props }) => {
@@ -34,7 +33,7 @@ const Search = ({ props }) => {
       >
         <SearchBox
           translations={{
-            placeholder: 'Search by titile tagname or description...',
+            placeholder: 'Search by titile, tags or description...',
           }}
         />
 
@@ -43,15 +42,12 @@ const Search = ({ props }) => {
             <Stats
               translations={{
                 stats(nbHits) {
-                  return `${nbHits} Results`;
+                  return `${nbHits} Results found`;
                 },
               }}
             />
-            <div>
-              Powered by Algolia
-              <SimpleIcon stack="Algolia" />
-              <Hits hitComponent={Hit} />
-            </div>
+
+            <Hits hitComponent={Hit} />
           </>
         ) : (
           <Posts />

@@ -65,7 +65,7 @@ export const darkTheme = {
 
   bg: '#10171D',
   primaryColor: '#2D85F4',
-  secondaryColor: '#232323',  
+  secondaryColor: '#232323',
 
   tagColor: '#303030',
 
