@@ -83,7 +83,7 @@ export const ProjectTitle = styled.h3`
   font-family: ${p => p.theme.UbuntuFontFamily};
 
   @media ${props => props.theme.media.tablet} {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     box-shadow: none;
     padding: 10px 0;
     text-align: center;
@@ -115,6 +115,8 @@ export const ProjectDescription = styled.p`
   grid-area: description;
   padding: 2rem 0;
   line-height: 2.215rem;
+  font-size: 1rem;
+
 
   @media ${props => props.theme.media.tablet} {
     padding: 1rem 0;

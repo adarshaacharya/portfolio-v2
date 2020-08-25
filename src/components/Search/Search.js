@@ -33,7 +33,7 @@ const Search = ({ props }) => {
       >
         <SearchBox
           translations={{
-            placeholder: 'Search by titile, tags or description...',
+            placeholder: 'Search by title, tags or description..',
           }}
         />
 
