@@ -117,7 +117,6 @@ export const ProjectDescription = styled.p`
   line-height: 2.215rem;
   font-size: 1rem;
 
-
   @media ${props => props.theme.media.tablet} {
     padding: 1rem 0;
   }
