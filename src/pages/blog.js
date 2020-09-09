@@ -12,7 +12,7 @@ export default function Blog({ ...props }) {
       <SectionTitle>Blogs.</SectionTitle>
       <Search props={props} />
 
-      <Subscribe/>
+      <Subscribe />
     </Layout>
   );
 }

@@ -1,2 +1,2 @@
-import Subscribe from './Subscribe'
-export default Subscribe
+import Subscribe from './Subscribe';
+export default Subscribe;
