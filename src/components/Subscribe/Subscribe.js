@@ -1,17 +1,22 @@
+import { FormattedIcon } from '@portfolio-ui/';
 import React from 'react';
 import { tinyLetter } from '../../../config/SiteConfig';
 import {
-    SubmitBtn,
-    SubscribeContainer,
-    SubscribeForm,
-    SubscribeTitle,
-    Input
+  Input,
+  SubmitBtn,
+  SubscribeContainer,
+  SubscribeForm,
+  SubscribeTitle,
 } from './Subscribe.style';
+
 const Subscribe = () => {
   return (
     <>
       <SubscribeContainer>
-        <SubscribeTitle>News Letter</SubscribeTitle>
+        <SubscribeTitle>
+          News Letter
+          <FormattedIcon name="Newsletter" className="newsletter" />
+        </SubscribeTitle>{' '}
         <p>
           Subscribe to get notified with awesome articles deliverd directly in
           your inbox. I don't spam, really!{' '}

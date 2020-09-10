@@ -16,14 +16,23 @@ export const SubscribeContainer = styled.div`
 
   p {
     font-size: 1rem;
-    margin-top: 15px;
   }
 `;
 
 export const SubscribeTitle = styled(SectionTitle)`
-  margin: 0;
+  margin: 0 !important;
   padding: 0;
   text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+
+  svg {
+    height: 70px;
+    width: 70px;
+    margin-bottom: 25px;
+  }
 `;
 
 export const SubscribeForm = styled.form`
@@ -31,7 +40,7 @@ export const SubscribeForm = styled.form`
   align-items: center;
   gap: 20px;
   max-width: 600px;
-  margin: 2rem auto;
+  margin: 20px auto;
 `;
 
 export const SubmitBtn = styled(Button)`

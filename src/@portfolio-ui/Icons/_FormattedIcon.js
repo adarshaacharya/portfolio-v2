@@ -14,7 +14,9 @@ import {
   IconMoon,
   IconResume,
   IconEmail,
+  IconNewsLetter,
 } from '@portfolio-ui/Icons';
+import NewsLetter from './newsletter';
 
 const FormattedIcon = ({ name }) => {
   switch (name) {
@@ -53,6 +55,9 @@ const FormattedIcon = ({ name }) => {
 
     case 'Email':
       return <IconEmail />;
+
+    case 'Newsletter':
+      return <NewsLetter />;
 
     default:
       return null;
