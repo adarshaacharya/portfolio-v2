@@ -15,7 +15,3 @@ export { default as IconResume } from './resume';
 export { default as IconSun } from './sun';
 export { default as IconTwitter } from './twitter';
 export { default as FormattedIcon } from './_FormattedIcon';
-
-
-
-

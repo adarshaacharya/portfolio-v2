@@ -137,5 +137,12 @@ export const TechList = styled(Flex)`
     border-bottom: 0;
     white-space: nowrap;
     line-height: 1;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+
+    &:hover {
+      transform: translateY(-4px);
+      opacity: 0.8;
+    }
   }
 `;
