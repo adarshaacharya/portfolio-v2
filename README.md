@@ -7,7 +7,7 @@
 </p>
 
 <p align="center">
-  Personal website with blog 
+  Personal website and blog 
   built with <a href="https://www.gatsbyjs.org/" target="_blank">Gatsby</a>
 </p>
 
