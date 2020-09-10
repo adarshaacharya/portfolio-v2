@@ -23,7 +23,7 @@
     <img alt="Website" src="https://img.shields.io/website?down_message=offline&label=site&up_message=online&url=http%3A%2F%2Fadarshaacharya.com.np" />
   </a>
   <a href="https://github.com/adarshaacharya/adarshaacharya.com.np/blob/master/LICENSE" target="_blank">
-    <img alt="License: MIT" src="https://img.shields.io/github/license/adarshaacharya/Aadarsha Acharya" />
+    <img alt="License: MIT" src="https://img.shields.io/github/license/adarshaacharya/adarshaacharya.com.np" />
   </a>
 
 </p>
