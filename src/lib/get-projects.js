@@ -3,7 +3,7 @@ import { graphql, useStaticQuery } from 'gatsby';
 export default () => {
   const data = useStaticQuery(graphql`
     query {
-      allProjectsJson(sort: { fields: image }) {
+      allProjectsJson {
         edges {
           node {
             title

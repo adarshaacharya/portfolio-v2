@@ -23,6 +23,12 @@ export const StyledSearch = styled.section`
         border-radius: 4px;
         color: ${p => p.theme.primaryText};
         width: 100%;
+
+        &:focus {
+          box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075),
+            0 0 8px ${props => props.theme.primaryColor};
+          outline: 0 none;
+        }
       }
       &-reset,
       &-submit {

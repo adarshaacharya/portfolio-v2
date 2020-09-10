@@ -54,7 +54,7 @@ export const FormGroup = styled.div`
 `;
 
 // common css feature
-const FormControl = css`
+export const FormControl = css`
   width: 100%;
   padding: 10px 15px;
   border-radius: 5px;

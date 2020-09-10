@@ -1,8 +1,16 @@
 [
   {
+    "title": "Code Treats",
+    "repo": "https://github.com/adarshaacharya/CodeTreats",
+    "demo": "https://codetreats.herokuapp.com/",
+    "image": "project_codetreats.png",
+    "description": "In-browser IDE for running, collaborating and saving code snippets. Code Treats supports 10+ languages and 15+ beautiful themes with VS code like text editor. Multiple users can sit on same room, collaborate and talk on real-time.",
+    "techs": ["Typescript", "React", "Nodejs", "MongoDB", "Socket"]
+  },
+  {
     "title": "E-Complaints",
     "repo": "https://github.com/adarshaacharya/E-Complaints",
-    "demo": "http://e-complaints.herokuapp.com/",
+    "demo": "https://e-complaints.herokuapp.com/",
     "image": "project_ecomplaints.png",
     "description": "A public complaint management app that helps user to send the compaints to different government departments, admin can filter & forward complaints to respective department and department officer will reply to that complaint.",
     "techs": ["Node.js", "Express", "Ejs", "MongoDB"]

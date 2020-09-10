@@ -60,7 +60,7 @@ const BlogPostTemplate = ({ data, pageContext }) => {
             🗓️ {post.frontmatter.date}
           </span>
           <span role="img" aria-label="readingTime">
-            🕒 {post.fields.readingTime.text}
+            🍿 {post.fields.readingTime.text}
           </span>
         </Flex>
       </PostHeader>

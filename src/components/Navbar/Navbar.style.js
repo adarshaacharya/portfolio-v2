@@ -18,6 +18,7 @@ export const NavWrapper = styled.div`
     box-shadow: ${props => props.theme.navShadow};
     border-bottom: ${props => props.theme.navBorderBottom};
     z-index: 99;
+    backdrop-filter: blur(10px);
   }
 `;
 
