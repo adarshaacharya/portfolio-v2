@@ -1,13 +1,20 @@
 import React from 'react';
 import { tinyLetter } from '../../../config/SiteConfig';
-import { SubscribeContainer, SubscribeForm, SubscribeTitle } from './Subscribe.style';
+import {
+    SubmitBtn,
+    SubscribeContainer,
+    SubscribeForm,
+    SubscribeTitle,
+    Input
+} from './Subscribe.style';
 const Subscribe = () => {
   return (
     <>
       <SubscribeContainer>
-          <SubscribeTitle>News Letter</SubscribeTitle>
+        <SubscribeTitle>News Letter</SubscribeTitle>
         <p>
-          Subscribe to get notified with awesome articles deliverd directly in your inbox. I don't spam, really!{' '}
+          Subscribe to get notified with awesome articles deliverd directly in
+          your inbox. I don't spam, really!{' '}
         </p>
         <SubscribeForm
           action={`https://tinyletter.com/${tinyLetter}`}
@@ -15,7 +22,7 @@ const Subscribe = () => {
           target="popupwindow"
           onSubmit={`window.open('https://tinyletter.com/${tinyLetter}', 'popupwindow', 'scrollbars=yes,width=800,height=600');return true`}
         >
-          <input
+          <Input
             type="email"
             name="email"
             id="email"
@@ -23,7 +30,7 @@ const Subscribe = () => {
             required
           />
           <input type="hidden" value="1" name="embed" />
-          <input type="submit" value="Subscribe" />
+          <SubmitBtn type="submit">Subscribe</SubmitBtn>
         </SubscribeForm>
       </SubscribeContainer>
     </>
