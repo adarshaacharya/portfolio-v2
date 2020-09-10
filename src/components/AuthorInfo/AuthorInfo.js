@@ -46,8 +46,8 @@ const AuthorInfo = () => {
       </Bio>
       <Bio>
         I'm super passionate about exploring and building open source web apps
-        and tools. Currently I'm diving in the React ecosystem with
-        backend in Node.js.
+        and tools. Currently I'm diving in the React ecosystem with backend in
+        Node.js.
       </Bio>
       <Bio>
         I'm currently pursuing Bachelor Degree in Computer Science at

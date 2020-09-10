@@ -45,7 +45,7 @@ export const lightTheme = {
   blockQuote: '#E6E6E6',
 
   hrColor: 'rgba(0,0,0,0.2)',
-  navBg: 'rgba(255,255,255, 0.75)',
+  navBg: 'rgba(255,255,255, 0.7)',
   navBorderBottom: 'none',
 
   // card

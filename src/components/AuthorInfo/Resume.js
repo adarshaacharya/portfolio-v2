@@ -16,9 +16,7 @@ const Resume = () => (
   <Flex>
     <ResumeWrapper>
       <FormattedIcon name="Resume" />
-      <ExternalLink href="#">
-        View Resume
-      </ExternalLink>
+      <ExternalLink href="#">View Resume</ExternalLink>
     </ResumeWrapper>
   </Flex>
 );
