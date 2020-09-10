@@ -31,7 +31,7 @@ const Subscribe = () => {
             type="email"
             name="email"
             id="email"
-            placeholder="Enter your email"
+            placeholder="you@domain.com"
             required
           />
           <input type="hidden" value="1" name="embed" />
