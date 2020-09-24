@@ -142,12 +142,19 @@ const BlogCssStyles = css`
     }
 
     li {
-      margin: 0.8rem 0;
+      margin: 1rem 0;
+      color: ${p => p.theme.secondaryText};
+      font-style: italic;
+
+      p {
+        display: inline;
+      }
     }
 
     li:nth-child(n)::before {
       content: '👉🏼 ';
-      margin: 0.2rem;
+      margin-right: 0.7rem;
+      display: inline;
     }
 
     /* Gatsby image*/

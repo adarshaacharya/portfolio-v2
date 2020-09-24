@@ -17,7 +17,7 @@ const social = {
   linkedinLink: `https://www.linkedin.com/in/adarshaacharya/`,
   githubLink: `https://github.com/adarshaacharya`,
   tinyLetter: 'adarshaacharya',
-  cloudinaryName : `${process.env.CLOUDINARY_NAME}`
+  cloudinaryName: `${process.env.CLOUDINARY_NAME}`,
 };
 
 const theme = {
