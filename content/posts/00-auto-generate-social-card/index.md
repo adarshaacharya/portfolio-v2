@@ -8,22 +8,22 @@ tags: ['react', 'cards', 'gatsby']
 date: 2020-09-25
 ---
 
-So, few months back I was building my [portfolio site](http://adarshaacharya.com.np/) which you are in right now. Everything was completed, build blog sections add some SEO stuffs \*_(although I'm very bad at it)._ Deployed site and when I want to share it to twitter. Surprisingly, I can't see any preview over there just a blank link with some description over there. I thought Twitter would automatically generate social cards for my site 🤪.
+So, few months back I was building my [portfolio site](http://adarshaacharya.com.np/) which you are in right now. Almost everything was completed, integrated blog, added some SEO stuffs _(although I'm very bad at it).😳_ I was checking preview of my site on twitter I notice that preview wasn't that good — it was just a blank link with some meta-description. I used to think Twitter would automatically generate social cards for my site 🤪.
 
-I used to see [dev.to](https://dev.to/) articles quite often shared quite often on social media, with similar kinda' social card with those author name title social media links and all kinds of stuff.
+I used to see [dev.to](https://dev.to/) articles shared quite often on social media, which previewed social card with author name, title, social media links, neat background with focused title.
 
-Hmmm.. then I started looking at some Gatsby plugins, I found some good ones but I didn't really like them tbh. They require a lot of configuration which I didn't want to do. I was searching for the plugin with minimum configuraion and you are good to go ! 🚀🔥
+Hmmm.. then I started looking at some Gatsby plugins 🖱️, I found some good ones but I didn't really like them tbh. They require a lot of configuration which I didn't want to do. I was searching for the plugin with minimum configuraion, setup one time and leave it for rest of my life ! 🚀🔥
 
-Then I saw tweet which actually address my problem and he recommend we this [awesome plugin](https://www.npmjs.com/package/@jlengstorf/get-share-image) . Although Jason has awesome [article](https://www.learnwithjason.dev/blog/auto-generate-social-image/) regarding building this plugin but I wanna share my experience how I integrate it in my site especially where I have to address two big things :
+I bumped into this [awesome article](https://www.learnwithjason.dev/blog/auto-generate-social-image/) where Jason describes How to generate social image using Cloudinary. Luckily he created npm package [get-share-image](https://www.npmjs.com/package/@jlengstorf/get-share-image) so I don't have to write everything from scratch.So, in this article I wanna share my experience how I integrate it in my site especially where I have to address two big things :
 
-- Generate social cards for website pages like home, contact
+- Generate social cards for website pages like home, contact.
 - Generate social cards for blog pages that means I have to generate title dynamically for each pages.
 
-## Before we start..
+## Before we start
 
 Before we get started we need to setup just few things:
 
-> 🚨 Signup for Cloudinary account [with this link](https://jason.af/cloudinary). — It's absoultely free , and will also help creator of package that we are going to use.
+> 🚨 Signup for Cloudinary account [with this link](https://jason.af/cloudinary). — It's absoultely free, and using affiliated link will also help creator of package.
 
 We are going to use package [`get-share-image`](https://www.npmjs.com/package/@jlengstorf/get-share-image) to generate the social cards using Cloudinary API.
 
@@ -39,7 +39,7 @@ npm install --save @jlengstorf/get-share-image
 yarn add @jlengstorf/get-share-image
 ```
 
-You must also install [react-helmet](https://www.gatsbyjs.com/plugins/gatsby-plugin-react-helmet/#install) as we will be injecting cards as Seo using this plugin.
+You should also install [react-helmet](https://www.gatsbyjs.com/plugins/gatsby-plugin-react-helmet/#install) as we will be injecting cards as Seo using this plugin.
 
 > We will be using Gatsby site as the example in this project you can use it with CRA or in Next.js site too.
 > You can see the the example used in [this site source code](https://github.com/adarshaacharya/adarshaacharya.com.np/blob/master/src/components/Seo/Seo.js) and follow along.
@@ -48,21 +48,20 @@ You must also install [react-helmet](https://www.gatsbyjs.com/plugins/gatsby-plu
 
 ## Usage
 
-Now you must ahve the cloudinary name which is the username you entered while creating account. Check that by going to [Console](https://cloudinary.com/console) of cloudinary account. I prefer to put it as env variables by there is no harm in exposing to the user.
+Now you must have the cloudinary name which is the username you entered while creating account. Check that by going to [console of cloudinary account](https://cloudinary.com/console) . I prefer to put it as env variables but there is no harm in exposing to the user.
 
 Now go to media library section, create directory named `portfolio` and upload the cover photo and name it `website-card` _(convention)_. You can use the same photo for blog too but we are going to upload next one with and name it `blog-card` _(convention)_.
 
 My cover photo looks something like this : 👇
 ![Website Card](website-card.png)
 
-I recommend you to put much blank as possible with some social link so that there will be ample space for text.
-
-In the file where you put all your SEO objects *(commonly Seo.js)*import the hooks provided by package and pass object as parameter.
+I recommend you to put much cover photo as blank as possible with some social link so that there will be ample space for text.
 
 ---
 
 ### Social Card for Website Pages
 
+In the file where you put all your SEO objects *(commonly Seo.js)*import the hooks provided by package and pass object as parameter as below.
 At first we are going to create social image for overall website so,
 
 ```js
@@ -81,9 +80,9 @@ const socialImage = getShareImage({
 });
 ```
 
-It will return the URL of website-card for the website pages.
+It will return the URL of website-card from cloudinary for the website pages.
 
-You can modify and add the above properties by checking the [options in the docs](https://github.com/jlengstorf/get-share-image#options) , I've added a bit more in my site[check source code here](https://github.com/adarshaacharya/adarshaacharya.com.np/blob/c229d6341ae76d0c49b5cd6e969640aee44e799c/src/components/Seo/Seo.js#L15).
+You can modify and add the above properties by checking the [options in the docs](https://github.com/jlengstorf/get-share-image#options) , I've added a bit more in my site [check source code here](https://github.com/adarshaacharya/adarshaacharya.com.np/blob/c229d6341ae76d0c49b5cd6e969640aee44e799c/src/components/Seo/Seo.js#L15).
 
 ## Social Card for Blog Post
 
@@ -147,7 +146,7 @@ Now use it everywhere you can 😹 😹 _(joking)_. Pass the following props in 
 />
 ```
 
-This will inject the card images as the content in meta tags we are done !
+This will inject the card images as the content in meta tags... we are done ! 🤙
 
 Test the above work by deploying the site in production environment _( this won't work in dev environment)._
 
@@ -155,18 +154,18 @@ Test the above work by deploying the site in production environment _( this won'
 
 ## Adding more features
 
-You might encounter some problems while following alone, feel free to drop comment if you face any issue. I will be happy to help you.
+You might encounter some problems _yeah, I also felt same_, feel free to drop comment if you face any issue. I will be happy to help you.
 
 Also, learn by reading source code, docs. Check below resources & source code of production site using this package to explore more and customizing it.
 
-**Docs : **
+**🔥 Docs :**
 
 - https://github.com/jlengstorf/get-share-image
 
-**Production sites :**
+**🔥 Production sites :**
 
 - [learnwithjason.dev source code](https://github.com/jlengstorf/learnwithjason.dev)
 
 - [adarshaacharya.com.np source code](https://github.com/adarshaacharya/adarshaacharya.com.np)
 
-If you like this blog please comment down below. Join my newsletter and I’ll share what I’ve learned about building modern web apps right into your mail box.
+That's it 👍 Please give feedback to the blog. You can always [send PR](https://github.com/adarshaacharya/adarshaacharya.com.np/edit/master/content/posts/00-auto-generate-social-card/index.md) if you find any error/typo in blog. Join my newsletter and I’ll share what I’ve learned about building modern web apps right into your mail box.
