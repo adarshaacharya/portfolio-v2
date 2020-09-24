@@ -8,7 +8,6 @@ tags: ['react', 'cards', 'gatsby']
 date: 2020-09-25
 ---
 
-
 So, few months back I was building my [portfolio site](http://adarshaacharya.com.np/) which you are in right now. Everything was completed, build blog sections add some SEO stuffs \*_(although I'm very bad at it)._ Deployed site and when I want to share it to twitter. Surprisingly, I can't see any preview over there just a blank link with some description over there. I thought Twitter would automatically generate social cards for my site 🤪.
 
 I used to see [dev.to](https://dev.to/) articles quite often shared quite often on social media, with similar kinda' social card with those author name title social media links and all kinds of stuff.
@@ -113,7 +112,7 @@ You can modify and add the above properties by checking the [options in the docs
 
 ---
 
-## Rendering Cards Conditionally 
+## Rendering Cards Conditionally
 
 Pass `isBlogPost={true}` or `isBlogPost={false}` as props to SEO component from every component that's using `Seo.js`.
 
