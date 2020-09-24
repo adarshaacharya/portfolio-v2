@@ -2,6 +2,7 @@ import getShareImage from '@jlengstorf/get-share-image';
 import getSiteMetadata from '@lib/get-site-metadata.js';
 import React from 'react';
 import { Helmet } from 'react-helmet';
+import { cloudinaryName } from '../../../config/SiteConfig';
 
 const SEO = ({ title, description, keywords, author, isBlogPost, slug }) => {
   const data = getSiteMetadata();
@@ -15,7 +16,7 @@ const SEO = ({ title, description, keywords, author, isBlogPost, slug }) => {
   const websiteCard = getShareImage({
     title: 'Aadarsha Acharya',
     tagline: 'http://adarshaacharya.com.np/',
-    cloudName: 'aadarsha',
+    cloudName: cloudinaryName,
     imagePublicID: 'portfolio/website-card',
     titleFont: 'futura',
     taglineFont: 'futura',
