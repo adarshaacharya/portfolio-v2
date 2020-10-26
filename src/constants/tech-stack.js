@@ -7,7 +7,7 @@ module.exports = {
     'Node.js',
     'Gatsby',
     'Next.js',
-    'MySql',
+    'PostgreSQL',
     'MongoDB',
     'Git',
   ],
