@@ -16,7 +16,9 @@ const Resume = () => (
   <Flex>
     <ResumeWrapper>
       <FormattedIcon name="Resume" />
-      <ExternalLink href="#">View Resume</ExternalLink>
+      <ExternalLink href="https://drive.google.com/file/d/1ywDlwl-k13Hj643IefYHaWjfNVnDBd_E/view?usp=sharing">
+        View Resume
+      </ExternalLink>
     </ResumeWrapper>
   </Flex>
 );
