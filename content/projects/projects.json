@@ -16,6 +16,14 @@
     "techs": ["Typescript", "React", "Nodejs", "MongoDB", "Socket"]
   },
   {
+    "title": "states-nepal",
+    "repo": "https://github.com/adarshaacharya/states-nepal",
+    "demo": "https://www.npmjs.com/package/states-nepal",
+    "image": "states_nepal.png",
+    "description": "states-nepal is a npm package that helps to get the dataset about different administrative division of Nepal like provinces, districts, categories,etc.",
+    "techs": ["npm", "Typescript", "Nodejs"]
+  },
+  {
     "title": "E-Complaints",
     "repo": "https://github.com/adarshaacharya/E-Complaints",
     "demo": "https://e-complaints.herokuapp.com/",

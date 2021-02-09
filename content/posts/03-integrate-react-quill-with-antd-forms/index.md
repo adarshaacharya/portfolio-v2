@@ -8,7 +8,6 @@ tags: ['antd', 'react-quill', 'react']
 date: 2021-01-13
 ---
 
-
 Ant design [docs](https://ant.design/docs/react/recommendation) recommends the react-quill editor as the rich text editor to be integrated with the ant design forms.
 
 There are majorly two task to do. First one is making the React Quill Editor controlled component and second one is to integrate it with AntD forms by using values from the react-quill editor.
@@ -96,7 +95,6 @@ We can customize the toolbar by adding the modules and toolbar array. Learn more
 ### Integrate with Ant Design Forms
 
 We are using the above `TextEditor` component in the component/page where we are creating the post.
-
 
 ```tsx
 // Post.tsx
