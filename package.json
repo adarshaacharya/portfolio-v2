@@ -13,13 +13,20 @@
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
-    "lint": "eslint ./src/"
+    "lint": "eslint ./src/",
+    "lint:fix": "eslint ./src/ --fix"
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm run format",
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+      "pre-commit": "lint-staged"
     }
+  },
+  "lint-staged": {
+    "*.js": [
+      "npm run lint:fix -- --cache",
+      "npm run format"
+    ]
   },
   "dependencies": {
     "@jlengstorf/get-share-image": "^0.7.1",
@@ -83,6 +90,7 @@
     "eslint-plugin-react": "^7.20.6",
     "eslint-plugin-react-hooks": "^4.1.0",
     "husky": "^4.2.5",
+    "lint-staged": "^10.5.4",
     "prettier": "2.0.5"
   },
   "repository": {
