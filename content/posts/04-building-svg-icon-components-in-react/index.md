@@ -17,7 +17,7 @@ Since svg is based on the markup langugae similar to XML it's much easier to man
 - create-react-app v2 or
 - Nestjs/ Gatsby application
 
-> 🧠 Pro tip : Check out [Iconscout](https://iconscout.com/) if you want awesome icons for your project. 
+> 🧠 Pro tip : Check out [Iconscout](https://iconscout.com/) if you want awesome icons for your project.
 
 We have mainly two ways of using the SVG as React component:
 
@@ -77,4 +77,3 @@ export default function App() {
 Let's see what taht looks like in codesandbox:
 
 https://codesandbox.io/s/silly-napier-ycdbd?file=/src/App.js
-
