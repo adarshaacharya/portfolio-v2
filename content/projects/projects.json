@@ -4,7 +4,7 @@
     "repo": "https://github.com/adarshaacharya/CsOverflow",
     "demo": "https://csoverflow.herokuapp.com/",
     "image": "project_csoverflow.png",
-    "description": "Q/A forum for Computer Science and Engineering students. Ask a question contribute an answer and upvote your favourite one. CsOverflow gives students correct answer and derivation of all relevant computer science and engineering questions.    ",
+    "description": "Q/A forum for Computer Science and Engineering students. Ask a question, contribute an answer and upvote your favourite one. CsOverflow gives students correct answer and derivation of all relevant computer science and engineering questions.    ",
     "techs": ["Typescript", "React", "Redux", "Nodejs", "PostgreSQL"]
   },
   {

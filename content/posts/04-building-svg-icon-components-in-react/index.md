@@ -74,6 +74,6 @@ export default function App() {
 }
 ```
 
-Let's see what taht looks like in codesandbox:
+Let's see what it looks like in codesandbox:
 
 https://codesandbox.io/s/silly-napier-ycdbd?file=/src/App.js
