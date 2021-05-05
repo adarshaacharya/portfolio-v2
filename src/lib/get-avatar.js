@@ -5,13 +5,13 @@ export default () => {
     query {
       pic: file(relativePath: { eq: "my-pic.png" }) {
         sharp: childImageSharp {
-          fixed(width: 200, height: 200) {
-            ...GatsbyImageSharpFixed
-          }
+        
+          gatsbyImageData(layout: CONSTRAINED)
+
         }
       }
     }
   `);
 
-  return data.pic.sharp.fixed;
+  return data.pic.sharp.gatsbyImageData;
 };

@@ -26,7 +26,7 @@ const ProjectPreview = ({
       <ProjectPreviewWrapper>
         <Project>
           <ProjectImgContainer href={demo ? demo : repo} onMouseEnter={playPop}>
-            <ProjectImg fluid={thumbnail} alt={title} />
+            <ProjectImg image={thumbnail} alt={title} />
           </ProjectImgContainer>
 
           <ProjectTitleContainer href={demo ? demo : repo}>

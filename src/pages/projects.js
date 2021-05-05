@@ -5,7 +5,7 @@ import ProjectPreview from '@components/ProjectPreview';
 import { SectionTitle } from '@portfolio-ui/';
 import getProjects from '@lib/get-projects';
 
-export default function Projects() {
+function Projects() {
   const projects = getProjects();
 
   return (
@@ -19,3 +19,5 @@ export default function Projects() {
     </Layout>
   );
 }
+
+export default Projects;

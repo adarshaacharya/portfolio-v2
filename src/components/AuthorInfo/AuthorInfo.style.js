@@ -1,5 +1,6 @@
 import { Flex, SvgAnimation } from '@portfolio-ui/';
-import Image from 'gatsby-image';
+import { GatsbyImage } from 'gatsby-plugin-image';
+
 import styled from 'styled-components';
 
 export const AuthorInfoWrapper = styled.div`
@@ -16,11 +17,13 @@ export const AuthorInfoWrapper = styled.div`
   }
 `;
 
-export const Avatar = styled(Image)`
+export const Avatar = styled(GatsbyImage)`
   border-radius: 50%;
   border: 3px solid ${props => props.theme.primaryColor};
   box-shadow: 4px 4px 23px -10px ${props => props.theme.primaryColor};
   cursor: pointer;
+  width: 200px !important;
+  height: 200px !important;
 
   @media ${props => props.theme.media.tablet} {
     justify-self: center;

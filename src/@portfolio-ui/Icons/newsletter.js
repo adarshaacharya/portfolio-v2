@@ -4,7 +4,7 @@ const NewsLetter = () => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      enable-background="new 0 0 512 512"
+      enableBackground="new 0 0 512 512"
       viewBox="0 0 512 512"
     >
       <g display="none" opacity=".82">
@@ -46,8 +46,8 @@ const NewsLetter = () => {
         <path
           fill="none"
           stroke="#221f1f"
-          stroke-linecap="round"
-          stroke-linejoin="round"
+          strokeLinecap="round"
+          strokeLinejoin="round"
           d="M256,256"
         />
       </g>

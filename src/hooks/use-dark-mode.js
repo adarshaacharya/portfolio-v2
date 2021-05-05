@@ -67,12 +67,13 @@ const useTheme = () => {
     const enable = disableAnimation();
 
     if (theme === 'dark') {
-      setDarkMode();
+    setDarkMode();
     } else {
       setLightMode();
     }
 
     enable();
+    return () => disableAnimation() // added by myself
   }, [theme]);
 
   return {
