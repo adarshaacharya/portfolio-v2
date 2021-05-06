@@ -1,7 +1,6 @@
 import Layout from '@components/Layout';
 import SEO from '@components/Seo';
 import { Flex } from '@portfolio-ui/';
-import Subscribe from '@src/components/Subscribe';
 import { DiscussionEmbed } from 'disqus-react';
 import { graphql, Link } from 'gatsby';
 import { MDXRenderer } from 'gatsby-plugin-mdx';

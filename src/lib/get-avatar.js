@@ -1,6 +1,6 @@
 import { graphql, useStaticQuery } from 'gatsby';
 
-export default () => {
+const GetAvatar = () => {
   const data = useStaticQuery(graphql`
     query {
       pic: file(relativePath: { eq: "my-pic.png" }) {
@@ -15,3 +15,5 @@ export default () => {
 
   return data.pic.sharp.gatsbyImageData;
 };
+
+export default GetAvatar

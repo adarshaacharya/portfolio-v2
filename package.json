@@ -18,7 +18,7 @@
   "husky": {
     "hooks": {
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
-      "pre-commit": "yarn lint-staged"
+      "pre-commit": "lint-staged"
     }
   },
   "lint-staged": {
@@ -80,6 +80,7 @@
   "devDependencies": {
     "@commitlint/cli": "^12.1.1",
     "@commitlint/config-conventional": "^12.1.1",
+    "babel-eslint": "^10.1.0",
     "commitlint": "^12.1.1",
     "eslint": "^7.25.0",
     "eslint-config-react-app": "^6.0.0",

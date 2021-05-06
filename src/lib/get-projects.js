@@ -1,6 +1,6 @@
 import { graphql, useStaticQuery } from 'gatsby';
 
-export default () => {
+const GetProjects = () => {
   const data = useStaticQuery(graphql`
     query {
       allProjectsJson {
@@ -43,3 +43,5 @@ export default () => {
     techs: node.techs,
   }));
 };
+
+export default  GetProjects
