@@ -1,6 +1,6 @@
 import { graphql, useStaticQuery } from 'gatsby';
 
-export default () => {
+function GetLogo() {
   const data = useStaticQuery(graphql`
     query {
       #since we have put source file system up to  static/images
@@ -15,4 +15,6 @@ export default () => {
   `);
 
   return data.logo.sharp.fixed;
-};
+}
+
+export default GetLogo;

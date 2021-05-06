@@ -18,7 +18,7 @@ const AuthorInfo = () => {
   return (
     <>
       <AuthorInfoWrapper>
-        <Avatar fixed={avatar} alt="adarsha" />
+        <Avatar image={avatar} alt="adarsha" />
         <Info>
           <AvatarName> Aadarsha Acharya</AvatarName>
 

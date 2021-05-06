@@ -73,6 +73,7 @@ const useTheme = () => {
     }
 
     enable();
+    return () => disableAnimation(); // added by myself
   }, [theme]);
 
   return {

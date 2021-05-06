@@ -7,6 +7,10 @@ require('dotenv').config({
 const queries = require('./src/utils/algolia');
 
 module.exports = {
+  // faster dev env
+  flags: {
+    FAST_DEV: true,
+  },
   siteMetadata: {
     title: config.siteTitle,
     author: config.siteAuthor,
@@ -34,8 +38,9 @@ module.exports = {
     },
 
     // Image Transformer
-    `gatsby-transformer-sharp`,
+    `gatsby-plugin-image`,
     `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`, // for dynamic image from graphql
     {
       resolve: `gatsby-source-filesystem`,
       options: {

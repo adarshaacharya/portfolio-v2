@@ -1,17 +1,21 @@
 import { graphql, useStaticQuery } from 'gatsby';
 
-export default () => {
+const GetAvatar = () => {
   const data = useStaticQuery(graphql`
     query {
       pic: file(relativePath: { eq: "my-pic.png" }) {
         sharp: childImageSharp {
-          fixed(width: 200, height: 200) {
-            ...GatsbyImageSharpFixed
-          }
+          gatsbyImageData(
+            layout: CONSTRAINED
+            placeholder: BLURRED
+            formats: [AUTO, WEBP, AVIF]
+          )
         }
       }
     }
   `);
 
-  return data.pic.sharp.fixed;
+  return data.pic.sharp.gatsbyImageData;
 };
+
+export default GetAvatar;

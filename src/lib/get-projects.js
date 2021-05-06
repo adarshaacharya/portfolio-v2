@@ -1,6 +1,6 @@
 import { graphql, useStaticQuery } from 'gatsby';
 
-export default () => {
+const GetProjects = () => {
   const data = useStaticQuery(graphql`
     query {
       allProjectsJson {
@@ -25,9 +25,11 @@ export default () => {
           node {
             relativePath
             sharp: childImageSharp {
-              fluid(quality: 90, maxWidth: 600) {
-                ...GatsbyImageSharpFluid
-              }
+              gatsbyImageData(
+                placeholder: BLURRED
+                layout: CONSTRAINED
+                formats: [AUTO, WEBP, AVIF]
+              )
             }
           }
         }
@@ -36,7 +38,7 @@ export default () => {
   `);
 
   return data.allProjectsJson.edges.map(({ node }, index) => ({
-    thumbnail: data.allFile.edges[index].node.sharp.fluid, // optimized image
+    thumbnail: data.allFile.edges[index].node.sharp.gatsbyImageData, // optimized image
     title: node.title,
     repo: node.repo,
     demo: node.demo,
@@ -45,3 +47,5 @@ export default () => {
     techs: node.techs,
   }));
 };
+
+export default GetProjects;

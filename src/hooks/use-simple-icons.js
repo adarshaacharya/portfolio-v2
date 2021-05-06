@@ -1,7 +1,7 @@
 import React from 'react';
 import simpleIcons from 'simple-icons';
 
-export default ({ stack, style }) => {
+const SimpleIcons = ({ stack, style }) => {
   const icon = simpleIcons.get(stack);
 
   return (
@@ -18,3 +18,5 @@ export default ({ stack, style }) => {
     />
   );
 };
+
+export default SimpleIcons;

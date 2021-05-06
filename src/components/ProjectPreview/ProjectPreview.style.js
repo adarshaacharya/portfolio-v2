@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { Flex, ExternalLink, SvgAnimation } from '@portfolio-ui/';
-import Image from 'gatsby-image';
+import { GatsbyImage } from 'gatsby-plugin-image';
 
 export const ProjectPreviewWrapper = styled.div`
   padding: 60px 0;
@@ -45,7 +45,7 @@ export const ProjectImgContainer = styled(ExternalLink)`
   grid-area: thumbnail;
 `;
 
-export const ProjectImg = styled(Image)`
+export const ProjectImg = styled(GatsbyImage)`
   border: 2px solid
     ${props => (props.theme.dark ? props.theme.primaryColor : 'none')};
   box-shadow: 0 3px 4px hsla(0, 0%, 0%, 0.4);
