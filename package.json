@@ -14,7 +14,7 @@
     "clean": "gatsby clean",
     "lint": "eslint ./src/",
     "lint:fix": "eslint ./src/ --fix",
-    "pre-commit": "lint-staged",
+    "pre-commit": "lint-staged --allow-empty",
     "prepare": "husky install"
   },
   "lint-staged": {
@@ -22,7 +22,7 @@
       "npm run lint:fix -- --cache",
       "npm run format"
     ],
-    "content/posts/**/*.{md}": [
+    "content/**/*.{md}": [
       "npm run format"
     ]
   },
