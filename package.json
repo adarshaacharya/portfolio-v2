@@ -13,16 +13,16 @@
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "lint": "eslint ./src/",
-    "lint:fix": "eslint ./src/ --fix"
+    "lint:fix": "eslint ./src/ --fix",
+    "pre-commit": "lint-staged"
   },
   "husky": {
     "hooks": {
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
-      "pre-commit": "lint-staged"
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
     }
   },
   "lint-staged": {
-    "*.js": [
+    "src/**/*.{js,jsx,ts,tsx,json,css,scss,md}": [
       "npm run lint:fix -- --cache",
       "npm run format"
     ]
