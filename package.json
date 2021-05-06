@@ -17,14 +17,12 @@
     "pre-commit": "lint-staged",
     "prepare": "husky install"
   },
-  "husky": {
-    "hooks": {
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
-    }
-  },
   "lint-staged": {
     "src/**/*.{js,jsx,ts,tsx,json,css,scss,md}": [
       "npm run lint:fix -- --cache",
+      "npm run format"
+    ],
+    "content/posts/**/*.{md}": [
       "npm run format"
     ]
   },
