@@ -175,6 +175,13 @@ Now inside `.husky/pre-commit` add the following script :
 npm run pre-commit
 ```
 
+
+
+
+
+
+
+
 That's it ! Now test everything that we've worked on.
 
 > If you are already using husky in your project you can migrate easily yo v6 [check this link!](https://github.com/typicode/husky-4-to-6)
