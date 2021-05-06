@@ -24,7 +24,7 @@ feat(lang): add nepali language
 You can check other conventions [here](https://www.conventionalcommits.org/en/v1.0.0/).
 
 <p align="center">
-  <img width="600" src="commitlint.svg">
+  <img width="600" src="commitlint.svg" alt="commitlint"/>
 </p>
 
 <p align="center">
@@ -47,7 +47,7 @@ Pre-commit hooks are actions that run after staging your changes and running `gi
 We can make pre-commit hooks to check `conventional-commits` on every commit.
 If the checks fail then the commit is not made and an error shown, while if all checks pass the commit is made as normal.
 
-### Husky :dog:
+### Husky 🐶
 
 Husky makes these things easier by defining the hooks and run the certain sceipts when certain events are triggered in git workflow.
 
@@ -70,6 +70,10 @@ Run following command in your terminal :
 ```bash
 npx husky-init
 ```
+
+Chack your `package.json` file. You may have seen `prepare` script and `husky` added as dev dependencies.
+
+`package.json`
 
 ```json
 {
@@ -96,7 +100,9 @@ npx husky add .husky/commit-msg 'npx --no-install commitlint --edit "$1"'
 
 ```
 
-Previously, all hooks lived within package.json under the "husky" object. Now it creates separate directory named `.husky/`. And creates a file named `commit-msg` with following bash script.
+Previously, all hooks lived within package.json under the "husky" object. Now it creates separate directory named `.husky/` and creates two files `commit-msg` & `pre-commit`.
+
+Checking `comit-msg` file you might find the following bash script :
 
 `.husky/commit-msg`
 
@@ -110,9 +116,9 @@ npx --no-install commitlint --edit ""
 
 Since, we are not doing any thing in `pre-commit` hooks clear everything what's inside the `.husky/pre-commit` and we will add additional scripts over here later.
 
-Add commit-lint package to lint commit messages.
+**Add commit-lint package to lint commit messages.**
 
-```
+```bash
 npm install @commitlint/config-conventional @commitlint/cli --dev
 ```
 
@@ -142,6 +148,8 @@ npm install lint-staged --save-dev
 ```
 
 Now go to package.json and write the following script `pre-commit` which runs the lint-staged in our project.
+
+`package.json`
 
 ```json
   "scripts": {
@@ -176,7 +184,10 @@ npm run pre-commit
 ```
 
 That's it ! Now test everything that we've worked on.
-<img src="success.gif" alt="commit-success">
+<img src="success.png" alt="commit-success" />
 
+> 🧠 If you are already using husky in your project you can migrate easily yo v6 [check this link!](https://github.com/typicode/husky-4-to-6)
 
-> If you are already using husky in your project you can migrate easily yo v6 [check this link!](https://github.com/typicode/husky-4-to-6)
+🤔 If you have any problem regarding husky and commitlint setup comment down below or you can directly message me on twiiter via : [@aadarshatweets](https://twitter.com/aadarshatweets)
+
+🔥 Also, if you see any kind of mistake/typo on above post [submit PR on GitHub](https://github.com/adarshaacharya/adarshaacharya.com.np/edit/master/content/posts/05-setup-husky-precommit-hooks/index.md).
