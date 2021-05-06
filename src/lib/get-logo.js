@@ -17,5 +17,4 @@ function GetLogo() {
   return data.logo.sharp.fixed;
 }
 
-
-export default  GetLogo
+export default GetLogo;

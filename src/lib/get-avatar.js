@@ -5,9 +5,7 @@ const GetAvatar = () => {
     query {
       pic: file(relativePath: { eq: "my-pic.png" }) {
         sharp: childImageSharp {
-        
           gatsbyImageData(layout: CONSTRAINED)
-
         }
       }
     }
@@ -16,4 +14,4 @@ const GetAvatar = () => {
   return data.pic.sharp.gatsbyImageData;
 };
 
-export default GetAvatar
+export default GetAvatar;

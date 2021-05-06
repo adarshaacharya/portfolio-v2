@@ -44,4 +44,4 @@ const GetProjects = () => {
   }));
 };
 
-export default  GetProjects
+export default GetProjects;

@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { Flex, ExternalLink, SvgAnimation } from '@portfolio-ui/';
-import { GatsbyImage} from "gatsby-plugin-image"
+import { GatsbyImage } from 'gatsby-plugin-image';
 
 export const ProjectPreviewWrapper = styled.div`
   padding: 60px 0;
