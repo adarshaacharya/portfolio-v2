@@ -5,7 +5,11 @@ const GetAvatar = () => {
     query {
       pic: file(relativePath: { eq: "my-pic.png" }) {
         sharp: childImageSharp {
-          gatsbyImageData(layout: CONSTRAINED)
+          gatsbyImageData(
+            layout: CONSTRAINED
+            placeholder: BLURRED
+            formats: [AUTO, WEBP, AVIF]
+          )
         }
       }
     }

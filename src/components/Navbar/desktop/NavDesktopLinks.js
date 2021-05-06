@@ -5,6 +5,7 @@ import { useSfx } from '@hooks/use-sfx';
 
 const NavLinks = ({ NavItem }) => {
   const { playClick, playPop } = useSfx();
+
   return (
     <>
       <NavItem>

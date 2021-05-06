@@ -25,7 +25,11 @@ const GetProjects = () => {
           node {
             relativePath
             sharp: childImageSharp {
-              gatsbyImageData(layout: CONSTRAINED)
+              gatsbyImageData(
+                placeholder: BLURRED
+                layout: CONSTRAINED
+                formats: [AUTO, WEBP, AVIF]
+              )
             }
           }
         }

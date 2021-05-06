@@ -22,18 +22,18 @@ export const Avatar = styled(GatsbyImage)`
   border: 3px solid ${props => props.theme.primaryColor};
   box-shadow: 4px 4px 23px -10px ${props => props.theme.primaryColor};
   cursor: pointer;
-  width: 200px !important;
-  height: 200px !important;
+  height: 200px;
+  width: 200px;
 
   @media ${props => props.theme.media.tablet} {
     justify-self: center;
-    width: 150px !important;
-    height: 150px !important;
+    width: 150px;
+    height: 150px;
   }
 
   @media ${props => props.theme.media.mobile} {
-    width: 100px !important;
-    height: 100px !important;
+    width: 100px;
+    height: 100px;
   }
 `;
 
