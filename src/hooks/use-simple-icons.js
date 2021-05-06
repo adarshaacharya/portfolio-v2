@@ -5,24 +5,6 @@ const SimpleIcons = ({ stack, style }) => {
   const icon = simpleIcons.get(stack);
 
   return (
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
     <div
       data-icon={stack}
       style={{

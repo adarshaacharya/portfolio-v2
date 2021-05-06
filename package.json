@@ -14,7 +14,8 @@
     "clean": "gatsby clean",
     "lint": "eslint ./src/",
     "lint:fix": "eslint ./src/ --fix",
-    "pre-commit": "lint-staged"
+    "pre-commit": "lint-staged",
+    "prepare": "husky install"
   },
   "husky": {
     "hooks": {
