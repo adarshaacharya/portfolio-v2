@@ -1,20 +1,20 @@
 import React from 'react';
 import Layout from '@components/Layout';
 import SEO from '@components/Seo';
-import ProjectPreview from '@components/ProjectPreview';
 import { SectionTitle } from '@portfolio-ui/';
-import getProjects from '@lib/get-projects';
+import getWebsites from '@src/lib/get-websites';
+import WebsitePreview from '@src/components/ProjectPreview/WebsitePreview';
 
 function Projects() {
-  const projects = getProjects();
+  const websites = getWebsites();
 
   return (
     <Layout>
       <SEO title={`Projects`} />
       <SectionTitle>Some Things I've Built.</SectionTitle>
 
-      {projects.map(project => (
-        <ProjectPreview project={project} key={project.title} />
+      {websites.map(website => (
+        <WebsitePreview website={website} key={website.title} />
       ))}
     </Layout>
   );

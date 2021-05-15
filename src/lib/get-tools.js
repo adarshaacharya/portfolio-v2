@@ -9,8 +9,7 @@ const GetTools = () => {
           node {
             title
             repo
-            demo
-            image
+            external
             description
             techs
           }

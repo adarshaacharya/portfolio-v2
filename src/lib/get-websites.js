@@ -1,10 +1,10 @@
 import { graphql, useStaticQuery } from 'gatsby';
 
-const GetProjects = () => {
+const GetWebsites = () => {
   const data = useStaticQuery(graphql`
     query {
-      # since file name in projects.json so allProjectsJson
-      allProjectsJson {
+      # since file name in websites.json so allWebsitesJson
+      allWebsitesJson {
         edges {
           node {
             title
@@ -38,7 +38,7 @@ const GetProjects = () => {
     }
   `);
 
-  return data.allProjectsJson.edges.map(({ node }, index) => ({
+  return data.allWebsitesJson.edges.map(({ node }, index) => ({
     thumbnail: data.allFile.edges[index].node.sharp.gatsbyImageData, // optimized image
     title: node.title,
     repo: node.repo,
@@ -49,4 +49,4 @@ const GetProjects = () => {
   }));
 };
 
-export default GetProjects;
+export default GetWebsites;
