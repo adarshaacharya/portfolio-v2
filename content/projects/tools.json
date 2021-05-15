@@ -1,0 +1,9 @@
+[
+  {
+    "title": "states-nepal",
+    "repo": "https://github.com/adarshaacharya/states-nepal",
+    "external": "https://www.npmjs.com/package/states-nepal",
+    "description": "npm package  to get the dataset about different administrative division of Nepal.",
+    "techs": ["Typescript", "Nodejs"]
+  }
+]

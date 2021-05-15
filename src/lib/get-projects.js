@@ -3,6 +3,7 @@ import { graphql, useStaticQuery } from 'gatsby';
 const GetProjects = () => {
   const data = useStaticQuery(graphql`
     query {
+      # since file name in projects.json so allProjectsJson
       allProjectsJson {
         edges {
           node {
