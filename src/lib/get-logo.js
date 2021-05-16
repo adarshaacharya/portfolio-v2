@@ -6,15 +6,13 @@ function GetLogo() {
       #since we have put source file system up to  static/images
       logo: file(relativePath: { eq: "logo.png" }) {
         sharp: childImageSharp {
-          fixed(width: 64, height: 64) {
-            ...GatsbyImageSharpFixed
-          }
+          gatsbyImageData(layout: FIXED)
         }
       }
     }
   `);
 
-  return data.logo.sharp.fixed;
+  return data.logo.sharp.gatsbyImageData;
 }
 
 export default GetLogo;
