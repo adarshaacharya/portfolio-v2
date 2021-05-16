@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { Flex, ExternalLink, SvgAnimation } from '@portfolio-ui/';
 import { GatsbyImage } from 'gatsby-plugin-image';
 
-export const ProjectPreviewWrapper = styled.div`
+export const WebsitePreviewWrapper = styled.div`
   padding: 60px 0;
   border: none;
   border-bottom: 1px solid ${p => p.theme.hrColor};
@@ -20,7 +20,7 @@ export const ProjectPreviewWrapper = styled.div`
   }
 `;
 
-export const Project = styled.div`
+export const Website = styled.div`
   padding: 0.5rem 0;
   min-height: 480px;
   display: grid;
@@ -41,11 +41,11 @@ export const Project = styled.div`
   }
 `;
 
-export const ProjectImgContainer = styled(ExternalLink)`
+export const WebsiteImgContainer = styled(ExternalLink)`
   grid-area: thumbnail;
 `;
 
-export const ProjectImg = styled(GatsbyImage)`
+export const WebsiteImg = styled(GatsbyImage)`
   border: 2px solid
     ${props => (props.theme.dark ? props.theme.primaryColor : 'none')};
   box-shadow: 0 3px 4px hsla(0, 0%, 0%, 0.4);
@@ -65,12 +65,12 @@ export const ProjectImg = styled(GatsbyImage)`
   }
 `;
 
-export const ProjectTitleContainer = styled(ExternalLink)`
+export const WebsiteTitleContainer = styled(ExternalLink)`
   grid-area: title;
   align-self: flex-end;
 `;
 
-export const ProjectTitle = styled.h3`
+export const WebsiteTitle = styled.h3`
   cursor: pointer;
   padding: 1.5rem 0 1rem 0.5rem;
   margin: 0;
@@ -91,14 +91,14 @@ export const ProjectTitle = styled.h3`
   }
 `;
 
-export const ProjectLinks = styled(Flex)`
+export const WebsiteLinks = styled(Flex)`
   grid-area: links;
   @media ${props => props.theme.media.tablet} {
     justify-self: center;
   }
 `;
 
-export const ProjectLink = styled(ExternalLink)`
+export const WebsiteLink = styled(ExternalLink)`
   position: relative;
   top: 7px;
   left: 10px;
@@ -111,7 +111,7 @@ export const ProjectLink = styled(ExternalLink)`
   ${SvgAnimation};
 `;
 
-export const ProjectDescription = styled.p`
+export const WebsiteDescription = styled.p`
   grid-area: description;
   padding: 2rem 0;
   line-height: 2.215rem;

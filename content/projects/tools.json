@@ -1,0 +1,23 @@
+[
+  {
+    "title": "states-nepal",
+    "repo": "https://github.com/adarshaacharya/states-nepal",
+    "external": "https://www.npmjs.com/package/states-nepal",
+    "description": "npm package to get the dataset about different administrative division of Nepal.",
+    "techs": ["npm-package"]
+  },
+  {
+    "title": "ApiHub",
+    "repo": "https://github.com/adarshaacharya/ApiHub",
+    "external": "https://www.npmjs.com/package/states-nepal",
+    "description": "VS Code extension to get free third party api url on different categories.",
+    "techs": ["vscode-extension"]
+  },
+  {
+    "title": "shitcommits",
+    "repo": "https://github.com/adarshaacharya/shitcommits",
+    "external": "https://www.npmjs.com/package/shitcommits",
+    "description": "Cli tool to make git commits with not-so perfect messges.",
+    "techs": ["npm-package"]
+  }
+]
