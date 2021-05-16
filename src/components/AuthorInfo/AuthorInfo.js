@@ -22,7 +22,7 @@ const AuthorInfo = () => {
         <Info>
           <AvatarName> Aadarsha Acharya</AvatarName>
 
-          <a href="mailto: adarshaofficial@gmail.com" className="email">
+          <a href="mailto:adarshaofficial@gmail.com" className="email">
             <FormattedIcon name="Email" />
             <span>adarshaofficial@gmail.com</span>
           </a>
