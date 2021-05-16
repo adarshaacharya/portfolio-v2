@@ -14,13 +14,13 @@ function Projects() {
   return (
     <Layout>
       <SEO title={`Projects`} />
-      <SectionTitle>Some Things I've Built.</SectionTitle>
+      <SectionTitle>Web Applications.</SectionTitle>
 
       {websites.map(website => (
         <WebsitePreview website={website} key={website.title} />
       ))}
 
-      <SectionTitle>Open Source Tools</SectionTitle>
+      <SectionTitle>Open Source Tools.</SectionTitle>
 
       <Tools tools={tools} />
     </Layout>

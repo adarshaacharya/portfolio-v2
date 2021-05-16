@@ -17,28 +17,7 @@
     "title": "shitcommits",
     "repo": "https://github.com/adarshaacharya/shitcommits",
     "external": "https://www.npmjs.com/package/shitcommits",
-    "description": "Cli tool to make not-so perfect commits.",
-    "techs": ["npm-package"]
-  },
-  {
-    "title": "TestApplication",
-    "repo": "https://github.com/adarshaacharya/shitcommits",
-    "external": "https://www.npmjs.com/package/shitcommits",
-    "description": "Testing application.",
-    "techs": ["npm-package"]
-  },
-  {
-    "title": "TestApplication1",
-    "repo": "https://github.com/adarshaacharya/shitcommits",
-    "external": "https://www.npmjs.com/package/shitcommits",
-    "description": "Testing application.",
-    "techs": ["npm-package"]
-  },
-  {
-    "title": "TestApplication2",
-    "repo": "https://github.com/adarshaacharya/shitcommits",
-    "external": "https://www.npmjs.com/package/shitcommits",
-    "description": "Testing application.",
+    "description": "Cli tool to make git commits with not-so perfect messges.",
     "techs": ["npm-package"]
   }
 ]
