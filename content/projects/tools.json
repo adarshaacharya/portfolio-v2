@@ -4,7 +4,7 @@
     "repo": "https://github.com/adarshaacharya/states-nepal",
     "external": "https://www.npmjs.com/package/states-nepal",
     "description": "npm package to get the dataset about different administrative division of Nepal.",
-    "techs": ["npm-package", "node"]
+    "techs": ["npm-package"]
   },
   {
     "title": "ApiHub",
@@ -22,6 +22,20 @@
   },
   {
     "title": "TestApplication",
+    "repo": "https://github.com/adarshaacharya/shitcommits",
+    "external": "https://www.npmjs.com/package/shitcommits",
+    "description": "Testing application.",
+    "techs": ["npm-package"]
+  },
+  {
+    "title": "TestApplication1",
+    "repo": "https://github.com/adarshaacharya/shitcommits",
+    "external": "https://www.npmjs.com/package/shitcommits",
+    "description": "Testing application.",
+    "techs": ["npm-package"]
+  },
+  {
+    "title": "TestApplication2",
     "repo": "https://github.com/adarshaacharya/shitcommits",
     "external": "https://www.npmjs.com/package/shitcommits",
     "description": "Testing application.",

@@ -1,5 +1,5 @@
 import React from 'react';
-import ToolsPreview from './ToolsPreview';
+import ToolsPreview from './ToolPreview';
 import { ToolsList } from './Tools.style';
 import PropTypes from 'prop-types';
 
