@@ -7,6 +7,13 @@
     "techs": ["npm-package"]
   },
   {
+    "title": "aaja (आज)",
+    "repo": "https://github.com/adarshaacharya/aaja",
+    "external": "https://www.npmjs.com/package/aaja",
+    "description": "Cli tool to get today's nepali date, tithi, public events and current time.",
+    "techs": ["npm-package"]
+  },
+  {
     "title": "ApiHub",
     "repo": "https://github.com/adarshaacharya/ApiHub",
     "external": "https://www.npmjs.com/package/states-nepal",
