@@ -41,8 +41,7 @@ const AuthorInfo = () => {
       </AuthorInfoWrapper>
 
       <Bio>
-        Hello! I’m Aadarsha Acharya, aspiring web developer based in Kathmandu
-        Nepal.
+        Hello! I’m Aadarsha Acharya, web developer based in Kathmandu Nepal.
       </Bio>
       <Bio>
         I'm super passionate about exploring and building open source web apps
