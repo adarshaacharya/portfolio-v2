@@ -42,7 +42,6 @@ Javascript is executed in a two-step process:
 
 - Runtime execution where the value is assigned to the variables.
 
-
 Whenever we declare variable the engine parses TDZ as follows:
 
 ```js
@@ -50,7 +49,6 @@ Whenever we declare variable the engine parses TDZ as follows:
 
 let name = 'Evan';
 ```
-
 
 ```js
 // 🚨 temporal deadzone for var name
