@@ -29,6 +29,11 @@ const disqus = {
   disqusShortName: 'aadarshaacharya',
 };
 
+// comments repo
+const comments = {
+  commentsRepo : 'adarshaacharya/comments'
+}
+
 const trackingID = {
   googleAnalyticsID: 'UA-168740334-1',
 };
@@ -39,4 +44,5 @@ module.exports = {
   ...theme, // manifest
   ...disqus,
   ...trackingID,
+  ...comments
 };
