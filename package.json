@@ -29,7 +29,6 @@
     "@mdx-js/react": "^1.6.22",
     "algoliasearch": "^4.9.1",
     "babel-plugin-styled-components": "^1.12.0",
-    "disqus-react": "^1.0.11",
     "dotenv": "^8.6.0",
     "env-cmd": "^10.1.0",
     "gatsby": "^3.4.1",
