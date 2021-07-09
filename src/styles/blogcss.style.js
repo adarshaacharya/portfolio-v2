@@ -1,14 +1,21 @@
 import { css } from 'styled-components';
 
 const BlogCssStyles = css`
-  .comments {
-    margin: 3rem 0;
+  #comments {
+    margin: 2rem 0;
+  }
+
+  #comments h2 {
+    margin: 0;
+    text-align: center;
+    font-family: ${p => p.theme.UbuntuFontFamily};
   }
 
   .recommendation a {
     font-size: 1rem;
     font-style: italic;
-    font-family: ${p => p.theme.UbuntuFontFamily} !important;
+    font-family: ${p => p.theme.UbuntuFontFamily};
+    margin-bottom: 3rem;
   }
 
   .blog-content {

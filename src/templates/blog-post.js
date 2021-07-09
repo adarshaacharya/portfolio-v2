@@ -3,11 +3,12 @@ import Layout from '@components/Layout';
 import SEO from '@components/Seo';
 import useDarkMode from '@hooks/use-dark-mode';
 import { Flex } from '@portfolio-ui/';
+import Subscribe from '@src/components/Subscribe';
 import { graphql, Link } from 'gatsby';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
 import React from 'react';
 import styled from 'styled-components';
-import { commentsRepo, siteUrl } from '../../config/SiteConfig';
+import { commentsRepo } from '../../config/SiteConfig';
 
 const PostHeader = styled.div`
   font-family: ${p => p.theme.UbuntuFontFamily};
@@ -100,7 +101,10 @@ const BlogPostTemplate = ({ data, pageContext }) => {
 
       <hr />
 
-      <Comment ref={commentBox} />
+      <div id="comments">
+        <h2>Comments</h2>
+        <Comment ref={commentBox} />
+      </div>
 
       {/* recommendation */}
       <Flex justify="space-between" className="recommendation">
@@ -116,6 +120,7 @@ const BlogPostTemplate = ({ data, pageContext }) => {
           </Link>
         )}
       </Flex>
+      <Subscribe />
     </Layout>
   );
 };

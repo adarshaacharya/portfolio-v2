@@ -14,12 +14,12 @@ const Subscribe = () => {
     <>
       <SubscribeContainer>
         <SubscribeTitle>
-          News Letter
+          Newsletter
           <FormattedIcon name="Newsletter" className="newsletter" />
         </SubscribeTitle>{' '}
         <p>
-          Subscribe to get notified with awesome articles deliverd directly in
-          your inbox. I don't spam, really!{' '}
+          Subscribe to get notified with awesome articles delivered right in
+          your inbox. No spam.
         </p>
         <SubscribeForm
           action={`https://tinyletter.com/${tinyLetter}`}
@@ -31,7 +31,7 @@ const Subscribe = () => {
             type="email"
             name="email"
             id="email"
-            placeholder="you@domain.com"
+            placeholder="your.awesome@email.com"
             required
           />
           <input type="hidden" value="1" name="embed" />
