@@ -25,7 +25,6 @@ const theme = {
   backgroundColor: '#1b2938',
 };
 
-
 // comments repo
 const comments = {
   commentsRepo: 'adarshaacharya/comments',
