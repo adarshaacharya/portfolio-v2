@@ -25,14 +25,11 @@ const theme = {
   backgroundColor: '#1b2938',
 };
 
-const disqus = {
-  disqusShortName: 'aadarshaacharya',
-};
 
 // comments repo
 const comments = {
-  commentsRepo : 'adarshaacharya/comments'
-}
+  commentsRepo: 'adarshaacharya/comments',
+};
 
 const trackingID = {
   googleAnalyticsID: 'UA-168740334-1',
@@ -42,7 +39,6 @@ module.exports = {
   ...personal,
   ...social,
   ...theme, // manifest
-  ...disqus,
   ...trackingID,
-  ...comments
+  ...comments,
 };

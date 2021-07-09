@@ -1,14 +1,8 @@
 import { css } from 'styled-components';
 
 const BlogCssStyles = css`
-  /* Disqus styles */
-  div#disqus_thread {
-    padding: 15px 25px;
-    border-radius: 10px;
-    background: #fafafa;
-    margin-bottom: 90px;
-    margin-top: 50px;
-    box-shadow: ${p => p.theme.shadowSmall};
+  .comments {
+    margin: 3rem 0;
   }
 
   .recommendation a {

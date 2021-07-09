@@ -1,19 +1,13 @@
+import Comment from '@components/Comment';
 import Layout from '@components/Layout';
 import SEO from '@components/Seo';
-import Comment from '@components/Comment';
-
+import useDarkMode from '@hooks/use-dark-mode';
 import { Flex } from '@portfolio-ui/';
-import { DiscussionEmbed } from 'disqus-react';
 import { graphql, Link } from 'gatsby';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
 import React from 'react';
 import styled from 'styled-components';
-import {
-  disqusShortName,
-  siteUrl,
-  commentsRepo,
-} from '../../config/SiteConfig';
-import useDarkMode from '@hooks/use-dark-mode';
+import { commentsRepo, siteUrl } from '../../config/SiteConfig';
 
 const PostHeader = styled.div`
   font-family: ${p => p.theme.UbuntuFontFamily};
@@ -71,13 +65,6 @@ const BlogPostTemplate = ({ data, pageContext }) => {
     };
   }, [theme]); // eslint-disable-line
 
-  const baseSlugUrl = `${siteUrl}/blog/${slug}`;
-  const disqusConfig = {
-    url: baseSlugUrl,
-    identifier: post.frontmatter.id.toString(),
-    title: post.frontmatter.title,
-  };
-
   return (
     <Layout>
       <SEO
@@ -113,7 +100,6 @@ const BlogPostTemplate = ({ data, pageContext }) => {
 
       <hr />
 
-      {/* <DiscussionEmbed shortname={disqusShortName} config={disqusConfig} /> */}
       <Comment ref={commentBox} />
 
       {/* recommendation */}

@@ -5892,11 +5892,6 @@ dir-glob@^3.0.1:
   dependencies:
     path-type "^4.0.0"
 
-disqus-react@^1.0.11:
-  version "1.0.11"
-  resolved "https://registry.npmjs.org/disqus-react/-/disqus-react-1.0.11.tgz"
-  integrity sha512-DZGc6kk16EGLAJtJAn+EdNHy44pBD0QJnuuOSyMf6qqsZrIYwkBFe72mdvRKfGYD1toR7bAvkRjmec/YQTrG+w==
-
 dns-equal@^1.0.0:
   version "1.0.0"
   resolved "https://registry.npmjs.org/dns-equal/-/dns-equal-1.0.0.tgz"
