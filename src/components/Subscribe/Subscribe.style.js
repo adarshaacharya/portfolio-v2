@@ -32,7 +32,11 @@ export const SubscribeForm = styled.form`
 `;
 
 export const SubmitBtn = styled(Button)`
-  padding: 0.8rem 1.5rem;
+  padding: 0.8rem 1.7rem;
+
+  &:hover {
+    transform: none;
+  }
 `;
 
 export const Input = styled.input`

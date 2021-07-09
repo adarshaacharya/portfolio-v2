@@ -1,6 +1,6 @@
 import { FormattedIcon } from '@portfolio-ui/';
 import React from 'react';
-import { tinyLetter } from '../../../config/SiteConfig';
+import { buttonDownEmail } from '../../../config/SiteConfig';
 import {
   Input,
   SubmitBtn,
@@ -22,16 +22,19 @@ const Subscribe = () => {
           your inbox. No spam.
         </p>
         <SubscribeForm
-          action={`https://tinyletter.com/${tinyLetter}`}
+          action={`https://buttondown.email/api/emails/embed-subscribe/${buttonDownEmail}`}
           method="post"
           target="popupwindow"
-          onSubmit={`window.open('https://tinyletter.com/${tinyLetter}', 'popupwindow', 'scrollbars=yes,width=800,height=600');return true`}
+          onSubmit={() => `window.open(
+            'https://buttondown.email/${buttonDownEmail}',
+            'popupwindow'
+          )`}
         >
           <Input
             type="email"
             name="email"
             id="email"
-            placeholder="your.awesome@email.com"
+            placeholder="Your email address..."
             required
           />
           <input type="hidden" value="1" name="embed" />

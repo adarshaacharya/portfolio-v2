@@ -16,7 +16,7 @@ const social = {
   twitterLink: `https://twitter.com/aadarshatweets`,
   linkedinLink: `https://www.linkedin.com/in/adarshaacharya/`,
   githubLink: `https://github.com/adarshaacharya`,
-  tinyLetter: 'adarshaacharya',
+  buttonDownEmail: 'adarshaacharya',
   cloudinaryName: `${process.env.CLOUDINARY_NAME}`,
 };
 
