@@ -16,7 +16,7 @@
   {
     "title": "ApiHub",
     "repo": "https://github.com/adarshaacharya/ApiHub",
-    "external": "https://www.npmjs.com/package/states-nepal",
+    "external": "https://marketplace.visualstudio.com/items?itemName=AadarshaAcharya.api-hub",
     "description": "VS Code extension to get free third party api url on different categories.",
     "techs": ["vscode-extension"]
   },
