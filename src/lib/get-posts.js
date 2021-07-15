@@ -7,6 +7,7 @@ const GetPosts = () => {
         nodes {
           excerpt
           frontmatter {
+            id # required for algolia
             title
             slug
             author
