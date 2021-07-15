@@ -5,8 +5,10 @@ author: Aadarsha Acharya
 slug: react-lists-and-reconcilation
 description: 'How reconcilation works with lists in React and how can we use key attribute to prevent unnecessary re-render.'
 tags: ['react', 'reconciliation']
-date: 2021-06-15
+date: 2021-07-15
 ---
+
+<img src="lists.jpeg" alt="list"/>
 
 ### Reconciliation and Virtual DOM
 

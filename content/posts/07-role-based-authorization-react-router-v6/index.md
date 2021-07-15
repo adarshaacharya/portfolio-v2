@@ -5,7 +5,7 @@ author: Aadarsha Acharya
 slug: role-based-auth-with-react-router-v6
 description: 'Building auth route in react router v6 with role based authorization.'
 tags: ['react-router', 'typescript', 'redux', 'react']
-date: 2021-05-01
+date: 2021-07-01
 ---
 
 <img  src="banner.png"    alt="banner" />
