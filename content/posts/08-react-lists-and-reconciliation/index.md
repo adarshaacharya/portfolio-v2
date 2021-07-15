@@ -1,9 +1,9 @@
 ---
 id: 8
-title: 'React Lists Understanding the Weird Parts'
+title: "Reconciliation in React's Lists"
 author: Aadarsha Acharya
-slug: react-lists-and-reconcilation
-description: 'How reconcilation works with lists in React and how can we use key attribute to prevent unnecessary re-render.'
+slug: react-lists-and-reconciliation
+description: 'In depth overview of reconciliation works with lists in React and how can we use key attribute to prevent unnecessary re-render.'
 tags: ['react', 'reconciliation']
 date: 2021-07-15
 ---
@@ -12,7 +12,7 @@ date: 2021-07-15
 
 ### Reconciliation and Virtual DOM
 
-First, let's understand how React rendering process works.
+First, let's understand how React rendering process works through Virtual DOM.
 
 **Virtual DOM :** Its a object that represents the DOM tree structure of an App in memory. Lets see how can we get from JSX to Virtual DOM :
 
@@ -31,13 +31,13 @@ _Remember it only generates the VDOM object not render it to the real DOM._
 
 React now diffs the newly generated VDOM tree with previous tree aka JavaScirpt object which is also known as diffing algorithm, and find out what things have changed after state update. However, while rendering those updates to DOM, it doesn't render the entire tree (which is costly in terms of performance), instead it follows the [certain guideles](https://reactjs.org/docs/reconciliation.html#motivation) which makes the React extremly fast in terms of performance.
 
-These bunch of optimizations technique are nothing, but part of process called Reoncilation.
+These bunch of optimizations technique are nothing, but part of process called **Reconciliation**.
 
 ### Back to topic
 
-One of the key points of Reconcilation algorithm is :
+One of the key points of Reconciliation algorithm is about React's "Diffing algorithm" in lists.
 
-> Diffing of lists is performed using keys. Keys should be "stable, predictable, and unique."
+> 💡 Diffing of lists is performed using keys. Keys should be "stable, predictable, and unique."
 
 Lets see an example of e-commerce app where we have thousands of items and they are fetched from backend and mapped in the frontend.
 
@@ -66,16 +66,16 @@ imagine the same scenario in the large e-commerce application, where we have liv
 When we add the new mobile on the top of list, React only sees the text content in the first item in the list and notices that `Nokia` element changes to `Nexus` then re-render it.... similarly it looks at second element and founds `Lenovo` changed to `Sony` and re-render it....
 This goes till the last util whole item below it gets re-rendered. Remember I say it only looks at the text node not anything else.
 
-So, that brings to another point of reconcilation :
+So, that brings to another point of reconciliation :
 
-> Every DOM node is associated to the element, If that element changes then the DOM node
+> 💡 Every DOM node is associated to the element, If that element changes then the DOM node
 > changes. If the element is destroyed that DOM node is gonna be destroyed.
 
 In our case if Mobile item gets changed then its corresponding DOM node will also get changed.
 
 <img src="diffing-unkeyed-lists.png" alt="diffing-unkeyed-lists"/>
 
-_The thing with list of elemnents in virtual DOM is that element push or pop at the end by default so you mightn't notice any re-render if you push item at end._
+_The thing with list of elements in virtual DOM is that element push or pop at the end by default so you mightn't notice any re-render if you push item at end._
 
 ### Solution
 
@@ -98,13 +98,16 @@ Above code can be refactored as :
 </ul>
 ```
 
+Let's check how it beahves in the browser :
+
 <img src="only-one-item-rerender.gif" alt="only-one-item-rerender" />
 
 If you notice on devtools only one the item which has been added to the top gets re-rendered on every item, other one stays as usual.
 
 So, what's the magic `key` props bring to you component ?
 
-Keys are the hacky way to tell React what makes the **item** in the list, same **item** between the renders.
+> 💡 Keys are the hacky way to tell React what makes the **item** in the list, same **item** between the renders.
+
 So if we pre-prend item on the beginning of the list, with key attribute, then while diffing : React loops over the list in VDOM and checks the first item `Nokia`, see its `key = {1}` then compares with the new VDOM tree first item `Sony` has `key={104}` it's different. But, wait a minute.... Let's loop at another item and sees its key, and found `key={1}` and found that it matches ! It continues to loop all the items in the lists and finds what has actually changed after re-render.
 
 <img src="diffing-keyed-lists.png" alt="diffing keyed lists" />
@@ -139,8 +142,17 @@ But, never pass the `index` of item as `key` attribute !
 
 The problem with this approach is it will re-render the whole list when new item is added since the key of all item will changed.
 
-If you see any kind of mistake/typo on above post [edit it on GitHub](https://github.com/adarshaacharya/adarshaacharya.com.np/edit/master/content/posts/07-role-based-authorization-react-router-v6/index.md).
+### Summing up
 
-Enjoy !
+Having the good understanding of working of lists can help a lot in optimizing performance especially in large applications, and helps fixing the potential bugs. Reconcilitaion has other principles on how the component should behave on different state change, which I will try to explain in other blogs.
+
+### References
+
+- [React Docs](https://reactjs.org/docs/reconciliation.html)
+- [Jason Miller: Preact: Into the void 0](https://www.youtube.com/watch?v=LY6y3HbDVmg)
+
+<hr />
+
+If you see any kind of mistake/typo on above post [edit it on GitHub](https://github.com/adarshaacharya/adarshaacharya.com.np/edit/master/content/posts/08-react-lists-and-reconciliation/index.md).
 
 Subscribe to my newsletter if you want upcoming blogs directly in your inbox. 👇
