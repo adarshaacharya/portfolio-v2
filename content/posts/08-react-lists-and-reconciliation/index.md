@@ -20,7 +20,7 @@ First, let's understand how React rendering process works through Virtual DOM.
 
 Basically when you write JSX, it gets transpiled to plain old js by Babel or other compiler. It invokes the `React.createElement()`function which bunch of parameteres as per your element and the plain old JS object which is also known as `Virtual DOM`.
 
-<img src="vdom-example.png" alt="vdom-example"/>
+<img src="vdom-example.png" alt="vdom-example" caption="vdom"/>
 
 But...
 Most of our application isn't only about the static content. What happens when the state changes and we have to generate new UI based on that state.
