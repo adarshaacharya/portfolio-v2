@@ -6,6 +6,7 @@ const GetPosts = () => {
       allMdx(sort: { fields: [frontmatter___date], order: DESC }) {
         nodes {
           excerpt
+          id
           frontmatter {
             id # required for algolia
             title
