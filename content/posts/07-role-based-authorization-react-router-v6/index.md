@@ -1,5 +1,5 @@
 ---
-id: 7
+id: 07
 title: 'Role Based Authorization with React Router v6 and Typescript'
 author: Aadarsha Acharya
 slug: role-based-auth-with-react-router-v6

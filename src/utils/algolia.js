@@ -6,6 +6,7 @@ query {
     allMdx(filter: {fileAbsolutePath: {regex: "/posts/"}}) {
       edges {
         node {
+          id
           frontmatter {
             tags
             title
@@ -27,9 +28,10 @@ query {
 `;
 
 const unnestFrontmatter = node => {
-  const { frontmatter, ...rest } = node;
+  const { frontmatter, id, ...rest } = node;
 
   return {
+    objectID: id,
     ...frontmatter,
     ...rest,
   };
