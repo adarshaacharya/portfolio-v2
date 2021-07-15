@@ -3,7 +3,7 @@ id: 8
 title: "Reconciliation in React's Lists"
 author: Aadarsha Acharya
 slug: react-lists-and-reconciliation
-description: 'In depth overview of reconciliation works with lists in React and how can we use key attribute to prevent unnecessary re-render.'
+description: 'In depth overview of how reconciliation works with lists in React and how can we use key attribute to prevent unnecessary re-render.'
 tags: ['react', 'reconciliation']
 date: 2021-07-15
 ---

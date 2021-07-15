@@ -1,5 +1,5 @@
 ---
-id: 01
+id: 1
 title: 'Building Rest API In Next.js using next-connect'
 author: Aadarsha Acharya
 slug: building-rest-api-with-next-connect
