@@ -1,5 +1,5 @@
 ---
-id: 04
+id: 4
 title: 'Building SVG Icon Component in React'
 author: Aadarsha Acharya
 slug: building-svg-icon-component

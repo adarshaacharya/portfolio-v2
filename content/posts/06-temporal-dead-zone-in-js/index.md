@@ -1,5 +1,5 @@
 ---
-id: 06
+id: 6
 title: 'Temporal Dead Zone in JS'
 author: Aadarsha Acharya
 slug: temporal-dead-zone

@@ -1,5 +1,5 @@
 ---
-id: 02
+id: 2
 title: 'Exploring Redux Toolkit'
 author: Aadarsha Acharya
 slug: exploring-redux-toolkit

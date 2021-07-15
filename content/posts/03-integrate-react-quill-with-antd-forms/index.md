@@ -1,5 +1,5 @@
 ---
-id: 03
+id: 3
 title: 'Integrating React Quill Editor with Ant Design Forms'
 author: Aadarsha Acharya
 slug: integrate-react-quill-with-antd-forms
