@@ -1,11 +1,11 @@
 ---
-id: 06
+id: 6
 title: 'Temporal Dead Zone in JS'
 author: Aadarsha Acharya
 slug: temporal-dead-zone
 description: 'Learning in and out of temporal dead zone in javascript in short way.'
 tags: ['javascript']
-date: 2021-04-30
+date: 2021-05-30
 ---
 
 <img  src="dead.jpeg"  width="600"  alt="deadzone" />

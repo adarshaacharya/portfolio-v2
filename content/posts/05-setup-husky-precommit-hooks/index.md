@@ -1,5 +1,5 @@
 ---
-id: 05
+id: 5
 title: 'Setup pre-commit hooks with husky v6 + commitlint + lint-staged'
 author: Aadarsha Acharya
 slug: setup-husky-precommit-hooks
