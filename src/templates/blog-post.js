@@ -1,13 +1,14 @@
+import Comment from '@components/Comment';
 import Layout from '@components/Layout';
 import SEO from '@components/Seo';
+import useDarkMode from '@hooks/use-dark-mode';
 import { Flex } from '@portfolio-ui/';
 import Subscribe from '@src/components/Subscribe';
-import { DiscussionEmbed } from 'disqus-react';
 import { graphql, Link } from 'gatsby';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
 import React from 'react';
 import styled from 'styled-components';
-import { disqusShortName, siteUrl } from '../../config/SiteConfig';
+import { commentsRepo } from '../../config/SiteConfig';
 
 const PostHeader = styled.div`
   font-family: ${p => p.theme.UbuntuFontFamily};
@@ -29,15 +30,41 @@ const PostTitle = styled.h1`
 
 // page context from gatsby-node and data from below graphql query
 const BlogPostTemplate = ({ data, pageContext }) => {
+  const commentBox = React.createRef();
+  const { theme } = useDarkMode();
+
   const post = data.mdx;
   const { previous, next, slug } = pageContext;
 
-  const baseSlugUrl = `${siteUrl}/blog/${slug}`;
-  const disqusConfig = {
-    url: baseSlugUrl,
-    identifier: post.frontmatter.id.toString(),
-    title: post.frontmatter.title,
-  };
+  React.useEffect(() => {
+    const commentScript = document.createElement('script');
+
+    // theme for github
+    const commentsTheme =
+      theme && theme === 'dark' ? 'github-dark' : 'github-light';
+
+    commentScript.async = true;
+    commentScript.src = 'https://utteranc.es/client.js';
+    commentScript.setAttribute('repo', commentsRepo);
+    commentScript.setAttribute('issue-term', 'pathname');
+    commentScript.setAttribute('label', 'blog-comment');
+    commentScript.setAttribute('theme', commentsTheme);
+    commentScript.setAttribute('crossorigin', 'anonymous');
+    if (commentBox && commentBox.current) {
+      commentBox.current.appendChild(commentScript);
+    } else {
+      console.log(`Error adding utterances comments on: ${commentBox}`);
+    }
+
+    const removeScript = () => {
+      commentScript.remove();
+      document.querySelectorAll('.utterances').forEach(el => el.remove());
+    };
+    // clean up on component unmount
+    return () => {
+      removeScript();
+    };
+  }, [theme]); // eslint-disable-line
 
   return (
     <Layout>
@@ -74,6 +101,12 @@ const BlogPostTemplate = ({ data, pageContext }) => {
 
       <hr />
 
+      <div id="comments">
+        <h2>Comments</h2>
+        <Comment ref={commentBox} />
+      </div>
+
+      {/* recommendation */}
       <Flex justify="space-between" className="recommendation">
         {previous && (
           <Link to={`/blog/${previous.frontmatter.slug}/`} rel="prev">
@@ -87,8 +120,7 @@ const BlogPostTemplate = ({ data, pageContext }) => {
           </Link>
         )}
       </Flex>
-
-      <DiscussionEmbed shortname={disqusShortName} config={disqusConfig} />
+      <Subscribe />
     </Layout>
   );
 };

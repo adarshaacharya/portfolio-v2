@@ -1,5 +1,5 @@
 ---
-id: 02
+id: 2
 title: 'Exploring Redux Toolkit'
 author: Aadarsha Acharya
 slug: exploring-redux-toolkit
@@ -145,8 +145,6 @@ const handleSubmit = () => {
 Here we are using `useDispatch()` hook to dispatch the addTodo action.
 
 Now, we have added the Todo in the state successfully. 🕺
-
-<img src="dance.gif" height="100"  />
 
 ### Add other fields to payload
 

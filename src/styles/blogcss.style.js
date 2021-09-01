@@ -1,20 +1,21 @@
 import { css } from 'styled-components';
 
 const BlogCssStyles = css`
-  /* Disqus styles */
-  div#disqus_thread {
-    padding: 15px 25px;
-    border-radius: 10px;
-    background: #fafafa;
-    margin-bottom: 90px;
-    margin-top: 50px;
-    box-shadow: ${p => p.theme.shadowSmall};
+  #comments {
+    margin: 2rem 0;
+  }
+
+  #comments h2 {
+    margin: 0;
+    text-align: center;
+    font-family: ${p => p.theme.UbuntuFontFamily};
   }
 
   .recommendation a {
     font-size: 1rem;
     font-style: italic;
-    font-family: ${p => p.theme.UbuntuFontFamily} !important;
+    font-family: ${p => p.theme.UbuntuFontFamily};
+    margin-bottom: 3rem;
   }
 
   .blog-content {

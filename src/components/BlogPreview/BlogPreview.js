@@ -1,4 +1,3 @@
-import { useSfx } from '@hooks/use-sfx';
 import PropTypes from 'prop-types';
 import React from 'react';
 import {
@@ -12,14 +11,8 @@ import {
 const BlogPreview = ({
   blog: { title, date, tags, readingTime, slug, description },
 }) => {
-  const { playPop, playClick } = useSfx();
   return (
-    <BlogItem
-      to={'/blog/' + slug}
-      key={title}
-      onMouseEnter={playPop}
-      onClick={playClick}
-    >
+    <BlogItem to={'/blog/' + slug} key={title}>
       <DateTime>
         <span>📅 {date}</span> &nbsp; &nbsp; 🍿 {readingTime}
       </DateTime>

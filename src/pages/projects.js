@@ -1,21 +1,30 @@
 import React from 'react';
 import Layout from '@components/Layout';
 import SEO from '@components/Seo';
-import ProjectPreview from '@components/ProjectPreview';
 import { SectionTitle } from '@portfolio-ui/';
-import getProjects from '@lib/get-projects';
+import getWebsites from '@src/lib/get-websites';
+import WebsitePreview from '@src/components/ProjectPreview/web/WebsitePreview';
+import getTools from '@src/lib/get-tools';
+import Tools from '@src/components/ProjectPreview/tools/Tools';
 
-export default function Projects() {
-  const projects = getProjects();
+function Projects() {
+  const websites = getWebsites();
+  const tools = getTools();
 
   return (
     <Layout>
       <SEO title={`Projects`} />
-      <SectionTitle>Some Things I've Built.</SectionTitle>
+      <SectionTitle>Web Applications.</SectionTitle>
 
-      {projects.map(project => (
-        <ProjectPreview project={project} key={project.title} />
+      {websites.map(website => (
+        <WebsitePreview website={website} key={website.title} />
       ))}
+
+      <SectionTitle>Open Source Tools.</SectionTitle>
+
+      <Tools tools={tools} />
     </Layout>
   );
 }
+
+export default Projects;

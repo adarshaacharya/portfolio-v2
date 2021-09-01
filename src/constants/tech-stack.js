@@ -1,14 +1,16 @@
-module.exports = {
-  techstack: [
-    'HTML5',
-    'CSS3',
-    'JavaScript',
-    'React',
-    'Node.js',
-    'Gatsby',
-    'Next.js',
-    'PostgreSQL',
-    'MongoDB',
-    'Git',
-  ],
-};
+export const techstack = [
+  'HTML5',
+  'CSS3',
+  'JavaScript',
+  'TypeScript',
+  'React',
+  'Node.js',
+  'NestJS',
+  'Jest',
+  'GraphQL',
+  'Next.js',
+  'Gatsby',
+  'PostgreSQL',
+  'MongoDB',
+  'Git',
+];

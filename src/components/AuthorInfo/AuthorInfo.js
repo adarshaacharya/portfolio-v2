@@ -18,11 +18,11 @@ const AuthorInfo = () => {
   return (
     <>
       <AuthorInfoWrapper>
-        <Avatar fixed={avatar} alt="adarsha" />
+        <Avatar image={avatar} alt="adarsha" />
         <Info>
           <AvatarName> Aadarsha Acharya</AvatarName>
 
-          <a href="mailto: adarshaofficial@gmail.com" className="email">
+          <a href="mailto:adarshaofficial@gmail.com" className="email">
             <FormattedIcon name="Email" />
             <span>adarshaofficial@gmail.com</span>
           </a>
@@ -41,8 +41,8 @@ const AuthorInfo = () => {
       </AuthorInfoWrapper>
 
       <Bio>
-        Hello! I’m Aadarsha Acharya, aspiring web developer based in Kathmandu
-        Nepal.
+        Hello! I’m Aadarsha Acharya, fullstack JavaScript developer based in
+        Kathmandu Nepal.
       </Bio>
       <Bio>
         I'm super passionate about exploring and building open source web apps

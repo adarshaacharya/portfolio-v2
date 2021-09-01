@@ -16,7 +16,7 @@ const social = {
   twitterLink: `https://twitter.com/aadarshatweets`,
   linkedinLink: `https://www.linkedin.com/in/adarshaacharya/`,
   githubLink: `https://github.com/adarshaacharya`,
-  tinyLetter: 'adarshaacharya',
+  buttonDownEmail: 'adarshaacharya',
   cloudinaryName: `${process.env.CLOUDINARY_NAME}`,
 };
 
@@ -25,8 +25,9 @@ const theme = {
   backgroundColor: '#1b2938',
 };
 
-const disqus = {
-  disqusShortName: 'aadarshaacharya',
+// comments repo
+const comments = {
+  commentsRepo: 'adarshaacharya/comments',
 };
 
 const trackingID = {
@@ -37,6 +38,6 @@ module.exports = {
   ...personal,
   ...social,
   ...theme, // manifest
-  ...disqus,
   ...trackingID,
+  ...comments,
 };

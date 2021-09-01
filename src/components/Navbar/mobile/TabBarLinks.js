@@ -1,27 +1,25 @@
 import React from 'react';
 import { FormattedIcon } from '@portfolio-ui/';
-import { useSfx } from '@hooks/use-sfx';
 
 const TabBarLinks = ({ TabItem, TabLabel }) => {
-  const { playClick } = useSfx();
   return (
     <>
-      <TabItem to="/" activeClassName="active" onClick={playClick}>
+      <TabItem to="/" activeClassName="active">
         <FormattedIcon name="Home" />
         <TabLabel>Home</TabLabel>
       </TabItem>
 
-      <TabItem to="/projects/" activeClassName="active" onClick={playClick}>
+      <TabItem to="/projects/" activeClassName="active">
         <FormattedIcon name="Project" />
         <TabLabel>Projects</TabLabel>
       </TabItem>
 
-      <TabItem to="/blog/" activeClassName="active" onClick={playClick}>
+      <TabItem to="/blog/" activeClassName="active">
         <FormattedIcon name="Blog" />
         <TabLabel>Blog</TabLabel>
       </TabItem>
 
-      <TabItem to="/contact/" activeClassName="active" onClick={playClick}>
+      <TabItem to="/contact/" activeClassName="active">
         <FormattedIcon name="Contact" />
         <TabLabel>Contact</TabLabel>
       </TabItem>

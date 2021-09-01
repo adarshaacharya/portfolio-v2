@@ -84,6 +84,6 @@ export const darkTheme = {
 
   grayColor: '#888',
 
-  selectionColor: '#84909e',
+  selectionColor: '#3A5BDB',
   ...commonTheme,
 };

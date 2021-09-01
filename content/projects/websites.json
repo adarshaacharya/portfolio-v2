@@ -4,7 +4,7 @@
     "repo": "https://github.com/adarshaacharya/CsOverflow",
     "demo": "https://csoverflow.herokuapp.com/",
     "image": "project_csoverflow.png",
-    "description": "Q/A forum for Computer Science and Engineering students. Ask a question contribute an answer and upvote your favourite one. CsOverflow gives students correct answer and derivation of all relevant computer science and engineering questions.    ",
+    "description": "Q/A forum for Computer Science and Engineering students. Ask a question, contribute an answer and upvote your favourite one. CsOverflow gives students correct answer and derivation of all relevant computer science and engineering questions.    ",
     "techs": ["Typescript", "React", "Redux", "Nodejs", "PostgreSQL"]
   },
   {
@@ -14,14 +14,6 @@
     "image": "project_codetreats.png",
     "description": "In-browser IDE for running, collaborating and saving code snippets. Code Treats supports 10+ languages and 15+ beautiful themes with VS code like text editor. Multiple users can sit on same room, collaborate and talk on real-time.",
     "techs": ["Typescript", "React", "Nodejs", "MongoDB", "Socket"]
-  },
-  {
-    "title": "states-nepal",
-    "repo": "https://github.com/adarshaacharya/states-nepal",
-    "demo": "https://www.npmjs.com/package/states-nepal",
-    "image": "states_nepal.png",
-    "description": "states-nepal is a npm package that helps to get the dataset about different administrative division of Nepal like provinces, districts, categories,etc.",
-    "techs": ["npm", "Typescript", "Nodejs"]
   },
   {
     "title": "E-Complaints",

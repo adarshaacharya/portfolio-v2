@@ -1,5 +1,5 @@
 ---
-id: 01
+id: 0
 title: 'Auto Generate Social Cards on your Website'
 author: Aadarsha Acharya
 slug: auto-generate-social-cards
