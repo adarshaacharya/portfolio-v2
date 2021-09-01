@@ -2,13 +2,11 @@ import React from 'react';
 
 import { NavItem, NavItems, Logo } from './NavDesktop.style';
 import NavDesktopLinks from './NavDesktopLinks';
-import { useSfx } from '@hooks/use-sfx';
 
 const NavDesktop = () => {
-  const { playClick } = useSfx();
   return (
     <>
-      <Logo to="/" onClick={playClick}>
+      <Logo to="/">
         <span>aada</span>
         rsha
       </Logo>

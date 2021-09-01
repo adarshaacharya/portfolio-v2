@@ -146,7 +146,6 @@ Here we are using `useDispatch()` hook to dispatch the addTodo action.
 
 Now, we have added the Todo in the state successfully. 🕺
 
-
 ### Add other fields to payload
 
 In react if we want to keep the list sync with the state, then we have to add the key to each list. For that we have to add the `prepare callback`.

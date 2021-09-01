@@ -4,27 +4,22 @@ import { Link } from 'gatsby';
 import { useSfx } from '@hooks/use-sfx';
 
 const NavLinks = ({ NavItem }) => {
-  const { playClick, playPop } = useSfx();
+  const { playPop } = useSfx();
 
   return (
     <>
       <NavItem>
-        <Link to="/projects/" activeClassName="active" onClick={playClick}>
+        <Link to="/projects/" activeClassName="active">
           Projects
         </Link>
       </NavItem>
       <NavItem>
-        <Link
-          to="/blog/"
-          activeClassName="active"
-          partiallyActive={true}
-          onClick={playClick}
-        >
+        <Link to="/blog/" activeClassName="active" partiallyActive={true}>
           Blog
         </Link>
       </NavItem>
       <NavItem>
-        <Link to="/contact/" activeClassName="active" onClick={playClick}>
+        <Link to="/contact/" activeClassName="active">
           Contact
         </Link>
       </NavItem>
