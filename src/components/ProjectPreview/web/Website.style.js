@@ -140,7 +140,7 @@ export const TechList = styled(Flex)`
     transition: transform 0.3s ease-in-out;
 
     &:hover {
-      transform: translateY(-4px);
+      transform: translateY(-2px);
       opacity: 0.8;
     }
   }
