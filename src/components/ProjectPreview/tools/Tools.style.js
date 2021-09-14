@@ -20,14 +20,13 @@ export const ToolPreviewWrapper = styled.div`
   box-shadow: ${p => p.theme.cardShadow};
   padding: 15px 10px;
   cursor: default;
-  border-radius: 5px;
+  border-radius: 3px;
   border: 1px solid
     ${props =>
       props.theme.dark ? props.theme.primaryColor : 'hsla(0, 0%, 50%, 0.1)'};
   transition: transform 0.3s ease-in-out;
   &:hover,
   &:focus-within {
-    transform: translateY(-5px);
   }
 
   .tools-title {

@@ -7,7 +7,7 @@ export const BlogItem = styled(Link)`
   margin-bottom: 70px;
   box-shadow: ${props => props.theme.cardShadow};
   padding: 2rem 3rem;
-  border-radius: 10px;
+  border-radius: 3px;
   border: 1px solid
     ${props =>
       props.theme.dark ? props.theme.primaryColor : 'hsla(0, 0%, 50%, 0.1)'};
@@ -15,7 +15,6 @@ export const BlogItem = styled(Link)`
   transition: 0.3s;
 
   &:hover {
-    transform: translate(0, -10px);
     h1 {
       color: ${p => p.theme.primaryColor};
     }

@@ -11,7 +11,7 @@ export const TechItem = styled(Flex)`
   [data-icon='Next.js'] svg {
     fill: ${p => p.theme.primaryText};
   }
-  transition: transform 0.2s ease-in-out;
+  transition: transform 0.3s ease-in-out;
 
   &:hover {
     cursor: pointer;

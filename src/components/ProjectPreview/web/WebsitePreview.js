@@ -14,18 +14,15 @@ import {
   WebsiteDescription,
   TechList,
 } from './Website.style';
-import { useSfx } from '@hooks/use-sfx';
 
 const WebsitePreview = ({
   website: { title, repo, demo, description, thumbnail, techs },
 }) => {
-  const { playPop } = useSfx();
-
   return (
     <>
       <WebsitePreviewWrapper>
         <Website>
-          <WebsiteImgContainer href={demo ? demo : repo} onMouseEnter={playPop}>
+          <WebsiteImgContainer href={demo ? demo : repo}>
             <WebsiteImg image={thumbnail} alt={title} />
           </WebsiteImgContainer>
 
