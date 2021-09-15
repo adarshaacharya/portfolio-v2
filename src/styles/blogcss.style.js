@@ -162,14 +162,11 @@ const BlogCssStyles = css`
     .gatsby-resp-image-image,
     .gatsby-resp-image-background-image,
     img {
-      border-radius: 8px;
-      transition: transform 0.2s;
+      border-radius: 3px;
       width: 100%;
       height: auto;
 
       &:hover {
-        transform: scale(1.01);
-        cursor: pointer;
       }
     }
 

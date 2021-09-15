@@ -51,12 +51,11 @@ export const WebsiteImg = styled(GatsbyImage)`
   box-shadow: 0 3px 4px hsla(0, 0%, 0%, 0.4);
   height: 100%;
   background-size: cover;
-  border-radius: 20px;
+  border-radius: 5px;
   max-width: 485px;
   cursor: pointer;
   transition: transform 0.3s ease-in-out;
   &:hover {
-    transform: translateY(-5px);
   }
 
   @media ${props => props.theme.media.tablet} {
@@ -141,7 +140,7 @@ export const TechList = styled(Flex)`
     transition: transform 0.3s ease-in-out;
 
     &:hover {
-      transform: translateY(-4px);
+      transform: translateY(-2px);
       opacity: 0.8;
     }
   }
