@@ -8,7 +8,8 @@ tags: ['redux', 'redux-toolkit', 'react']
 date: 2020-11-20
 ---
 
-I've been using Redux for managing and updating the global state in my React apps for a while. Redux makes way easier for managing the gobal state and automatically implements complex performance optimizations, so that your own component only re-renders when the data it needs has actually changed ; the major complaint about the React-Redux is **Boilerplate**. 🍽️
+I've been using Redux for managing and updating the global state in my React apps for a while. Redux makes it way easier to manage the gobal state and automatically implements complex performance optimizations, so that your own component only re-renders when the data it needs has actually changed ; the major complaint about the React-Redux is **
+boilerplate**. 🍽️
 
 From configuring store to configuring with redux dev tools and maintaining actions, dispatch and reducers is quite hectic.
 
@@ -16,7 +17,7 @@ To overcome these problems we might choose two solutions :
 
 **1. Stop using REDUX !! ⚠️**
 
-Yes ! you might not even need Redux . There is inbuild Context API with React where we can basically inject the state data into the different components. Honestly, most of the simpler apps doesn't even need redux. You can use library like [react-query](https://react-query.tanstack.com/) for caching data with Context for passing data among components.
+Yes ! you might not even need Redux . There is inbuild Context API with React where we can basically inject the state data into the different components. Honestly, most of the simpler apps doesn't even need redux. You can use libraries like [react-query](https://react-query.tanstack.com/) for caching data with Context for passing data among components.
 
 **2. Use Redux Toolkit(RTK):**
 
@@ -39,7 +40,7 @@ Before heading towards the code part you must have the basic knowledge of Redux 
 - reducer
 - Provider component
 
-If you haven't already checkout the latest [basic tutorial](https://redux-toolkit.js.org/introduction/quick-start) section in React-Redux docs. They have recently updated it and make fantastics tutorial for getting started with redux.
+If you haven't already checkout the latest [basic tutorial](https://redux-toolkit.js.org/introduction/quick-start) section in React-Redux docs. They have recently updated it and make fantastic tutorials for getting started with redux.
 
 ### Installation
 
@@ -276,4 +277,4 @@ Now we can check the status of data and map the data in the corresponding compon
 
 That's it ! 👋
 
-Tbh, Redux toolkit seems little bit confusing at first but once you get hands on it it will reducer lot of boiler plate in application.
+Tbh, Redux toolkit seems a little bit confusing at first but once you get hands on it it will reduce a lot of boiler plate in your application.

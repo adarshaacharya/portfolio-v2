@@ -8,20 +8,20 @@ tags: ['react', 'cards', 'gatsby']
 date: 2020-09-25
 ---
 
-So, few months back I was building my [portfolio site](http://adarshaacharya.com.np/) which you are in right now. Almost everything was completed, integrated blog, added some SEO stuffs _(although I'm very bad at it).😳_ I was checking preview of my site on twitter I notice that preview wasn't that good — it was just a blank link with some meta-description. I used to think Twitter would automatically generate social cards for my site 🤪.
+So, a few months back I was building my [portfolio site](http://adarshaacharya.com.np/) which you are in right now. Almost everything was completed, integrated blog, added some SEO stuff _(although I'm very bad at it).😳_ While I was checking the preview of my site on twitter I noticed that preview wasn't that good — it was just a blank link with some meta-description. I used to think Twitter would automatically generate social cards for my site 🤪.
 
-I used to see [dev.to](https://dev.to/) articles shared quite often on social media, which previewed social card with author name, title, social media links, neat background with focused title.
+I used to see [dev.to](https://dev.to/) articles shared quite often on social media, which previewed social cards with author name, title, social media links, neat background with focused title.
 
-Hmmm.. then I started looking at some Gatsby plugins 🖱️, I found some good ones but I didn't really like them tbh. They require a lot of configuration which I didn't want to do. I was searching for the plugin with minimum configuraion, setup one time and leave it for rest of my life ! 🚀🔥
+Hmmm.. then I started looking at some Gatsby plugins 🖱️, I found some good ones but I didn't really like them tbh. They require a lot of configuration which I didn't want to do. I was searching for the plugin with minimum configuration requirements, ideally setup one time and leave it for rest of my life ! 🚀🔥
 
-I bumped into this [awesome article](https://www.learnwithjason.dev/blog/auto-generate-social-image/) where Jason describes How to generate social image using Cloudinary. Luckily he created npm package [get-share-image](https://www.npmjs.com/package/@jlengstorf/get-share-image) so I don't have to write everything from scratch.So, in this article I wanna share my experience how I integrate it in my site especially where I have to address two big things :
+I bumped into this [awesome article](https://www.learnwithjason.dev/blog/auto-generate-social-image/) where Jason describes How to generate social image using Cloudinary. Luckily he created npm package [get-share-image](https://www.npmjs.com/package/@jlengstorf/get-share-image) so I don't have to write everything from scratch.So, in this article I wanna share my experiences around how I integrate it in my site, especially where I have to address two big things :
 
 - Generate social cards for website pages like home, contact.
 - Generate social cards for blog pages that means I have to generate title dynamically for each pages.
 
 ## Before we start
 
-Before we get started we need to setup just few things:
+Before we get started we need to setup just a few things:
 
 > 🚨 Signup for Cloudinary account [with this link](https://jason.af/cloudinary). — It's absoultely free, and using affiliated link will also help creator of package.
 
@@ -48,7 +48,7 @@ You should also install [react-helmet](https://www.gatsbyjs.com/plugins/gatsby-p
 
 ## Usage
 
-Now you must have the cloudinary name which is the username you entered while creating account. Check that by going to [console of cloudinary account](https://cloudinary.com/console) . I prefer to put it as env variables but there is no harm in exposing to the user.
+Now you must have the cloudinary name which is the username you entered while creating your account. Check that by going to [console of cloudinary account](https://cloudinary.com/console) . I prefer to put it as env variables but there is no harm in exposing to the user.
 
 Now go to media library section, create directory named `portfolio` and upload the cover photo and name it `website-card` _(convention)_. You can use the same photo for blog too but we are going to upload next one with and name it `blog-card` _(convention)_.
 
