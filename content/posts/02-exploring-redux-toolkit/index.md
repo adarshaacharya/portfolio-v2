@@ -9,7 +9,7 @@ date: 2020-11-20
 ---
 
 I've been using Redux for managing and updating the global state in my React apps for a while. Redux makes it way easier to manage the gobal state and automatically implements complex performance optimizations, so that your own component only re-renders when the data it needs has actually changed ; the major complaint about the React-Redux is **
-plate**. 🍽️
+boilerplate**. 🍽️
 
 From configuring store to configuring with redux dev tools and maintaining actions, dispatch and reducers is quite hectic.
 
