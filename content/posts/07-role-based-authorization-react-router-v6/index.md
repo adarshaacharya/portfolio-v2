@@ -8,7 +8,7 @@ tags: ['react-router', 'typescript', 'redux', 'react']
 date: 2021-07-01
 ---
 
-<img  src="banner.png"    alt="banner" />
+<img  src="banner.png" alt="react router banner" />
 
 ### Background
 
@@ -75,37 +75,32 @@ Let's see how we can modify above component and how easy it is to build the Priv
 import { useSelector } from 'react-redux';
 import { Navigate, Route, useLocation } from 'react-router-dom';
 
-interface Props {
-  element: React.ReactElement;
-  path?: string;
-}
-
-const PrivateElement<Props> = ({ element }) => {
+const PrivateRoute = ({ children }: { children: JSX.Element }) => {
   let location = useLocation();
 
-  const { isAuthenticated, loading } = useSelector((state) => state.auth);
+  const { isAuthenticated, loading } = useSelector(state => state.auth);
 
-  if(loading) return <p>Loading.. </p>
+  if (loading) {
+    return <p>Checking authenticaton..</p>;
+  }
 
-  return isAuthenticated ? element : <Navigate to="/login" state={{ from: location }} />;
-};
+  if (!isAuthenticated) {
+    return <Navigate to="/login" state={{ from: location }} />;
+  }
 
-export const PrivateRoute<Props> = ({ element, ...rest }) => {
-  return <Route {...rest} element={<PrivateElement element={element} />} />;
+  return children;
 };
 
 export default PrivateRoute;
 ```
 
-I hope looking at the code you may have already understand it, it is as simple. You just create create a component named `PrivateRoute` which receives the props named element and {...rest} represents the rest of the props so we can pass it into the custom react component we made. In the element props in `<Route />` compoennt we pass the wrapper component named `PrivateElement` which has all the logic which elemnt to render.
+I hope looking at the code you may have already understand it, it is as simple. You just create create a component named `PrivateRoute` which receives the children prop. Inside the `PrivateRoute` component we check if user if logged in or not using `isAuthenticated` state that we've created in`react-redux`store, but you can use any state maangement solution that may be contexts, or your custom hooks to check the user auth state. Now, if user `isAuthenticated === false` Navigate to `/login` path else render the component inside it. Btw we are checking `loading` state so that user doesn't see blank screen while checking authentication.
 
-Now lets look at the container or wrapper component named `PrivateElement` which recives the `element` props to be rendered if the property satisfies. Here we check if user if logged in or not using `isAuthenticated` state that we created in`react-redux`store, but you can use any state maangement solution that may be contexts, or your custom hooks to check the user auth state. Now, if user `isAuthenticated === true` render the elemnt aka Component we want to render else Navigate to `/login` path.
-
-Everything is simple except you amy be confused on props like element or Navigate that doesn't used to be there on v5. Check this [blog](https://reacttraining.com/blog/react-router-v6-pre/) about new api changes.
+Everything is simple except you amy be confused on props like element or Navigate that doesn't used to be there on v5. Check this [blog](https://reactrouter.com/docs/en/v6/upgrading/v5) about new api changes.
 
 #### How to use it ?
 
-Go t you App or the component where you manage your routes and use PrivateRoute component instead of normal `Route` component.
+Go to your App or the component where you manage your routes and use PrivateRoute component instead of normal `Route` component.
 
 ```tsx
 // App.tsx
@@ -125,14 +120,22 @@ export const App = () => {
       <Route path="/" element={<Home />} />
       <Route path="/create-account" element={<CreateAccount />} />
       <Route path="/login" element={<Login />} />
-      <PrivateRoute path="/dashboard" element={<Dashboard />} /> {/* Private Route */}
+      {/* Private Route */}
+      <Route
+        path="/dashboard"
+        element={
+          <PrivateRoute>
+            <StudentDashboard />
+          </PrivateRoute>
+        }
+      />
       <Route path="*" element={<NotFound />} />
     </Routes>
   );
 };
 ```
 
-Here, you simply as protect the `Dashboard` by using `PrivateRoute` instead of normal `Route` component.
+Here, you simply as protect the `Dashboard` by wrapping the component with `PrivateRoute` inside of element.
 
 Don't forget to wrap your `App` component with BrowserRouter in your `index.tsx` file.
 
@@ -142,21 +145,21 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import { BrowserRouter as Router } from 'react-router-dom';
+import { BrowserRouter } from 'react-router-dom';
 
 ReactDOM.render(
-  <Router>
+  <BrowserRouter>
     <React.StrictMode>
       <App />
     </React.StrictMode>
-  </Router>,
+  </BrowserRouter>,
   document.getElementById('root')
 );
 ```
 
 If you only want protected route without role based authorization then that's it.
 
-But... what about cehecking the role of user and redirecting to particular dashboard.
+But... what about cehecking the role of user and redirecting to particular dashboard. Then welcome to second part of blog.
 
 ### Role based Authentication
 
@@ -164,8 +167,9 @@ First create file named `roles.ts` where we can define the enum of roles and can
 
 ```ts
 export enum ROLE {
-	Admin = "Admin",
-    User = "User"
+  Admin = 'Admin',
+  User = 'User',
+}
 ```
 
 Secondly, lets modify our `PrivateRoute` component which checks what type of user it is.
@@ -177,49 +181,50 @@ import { ROLE } from './roles';
 import { useSelector } from 'react-redux';
 import { Navigate, Route, useLocation } from 'react-router-dom';
 
-interface Props {
-  element: React.ReactElement;
-  requiredRoles: Array<ROLE>;
-  path?: string;
-}
-
-const PrivateElement: React.FC<Props> = ({ element, requiredRoles }) => {
+const PrivateRoute = ({
+  children,
+  roles,
+}: {
+  children: JSX.Element;
+  roles: Array<Role>;
+}) => {
   let location = useLocation();
   const { isAuthenticated, user, loading } = useSelector(state => state.auth);
 
-  if (loading) return <p className="container">Checking auth..</p>;
+  if (loading) {
+    return <p className="container">Checking auth..</p>;
+  }
 
-  const userHasRequiredRole = requiredRoles.includes(user.role);
+  const userHasRequiredRole = user && roles.includes(user.role) ? true : false;
 
-  return isAuthenticated && userHasRequiredRole ? (
-    element
-  ) : (
-    <Navigate to="/login" state={{ from: location }} />
-  );
-};
+  if (!isAuthenticated) {
+    return <Navigate to="/login" state={{ from: location }} />;
+  }
 
-export const PrivateRoute: React.FC<Props> = ({
-  element,
-  requiredRoles,
-  ...rest
-}) => {
-  return (
-    <Route
-      {...rest}
-      element={
-        <PrivateElement element={element} requiredRoles={requiredRoles} />
-      }
-    />
-  );
+  if (isAuthenticated && !userHasRequiredRole) {
+    return <AccessDenied />; // build your won access denied page (sth like 404)
+  }
+
+  return children;
 };
 ```
 
 Everything is same as above, except the props we receive :
 
-- `requiredRoles` : takes the array of roles which user role should be authorized.
+- `roles` : takes the array of roles which user role should be authorized.
 
-In PrivateElement we check the `user` from redux store which has roles within it. If the
-passed `requiredRoles` contains the `user.role` then render that element, else redirect to `/login` route.
+In PrivateRoute we check the `user` from redux store which has roles within it. Then we check
+passed `roles` contains/includes the `user.role` and store it in `requiredRoles` variable.
+
+Now we have three points to consider :
+
+- If user isn't authenticated redirected to `login` page.
+
+- If user is authenticated but doesn't have required role specified then render `AccessDenied` page.
+
+- Else render the children component.
+
+Note : We have to create `AccessDenied` page manually to show if the user isn't authorized to view certain page. Example, student trying to see teacher dashboard and so on. I've created one Access Denied page using Ant Design[you can check here](https://github.com/adarshaacharya/MentorLabs/blob/main/client/src/sections/AccessDenied/index.tsx).
 
 In App component we pass the required roles for each component:
 
@@ -231,8 +236,8 @@ import {
   Home,
   Login,
   NotFound,
-  Student,
-  Teacher,
+  AdminDashboard,
+  UserDashboard,
 } from 'sections';
 import PrivateRoute from './PrivateRoute';
 
@@ -247,15 +252,21 @@ export const Router = () => {
       <Route path="/" element={<Home />} />
       <Route path="/create-account" element={<CreateAccount />} />
       <Route path="login" element={<Login />} />
-      <PrivateRoute
+      <Route
         path="admin-dashboard"
-        element={<Student />}
-        requiredRoles={[ROLE.Admin]}
+        element={
+          <AuthRoute roles={[Role.Admin]}>
+            <AdminDashboard />
+          </AuthRoute>
+        }
       />
-      <PrivateRoute
+      <Route
         path="user-dashboard"
-        element={<UserPage />}
-        requiredRoles={[ROLE.User]}
+        element={
+          <AuthRoute roles={[Role.User]}>
+            <UserDashboard />
+          </AuthRoute>
+        }
       />
       <Route path="*" element={<NotFound />} />
     </Routes>
@@ -265,7 +276,7 @@ export const Router = () => {
 
 Now user isn't only authenticated but also they are authorized with right to view that particular page that too using new react-router v6. 👍
 
-I've been working on exciting side project which requires role based authorization and thought to share how I approach things. If I found anything nteresting I will share it on other posts. If you have any suggestion regarding this approach, feel free to comment down below.
+Here's the simple example of how to leverage react router v6 while creating the authenticated routes. If you want example on big project then checkout my project[MentorLabs](https://github.com/adarshaacharya/MentorLabs). THe project structure may be different from the above example but can be good example how to leverage it in fairly large project.
 
 Also, if you face any problem in setting up above feature on your project comment down below or you can directly message me on twiiter via : [@aadarshatweets](https://twitter.com/aadarshatweets)
 
@@ -275,6 +286,6 @@ Also, if you see any kind of mistake/typo on above post [edit it on GitHub](http
 
 ### More resources:
 
+- [React Router Authentication](https://reactrouter.com/docs/en/v6/examples/auth)
 - [Michael Jackson on React Router v6 and Empathy in Open Source
   ](https://dev.to/reactpodcast/85-michael-jackson-on-react-router-v6-and-empathy-in-open-source)
-- [React Router v6 Preview](https://reacttraining.com/blog/react-router-v6-pre/)
