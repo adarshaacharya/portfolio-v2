@@ -224,6 +224,7 @@ Now we have three points to consider :
 
 Note : We have to create `AccessDenied` page manually to show if the user isn't authorized to view certain page. Example, student trying to see teacher dashboard and so on. I've created one Access Denied page using Ant Design [you can check here](https://github.com/adarshaacharya/MentorLabs/blob/main/client/src/sections/AccessDenied/index.tsx).
 
+
 In App component we pass the required roles for each component:
 
 ```tsx
@@ -275,6 +276,7 @@ export const Router = () => {
 Now user isn't only authenticated but also they are authorized with right to view that particular page that too using new react-router v6. 👍
 
 Here's the simple example of how to leverage react router v6 while creating the authenticated routes. If you want example on big project then checkout my project [MentorLabs](https://github.com/adarshaacharya/MentorLabs). THe project structure may be different from the above example but can be good example how to leverage it in fairly large project.
+
 
 Also, if you face any problem in setting up above feature on your project comment down below or you can directly message me on twiiter via : [@aadarshatweets](https://twitter.com/aadarshatweets)
 
