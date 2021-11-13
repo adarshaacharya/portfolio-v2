@@ -14,12 +14,10 @@ date: 2021-07-01
 
 React router has almost become de-facto way of setting up routing in React application and it has really come long way with exciting features in each iteration.
 
-Although react-router v6.0.0 is in [alpha release](https://github.com/ReactTraining/react-router/releases/tag/v6.0.0-alpha.3) right now, I've already started using it. Although it isn't final release, I don't see any breaking changes as framework like Remix are already using it.
 
-I love how composable the new api is and best thing is it's tiny/simple api structure
-which makes api more memorizable so, I don't need to switch to docs everytime.
+I love how composable the new api is and best thing is it's tiny/simple api structure which makes api more memorizable so, I don't need to switch to docs everytime.
 
-You can read more features on [this blog post](https://reacttraining.com/blog/react-router-v6-pre/) by [Michael Jackson](https://twitter.com/mjackson).
+You can read more features on [this blog post](https://reactrouter.com/docs/en/v6/getting-started/overview) by [Michael Jackson](https://twitter.com/mjackson).
 
 Talking about building Private Route component it is the way by which we only allow the authenticated user to view the partuicular page by checking the user state, or the roles given to the user in the state.
 
@@ -224,7 +222,8 @@ Now we have three points to consider :
 
 - Else render the children component.
 
-Note : We have to create `AccessDenied` page manually to show if the user isn't authorized to view certain page. Example, student trying to see teacher dashboard and so on. I've created one Access Denied page using Ant Design[you can check here](https://github.com/adarshaacharya/MentorLabs/blob/main/client/src/sections/AccessDenied/index.tsx).
+Note : We have to create `AccessDenied` page manually to show if the user isn't authorized to view certain page. Example, student trying to see teacher dashboard and so on. I've created one Access Denied page using Ant Design [you can check here](https://github.com/adarshaacharya/MentorLabs/blob/main/client/src/sections/AccessDenied/index.tsx).
+
 
 In App component we pass the required roles for each component:
 
@@ -276,7 +275,8 @@ export const Router = () => {
 
 Now user isn't only authenticated but also they are authorized with right to view that particular page that too using new react-router v6. 👍
 
-Here's the simple example of how to leverage react router v6 while creating the authenticated routes. If you want example on big project then checkout my project[MentorLabs](https://github.com/adarshaacharya/MentorLabs). THe project structure may be different from the above example but can be good example how to leverage it in fairly large project.
+Here's the simple example of how to leverage react router v6 while creating the authenticated routes. If you want example on big project then checkout my project [MentorLabs](https://github.com/adarshaacharya/MentorLabs). THe project structure may be different from the above example but can be good example how to leverage it in fairly large project.
+
 
 Also, if you face any problem in setting up above feature on your project comment down below or you can directly message me on twiiter via : [@aadarshatweets](https://twitter.com/aadarshatweets)
 
