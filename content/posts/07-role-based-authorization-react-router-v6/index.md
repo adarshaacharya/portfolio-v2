@@ -23,7 +23,7 @@ Talking about building Private Route component it is the way by which we only al
 
 ### Before v6
 
-Before react router v6 the common way to build the `PrivateRoute` component by utilizing the [render-props](https://github.com/ReactTraining/react-router/blob/master/packages/react-router/docs/api/Route.md#render-func) pattern. If you are building apps with react this might be the standard way of creating PrivateRoute/ AuthRoute pattern :
+Before react router v6 the common way to build the `PrivateRoute` component by utilizing the [render-props](https://github.com/ReactTraining/react-router/blob/master/packages/react-router/docs/api/Route.md#render-func) pattern. If you are building apps with react this might be the standard way of creating PrivateRoute pattern :
 
 ```tsx
 // PrivateRoute.tsx
@@ -254,17 +254,17 @@ export const Router = () => {
       <Route
         path="admin-dashboard"
         element={
-          <AuthRoute roles={[Role.Admin]}>
+          <PrivateRoute roles={[Role.Admin]}>
             <AdminDashboard />
-          </AuthRoute>
+          </PrivateRoute>
         }
       />
       <Route
         path="user-dashboard"
         element={
-          <AuthRoute roles={[Role.User]}>
+          <PrivateRoute roles={[Role.User]}>
             <UserDashboard />
-          </AuthRoute>
+          </PrivateRoute>
         }
       />
       <Route path="*" element={<NotFound />} />
