@@ -57,7 +57,7 @@
     "gatsby-transformer-remark": "^4.1.0",
     "gatsby-transformer-sharp": "^3.4.0",
     "jimp": "^0.16.1",
-    "node-sass": "^5.0.0",
+    "node-sass": "^7.0.0",
     "prism-themes": "^1.7.0",
     "prismjs": "^1.25.0",
     "qs": "^6.10.1",
