@@ -13,7 +13,7 @@ const personal = {
 const social = {
   logo: 'static/images/logo.png',
   twitter: '@adarshatweets',
-  twitterLink: `https://twitter.com/aadarshatweets`,
+  twitterLink: `https://twitter.com/adarsha_ach`,
   linkedinLink: `https://www.linkedin.com/in/adarshaacharya/`,
   githubLink: `https://github.com/adarshaacharya`,
   buttonDownEmail: 'adarshaacharya',
