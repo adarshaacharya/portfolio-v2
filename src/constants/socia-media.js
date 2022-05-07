@@ -1,7 +1,7 @@
 export const socialmedia = [
   {
     name: 'Twitter',
-    url: 'https://twitter.com/aadarshatweets',
+    url: 'https://twitter.com/adarsha_ach',
   },
   {
     name: 'Linkedin',

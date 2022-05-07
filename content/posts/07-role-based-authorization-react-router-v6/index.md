@@ -278,7 +278,7 @@ Now user isn't only authenticated but also they are authorized with right to vie
 Here's the simple example of how to leverage react router v6 while creating the authenticated routes. If you want example on big project then checkout my project [MentorLabs](https://github.com/adarshaacharya/MentorLabs). THe project structure may be different from the above example but can be good example how to leverage it in fairly large project.
 
 
-Also, if you face any problem in setting up above feature on your project comment down below or you can directly message me on twiiter via : [@aadarshatweets](https://twitter.com/aadarshatweets)
+Also, if you face any problem in setting up above feature on your project comment down below or you can directly message me on twiiter via : [@adarsha_ach](https://twitter.com/adarsha_ach)
 
 Thanks !
 
