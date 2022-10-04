@@ -12,8 +12,22 @@
     "repo": "https://github.com/adarshaacharya/CsOverflow",
     "demo": "https://csoverflow.herokuapp.com/",
     "image": "project_csoverflow.png",
-    "description": "Q/A forum for Computer Science and Engineering students. Ask a question, contribute an answer and upvote your favourite one. CsOverflow gives students correct answer and derivation of all relevant computer science and engineering questions.    ",
+    "description": "Q/A forum for Computer Science and Engineering students. Ask a question, contribute an answer and upvote your favourite one. CsOverflow gives students correct answer and derivation of all relevant computer science and engineering questions.",
     "techs": ["Typescript", "React", "Redux", "Nodejs", "PostgreSQL"]
+  },
+  {
+    "title": "Pass Man",
+    "repo": "https://github.com/adarshaacharya/PassMan",
+    "demo": "https://passmanager.vercel.app/",
+    "image": "passman.png",
+    "description": "Cloud based password manager where user can login using GitHub account, create vault for personal and business purpose and store the credentials of different type. Credentials are hashed using AES256 algorithm, and one way hashing is done using Scrypt algorithm.",
+    "techs": [
+      "Next.js",
+      "Next Auth",
+      "Prisma",
+      "Docker",
+      "Chakra UI"
+    ]
   },
   {
     "title": "Code Treats",
