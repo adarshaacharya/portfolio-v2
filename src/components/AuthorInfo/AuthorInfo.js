@@ -42,19 +42,16 @@ const AuthorInfo = () => {
 
       <Bio>
         Hello! I’m Aadarsha Acharya, fullstack JavaScript developer based in
-        Kathmandu Nepal.
+        Kathmandu Nepal, currently working at&nbsp;
+        <ExternalLink href="https://renegadeinsurance.com/">
+          Renegade Insurance
+        </ExternalLink>
+        &nbsp;as Software Development Engineer-I.
       </Bio>
       <Bio>
         I'm super passionate about exploring and building open source web apps
         and tools. Currently I'm diving in the React ecosystem with backend in
         Node.js.
-      </Bio>
-      <Bio>
-        I'm currently pursuing Bachelor Degree in Computer Science at
-        <ExternalLink href="http://www.tribhuvan-university.edu.np/">
-          {' '}
-          Tribuvan University.
-        </ExternalLink>
       </Bio>
 
       <Resume />
