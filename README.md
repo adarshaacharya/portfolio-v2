@@ -97,5 +97,6 @@ This project is [MIT](https://github.com/adarshaacharya/adarshaacharya.com.np/bl
 ---
 
 **Depoly on your own Netlify Instance**
+**Hey guys love you guys**
 
 [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/adarshaacharya/adarshaacharya.com.np)
