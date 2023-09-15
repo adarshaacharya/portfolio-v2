@@ -42,8 +42,7 @@ const AuthorInfo = () => {
 
       <Bio>
         Hello! I’m Aadarsha Acharya, fullstack JavaScript developer based in
-        Kathmandu Nepal, working at&nbsp;
-        &nbsp;as Software Engineer at game-tech domain.
+        Kathmandu Nepal, currently working as Software Engineer in game-tech domain.
       </Bio>
       <Bio>
         I'm super passionate about exploring and building open source web apps
